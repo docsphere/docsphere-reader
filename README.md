@@ -1,10 +1,11 @@
 # Quasar Documentation++
-<p style='color: red;'>UNDER CONSTRUCTION</p>
+UNDER CONSTRUCTION
 
 > All-in-one Quasar Documentation: Guide, Play (Examples) and Code (Examples Source code with VEmbed).
 
 ## Global (i18n)
-Avaliable in 2 languages: English and Portuguese.
+Currently available in 2 languages: English and Portuguese.
+Make a contribution to more languages!
 
 ## Screenshots
 ![Change Log](src/assets/screenshot/changelog-wip.png)

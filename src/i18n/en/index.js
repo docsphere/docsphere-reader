@@ -1,6 +1,7 @@
 export default {
   _: {
     and: 'and',
+    or: 'or',
     files: 'files'
   },
 
@@ -21,9 +22,12 @@ export default {
         t2: 'Color List',
         p6: 'Here’s the list of colors provided out of the box. Use them as CSS classes (in HTML templates) or as Stylus variables (in',
         p7: 'tags) within your app’s',
-        p8: 'On the following colors there are variations available:',
+        p8: 'On the following colors there are variations available',
         p9: 'Example of color variation',
-        p10: 'See the demo to make a good picture of what variations are. Variation 11 to 14 are color accents'
+        p10: 'See the demo to make a good picture of what variations are. Variation 11 to 14 are color accents',
+        t3: 'Using as CSS Classes',
+        p11: 'Use',
+        p12: 'prefixes as class names to change the color of text or the color of the background.'
       },
       typography: {
         _: 'Typography'

@@ -13,8 +13,8 @@ export default [
       {
         path: '/settings',
         components: {
-          toolbar: () => import('pages/settings/toolbar'),
-          default: () => import('pages/settings')
+          toolbar: () => import('pages/{settings}/toolbar'),
+          default: () => import('pages/{settings}')
         }
       }
     ]
@@ -27,25 +27,25 @@ export default [
       {
         path: '',
         components: {
-          toolbar: () => import('pages/design/toolbar'),
-          default: () => import('pages/design/index'),
-          tools: () => import('pages/design/tools')
+          toolbar: () => import('pages/style/01/toolbar'),
+          default: () => import('pages/style/01/index'),
+          tools: () => import('pages/style/01/tools')
         }
       },
       {
         path: 'play',
         components: {
-          toolbar: () => import('pages/design/toolbar'),
-          default: () => import('pages/design/play/index'),
-          tools: () => import('pages/design/tools')
+          toolbar: () => import('pages/style/01/toolbar'),
+          default: () => import('pages/style/01/play/index'),
+          tools: () => import('pages/style/01/tools')
         }
       },
       {
         path: 'code',
         components: {
-          toolbar: () => import('pages/design/toolbar'),
-          default: () => import('pages/design/code/index'),
-          tools: () => import('pages/design/tools')
+          toolbar: () => import('pages/style/01/toolbar'),
+          default: () => import('pages/style/01/code/index'),
+          tools: () => import('pages/style/01/tools')
         }
       }
     ]

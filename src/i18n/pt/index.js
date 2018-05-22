@@ -1,6 +1,7 @@
 export default {
   _: {
     and: 'e',
+    or: 'ou',
     files: 'arquivos'
   },
 
@@ -19,11 +20,14 @@ export default {
         p4: 'Pode haver três cores principais usadas em todo o seu aplicativo, chamadas',
         p5: 'A maioria das cores que o Quasar Components usa estão fortemente ligadas a essas três cores que você pode alterar. A escolha dessas cores é o primeiro passo que se deve adotar ao diferenciar o design de seu próprio aplicativo. Você perceberá imediatamente ao alterar seus valores padrão que os Componentes Quasar seguem essas cores como uma diretriz.',
         t2: 'Lista de cores',
-        p6: 'Esta é a lista de cores fornecidas imediatamente. Use-os como classes CSS (em templates HTML) ou como variáveis Stylus (em',
-        p7: 'tags) dentro do aplicativo',
-        p8: 'Nas seguintes cores existem variações disponíveis:',
+        p6: 'Esta é a lista de cores fornecidas imediatamente. Use-os como classes CSS (em templates HTML) ou como variáveis Stylus (em tags ',
+        p7: ') dentro do aplicativo em arquivos ',
+        p8: 'Nas seguintes cores existem variações disponíveis',
         p9: 'Exemplo de variação de cor',
-        p10: 'Veja a demonstração para ter uma boa ideia das variações. Variações 11 a 14 são acentos coloridos'
+        p10: 'Veja a demonstração para ter uma boa ideia das variações. As variações entre 11 e 14 são cores acentuadas.',
+        t3: 'Usando como classes CSS',
+        p11: 'Use os prefixos',
+        p12: 'como nomes de classes para alterar a cor do texto ou a cor do plano de fundo..'
       },
       typography: {
         _: 'Tipografia'
