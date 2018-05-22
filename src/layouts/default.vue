@@ -30,7 +30,7 @@
         </q-item>
         <q-item-separator />
 
-        <q-list-header>Getting started</q-list-header>
+        <q-list-header>{{ $t('section.starting._') }}</q-list-header>
         <q-item-separator />
 
         <q-list-header>{{ $t('section.style._') }}</q-list-header>
@@ -54,7 +54,7 @@
         <q-list-header>{{ $t('section.layout._') }}</q-list-header>
         <q-item-separator />
 
-        <q-list-header>Components</q-list-header>
+        <q-list-header>{{ $t('section.components._') }}</q-list-header>
         <q-collapsible :label="$t('section.components.buttons._')"></q-collapsible>
         <q-collapsible :label="$t('section.components.navigation._')"></q-collapsible>
         <q-collapsible :label="$t('section.components.forms._')"></q-collapsible>

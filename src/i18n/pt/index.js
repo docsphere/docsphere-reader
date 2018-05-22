@@ -10,7 +10,7 @@ export default {
       p1: 'Use a barra lateral para navegar pelas demos, que exibem apenas alguns dos componentes e recursos do Quasar.'
     },
 
-    starting: {},
+    starting: {_: 'Começando'},
 
     style: {
       _: 'Estilo e identidade',
@@ -59,16 +59,16 @@ export default {
     layout: {_: 'Layout'},
 
     components: {
-      _: 'Components',
-      buttons: {_: 'Buttons'},
-      navigation: {_: 'Navigation'},
-      forms: {_: 'Forms'},
-      grouping: {_: 'Grouping'},
+      _: 'Componentes',
+      buttons: {_: 'Botões'},
+      navigation: {_: 'Navegação'},
+      forms: {_: 'Formulários'},
+      grouping: {_: 'Agrupamento'},
       popups: {_: 'Popups'},
-      progress: {_: 'Progress'},
+      progress: {_: 'Progresso'},
       media: {_: 'Media'},
-      scrolling: {_: 'Scrolling'},
-      others: {_: 'Others Components'}
+      scrolling: {_: 'Rolagem'},
+      others: {_: 'Outros componentes'}
     },
 
     animations: {_: 'Animações'},

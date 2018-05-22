@@ -10,7 +10,7 @@ export default {
       p1: 'Use sidebar to browse through demos, which showcase only a few of the Quasar components and features.'
     },
 
-    starting: {},
+    starting: {_: 'Getting started'},
 
     style: {
       _: 'Style & Identity',
