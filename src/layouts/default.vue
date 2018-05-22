@@ -70,10 +70,10 @@
 <script>
 export default {
   name: 'LayoutDefault',
+
   data () {
     return {
-      leftDrawerOpen: this.$q.platform.is.desktop,
-      rightDrawerOpen: true
+      leftDrawerOpen: this.$q.platform.is.desktop
     }
   }
 }
@@ -134,4 +134,9 @@ export default {
 
   .padding
     padding: 1rem 2rem
+
+  #embed__container a
+    display: none
+  .gist-meta
+    display: none
 </style>

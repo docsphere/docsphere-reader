@@ -1,8 +1,8 @@
 {
-  "name": "quasar-documentation",
-  "version": "1.0.0",
+  "name": "quasar-documentation-pp",
+  "version": "1.0.1",
   "description": "All-in-one Quasar Documentation",
-  "productName": "Quasar Documentation+",
+  "productName": "Quasar Documentation++",
   "cordovaId": "org.cordova.quasar.app",
   "author": "Rodrigo Vieira <rodrigo@vieira.com>",
   "private": true,
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "vue-embed": "^1.0.0",
+    "vue-embed-gist": "^1.0.1",
     "vue-i18n": "^7.3.3"
   },
   "devDependencies": {

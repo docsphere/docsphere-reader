@@ -1,20 +1,17 @@
 <template>
   <q-page class="padding">
-    <VEmbed>https://gist.github.com/slowaways/1a65d842599edaa0f31873c33431ba1a</VEmbed>
+    <vue-embed-gist gist-id="1a65d842599edaa0f31873c33431ba1a" />
   </q-page>
 </template>
 
 <script>
-import VEmbed from 'vue-embed'
+import VueEmbedGist from 'vue-embed-gist'
 
 export default {
   components: {
-    VEmbed
+    VueEmbedGist
   }
 }
 </script>
 
-<style lang="stylus">
-  #embed__container a
-    display: none
-</style>
+<style lang="stylus"></style>
