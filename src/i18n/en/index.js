@@ -73,7 +73,7 @@ export default {
       others: {_: 'Others Components'}
     },
 
-    animation: {_: 'Animations'},
+    animations: {_: 'Animations'},
 
     directives: {_: 'Directives'},
 
