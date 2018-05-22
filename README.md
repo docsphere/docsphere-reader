@@ -5,4 +5,4 @@
 ## Global
 Avaliable in 2 languages: English and Portuguese.
 
-![Change Log](slowaways.github.com/quasar-documentation-pp/src/assets/screenshot/changelog-wip.png)
+![Change Log](src/assets/screenshot/changelog-wip.png)
