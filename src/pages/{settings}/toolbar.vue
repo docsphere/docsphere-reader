@@ -1,7 +1,7 @@
 <template>
   <q-toolbar-title>
     <q-icon name="settings"></q-icon>
-    Settings
+    {{ $t('menu.settings') }}
   </q-toolbar-title>
 </template>
 

@@ -9,7 +9,10 @@ export default {
     home: {
       p1: 'Use a barra lateral para navegar pelas demos, que exibem apenas alguns dos componentes e recursos do Quasar.'
     },
-    design: {
+
+    starting: {},
+
+    style: {
       _: 'Estilo e identidade',
       color: {
         _: 'Paleta de cores',
@@ -35,7 +38,11 @@ export default {
         t4: 'Usando Variáveis Stylus',
         p13: 'Nos arquivos ',
         p14: 'do seu aplicativo, você pode usar as cores',
-        p15: 'e assim por diante.'
+        p15: 'e assim por diante.',
+
+        t5: 'Adicionando suas próprias cores',
+        p16: 'Se você quiser usar cores próprias para componentes, digamos que estamos adicionando uma cor chamada "brand", tudo o que você precisa fazer é adicionar o seguinte CSS ao seu aplicativo:',
+        p17: 'Agora podemos usar essa cor para os componentes do Quasar:'
       },
       typography: {
         _: 'Tipografia'
@@ -44,24 +51,33 @@ export default {
         _: 'Materiais Ripples'
       }
     },
-    css: {
+
+    helpers: {
       _: 'CSS Helpers'
     },
-    layout: {_: 'Layout'},
-    buttons: {_: 'Botões'},
-    navigation: {_: 'Navegação'},
-    forms: {_: 'Formulário'},
-    grouping: {_: 'Agrupamento'},
-    popups: {_: 'Popups'},
-    progress: {_: 'Progresso'},
-    media: {_: 'Media'},
-    scrolling: {_: 'Rolagem'},
-    animation: {_: 'Animação'},
-    others: {_: 'Outros componentes'},
 
-    touch: {_: 'Diretivas touch'},
-    api: {_: 'Web API Wrappers'},
-    misc: {_: 'Variados'}
+    layout: {_: 'Layout'},
+
+    components: {
+      _: 'Components',
+      buttons: {_: 'Buttons'},
+      navigation: {_: 'Navigation'},
+      forms: {_: 'Forms'},
+      grouping: {_: 'Grouping'},
+      popups: {_: 'Popups'},
+      progress: {_: 'Progress'},
+      media: {_: 'Media'},
+      scrolling: {_: 'Scrolling'},
+      others: {_: 'Others Components'}
+    },
+
+    animations: {_: 'Animações'},
+
+    directives: {_: 'Diretivas'},
+
+    plugins: {_: 'Plugins'},
+
+    utils: {_: 'Utilidades'}
   },
 
   menu: {

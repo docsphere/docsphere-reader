@@ -9,7 +9,10 @@ export default {
     home: {
       p1: 'Use sidebar to browse through demos, which showcase only a few of the Quasar components and features.'
     },
-    design: {
+
+    starting: {},
+
+    style: {
       _: 'Style & Identity',
       color: {
         _: 'Color Palette',
@@ -35,7 +38,13 @@ export default {
         t4: 'Using Stylus Variables',
         p13: 'In your app’s',
         p14: 'files you can use the colors as',
-        p15: 'and so on.'
+        p15: 'and so on.',
+
+        t5: 'Adding Your Own Colors',
+        p16: 'If you want to use colors of your own for components, let’s say we are adding a color named “brand”, all you need to do is add the following CSS into your app:',
+        p17: 'Now we can use this color for Quasar components:',
+
+        t6: 'Dynamic Change of Brand Colors (Dynamic Theme Colors)'
       },
       typography: {
         _: 'Typography'
@@ -44,24 +53,33 @@ export default {
         _: 'Material Ripples'
       }
     },
-    css: {
+
+    helpers: {
       _: 'CSS Helpers'
     },
-    layout: {_: 'Layout'},
-    buttons: {_: 'Buttons'},
-    navigation: {_: 'Navigation'},
-    forms: {_: 'Forms'},
-    grouping: {_: 'Grouping'},
-    popups: {_: 'Popups'},
-    progress: {_: 'Progress'},
-    media: {_: 'Media'},
-    scrolling: {_: 'Scrolling'},
-    animation: {_: 'Animation'},
-    others: {_: 'Others Components'},
 
-    touch: {_: 'Touch Directives'},
-    api: {_: 'Web API Wrappers'},
-    misc: {_: 'Misc'}
+    layout: {_: 'Layout'},
+
+    components: {
+      _: 'Components',
+      buttons: {_: 'Buttons'},
+      navigation: {_: 'Navigation'},
+      forms: {_: 'Forms'},
+      grouping: {_: 'Grouping'},
+      popups: {_: 'Popups'},
+      progress: {_: 'Progress'},
+      media: {_: 'Media'},
+      scrolling: {_: 'Scrolling'},
+      others: {_: 'Others Components'}
+    },
+
+    animation: {_: 'Animations'},
+
+    directives: {_: 'Directives'},
+
+    plugins: {_: 'Plugins'},
+
+    utils: {_: 'Utils'}
   },
 
   menu: {

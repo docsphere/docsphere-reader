@@ -20,42 +20,63 @@
           <q-item-side icon="home" />
           <q-item-main>{{ $t('menu.home') }}</q-item-main>
         </q-item>
-        <q-item-separator />
-        <q-collapsible :label="$t('section.design._')">
-          <q-item to="/style">
-            <q-item-side icon="style" />
-            <q-item-main>{{ $t('section.design.color._') }}</q-item-main>
-          </q-item>
-          <q-item to="/typography">
-            <q-item-side icon="format_bold" />
-            <q-item-main>{{ $t('section.design.typography._') }}</q-item-main>
-          </q-item>
-          <q-item to="/ripples">
-            <q-item-side icon="blur_on" />
-            <q-item-main>{{ $t('section.design.ripples._') }}</q-item-main>
-          </q-item>
-        </q-collapsible>
-        <q-collapsible :label="$t('section.css._')"></q-collapsible>
-        <q-collapsible :label="$t('section.layout._')"></q-collapsible>
-        <q-collapsible :label="$t('section.buttons._')"></q-collapsible>
-        <q-collapsible :label="$t('section.navigation._')"></q-collapsible>
-        <q-collapsible :label="$t('section.forms._')"></q-collapsible>
-        <q-collapsible :label="$t('section.grouping._')"></q-collapsible>
-        <q-collapsible :label="$t('section.popups._')"></q-collapsible>
-        <q-collapsible :label="$t('section.progress._')"></q-collapsible>
-        <q-collapsible :label="$t('section.media._')"></q-collapsible>
-        <q-collapsible :label="$t('section.scrolling._')"></q-collapsible>
-        <q-collapsible :label="$t('section.animation._')"></q-collapsible>
-        <q-collapsible :label="$t('section.others._')"></q-collapsible>
-        <q-item-separator />
-        <q-collapsible :label="$t('section.touch._')"></q-collapsible>
-        <q-collapsible :label="$t('section.api._')"></q-collapsible>
-        <q-collapsible :label="$t('section.misc._')"></q-collapsible>
-        <q-item-separator />
+        <q-item to="/changelog">
+          <q-item-side icon="assignment" />
+          <q-item-main>Changelog</q-item-main>
+        </q-item>
         <q-item to="/settings">
           <q-item-side icon="settings" />
           <q-item-main>{{ $t('menu.settings') }}</q-item-main>
         </q-item>
+        <q-item-separator />
+
+        <q-list-header>Getting started</q-list-header>
+        <q-item-separator />
+
+        <q-list-header>{{ $t('section.style._') }}</q-list-header>
+        <q-item to="/style/color">
+          <q-item-side icon="style" />
+          <q-item-main>{{ $t('section.style.color._') }}</q-item-main>
+        </q-item>
+        <q-item to="/style/typography">
+          <q-item-side icon="format_bold" />
+          <q-item-main>{{ $t('section.style.typography._') }}</q-item-main>
+        </q-item>
+        <q-item to="/style/ripples">
+          <q-item-side icon="blur_on" />
+          <q-item-main>{{ $t('section.style.ripples._') }}</q-item-main>
+        </q-item>
+        <q-item-separator />
+
+        <q-list-header>{{ $t('section.helpers._') }}</q-list-header>
+        <q-item-separator />
+
+        <q-list-header>{{ $t('section.layout._') }}</q-list-header>
+        <q-item-separator />
+
+        <q-list-header>Components</q-list-header>
+        <q-collapsible :label="$t('section.components.buttons._')"></q-collapsible>
+        <q-collapsible :label="$t('section.components.navigation._')"></q-collapsible>
+        <q-collapsible :label="$t('section.components.forms._')"></q-collapsible>
+        <q-collapsible :label="$t('section.components.grouping._')"></q-collapsible>
+        <q-collapsible :label="$t('section.components.popups._')"></q-collapsible>
+        <q-collapsible :label="$t('section.components.progress._')"></q-collapsible>
+        <q-collapsible :label="$t('section.components.media._')"></q-collapsible>
+        <q-collapsible :label="$t('section.components.scrolling._')"></q-collapsible>
+        <q-collapsible :label="$t('section.components.others._')"></q-collapsible>
+        <q-item-separator />
+
+        <q-list-header>{{ $t('section.animations._') }}</q-list-header>
+        <q-item-separator />
+
+        <q-list-header>{{ $t('section.directives._') }}</q-list-header>
+        <q-item-separator />
+
+        <q-list-header>{{ $t('section.plugins._') }}</q-list-header>
+        <q-item-separator />
+
+        <q-list-header>{{ $t('section.utils._') }}</q-list-header>
+        <q-item-separator />
       </q-list>
     </q-layout-drawer>
 

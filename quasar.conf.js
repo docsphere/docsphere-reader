@@ -64,7 +64,13 @@ module.exports = function (ctx) {
         'QTabPane',
         'QCollapsible',
         'QSelect',
-        'QTooltip'
+        'QTooltip',
+        'QCard',
+        'QCardTitle',
+        'QCardMain',
+        'QCardMedia',
+        'QCardSeparator',
+        'QCardActions'
       ],
       directives: [
         'Ripple'

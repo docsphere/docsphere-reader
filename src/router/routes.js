@@ -16,36 +16,43 @@ export default [
           toolbar: () => import('pages/{settings}/toolbar'),
           default: () => import('pages/{settings}')
         }
+      },
+      {
+        path: '/changelog',
+        components: {
+          toolbar: () => import('pages/{changelog}/toolbar'),
+          default: () => import('pages/{changelog}')
+        }
       }
     ]
   },
 
   {
-    path: '/style',
+    path: '/style/color',
     component: () => import('layouts/default'),
     children: [
       {
         path: '',
         components: {
-          toolbar: () => import('pages/style/01/toolbar'),
-          default: () => import('pages/style/01/index'),
-          tools: () => import('pages/style/01/tools')
+          toolbar: () => import('pages/2-style/color/toolbar'),
+          default: () => import('pages/2-style/color/index'),
+          tools: () => import('pages/2-style/color/tools')
         }
       },
       {
         path: 'play',
         components: {
-          toolbar: () => import('pages/style/01/toolbar'),
-          default: () => import('pages/style/01/play/index'),
-          tools: () => import('pages/style/01/tools')
+          toolbar: () => import('pages/2-style/color/toolbar'),
+          default: () => import('pages/2-style/color/play/index'),
+          tools: () => import('pages/2-style/color/tools')
         }
       },
       {
         path: 'code',
         components: {
-          toolbar: () => import('pages/style/01/toolbar'),
-          default: () => import('pages/style/01/code/index'),
-          tools: () => import('pages/style/01/tools')
+          toolbar: () => import('pages/2-style/color/toolbar'),
+          default: () => import('pages/2-style/color/code/index'),
+          tools: () => import('pages/2-style/color/tools')
         }
       }
     ]
