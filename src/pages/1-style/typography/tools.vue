@@ -1,6 +1,6 @@
 <template>
   <d-tools guide="/style/typography"
-           play="/style/typography/play"
+           showcase="/style/typography/showcase"
            code="/style/typography/code" />
 </template>
 

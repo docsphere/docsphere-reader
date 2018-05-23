@@ -35,24 +35,24 @@ export default [
         path: '',
         components: {
           toolbar: () => import('pages/1-style/color/toolbar'),
-          default: () => import('pages/1-style/color/index'),
+          default: () => import('pages/1-style/color/'),
           tools: () => import('pages/1-style/color/tools')
         }
       },
 
       {
-        path: 'play',
+        path: 'showcase',
         components: {
-          toolbar: () => import('pages/1-style/color/toolbar'),
-          default: () => import('pages/1-style/color/play/index'),
+          toolbar: () => import('pages/1-style/color/showcase/toolbar'),
+          default: () => import('pages/1-style/color/showcase/'),
           tools: () => import('pages/1-style/color/tools')
         }
       },
       {
-        path: 'code',
+        path: 'showcase/code',
         components: {
-          toolbar: () => import('pages/1-style/color/toolbar'),
-          default: () => import('pages/1-style/color/code/index'),
+          toolbar: () => import('pages/1-style/color/showcase/code/toolbar'),
+          default: () => import('pages/1-style/color/showcase/code/'),
           tools: () => import('pages/1-style/color/tools')
         }
       }
@@ -66,24 +66,24 @@ export default [
         path: '',
         components: {
           toolbar: () => import('pages/1-style/typography/toolbar'),
-          default: () => import('pages/1-style/typography/index'),
+          default: () => import('pages/1-style/typography/'),
           tools: () => import('pages/1-style/typography/tools')
         }
       },
 
       {
-        path: 'play',
+        path: 'showcase',
         components: {
-          toolbar: () => import('pages/1-style/typography/toolbar'),
-          default: () => import('pages/1-style/typography/play/index'),
+          toolbar: () => import('pages/1-style/typography/showcase/toolbar'),
+          default: () => import('pages/1-style/typography/showcase/'),
           tools: () => import('pages/1-style/typography/tools')
         }
       },
       {
-        path: 'code',
+        path: 'showcase/code',
         components: {
-          toolbar: () => import('pages/1-style/typography/toolbar'),
-          default: () => import('pages/1-style/typography/code/index'),
+          toolbar: () => import('pages/1-style/typography/showcase/code/toolbar'),
+          default: () => import('pages/1-style/typography/showcase/code/'),
           tools: () => import('pages/1-style/typography/tools')
         }
       }
@@ -97,24 +97,24 @@ export default [
         path: '',
         components: {
           toolbar: () => import('pages/1-style/ripples/toolbar'),
-          default: () => import('pages/1-style/ripples/index'),
+          default: () => import('pages/1-style/ripples'),
           tools: () => import('pages/1-style/ripples/tools')
         }
       },
 
       {
-        path: 'play',
+        path: 'showcase',
         components: {
-          toolbar: () => import('pages/1-style/ripples/toolbar'),
-          default: () => import('pages/1-style/ripples/play/index'),
+          toolbar: () => import('pages/1-style/ripples/showcase/toolbar'),
+          default: () => import('pages/1-style/ripples/showcase/'),
           tools: () => import('pages/1-style/ripples/tools')
         }
       },
       {
-        path: 'code',
+        path: 'showcase/code',
         components: {
-          toolbar: () => import('pages/1-style/ripples/toolbar'),
-          default: () => import('pages/1-style/ripples/code/index'),
+          toolbar: () => import('pages/1-style/ripples/showcase/code/toolbar'),
+          default: () => import('pages/1-style/ripples/showcase/code/'),
           tools: () => import('pages/1-style/ripples/tools')
         }
       }

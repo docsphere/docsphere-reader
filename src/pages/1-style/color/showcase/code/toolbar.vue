@@ -1,9 +1,9 @@
 <template>
   <d-toolbar
-    icon="blur_on"
-    :title="$t('section.style.ripples._')"
-    subtitle="Guide"
-    edit="1-style/ripples/index.vue" />
+    icon="style"
+    :title="$t('section.style.color._')"
+    subtitle="Showcase Code"
+    edit="1-style/color/showcase/code/index.vue" />
 </template>
 
 <script>

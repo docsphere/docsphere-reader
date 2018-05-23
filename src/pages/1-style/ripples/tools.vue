@@ -1,6 +1,6 @@
 typography<template>
   <d-tools guide="/style/ripples"
-           play="/style/ripples/play"
+           showcase="/style/ripples/showcase"
            code="/style/ripples/code" />
 </template>
 

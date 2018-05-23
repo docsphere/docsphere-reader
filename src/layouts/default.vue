@@ -57,13 +57,6 @@
         </q-item>
         <q-item-separator />
 
-        <q-list-header>{{ $t('section.helpers._') }}</q-list-header>
-        <q-item to="/helpers/shadows">
-          <q-item-side icon="layers" />
-          <q-item-main>{{ $t('section.helpers.shadows._') }}</q-item-main>
-        </q-item>
-        <q-item-separator />
-
         <q-list-header>{{ $t('section.layout._') }}</q-list-header>
         <q-item to="/layout/flexbox">
           <q-item-side icon="web" />
@@ -83,13 +76,20 @@
         <q-collapsible :label="$t('section.components.others._')"></q-collapsible>
         <q-item-separator />
 
-        <q-list-header>{{ $t('section.animations._') }}</q-list-header>
+        <q-list-header>{{ $t('section.plugins._') }}</q-list-header>
         <q-item-separator />
 
         <q-list-header>{{ $t('section.directives._') }}</q-list-header>
         <q-item-separator />
 
-        <q-list-header>{{ $t('section.plugins._') }}</q-list-header>
+        <q-list-header>{{ $t('section.helpers._') }}</q-list-header>
+        <q-item to="/helpers/shadows">
+          <q-item-side icon="layers" />
+          <q-item-main>{{ $t('section.helpers.shadows._') }}</q-item-main>
+        </q-item>
+        <q-item-separator />
+
+        <q-list-header>{{ $t('section.animations._') }}</q-list-header>
         <q-item-separator />
 
         <q-list-header>{{ $t('section.utils._') }}</q-list-header>

@@ -52,11 +52,6 @@ export default {
       }
     },
 
-    helpers: {
-      _: 'CSS Helpers',
-      shadows: {_: 'Sombras'}
-    },
-
     layout: {
       _: 'Layout',
       flexbox: {_: 'Flexbox'}
@@ -75,11 +70,16 @@ export default {
       others: {_: 'Outros componentes'}
     },
 
-    animations: {_: 'Animações'},
+    plugins: {_: 'Plugins'},
 
     directives: {_: 'Diretivas'},
 
-    plugins: {_: 'Plugins'},
+    helpers: {
+      _: 'CSS Helpers',
+      shadows: {_: 'Sombras'}
+    },
+
+    animations: {_: 'Animações'},
 
     utils: {_: 'Utilidades'}
   },

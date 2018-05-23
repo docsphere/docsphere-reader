@@ -1,7 +1,6 @@
 <template>
   <d-tools guide="/style/color"
-           play="/style/color/play"
-           code="/style/color/code" />
+           showcase="/style/color/showcase" />
 </template>
 
 <script>

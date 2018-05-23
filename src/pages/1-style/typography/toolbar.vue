@@ -1,5 +1,9 @@
 <template>
-  <d-toolbar icon="format_bold" :title="$t('section.style.typography._')" edit="1-style/typography/index.vue" />
+  <d-toolbar
+    icon="format_bold"
+    :title="$t('section.style.typography._')"
+    subtitle="Guide"
+    edit="1-style/typography/index.vue" />
 </template>
 
 <script>

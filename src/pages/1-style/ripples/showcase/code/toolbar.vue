@@ -2,8 +2,8 @@
   <d-toolbar
     icon="blur_on"
     :title="$t('section.style.ripples._')"
-    subtitle="Guide"
-    edit="1-style/ripples/index.vue" />
+    subtitle="Showcase Code"
+    edit="1-style/ripples/showcase/code/index.vue" />
 </template>
 
 <script>

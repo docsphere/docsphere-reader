@@ -1,5 +1,9 @@
 <template>
-  <d-toolbar icon="style" :title="$t('section.style.color._')" edit="1-style/color/index.vue" />
+  <d-toolbar
+    icon="style"
+    :title="$t('section.style.color._')"
+    subtitle="Guide"
+    edit="1-style/color/index.vue" />
 </template>
 
 <script>
