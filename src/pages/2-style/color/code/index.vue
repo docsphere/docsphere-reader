@@ -1,6 +1,6 @@
 <template>
   <q-page class="padding">
-    <vue-embed-gist gist-id="93cc473cd79e236655104fdd5cf87d0e" />
+    <vue-embed-gist gist-id="1a65d842599edaa0f31873c33431ba1a" />
   </q-page>
 </template>
 
