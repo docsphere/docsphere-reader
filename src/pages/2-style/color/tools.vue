@@ -8,7 +8,7 @@
         </q-item>
         <q-item-separator />
         <q-item to="/style/color/play">
-          <q-item-side icon="visibility" />
+          <q-item-side icon="play_circle_filled" />
           <q-tooltip anchor="center right" self="center left">Examples</q-tooltip>
         </q-item>
         <q-item to="/style/color/code">
