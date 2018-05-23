@@ -1,26 +1,15 @@
 <template>
-  <q-toolbar-title>
-    <q-icon name="style"></q-icon>
-    {{ $t('section.style.color._') }}
-    <q-btn
-      flat dense
-      icon="edit"
-      @click="openURL('https://github.com/slowaways/quasar-documentation-pp/blob/master/src/pages/2-style/color/index.vue')">
-      <q-tooltip anchor="bottom middle" self="top middle">Edit this page on Github!</q-tooltip>
-    </q-btn>
-  </q-toolbar-title>
+  <d-toolbar icon="style" :title="$t('section.style.color._')" edit="2-style/color/index.vue" />
 </template>
 
 <script>
-import { openURL } from 'quasar'
+import DToolbar from 'src/components/DToolbar'
 
 export default {
-  methods: {
-    openURL
+  components: {
+    DToolbar
   }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
