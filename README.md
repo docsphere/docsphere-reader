@@ -1,7 +1,7 @@
 # Quasar Documentation++
 UNDER CONSTRUCTION
 
-> All-in-one Quasar Documentation: Guide, Play (Examples) and Code (Examples Source code with VEmbed).
+> All-in-one Quasar Documentation: Guide, Play (Examples) and Code (Embeded source code of Examples).
 
 ## Global (i18n)
 Currently available in 2 languages: English and Portuguese.

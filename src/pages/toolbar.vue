@@ -1,7 +1,7 @@
 <template>
   <q-toolbar-title>
     <q-icon name="home"></q-icon>
-    Showcase home
+    {{ $t('menu.home') }}
   </q-toolbar-title>
 </template>
 

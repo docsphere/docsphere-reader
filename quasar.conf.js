@@ -15,7 +15,7 @@ module.exports = function (ctx) {
       'material-icons',
       ctx.theme.ios ? 'ionicons' : null,
       // 'mdi',
-      // 'fontawesome'
+      'fontawesome'
     ],
     supportIE: false,
     build: {
@@ -70,7 +70,8 @@ module.exports = function (ctx) {
         'QCardMain',
         'QCardMedia',
         'QCardSeparator',
-        'QCardActions'
+        'QCardActions',
+        'QChip'
       ],
       directives: [
         'Ripple'

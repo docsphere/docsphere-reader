@@ -12,8 +12,17 @@
 
     <q-layout-drawer v-model="leftDrawerOpen" :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null">
       <div class="row flex-center bg-white" style="height: 115px;">
-        <img src="/assets/logo.svg" style="height: 75px">
-        <div class="text-weight-thin q-ml-md">Quasar v0.16.0</div>
+        <div class="col-5">
+          <img class="q-mr-xs" src="/assets/logo.svg" style="height: 75px; float: right;">
+        </div>
+        <div class="col-7">
+          <q-btn class="q-mb-xs" dense no-caps outline size="sm" icon="fa fa-ambulance" label="Support Quasar"
+            style="color: goldenrod;"
+            @click="openURL('https://quasar-framework.org/support-quasar-framework.html')"
+          />
+          <div class="text-weight-thin q-mb-xs">Quasar v0.16.0</div>
+          <div>Documentation++</div>
+        </div>
       </div>
       <q-list no-border link inset-delimiter>
         <q-item to="/" exact>
@@ -89,6 +98,8 @@
 </template>
 
 <script>
+import { openURL } from 'quasar'
+
 export default {
   name: 'LayoutDefault',
 
@@ -96,6 +107,10 @@ export default {
     return {
       leftDrawerOpen: this.$q.platform.is.desktop
     }
+  },
+
+  methods: {
+    openURL
   }
 }
 </script>
