@@ -19,6 +19,11 @@
           <q-item-side icon="assignment" />
           <q-tooltip anchor="center right" self="center left">Changelog (WIP)</q-tooltip>
         </q-item>
+        <q-item-separator />
+        <q-item v-if="build" class="bg-red-3">
+          <q-item-side icon="build" />
+          <q-tooltip anchor="center right" self="center left">Build (WIP)</q-tooltip>
+        </q-item>
       </q-list>
     </div>
   </q-layout-drawer>
@@ -43,6 +48,11 @@ export default {
       default: ''
     },
     changelog: {
+      type: String,
+      default: ''
+    },
+
+    build: {
       type: String,
       default: ''
     }

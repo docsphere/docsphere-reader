@@ -1,5 +1,5 @@
 <template>
-  <d-toolbar icon="blur_on" :title="$t('section.style.ripples._')" edit="2-style/ripples/index.vue" />
+  <d-toolbar icon="style" :title="$t('section.style.color._')" edit="1-style/color/index.vue" />
 </template>
 
 <script>

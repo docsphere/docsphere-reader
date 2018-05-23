@@ -58,9 +58,17 @@
         <q-item-separator />
 
         <q-list-header>{{ $t('section.helpers._') }}</q-list-header>
+        <q-item to="/helpers/shadows">
+          <q-item-side icon="layers" />
+          <q-item-main>{{ $t('section.helpers.shadows._') }}</q-item-main>
+        </q-item>
         <q-item-separator />
 
         <q-list-header>{{ $t('section.layout._') }}</q-list-header>
+        <q-item to="/layout/flexbox">
+          <q-item-side icon="web" />
+          <q-item-main>{{ $t('section.layout.flexbox._') }}</q-item-main>
+        </q-item>
         <q-item-separator />
 
         <q-list-header>{{ $t('section.components._') }}</q-list-header>

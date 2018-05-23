@@ -53,10 +53,14 @@ export default {
     },
 
     helpers: {
-      _: 'CSS Helpers'
+      _: 'CSS Helpers',
+      shadows: {_: 'Sombras'}
     },
 
-    layout: {_: 'Layout'},
+    layout: {
+      _: 'Layout',
+      flexbox: {_: 'Flexbox'}
+    },
 
     components: {
       _: 'Componentes',
