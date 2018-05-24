@@ -2,7 +2,7 @@
   <d-toolbar
     icon="style"
     :title="$t('section.style.color._')"
-    subtitle="Showcase Code"
+    :subtitle="$t('subsection.showcase.code._')"
     edit="1-style/color/showcase/code/index.vue" />
 </template>
 

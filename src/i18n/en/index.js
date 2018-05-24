@@ -91,6 +91,15 @@ export default {
     settings: 'Settings'
   },
 
+  toolbar: {
+    guide: {_: 'Guide'},
+    showcase: {
+      _: 'Showcase',
+      code: 'Showcase Code'
+    },
+    changelog: {_: 'Changelog'}
+  },
+
   settings: {
     general: 'General Settings',
     language: {

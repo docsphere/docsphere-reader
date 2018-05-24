@@ -5,6 +5,14 @@ export default {
     files: 'arquivos'
   },
 
+  subsection: {
+    guide: {_: 'Guia'},
+    showcase: {
+      _: 'Mostruário',
+      code: {_: 'Código do Mostruário'}
+    },
+    changelog: {_: 'Changelog'}
+  },
   section: {
     home: {
       p1: 'Use a barra lateral para navegar pelas demos, que exibem apenas alguns dos componentes e recursos do Quasar.'

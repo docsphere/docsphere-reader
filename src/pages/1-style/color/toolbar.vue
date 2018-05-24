@@ -2,7 +2,7 @@
   <d-toolbar
     icon="style"
     :title="$t('section.style.color._')"
-    subtitle="Guide"
+    :subtitle="$t('subsection.guide._')"
     edit="1-style/color/index.vue" />
 </template>
 
