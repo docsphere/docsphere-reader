@@ -5,6 +5,14 @@ export default {
     files: 'files'
   },
 
+  subsection: {
+    guide: {_: 'Guide'},
+    showcase: {
+      _: 'Showcase',
+      code: {_: 'Showcase Code'}
+    },
+    changelog: {_: 'Changelog'}
+  },
   section: {
     home: {
       p1: 'Use sidebar to browse through demos, which showcase only a few of the Quasar components and features.'
@@ -16,35 +24,38 @@ export default {
       _: 'Style & Identity',
       color: {
         _: 'Color Palette',
-        p1: 'Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.',
-        p2: 'This page comes really handy after reading',
-        p3: 'You might also want to check',
+        guide: {
+          p1: 'Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.',
+          p2: 'This page comes really handy after reading',
+          p3: 'You might also want to check',
 
-        t1: 'Brand Colors',
-        p4: 'There can be three main colors used throughout your App, called',
-        p5: 'Most of the colors that Quasar Components use are strongly linked with these three colors that you can change. Choosing these colors is the first step one should take when differentiating the design of its own App. You’ll notice immediately on changing their default values that Quasar Components follow these colors as a guideline.',
+          t1: 'Brand Colors',
+          p4: 'There can be three main colors used throughout your App, called',
+          p5: 'Most of the colors that Quasar Components use are strongly linked with these three colors that you can change. Choosing these colors is the first step one should take when differentiating the design of its own App. You’ll notice immediately on changing their default values that Quasar Components follow these colors as a guideline.',
 
-        t2: 'Color List',
-        p6: 'Here’s the list of colors provided out of the box. Use them as CSS classes (in HTML templates) or as Stylus variables (in',
-        p7: 'tags) within your app’s',
-        p8: 'On the following colors there are variations available',
-        p9: 'Example of color variation',
-        p10: 'See the demo to make a good picture of what variations are. Variation 11 to 14 are color accents',
+          t2: 'Color List',
+          p6: 'Here’s the list of colors provided out of the box. Use them as CSS classes (in HTML templates) or as Stylus variables (in',
+          p7: 'tags) within your app’s',
+          p8: 'On the following colors there are variations available',
+          p9: 'Example of color variation',
+          p10: 'See the demo to make a good picture of what variations are. Variation 11 to 14 are color accents',
 
-        t3: 'Using as CSS Classes',
-        p11: 'Use',
-        p12: 'prefixes as class names to change the color of text or the color of the background.',
+          t3: 'Using as CSS Classes',
+          p11: 'Use',
+          p12: 'prefixes as class names to change the color of text or the color of the background.',
 
-        t4: 'Using Stylus Variables',
-        p13: 'In your app’s',
-        p14: 'files you can use the colors as',
-        p15: 'and so on.',
+          t4: 'Using Stylus Variables',
+          p13: 'In your app’s',
+          p14: 'files you can use the colors as',
+          p15: 'and so on.',
 
-        t5: 'Adding Your Own Colors',
-        p16: 'If you want to use colors of your own for components, let’s say we are adding a color named “brand”, all you need to do is add the following CSS into your app:',
-        p17: 'Now we can use this color for Quasar components:',
+          t5: 'Adding Your Own Colors',
+          p16: 'If you want to use colors of your own for components, let’s say we are adding a color named “brand”, all you need to do is add the following CSS into your app:',
+          p17: 'Now we can use this color for Quasar components:',
 
-        t6: 'Dynamic Change of Brand Colors (Dynamic Theme Colors)'
+          t6: 'Dynamic Change of Brand Colors (Dynamic Theme Colors)'
+        },
+        showcase: {}
       },
       typography: {
         _: 'Typography'
@@ -89,15 +100,6 @@ export default {
   menu: {
     home: 'Showcase home',
     settings: 'Settings'
-  },
-
-  toolbar: {
-    guide: {_: 'Guide'},
-    showcase: {
-      _: 'Showcase',
-      code: 'Showcase Code'
-    },
-    changelog: {_: 'Changelog'}
   },
 
   settings: {
