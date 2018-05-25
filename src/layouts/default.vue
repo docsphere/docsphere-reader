@@ -62,18 +62,263 @@
           <q-item-side icon="web" />
           <q-item-main>{{ $t('section.layout.flexbox._') }}</q-item-main>
         </q-item>
+        <q-item>
+          <q-item-side icon="play_circle_outline" />
+          <q-item-main>Play with Layout</q-item-main>
+        </q-item>
+        <q-item>
+          <q-item-side icon="view_array" />
+          <q-item-main>Drawer Panels</q-item-main>
+        </q-item>
+        <q-item>
+          <q-item-side icon="pin_drop" />
+          <q-item-main>Page Sticky</q-item-main>
+        </q-item>
+        <q-item>
+          <q-item-side icon="play_for_work" />
+          <q-item-main>Floating Action Button</q-item-main>
+        </q-item>
         <q-item-separator />
 
         <q-list-header>{{ $t('section.components._') }}</q-list-header>
-        <q-collapsible :label="$t('section.components.buttons._')"></q-collapsible>
-        <q-collapsible :label="$t('section.components.navigation._')"></q-collapsible>
-        <q-collapsible :label="$t('section.components.forms._')"></q-collapsible>
-        <q-collapsible :label="$t('section.components.grouping._')"></q-collapsible>
-        <q-collapsible :label="$t('section.components.popups._')"></q-collapsible>
-        <q-collapsible :label="$t('section.components.progress._')"></q-collapsible>
-        <q-collapsible :label="$t('section.components.media._')"></q-collapsible>
-        <q-collapsible :label="$t('section.components.scrolling._')"></q-collapsible>
-        <q-collapsible :label="$t('section.components.others._')"></q-collapsible>
+        <q-collapsible :label="$t('section.components.buttons._')">
+          <q-item>
+            <q-item-side icon="panorama_wide_angle" />
+            <q-item-main>Standard Button</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="group" />
+            <q-item-main>Button Groups</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="details" />
+            <q-item-main>Dropdown Groups</q-item-main>
+          </q-item>
+        </q-collapsible>
+        <q-collapsible :label="$t('section.components.navigation._')">
+          <q-item>
+            <q-item-side icon="view_day" />
+            <q-item-main>Toolbar</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="tab" />
+            <q-item-main>Tabs</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="vertical_align_center" />
+            <q-item-main>Pull to Refresh</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="content_paste" />
+            <q-item-main>Context Menu</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="skip_next" />
+            <q-item-main>Breadcrumbs</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="linear_scale" />
+            <q-item-main>Pagination</q-item-main>
+          </q-item>
+        </q-collapsible>
+        <q-collapsible :label="$t('section.components.forms._')">
+          <q-item>
+            <q-item-side icon="text_fields" />
+            <q-item-main>Fields</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="text_format" />
+            <q-item-main>Input Textfield</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="dns" />
+            <q-item-main>Chips Input</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="brush" />
+            <q-item-main>Color Picker</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="more_horiz" />
+            <q-item-main>Autocomplete</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="mode_edit" />
+            <q-item-main>Editor (WYSIWYG)</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="search" />
+            <q-item-main>Search</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="tune" />
+            <q-item-main>Slider</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="linear_scale" />
+            <q-item-main>Range</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="check_box" />
+            <q-item-main>Checkbox</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="repeat" />
+            <q-item-main>Toggle</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="view_compact" />
+            <q-item-main>Button Toggle</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="toc" />
+            <q-item-main>Option Group</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="access_time" />
+            <q-item-main>Date & Time</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="event_note" />
+            <q-item-main>Select</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="star_half" />
+            <q-item-main>Rating</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="timelapse" />
+            <q-item-main>Knob</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="cloud_upload" />
+            <q-item-main>Uploader</q-item-main>
+          </q-item>
+        </q-collapsible>
+        <q-collapsible :label="$t('section.components.grouping._')">
+          <q-item>
+            <q-item-side icon="contact_mail" />
+            <q-item-main>Card</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="format_line_spacing" />
+            <q-item-main>Collapsible</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="border_all" />
+            <q-item-main>Data Table</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="list" />
+            <q-item-main>List</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="directions_run" />
+            <q-item-main>Stepper</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="format_indent_increase" />
+            <q-item-main>Tree</q-item-main>
+          </q-item>
+        </q-collapsible>
+        <q-collapsible :label="$t('section.components.popups._')">
+          <q-item>
+            <q-item-side icon="assignment" />
+            <q-item-main>Action Sheet</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="question_answer" />
+            <q-item-main>Dialog</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="settings_overscan" />
+            <q-item-main>Modal</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="warning" />
+            <q-item-main>Notify</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="filter_none" />
+            <q-item-main>Popover</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="speaker_notes" />
+            <q-item-main>Tooltip</q-item-main>
+          </q-item>
+        </q-collapsible>
+        <q-collapsible :label="$t('section.components.progress._')">
+          <q-item>
+            <q-item-side icon="trending_flat" />
+            <q-item-main>Ajax Bar</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="hourglass_full" />
+            <q-item-main>Loading</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="hourglass_empty" />
+            <q-item-main>Inner Loading</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="sort" />
+            <q-item-main>Progress Bar</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="refresh" />
+            <q-item-main>Spinner</q-item-main>
+          </q-item>
+        </q-collapsible>
+        <q-collapsible :label="$t('section.components.media._')">
+          <q-item>
+            <q-item-side icon="vibration" />
+            <q-item-main>Carousel</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="theaters" />
+            <q-item-main>Parallax</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="movie" />
+            <q-item-main>Video Embedding</q-item-main>
+          </q-item>
+        </q-collapsible>
+        <q-collapsible :label="$t('section.components.scrolling._')">
+          <q-item>
+            <q-item-side icon="update" />
+            <q-item-main>Infinite Scroll</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="aspect_ratio" />
+            <q-item-main>Scroll Area</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="low_priority" />
+            <q-item-main>Scroll Fire</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="vertical_align_top" />
+            <q-item-main>Back To Top</q-item-main>
+          </q-item>
+        </q-collapsible>
+        <q-collapsible :label="$t('section.components.others._')">
+          <q-item>
+            <q-item-side icon="assignment_late" />
+            <q-item-main>Alert</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="loyalty" />
+            <q-item-main>Chip</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="chat" />
+            <q-item-main>Chat</q-item-main>
+          </q-item>
+          <q-item>
+            <q-item-side icon="date_range" />
+            <q-item-main>Timeline</q-item-main>
+          </q-item>
+        </q-collapsible>
         <q-item-separator />
 
         <q-list-header>{{ $t('section.plugins._') }}</q-list-header>
