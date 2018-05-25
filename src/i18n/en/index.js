@@ -98,7 +98,7 @@ export default {
   },
 
   menu: {
-    home: 'Showcase home',
+    home: 'Home',
     settings: 'Settings'
   },
 

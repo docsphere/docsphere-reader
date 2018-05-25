@@ -96,7 +96,7 @@ export default {
   },
 
   menu: {
-    home: 'Mostruário',
+    home: 'Página inicial',
     settings: 'Configurações'
   },
 
