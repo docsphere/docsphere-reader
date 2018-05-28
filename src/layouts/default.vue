@@ -25,6 +25,9 @@
         </div>
       </div>
       <q-list no-border link inset-delimiter>
+        <q-search hide-underline clearable :value="term" @input="search" class="q-ml-sm" />
+        <q-item-separator />
+
         <q-item to="/" exact>
           <q-item-side icon="home" />
           <q-item-main>{{ $t('menu.home') }}</q-item-main>
@@ -43,15 +46,15 @@
         <q-item-separator />
 
         <q-list-header>{{ $t('section.style._') }}</q-list-header>
-        <q-item to="/style/color">
+        <q-item to="/style/color" v-show="matches[0] || !matches">
           <q-item-side icon="style" />
           <q-item-main>{{ $t('section.style.color._') }}</q-item-main>
         </q-item>
-        <q-item to="/style/typography">
+        <q-item to="/style/typography" v-show="matches[1] || !matches">
           <q-item-side icon="format_bold" />
           <q-item-main>{{ $t('section.style.typography._') }}</q-item-main>
         </q-item>
-        <q-item to="/style/ripples">
+        <q-item to="/style/ripples" v-show="matches[2] || !matches">
           <q-item-side icon="blur_on" />
           <q-item-main>{{ $t('section.style.ripples._') }}</q-item-main>
         </q-item>
@@ -62,6 +65,7 @@
           <q-item-side icon="web" />
           <q-item-main>{{ $t('section.layout.flexbox._') }}</q-item-main>
         </q-item>
+        <q-item-separator class="partial" />
         <q-item>
           <q-item-side icon="play_circle_outline" />
           <q-item-main>Play with Layout</q-item-main>
@@ -352,18 +356,33 @@
 
 <script>
 import { openURL } from 'quasar'
+import menu from 'assets/menu.json'
 
 export default {
   name: 'LayoutDefault',
 
   data () {
     return {
+      term: null,
+      matches: false,
       leftDrawerOpen: this.$q.platform.is.desktop
     }
   },
 
   methods: {
-    openURL
+    openURL,
+
+    search (term) {
+      if (term.length > 0) {
+        term = term.toLowerCase()
+        const lang = this.$q.localStorage.get.item('setting.language')
+        this.matches = menu[lang].map(item => {
+          return item.indexOf(term) !== -1
+        })
+      } else {
+        this.matches = false
+      }
+    }
   }
 }
 </script>
@@ -428,4 +447,9 @@ export default {
     display: none
   .gist-meta
     display: none
+
+  .q-item-separator-component.partial
+    margin: 1px auto
+    width: 30px
+    height: 3px
 </style>

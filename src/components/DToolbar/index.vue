@@ -3,7 +3,11 @@
     <q-icon v-if="icon" :name="icon" size="2rem"></q-icon>
     <span>{{ title }}</span><span v-if="subtitle"> - {{subtitle}}</span>
     <q-btn flat dense icon="edit" @click="openURL(`https://github.com/slowaways/quasar-documentation-pp/blob/master/src/pages/${edit}`)">
-      <q-tooltip anchor="bottom middle" self="top middle">Edit this page on Github!</q-tooltip>
+      <q-tooltip anchor="bottom middle" self="top middle">
+        <div v-if="status === 9">Edit this page on Github!</div>
+        <div v-else-if="status === 6">Complete the documentation for this Github!</div>
+        <div v-else>Start documenting this page on Github!</div>
+      </q-tooltip>
     </q-btn>
   </q-toolbar-title>
 </template>
@@ -29,6 +33,11 @@ export default {
     edit: {
       type: String,
       required: true
+    },
+
+    status: {
+      type: Number,
+      default: 6
     }
   },
 
