@@ -9,7 +9,14 @@ export default {
   name: 'App',
 
   mounted () {
-    this.$i18n.locale = this.$q.localStorage.get.item('setting.language')
+    let lang = this.$q.localStorage.get.item('setting.language')
+
+    if (lang === null) {
+      lang = 'en'
+      this.$q.localStorage.set('setting.language', lang)
+    }
+
+    this.$i18n.locale = lang
   }
 }
 </script>
