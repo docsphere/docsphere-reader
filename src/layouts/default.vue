@@ -25,7 +25,7 @@
         </div>
       </div>
       <q-list no-border link inset-delimiter>
-        <q-search hide-underline clearable :value="term" @input="search" class="q-ml-sm" />
+        <q-search hide-underline clearable v-model="term" @input="search" :placeholder="$t('menu.search')" class="q-ml-sm" />
         <q-item-separator />
 
         <q-item to="/" exact>
@@ -61,24 +61,24 @@
         <q-item-separator />
 
         <q-list-header>{{ $t('section.layout._') }}</q-list-header>
-        <q-item to="/layout/flexbox">
+        <q-item to="/layout/flexbox" v-show="matches[3] || !matches">
           <q-item-side icon="web" />
           <q-item-main>{{ $t('section.layout.flexbox._') }}</q-item-main>
         </q-item>
         <q-item-separator class="partial" />
-        <q-item>
+        <q-item v-show="matches[4] || !matches">
           <q-item-side icon="play_circle_outline" />
           <q-item-main>Play with Layout</q-item-main>
         </q-item>
-        <q-item>
+        <q-item v-show="matches[5] || !matches">
           <q-item-side icon="view_array" />
           <q-item-main>Drawer Panels</q-item-main>
         </q-item>
-        <q-item>
+        <q-item v-show="matches[6] || !matches">
           <q-item-side icon="pin_drop" />
           <q-item-main>Page Sticky</q-item-main>
         </q-item>
-        <q-item>
+        <q-item v-show="matches[7] || !matches">
           <q-item-side icon="play_for_work" />
           <q-item-main>Floating Action Button</q-item-main>
         </q-item>

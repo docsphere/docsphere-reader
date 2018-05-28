@@ -98,6 +98,7 @@ export default {
   },
 
   menu: {
+    search: '',
     home: 'Home',
     settings: 'Settings'
   },
