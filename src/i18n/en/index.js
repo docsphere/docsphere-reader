@@ -21,7 +21,7 @@ export default {
     starting: {_: 'Getting started'},
 
     style: {
-      _: 'Style & Identity',
+      _: 'Style',
       color: {
         _: 'Color Palette',
         guide: {
@@ -88,7 +88,7 @@ export default {
     directives: {_: 'Directives'},
 
     helpers: {
-      _: 'CSS Helpers',
+      _: 'Helpers',
       shadows: {_: 'Shadows'}
     },
 
