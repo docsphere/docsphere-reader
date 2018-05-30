@@ -18,7 +18,15 @@ export default {
       p1: 'Use sidebar to browse through demos, which showcase only a few of the Quasar components and features.'
     },
 
-    starting: {_: 'Getting started'},
+    starting: {
+      _: 'Getting started',
+      intro: 'Introduction for Beginners',
+      platform: 'Platform Detection',
+      global: 'Global Event Bus',
+      vue: 'Vue Prototype Injections',
+      i18n: 'Internationalization (i18n)',
+      rtl: 'RTL Support'
+    },
 
     style: {
       _: 'Style',
@@ -62,17 +70,32 @@ export default {
       },
       ripples: {
         _: 'Material Ripples'
+      },
+      stylus: {
+        _: 'Stylus Variables'
+      },
+      icons: {
+        _: 'Icons'
+      },
+      addressbar: {
+        _: 'Addressbar Color'
       }
     },
 
     layout: {
       _: 'Layout',
+      play: {_: 'Play with Layout'},
+      drawer: {_: 'Drawer Panels'},
+      sticky: {_: 'Page Sticky'},
+      floating: {_: 'Floating Action Button'},
       flexbox: {_: 'Flexbox'}
     },
 
     components: {
       _: 'Components',
-      buttons: {_: 'Buttons'},
+      buttons: {
+        _: 'Buttons'
+      },
       navigation: {_: 'Navigation'},
       forms: {_: 'Forms'},
       grouping: {_: 'Grouping'},

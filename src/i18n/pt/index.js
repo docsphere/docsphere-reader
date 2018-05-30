@@ -18,7 +18,15 @@ export default {
       p1: 'Use a barra lateral para navegar pelas demos, que exibem apenas alguns dos componentes e recursos do Quasar.'
     },
 
-    starting: {_: 'Começando'},
+    starting: {
+      _: 'Começando',
+      intro: 'Introdução para Iniciantes',
+      platform: 'Detecção de Plataforma',
+      global: 'Global Event Bus',
+      vue: 'Vue Prototype Injections',
+      i18n: 'Internacionalização (i18n)',
+      rtl: 'Suporte RTL'
+    },
 
     style: {
       _: 'Estilo',
@@ -60,11 +68,24 @@ export default {
       },
       ripples: {
         _: 'Materiais Ripples'
+      },
+      stylus: {
+        _: 'Variáveis Stylus'
+      },
+      icons: {
+        _: 'Ícones'
+      },
+      addressbar: {
+        _: 'Cor da barra de endereço'
       }
     },
 
     layout: {
       _: 'Layout',
+      play: {_: 'Play with Layout'},
+      drawer: {_: 'Drawer Panels'},
+      sticky: {_: 'Page Sticky'},
+      floating: {_: 'Floating Action Button'},
       flexbox: {_: 'Flexbox'}
     },
 
