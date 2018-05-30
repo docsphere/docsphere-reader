@@ -6,7 +6,8 @@ export default {
   },
 
   subsection: {
-    guide: {_: 'Guide'},
+
+    guide: {_: 'Overview'},
     showcase: {
       _: 'Showcase',
       code: {_: 'Showcase Code'}
