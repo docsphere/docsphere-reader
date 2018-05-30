@@ -81,4 +81,7 @@ export default {
     display: none
   .gist-meta
     display: none
+
+  .q-item-link .q-item-side, .q-item-division .q-item-side
+    text-align: center
 </style>
