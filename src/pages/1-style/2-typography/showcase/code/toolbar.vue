@@ -2,7 +2,7 @@
   <d-toolbar
     icon="format_bold"
     :title="$t('section.style.typography._')"
-    :subtitle="$t('subsection.showcase.code._')"
+    subsection="/showcase/code"
     :status="9"
     edit="1-style/2-typography/showcase/code/index.vue" />
 </template>

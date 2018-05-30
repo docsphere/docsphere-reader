@@ -2,7 +2,7 @@
   <d-toolbar
     icon="blur_on"
     :title="$t('section.style.ripples._')"
-    :subtitle="$t('subsection.guide._')"
+    subsection="/"
     edit="1-style/3-ripples/index.vue" />
 </template>
 

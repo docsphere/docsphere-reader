@@ -11,7 +11,7 @@
         <q-tooltip anchor="center right" self="center left">{{ $t('tools.showcase._') }}</q-tooltip>
       </q-item>
       <q-item v-if="showcase" :to="`${showcase}/code`">
-        <q-item-side icon="code" />
+        <q-item-side icon="fas fa-file-code" />
         <q-tooltip anchor="center right" self="center left">{{ $t('tools.showcase.code') }}</q-tooltip>
       </q-item>
       <q-item-separator />
