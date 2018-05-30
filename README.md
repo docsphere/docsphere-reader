@@ -1,7 +1,7 @@
 # Quasar Documentation++
 (WORKING IN PROGRESS)
 
-> All-in-one Quasar Documentation: Overview, Showcase (Examples) and Showcase Code (Embeded source code of Showcase).
+> All-in-one Quasar Documentation: Overview, Showcase (Examples), Showcase Code (Embeded source code of Showcase) and Changelog.
 
 The purpose of this project is to bring together the theoretical, examples, source code and changelogs of the Quasar documentation in one place.
 In addition, we have created several features that make it easy to study and search for specific information within the Quasar documentation.
@@ -25,8 +25,13 @@ We want the search for content in the documentation to be simple, quick and easy
 The search engine in the menu makes it easy to search for any content using keywords and you can do it in your language.
 
 ### Partial Source Code View inside the Showcase (WIP)
-### Offline Code View (WIP)
-### Component Builder with source code (WIP)
+...
+
+### Offline Souce Code View (WIP)
+...
+
+### Component Builder with Source Code (WIP)
+...
 
 ## Screenshots
 ![Change Log](src/assets/screenshot/changelog-wip.png)
