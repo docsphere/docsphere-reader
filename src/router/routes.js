@@ -29,93 +29,93 @@ export default [
 
   {
     path: '/style/color',
-    component: () => import('layouts/default'),
+    component: () => import('layouts/showcase'),
     children: [
       {
         path: '',
         components: {
-          toolbar: () => import('pages/1-style/color/toolbar'),
-          default: () => import('pages/1-style/color/'),
-          tools: () => import('pages/1-style/color/tools')
+          toolbar: () => import('pages/1-style/1-color/toolbar'),
+          default: () => import('pages/1-style/1-color/'),
+          tools: () => import('pages/1-style/1-color/tools')
         }
       },
 
       {
         path: 'showcase',
         components: {
-          toolbar: () => import('pages/1-style/color/showcase/toolbar'),
-          default: () => import('pages/1-style/color/showcase/'),
-          tools: () => import('pages/1-style/color/tools')
+          toolbar: () => import('pages/1-style/1-color/showcase/toolbar'),
+          default: () => import('pages/1-style/1-color/showcase/'),
+          tools: () => import('pages/1-style/1-color/tools')
         }
       },
       {
         path: 'showcase/code',
         components: {
-          toolbar: () => import('pages/1-style/color/showcase/code/toolbar'),
-          default: () => import('pages/1-style/color/showcase/code/'),
-          tools: () => import('pages/1-style/color/tools')
+          toolbar: () => import('pages/1-style/1-color/showcase/code/toolbar'),
+          default: () => import('pages/1-style/1-color/showcase/code/'),
+          tools: () => import('pages/1-style/1-color/tools')
         }
       }
     ]
   },
   {
     path: '/style/typography',
-    component: () => import('layouts/default'),
+    component: () => import('layouts/showcase'),
     children: [
       {
         path: '',
         components: {
-          toolbar: () => import('pages/1-style/typography/toolbar'),
-          default: () => import('pages/1-style/typography/'),
-          tools: () => import('pages/1-style/typography/tools')
+          toolbar: () => import('pages/1-style/2-typography/toolbar'),
+          default: () => import('pages/1-style/2-typography/'),
+          tools: () => import('pages/1-style/2-typography/tools')
         }
       },
 
       {
         path: 'showcase',
         components: {
-          toolbar: () => import('pages/1-style/typography/showcase/toolbar'),
-          default: () => import('pages/1-style/typography/showcase/'),
-          tools: () => import('pages/1-style/typography/tools')
+          toolbar: () => import('pages/1-style/2-typography/showcase/toolbar'),
+          default: () => import('pages/1-style/2-typography/showcase/'),
+          tools: () => import('pages/1-style/2-typography/tools')
         }
       },
       {
         path: 'showcase/code',
         components: {
-          toolbar: () => import('pages/1-style/typography/showcase/code/toolbar'),
-          default: () => import('pages/1-style/typography/showcase/code/'),
-          tools: () => import('pages/1-style/typography/tools')
+          toolbar: () => import('pages/1-style/2-typography/showcase/code/toolbar'),
+          default: () => import('pages/1-style/2-typography/showcase/code/'),
+          tools: () => import('pages/1-style/2-typography/tools')
         }
       }
     ]
   },
   {
     path: '/style/ripples',
-    component: () => import('layouts/default'),
+    component: () => import('layouts/showcase'),
     children: [
       {
         path: '',
         components: {
-          toolbar: () => import('pages/1-style/ripples/toolbar'),
-          default: () => import('pages/1-style/ripples'),
-          tools: () => import('pages/1-style/ripples/tools')
+          toolbar: () => import('pages/1-style/3-ripples/toolbar'),
+          default: () => import('pages/1-style/3-ripples'),
+          tools: () => import('pages/1-style/3-ripples/tools')
         }
       },
 
       {
         path: 'showcase',
         components: {
-          toolbar: () => import('pages/1-style/ripples/showcase/toolbar'),
-          default: () => import('pages/1-style/ripples/showcase/'),
-          tools: () => import('pages/1-style/ripples/tools')
+          toolbar: () => import('pages/1-style/3-ripples/showcase/toolbar'),
+          default: () => import('pages/1-style/3-ripples/showcase/'),
+          tools: () => import('pages/1-style/3-ripples/tools')
         }
       },
       {
         path: 'showcase/code',
         components: {
-          toolbar: () => import('pages/1-style/ripples/showcase/code/toolbar'),
-          default: () => import('pages/1-style/ripples/showcase/code/'),
-          tools: () => import('pages/1-style/ripples/tools')
+          toolbar: () => import('pages/1-style/3-ripples/showcase/code/toolbar'),
+          default: () => import('pages/1-style/3-ripples/showcase/code/'),
+          tools: () => import('pages/1-style/3-ripples/tools')
         }
       }
     ]

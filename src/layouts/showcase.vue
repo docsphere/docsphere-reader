@@ -7,11 +7,19 @@
         </q-btn>
 
         <router-view name="toolbar" />
+
+        <q-btn flat dense round @click="rightDrawerOpen = !rightDrawerOpen" aria-label="Menu">
+          <q-icon name="more_vert" />
+        </q-btn>
       </q-toolbar>
     </q-layout-header>
 
     <q-layout-drawer v-model="leftDrawerOpen">
       <d-menu></d-menu>
+    </q-layout-drawer>
+
+    <q-layout-drawer side="right" v-model="rightDrawerOpen">
+      <router-view name="tools" />
     </q-layout-drawer>
 
     <q-page-container>
@@ -24,16 +32,17 @@
 import DMenu from 'src/components/DMenu'
 
 export default {
-  name: 'LayoutDefault',
-
-  data () {
-    return {
-      leftDrawerOpen: this.$q.platform.is.desktop
-    }
-  },
+  name: 'LayoutShowcase',
 
   components: {
     DMenu
+  },
+
+  data () {
+    return {
+      leftDrawerOpen: this.$q.platform.is.desktop,
+      rightDrawerOpen: this.$q.platform.is.desktop
+    }
   }
 }
 </script>

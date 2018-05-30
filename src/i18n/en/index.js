@@ -22,8 +22,8 @@ export default {
       _: 'Getting started',
       intro: 'Introduction for Beginners',
       platform: 'Platform Detection',
-      global: 'Global Event Bus',
-      vue: 'Vue Prototype Injections',
+      events: 'Global Event Bus',
+      injections: 'Vue Prototype Injections',
       i18n: 'Internationalization (i18n)',
       rtl: 'RTL Support'
     },
@@ -118,6 +118,16 @@ export default {
     animations: {_: 'Animations'},
 
     utils: {_: 'Utils'}
+  },
+
+  tools: {
+    overview: 'Overview',
+    showcase: {
+      _: 'Showcase',
+      code: 'Showcase Code'
+    },
+    changelog: 'Changelog WIP',
+    builder: {_: 'Builder'}
   },
 
   menu: {
