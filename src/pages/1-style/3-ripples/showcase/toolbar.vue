@@ -3,7 +3,8 @@
     icon="blur_on"
     :title="$t('section.style.ripples._')"
     :subtitle="$t('subsection.showcase._')"
-    edit="1-style/ripples/showcase/index.vue" />
+    :status="9"
+    edit="1-style/3-ripples/showcase/index.vue" />
 </template>
 
 <script>

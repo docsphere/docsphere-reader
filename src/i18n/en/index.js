@@ -120,6 +120,11 @@ export default {
     utils: {_: 'Utils'}
   },
 
+  toolbar: {
+    start: 'Start this page on ',
+    complete: 'Complete this page on ',
+    edit: 'Edit this page on '
+  },
   tools: {
     overview: 'Overview',
     showcase: {

@@ -3,7 +3,8 @@
     icon="style"
     :title="$t('section.style.color._')"
     :subtitle="$t('subsection.guide._')"
-    edit="1-style/color/index.vue" />
+    :status="6"
+    edit="1-style/1-color/index.vue" />
 </template>
 
 <script>

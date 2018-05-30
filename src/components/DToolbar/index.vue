@@ -2,12 +2,19 @@
   <q-toolbar-title>
     <q-icon v-if="icon" :name="icon" size="2rem"></q-icon>
     <span>{{ title }}</span><span v-if="subtitle"> - {{subtitle}}</span>
-    <q-btn flat dense icon="edit" @click="openURL(`https://github.com/slowaways/quasar-documentation-pp/blob/master/src/pages/${edit}`)">
-      <q-tooltip anchor="bottom middle" self="top middle">
-        <div v-if="status === 9">Edit this page on Github!</div>
-        <div v-else-if="status === 6">Complete the documentation for this Github!</div>
-        <div v-else>Start documenting this page on Github!</div>
-      </q-tooltip>
+    <q-btn
+      dense
+      no-caps
+      :icon="icons"
+      :color="color"
+      class="float-right"
+      @click="openURL(`https://github.com/slowaways/quasar-documentation-pp/blob/master/src/pages/${edit}`)">
+      <div class="desktop-only">
+        <span class="hm" v-if="status === 9">{{ $t('toolbar.edit') }}</span>
+        <span class="hm" v-else-if="status === 6">{{ $t('toolbar.complete') }}</span>
+        <span class="hm" v-else>{{ $t('toolbar.start') }}</span>
+        <q-icon name="fab fa-github"></q-icon>
+      </div>
     </q-btn>
   </q-toolbar-title>
 </template>
@@ -37,7 +44,27 @@ export default {
 
     status: {
       type: Number,
-      default: 6
+      default: 1
+    }
+  },
+  computed: {
+    color () {
+      if (this.status === 9) {
+        return 'primary'
+      } else if (this.status === 6) {
+        return 'secondary'
+      } else {
+        return 'negative'
+      }
+    },
+    icons () {
+      if (this.status === 9) {
+        return 'edit'
+      } else if (this.status === 6) {
+        return 'border_color'
+      } else {
+        return 'note_add'
+      }
     }
   },
 
@@ -47,4 +74,7 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="stylus" scoped>
+  span.hm
+    margin: 0 5px
+</style>

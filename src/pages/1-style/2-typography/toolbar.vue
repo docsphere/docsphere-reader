@@ -3,7 +3,7 @@
     icon="format_bold"
     :title="$t('section.style.typography._')"
     :subtitle="$t('subsection.guide._')"
-    edit="1-style/typography/index.vue" />
+    edit="1-style/2-typography/index.vue" />
 </template>
 
 <script>

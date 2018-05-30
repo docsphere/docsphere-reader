@@ -116,6 +116,11 @@ export default {
     utils: {_: 'Utilidades'}
   },
 
+  toolbar: {
+    start: 'Comece esta página no ',
+    complete: 'Complete esta página no ',
+    edit: 'Edite esta página no '
+  },
   tools: {
     overview: 'Apresentação',
     showcase: {
