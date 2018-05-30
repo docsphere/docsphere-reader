@@ -1,5 +1,5 @@
 <template>
-  <div id="tools" class="row bg-white">
+  <div id="tools" class="row bg-white" style="height: 100%">
     <q-list highlight>
       <q-item :to="guide" exact>
         <q-item-side icon="pageview" />
