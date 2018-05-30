@@ -33,7 +33,7 @@
 
       <q-list-header>{{ $t('section.starting._') }}</q-list-header>
       <q-item to="/starting/intro" v-show="matches[0] || !matches">
-        <!--<q-item-side icon="phonelink" />-->
+        <q-item-side icon="announcement" />
         <q-item-main>{{ $t('section.starting.intro') }}</q-item-main>
       </q-item>
       <q-item to="/starting/platform" v-show="matches[1] || !matches">
@@ -41,19 +41,19 @@
         <q-item-main>{{ $t('section.starting.platform') }}</q-item-main>
       </q-item>
       <q-item to="/starting/events" v-show="matches[2] || !matches">
-        <!--<q-item-side icon="phonelink" />-->
+        <q-item-side icon="event" />
         <q-item-main>{{ $t('section.starting.events') }}</q-item-main>
       </q-item>
       <q-item to="/starting/injections" v-show="matches[3] || !matches">
-        <!--<q-item-side icon="phonelink" />-->
+        <q-item-side icon="vertical_align_bottom" />
         <q-item-main>{{ $t('section.starting.injections') }}</q-item-main>
       </q-item>
       <q-item to="/starting/i18n" v-show="matches[4] || !matches">
-        <!--<q-item-side icon="phonelink" />-->
+        <q-item-side icon="language" />
         <q-item-main>{{ $t('section.starting.i18n') }}</q-item-main>
       </q-item>
       <q-item to="/starting/rtl" v-show="matches[5] || !matches">
-        <!--<q-item-side icon="phonelink" />-->
+        <q-item-side icon="format_list_numbered_rtl" />
         <q-item-main>{{ $t('section.starting.rtl') }}</q-item-main>
       </q-item>
       <q-item-separator />
@@ -73,15 +73,15 @@
       </q-item>
       <q-item-separator class="partial" />
       <q-item v-show="matches[9] || !matches">
-        <!--<q-item-side icon="phonelink" />-->
+        <q-item-side icon="border_style" />
         <q-item-main>{{ $t('section.style.stylus._') }}</q-item-main>
       </q-item>
       <q-item v-show="matches[10] || !matches">
-        <!--<q-item-side icon="phonelink" />-->
+        <q-item-side icon="insert_emoticon" />
         <q-item-main>{{ $t('section.style.icons._') }}</q-item-main>
       </q-item>
       <q-item v-show="matches[11] || !matches">
-        <!--<q-item-side icon="phonelink" />-->
+        <q-item-side icon="space_bar" />
         <q-item-main>{{ $t('section.style.addressbar._') }}</q-item-main>
       </q-item>
       <q-item-separator />
@@ -353,15 +353,15 @@
 
       <q-list-header>{{ $t('section.plugins._') }}</q-list-header>
       <q-item v-show="matches[72] || !matches">
-        <!--<q-item-side icon="visibility" />-->
+        <q-item-side icon="cloud_upload" />
         <q-item-main>Cookies</q-item-main>
       </q-item>
       <q-item v-show="matches[73] || !matches">
-        <!--<q-item-side icon="visibility" />-->
+        <q-item-side icon="storage" />
         <q-item-main>Web Storage</q-item-main>
       </q-item>
       <q-item v-show="matches[74] || !matches">
-        <!--<q-item-side icon="visibility" />-->
+        <q-item-side icon="devices_other" />
         <q-item-main>Screen</q-item-main>
       </q-item>
       <q-item v-show="matches[75] || !matches">
@@ -391,7 +391,7 @@
 
       <q-list-header>{{ $t('section.helpers._') }}</q-list-header>
       <q-item v-show="matches[80] || !matches">
-        <!--<q-item-side icon="visibility" />-->
+        <q-item-side icon="space_bar" />
         <q-item-main>Spacing</q-item-main>
       </q-item>
       <q-item to="/helpers/shadows" v-show="matches[81] || !matches">
@@ -399,15 +399,15 @@
         <q-item-main>{{ $t('section.helpers.shadows._') }}</q-item-main>
       </q-item>
       <q-item v-show="matches[82] || !matches">
-        <!--<q-item-side icon="visibility" />-->
+        <q-item-side icon="visibility_off" />
         <q-item-main>Visibility</q-item-main>
       </q-item>
       <q-item v-show="matches[83] || !matches">
-        <!--<q-item-side icon="visibility" />-->
+        <q-item-side icon="line_style" />
         <q-item-main>Positioning</q-item-main>
       </q-item>
       <q-item v-show="matches[84] || !matches">
-        <!--<q-item-side icon="visibility" />-->
+        <q-item-side icon="more_horiz" />
         <q-item-main>Other Helpers Classes</q-item-main>
       </q-item>
       <q-item-separator />
@@ -422,34 +422,34 @@
         <q-item-main>Slide Transition</q-item-main>
       </q-item>
       <q-item v-show="matches[87] || !matches">
-        <!--<q-item-side icon="visibility" />-->
+        <q-item-side icon="fab fa-js" />
         <q-item-main>JS Animations</q-item-main>
       </q-item>
       <q-item v-show="matches[88] || !matches">
-        <!--<q-item-side icon="visibility" />-->
+        <q-item-side icon="fab fa-css3-alt" />
         <q-item-main>Animation CSS Helpers</q-item-main>
       </q-item>
       <q-item-separator />
 
       <q-list-header>{{ $t('section.utils._') }}</q-list-header>
       <q-item v-show="matches[89] || !matches">
-        <!--<q-item-side icon="visibility" />-->
+        <q-item-side icon="date_range" />
         <q-item-main>Date Utils</q-item-main>
       </q-item>
       <q-item v-show="matches[90] || !matches">
-        <!--<q-item-side icon="visibility" />-->
+        <q-item-side icon="format_color_fill" />
         <q-item-main>Color Utils</q-item-main>
       </q-item>
       <q-item v-show="matches[91] || !matches">
-        <!--<q-item-side icon="visibility" />-->
+        <q-item-side icon="code" />
         <q-item-main>DOM Utils</q-item-main>
       </q-item>
       <q-item v-show="matches[92] || !matches">
-        <!--<q-item-side icon="visibility" />-->
+        <q-item-side icon="text_format" />
         <q-item-main>Formatter Utils</q-item-main>
       </q-item>
       <q-item v-show="matches[93] || !matches">
-        <!--<q-item-side icon="visibility" />-->
+        <q-item-side icon="more_horiz" />
         <q-item-main>Other Utils</q-item-main>
       </q-item>
     </q-list>
