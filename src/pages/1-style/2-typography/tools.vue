@@ -1,5 +1,5 @@
 <template>
-  <d-tools guide="/style/typography"
+  <d-tools overview="/style/typography"
            showcase="/style/typography/showcase"
            code="/style/typography/code" />
 </template>

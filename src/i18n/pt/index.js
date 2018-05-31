@@ -5,14 +5,6 @@ export default {
     files: 'arquivos'
   },
 
-  subsection: {
-    guide: {_: 'Apresentação'},
-    showcase: {
-      _: 'Mostruário',
-      code: {_: 'Código do Mostruário'}
-    },
-    changelog: {_: 'Changelog'}
-  },
   section: {
     home: {
       p1: 'Use a barra lateral para navegar pelas demos, que exibem apenas alguns dos componentes e recursos do Quasar.'
@@ -34,7 +26,7 @@ export default {
       _: 'Estilo',
       color: {
         _: 'Paleta de cores',
-        guide: {
+        overview: {
           p1: 'Quasar Framework oferece uma ampla seleção de cores "fora da caixa". Você pode usar as cores como variáveis Stylus em seu código CSS ou diretamente como classes CSS em seus templates HTML.',
           p2: 'Esta página é muito útil depois de ler',
           p3: 'Você também pode querer verificar',

@@ -1,7 +1,7 @@
 <template>
   <div id="tools" class="row bg-white" style="height: 100%">
     <q-list highlight>
-      <q-item :to="guide" exact>
+      <q-item :to="overview" exact>
         <q-item-side icon="pageview" />
         <q-tooltip anchor="center right" self="center left">{{ $t('tools.overview') }}</q-tooltip>
       </q-item>
@@ -20,7 +20,7 @@
         <q-tooltip anchor="center right" self="center left">{{ $t('tools.changelog') }}</q-tooltip>
       </q-item>
       <q-item-separator />
-      <q-item v-if="build" class="bg-red-3">
+      <q-item v-if="builder" class="bg-red-3">
         <q-item-side icon="build" />
         <q-tooltip anchor="center right" self="center left">{{ $t('tools.builder') }}</q-tooltip>
       </q-item>
@@ -33,7 +33,7 @@ export default {
   name: 'DTools',
 
   props: {
-    guide: {
+    overview: {
       type: String,
       required: true
     },
@@ -47,7 +47,7 @@ export default {
       default: ''
     },
 
-    build: {
+    builder: {
       type: String,
       default: ''
     }

@@ -1,5 +1,5 @@
 typography<template>
-  <d-tools guide="/style/ripples"
+  <d-tools overview="/style/ripples"
            showcase="/style/ripples/showcase"
            code="/style/ripples/code" />
 </template>

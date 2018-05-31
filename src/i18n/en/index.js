@@ -5,15 +5,6 @@ export default {
     files: 'files'
   },
 
-  subsection: {
-
-    guide: {_: 'Overview'},
-    showcase: {
-      _: 'Showcase',
-      code: {_: 'Showcase Code'}
-    },
-    changelog: {_: 'Changelog'}
-  },
   section: {
     home: {
       p1: 'Use sidebar to browse through demos, which showcase only a few of the Quasar components and features.'
@@ -22,7 +13,10 @@ export default {
     starting: {
       _: 'Getting started',
       intro: {
-        _: 'Introduction for Beginners'
+        _: 'Introduction for Beginners',
+        overview: {
+          p1: 'Before you begin with Quasar, it is a good idea to get acquainted with ES6 and have a fairly good knowledge about how Vue works.'
+        }
       },
       platform: {_: 'Platform Detection'},
       events: {_: 'Global Event Bus'},
@@ -35,7 +29,7 @@ export default {
       _: 'Style',
       color: {
         _: 'Color Palette',
-        guide: {
+        overview: {
           p1: 'Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.',
           p2: 'This page comes really handy after reading',
           p3: 'You might also want to check',

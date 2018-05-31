@@ -1,5 +1,5 @@
 <template>
-  <d-tools guide="/style/color"
+  <d-tools overview="/style/color"
            showcase="/style/color/showcase" />
 </template>
 
