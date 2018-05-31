@@ -20,12 +20,12 @@ We want the documentation to be available in any language so that it can reach e
 Currently available in 2 languages: English and Portuguese.
 Make a contribution to more languages!
 
-### Search engine based in keywords in your language
-We want the search for content in the documentation to be simple, quick and easy.
-The search engine in the menu makes it easy to search for any content using keywords and you can do it in your language.
+### Menu search engine based in keywords and i18n
+The search for content in the documentation is simple, quick and easy.
+The input text in the **menu** makes it easy to search for any content using keywords and you can do it in your language.
 
-### Offline Source Code View (WIP)
-A JSON file that is processed by the gist is downloaded containing the .vue, css, and html codes that are used in the documentation so that you can access all of the documentation offline.
+### Documentation codes in local files
+A JSON file that is processed by the gist is downloaded containing `.vue`, `css`, `script`, or `html` codes that are used in the documentation so that you can access all of the documentation **offline**.
 
 ### Partial Source Code View inside the Showcase (WIP)
 ...

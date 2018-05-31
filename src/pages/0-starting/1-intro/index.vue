@@ -8,7 +8,21 @@
     <p>{{ _('p10') }} <code>*.vue</code> {{ _('p11') }}</p>
     <div v-html="code(1)"></div>
     <h3>{{ _('t2') }}</h3>
-    <p>{{ _('p12') }} <code v-html="smallcode1"></code> {{ _('p13') }}</p>
+    <p>{{ _('p12') }} <code v-html="smallcode1"></code> {{ _('p13') }} <a href="http://stylus-lang.com/" target="_blank">Stylus</a>{{ _('p14') }}<code>yarn add --dev less-loader</code>{{ $t('_or') }}<code>npm install --save-dev less-loader</code>)</p>
+    <p>{{ _('p15') }}</p>
+    <div v-html="code(2)"></div>
+    <p>{{ _('p16') }}<code>stylus</code>{{ _('p17') }}</p>
+    <h2>{{ _('t3') }}</h2>
+    <p>{{ _('p18') }}<a :href="_('l5')">{{ _('p19') }}</a>. {{ _('p20') }}</p>
+    <p>{{ _('p21') }}</p>
+    <div v-html="code(3)"></div>
+    <blockquote>
+      <p>{{ _('p22') }}<code>v-ripple</code>. {{ _('p23') }}<code>v-</code>.</p>
+    </blockquote>
+    <p>{{ _('p24') }}<code>/quasar.conf.js</code> {{ _('p25') }}</p>
+    <div v-html="code(4)"></div>
+    <p>{{ _('p26') }}</p>
+    <div v-html="code(5)"></div>
   </q-page>
 </template>
 

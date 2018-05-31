@@ -53,6 +53,10 @@ export default {
     padding: 0 2px
     transition: all .3s ease
     border-bottom: 1px dotted #4e9bd4
+  blockquote
+    margin: 0 0 16px;
+  blockquote p
+    margin: 0
 
   code
     color: #286fa3
