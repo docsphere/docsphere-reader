@@ -22,9 +22,6 @@ export default {
 </script>
 
 <style lang="stylus">
-  .q-layout-drawer-right
-    width: 58px
-
   h1, h2, h3, h4, h5, h6
     color: #286fa3
     font-weight: 600
@@ -50,11 +47,6 @@ export default {
     padding: 0 2px
     transition: all .3s ease
     border-bottom: 1px dotted #4e9bd4
-
-  .q-layout-drawer-right
-    position: fixed
-  #tools .q-item-side
-    min-width: 24px
 
   code
     color: #286fa3

@@ -18,7 +18,7 @@
       <d-menu></d-menu>
     </q-layout-drawer>
 
-    <q-layout-drawer side="right" v-model="rightDrawerOpen">
+    <q-layout-drawer mini side="right" v-model="rightDrawerOpen">
       <router-view name="tools" />
     </q-layout-drawer>
 
@@ -47,4 +47,10 @@ export default {
 }
 </script>
 
-<style lang="stylus"></style>
+<style lang="stylus">
+  .q-layout-drawer-right
+    position: fixed
+
+  #tools .q-item-side
+    min-width: 24px
+</style>

@@ -20,7 +20,7 @@ We want the documentation to be available in any language so that it can reach e
 Currently available in 2 languages: English and Portuguese.
 Make a contribution to more languages!
 
-### Search engine with keywords in your language
+### Search engine based in keywords in your language
 We want the search for content in the documentation to be simple, quick and easy.
 The search engine in the menu makes it easy to search for any content using keywords and you can do it in your language.
 

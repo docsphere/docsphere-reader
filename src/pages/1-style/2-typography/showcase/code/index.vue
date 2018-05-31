@@ -1,6 +1,6 @@
 <template>
   <q-page class="padding">
-    <vue-embed-gist gist-id="93cc473cd79e236655104fdd5cf87d0e" />
+    <vue-embed-gist gist-id="/slowaways/93cc473cd79e236655104fdd5cf87d0e" />
   </q-page>
 </template>
 
