@@ -22,18 +22,21 @@ export default {
 </script>
 
 <style lang="stylus">
-  h1, h2, h3, h4, h5, h6
-    color: #286fa3
+  h1, h2, h3, h4
     font-weight: 600
-  h1, h2, h3, h4, h5
+    color: #286fa3
+  h1
+    font-size: 2rem
     margin: 0 0 .7em
-  h6
+  h2
+    font-size: 1.5rem
     margin: 2em 0 .8em
     padding-bottom: .4em
     border-bottom: 1px solid #ddd
-  h7
-    font-weight: 600;
-    color: #286fa3;
+  h3
+    font-size: 1.17rem
+    margin: 2em 0 1.2em;
+    position: relative;
 
   a, body
     color: #34495e;

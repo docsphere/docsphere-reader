@@ -1,13 +1,13 @@
 <template>
   <q-page class="padding">
-    <h5>{{ $t('_.starting.intro._') }}</h5>
+    <h1>{{ $t('_.starting.intro._') }}</h1>
     <p>{{ _('p1') }}<a :href="_('l1')" target="_blank">{{ _('p2') }}</a> {{ $t('_and') }} <a :href="_('l2')" target="_blank">{{ _('p3') }}</a>{{ _('p4') }} <a href="_('l3')" target="_blank">{{ _('p5') }}</a> {{ _('p6') }}</p>
     <p>{{ _('p7') }} <a :href="_('l4')" target="_blank">{{ _('p8') }}.</a></p>
     <p>{{ _('p9') }}</p>
-    <h6>{{ _('t1') }}</h6>
+    <h2>{{ _('t1') }}</h2>
     <p>{{ _('p10') }} <code>*.vue</code> {{ _('p11') }}</p>
     <div v-html="code(1)"></div>
-    <h7>{{ _('t2') }}</h7>
+    <h3>{{ _('t2') }}</h3>
     <p>{{ _('p12') }} <code v-html="smallcode1"></code> {{ _('p13') }}</p>
   </q-page>
 </template>
