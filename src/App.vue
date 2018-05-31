@@ -31,6 +31,9 @@ export default {
     margin: 2em 0 .8em
     padding-bottom: .4em
     border-bottom: 1px solid #ddd
+  h7
+    font-weight: 600;
+    color: #286fa3;
 
   a, body
     color: #34495e;

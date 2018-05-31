@@ -1,9 +1,7 @@
 export default {
   _: {
     home: {
-      p1: 'Use sidebar to browse through demos, which showcase only a few of the Quasar components and features. (',
-      p2: 'quick overview of ES6',
-      p3: 'full description'
+      p1: 'Use sidebar to browse through demos, which showcase only a few of the Quasar components and features. ('
     },
 
     starting: {
@@ -11,7 +9,25 @@ export default {
       intro: {
         _: 'Introduction for Beginners',
         overview: {
-          p1: 'Before you begin with Quasar, it is a good idea to get acquainted with ES6 and have a fairly good knowledge about how Vue works.'
+          p1: 'Before you begin with Quasar, it is a good idea to get acquainted with ES6 and have a fairly good knowledge about how Vue works. (',
+          l1: 'https://github.com/lukehoban/es6features',
+          p2: 'quick overview of ES6',
+          l2: 'http://es6-features.org/#Constants',
+          p3: 'full description',
+          p4: ' – don’t worry, you don’t need to understand ALL of ES6). For devs experienced with reactive UIs, ',
+          l3: 'https://vuejs.org/v2/guide/',
+          p5: 'the Vue documentation',
+          p6: 'itself takes half a day at most to read top-to-bottom and will help you understand how Quasar components can be used and configured.',
+          p7: 'If you are a total beginner to Vue and reactive UI libraries and want a good tutorial, we recommend you take a look at the',
+          l4: 'https://www.udemy.com/vuejs-2-the-complete-guide/learn/v4/overview',
+          p8: 'Udemy Course - Vue JS 2 - The Complete Guide',
+          p9: 'After reading the Vue documentation, let’s clear up some of the most frequently asked questions, like “How can I use Quasar components, Vue properties, methods and events”.',
+          t1: 'Single File Vue Components',
+          p10: 'You’ll be building your Quasar app using',
+          p11: 'files which contain multiple sections: ‘template’ (HTML), ‘script’ (Javascript) and ‘style’ (CSS).',
+          t2: 'CSS preprocessors',
+          p12: 'For the ',
+          p13: 'tag, you can also use whatever CSS preprocessor you want.'
         }
       },
       platform: {_: 'Platform Detection'},
