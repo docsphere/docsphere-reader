@@ -9,7 +9,7 @@
       <q-icon v-else-if="subsection === '/showcase'" name="play_circle_filled" size="1.3rem"></q-icon>
       <q-icon v-else-if="subsection === '/showcase/code'" name="fas fa-file-code" size="1.3rem"></q-icon>
     </span>
-    <q-btn
+    <q-btn v-if="edit"
       dense
       no-caps
       :icon="icons"
@@ -44,9 +44,10 @@ export default {
       type: String,
       default: ''
     },
+
     edit: {
       type: String,
-      required: true
+      default: ''
     },
 
     status: {

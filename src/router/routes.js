@@ -28,6 +28,20 @@ export default [
   },
 
   {
+    path: '/starting/intro',
+    component: () => import('layouts/default'),
+    children: [
+      {
+        path: '',
+        components: {
+          toolbar: () => import('pages/0-starting/1-intro/toolbar'),
+          default: () => import('pages/0-starting/1-intro/')
+        }
+      }
+    ]
+  },
+
+  {
     path: '/style/color',
     component: () => import('layouts/showcase'),
     children: [

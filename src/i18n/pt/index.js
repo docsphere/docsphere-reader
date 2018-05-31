@@ -20,12 +20,14 @@ export default {
 
     starting: {
       _: 'Começando',
-      intro: 'Introdução para Iniciantes',
-      platform: 'Detecção de Plataforma',
-      events: 'Global Event Bus',
-      injections: 'Vue Prototype Injections',
-      i18n: 'Internacionalização (i18n)',
-      rtl: 'Suporte RTL'
+      intro: {
+        _: 'Introdução para Iniciantes'
+      },
+      platform: {_: 'Detecção de Plataforma'},
+      events: {_: 'Global Event Bus'},
+      injections: {_: 'Vue Prototype Injections'},
+      i18n: {_: 'Internacionalização (i18n)'},
+      rtl: {_: 'Suporte RTL'}
     },
 
     style: {

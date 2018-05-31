@@ -13,30 +13,30 @@
     <p>{{ $t('section.style.color.guide.p9') }}: <code>red</code>, <code>red-1</code>, <code>red-2</code>, <code>…</code>, <code>red-14</code>. {{ $t('section.style.color.guide.p10') }}.</p>
     <h6>{{ $t('section.style.color.guide.t3') }}</h6>
     <p>{{ $t('section.style.color.guide.p11') }} <code>text-</code> {{ $t('_.or') }} <code>bg-</code> {{ $t('section.style.color.guide.p12') }}</p>
-    <vue-embed-gist gist-id="/slowaways/408f5777df02764bf756906138b032fc" />
+    <div v-html="code(1)"></div>
     <h6>{{ $t('section.style.color.guide.t4') }}</h6>
     <p>{{ $t('section.style.color.guide.p13') }} <code>*.vue</code> {{ $t('section.style.color.guide.p14') }} <code>$primary</code>, <code>$red-1</code>, {{ $t('section.style.color.guide.p15') }}</p>
-    <vue-embed-gist gist-id="/slowaways/38d0a381cfa4fa00e6f9cccaf992cc93" />
+    <div v-html="code(2)"></div>
     <h6>{{ $t('section.style.color.guide.t5') }}</h6>
     <p>{{ $t('section.style.color.guide.p16') }}</p>
-    <vue-embed-gist gist-id="/slowaways/3d1b0710a65107e02ee1d1233dadc3f9" />
+    <div v-html="code(3)"></div>
     <p>{{ $t('section.style.color.guide.p17') }}</p>
-    <vue-embed-gist gist-id="/slowaways/bc8bf01394eee427530a4945134546cc" />
+    <div v-html="code(4)"></div>
     <p>... (UNDER CONSTRUCTION)</p>
   </q-page>
 </template>
 
 <script>
-import VueEmbedGist from 'vue-embed-gist'
-
 export default {
-  components: {
-    VueEmbedGist
-  },
-
   data () {
     return {
       smallcode1: `<style lang="stylus">`
+    }
+  },
+  methods: {
+    code (id) {
+      const code = require(`./_/code${id}.json`)
+      return code.div
     }
   }
 }

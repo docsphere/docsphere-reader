@@ -1,15 +1,15 @@
 <template>
   <q-page class="padding">
-    <vue-embed-gist gist-id="/slowaways/b2efb7e670058047f19cf3929d0a1599" />
+    <div v-html="code.div"></div>
   </q-page>
 </template>
 
 <script>
-import VueEmbedGist from 'vue-embed-gist'
-
 export default {
-  components: {
-    VueEmbedGist
+  data () {
+    return {
+      code: require('../index.json')
+    }
   }
 }
 </script>
