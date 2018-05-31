@@ -21,7 +21,9 @@ export default {
 
     starting: {
       _: 'Getting started',
-      intro: {_: 'Introduction for Beginners'},
+      intro: {
+        _: 'Introduction for Beginners'
+      },
       platform: {_: 'Platform Detection'},
       events: {_: 'Global Event Bus'},
       injections: {_: 'Vue Prototype Injections'},

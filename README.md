@@ -24,10 +24,10 @@ Make a contribution to more languages!
 We want the search for content in the documentation to be simple, quick and easy.
 The search engine in the menu makes it easy to search for any content using keywords and you can do it in your language.
 
-### Partial Source Code View inside the Showcase (WIP)
-...
+### Offline Source Code View (WIP)
+A JSON file that is processed by the gist is downloaded containing the .vue, css, and html codes that are used in the documentation so that you can access all of the documentation offline.
 
-### Offline Souce Code View (WIP)
+### Partial Source Code View inside the Showcase (WIP)
 ...
 
 ### Component Builder with Source Code (WIP)
