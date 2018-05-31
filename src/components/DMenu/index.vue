@@ -31,87 +31,87 @@
       </q-item>
       <q-item-separator />
 
-      <q-list-header>{{ $t('section.starting._') }}</q-list-header>
+      <q-list-header>{{ $t('_.starting._') }}</q-list-header>
       <q-item to="/starting/intro" v-show="matches[0] || !matches">
         <q-item-side icon="announcement" />
-        <q-item-main>{{ $t('section.starting.intro._') }}</q-item-main>
+        <q-item-main>{{ $t('_.starting.intro._') }}</q-item-main>
       </q-item>
       <q-item to="/starting/platform" v-show="matches[1] || !matches">
         <q-item-side icon="phonelink" />
-        <q-item-main>{{ $t('section.starting.platform._') }}</q-item-main>
+        <q-item-main>{{ $t('_.starting.platform._') }}</q-item-main>
       </q-item>
       <q-item to="/starting/events" v-show="matches[2] || !matches">
         <q-item-side icon="event" />
-        <q-item-main>{{ $t('section.starting.events._') }}</q-item-main>
+        <q-item-main>{{ $t('_.starting.events._') }}</q-item-main>
       </q-item>
       <q-item to="/starting/injections" v-show="matches[3] || !matches">
         <q-item-side icon="vertical_align_bottom" />
-        <q-item-main>{{ $t('section.starting.injections._') }}</q-item-main>
+        <q-item-main>{{ $t('_.starting.injections._') }}</q-item-main>
       </q-item>
       <q-item to="/starting/i18n" v-show="matches[4] || !matches">
         <q-item-side icon="language" />
-        <q-item-main>{{ $t('section.starting.i18n._') }}</q-item-main>
+        <q-item-main>{{ $t('_.starting.i18n._') }}</q-item-main>
       </q-item>
       <q-item to="/starting/rtl" v-show="matches[5] || !matches">
         <q-item-side icon="format_list_numbered_rtl" />
-        <q-item-main>{{ $t('section.starting.rtl._') }}</q-item-main>
+        <q-item-main>{{ $t('_.starting.rtl._') }}</q-item-main>
       </q-item>
       <q-item-separator />
 
-      <q-list-header>{{ $t('section.style._') }}</q-list-header>
+      <q-list-header>{{ $t('_.style._') }}</q-list-header>
       <q-item to="/style/color" v-show="matches[6] || !matches">
         <q-item-side icon="style" />
-        <q-item-main>{{ $t('section.style.color._') }}</q-item-main>
+        <q-item-main>{{ $t('_.style.color._') }}</q-item-main>
       </q-item>
       <q-item to="/style/typography" v-show="matches[7] || !matches">
         <q-item-side icon="format_bold" />
-        <q-item-main>{{ $t('section.style.typography._') }}</q-item-main>
+        <q-item-main>{{ $t('_.style.typography._') }}</q-item-main>
       </q-item>
       <q-item to="/style/ripples" v-show="matches[8] || !matches">
         <q-item-side icon="blur_on" />
-        <q-item-main>{{ $t('section.style.ripples._') }}</q-item-main>
+        <q-item-main>{{ $t('_.style.ripples._') }}</q-item-main>
       </q-item>
       <q-item-separator class="partial" />
       <q-item v-show="matches[9] || !matches">
         <q-item-side icon="border_style" />
-        <q-item-main>{{ $t('section.style.stylus._') }}</q-item-main>
+        <q-item-main>{{ $t('_.style.stylus._') }}</q-item-main>
       </q-item>
       <q-item v-show="matches[10] || !matches">
         <q-item-side icon="insert_emoticon" />
-        <q-item-main>{{ $t('section.style.icons._') }}</q-item-main>
+        <q-item-main>{{ $t('_.style.icons._') }}</q-item-main>
       </q-item>
       <q-item v-show="matches[11] || !matches">
         <q-item-side icon="space_bar" />
-        <q-item-main>{{ $t('section.style.addressbar._') }}</q-item-main>
+        <q-item-main>{{ $t('_.style.addressbar._') }}</q-item-main>
       </q-item>
       <q-item-separator />
 
-      <q-list-header>{{ $t('section.layout._') }}</q-list-header>
+      <q-list-header>{{ $t('_.layout._') }}</q-list-header>
       <q-item v-show="matches[12] || !matches">
         <q-item-side icon="play_circle_outline" />
-        <q-item-main>{{ $t('section.layout.play._') }}</q-item-main>
+        <q-item-main>{{ $t('_.layout.play._') }}</q-item-main>
       </q-item>
       <q-item v-show="matches[13] || !matches">
         <q-item-side icon="view_array" />
-        <q-item-main>{{ $t('section.layout.drawer._') }}</q-item-main>
+        <q-item-main>{{ $t('_.layout.drawer._') }}</q-item-main>
       </q-item>
       <q-item v-show="matches[14] || !matches">
         <q-item-side icon="pin_drop" />
-        <q-item-main>{{ $t('section.layout.sticky._') }}</q-item-main>
+        <q-item-main>{{ $t('_.layout.sticky._') }}</q-item-main>
       </q-item>
       <q-item v-show="matches[15] || !matches">
         <q-item-side icon="play_for_work" />
-        <q-item-main>{{ $t('section.layout.floating._') }}</q-item-main>
+        <q-item-main>{{ $t('_.layout.floating._') }}</q-item-main>
       </q-item>
       <q-item-separator class="partial" />
       <q-item to="/layout/flexbox" v-show="matches[16] || !matches">
         <q-item-side icon="web" />
-        <q-item-main>{{ $t('section.layout.flexbox._') }}</q-item-main>
+        <q-item-main>{{ $t('_.layout.flexbox._') }}</q-item-main>
       </q-item>
       <q-item-separator />
 
-      <q-list-header>{{ $t('section.components._') }}</q-list-header>
-      <q-collapsible :label="$t('section.components.buttons._')">
+      <q-list-header>{{ $t('_.components._') }}</q-list-header>
+      <q-collapsible :label="$t('_.components.buttons._')">
         <q-item v-show="matches[17] || !matches">
           <q-item-side icon="panorama_wide_angle" />
           <q-item-main>Standard Button</q-item-main>
@@ -125,7 +125,7 @@
           <q-item-main>Dropdown Groups</q-item-main>
         </q-item>
       </q-collapsible>
-      <q-collapsible :label="$t('section.components.navigation._')">
+      <q-collapsible :label="$t('_.components.navigation._')">
         <q-item v-show="matches[20] || !matches">
           <q-item-side icon="view_day" />
           <q-item-main>Toolbar</q-item-main>
@@ -151,7 +151,7 @@
           <q-item-main>Pagination</q-item-main>
         </q-item>
       </q-collapsible>
-      <q-collapsible :label="$t('section.components.forms._')">
+      <q-collapsible :label="$t('_.components.forms._')">
         <q-item v-show="matches[26] || !matches">
           <q-item-side icon="text_fields" />
           <q-item-main>Fields</q-item-main>
@@ -225,7 +225,7 @@
           <q-item-main>Uploader</q-item-main>
         </q-item>
       </q-collapsible>
-      <q-collapsible :label="$t('section.components.grouping._')">
+      <q-collapsible :label="$t('_.components.grouping._')">
         <q-item v-show="matches[44] || !matches">
           <q-item-side icon="contact_mail" />
           <q-item-main>Card</q-item-main>
@@ -251,7 +251,7 @@
           <q-item-main>Tree</q-item-main>
         </q-item>
       </q-collapsible>
-      <q-collapsible :label="$t('section.components.popups._')">
+      <q-collapsible :label="$t('_.components.popups._')">
         <q-item v-show="matches[50] || !matches">
           <q-item-side icon="assignment" />
           <q-item-main>Action Sheet</q-item-main>
@@ -277,7 +277,7 @@
           <q-item-main>Tooltip</q-item-main>
         </q-item>
       </q-collapsible>
-      <q-collapsible :label="$t('section.components.progress._')">
+      <q-collapsible :label="$t('_.components.progress._')">
         <q-item v-show="matches[56] || !matches">
           <q-item-side icon="trending_flat" />
           <q-item-main>Ajax Bar</q-item-main>
@@ -299,7 +299,7 @@
           <q-item-main>Spinner</q-item-main>
         </q-item>
       </q-collapsible>
-      <q-collapsible :label="$t('section.components.media._')">
+      <q-collapsible :label="$t('_.components.media._')">
         <q-item v-show="matches[61] || !matches">
           <q-item-side icon="vibration" />
           <q-item-main>Carousel</q-item-main>
@@ -313,7 +313,7 @@
           <q-item-main>Video Embedding</q-item-main>
         </q-item>
       </q-collapsible>
-      <q-collapsible :label="$t('section.components.scrolling._')">
+      <q-collapsible :label="$t('_.components.scrolling._')">
         <q-item v-show="matches[64] || !matches">
           <q-item-side icon="update" />
           <q-item-main>Infinite Scroll</q-item-main>
@@ -331,7 +331,7 @@
           <q-item-main>Back To Top</q-item-main>
         </q-item>
       </q-collapsible>
-      <q-collapsible :label="$t('section.components.others._')">
+      <q-collapsible :label="$t('_.components.others._')">
         <q-item v-show="matches[68] || !matches">
           <q-item-side icon="assignment_late" />
           <q-item-main>Alert</q-item-main>
@@ -351,7 +351,7 @@
       </q-collapsible>
       <q-item-separator />
 
-      <q-list-header>{{ $t('section.plugins._') }}</q-list-header>
+      <q-list-header>{{ $t('_.plugins._') }}</q-list-header>
       <q-item v-show="matches[72] || !matches">
         <q-item-side icon="cloud_upload" />
         <q-item-main>Cookies</q-item-main>
@@ -374,7 +374,7 @@
       </q-item>
       <q-item-separator />
 
-      <q-list-header>{{ $t('section.directives._') }}</q-list-header>
+      <q-list-header>{{ $t('_.directives._') }}</q-list-header>
       <q-item v-show="matches[77] || !matches">
         <q-item-side icon="touch_app" />
         <q-item-main>Panning Touch/Mouse</q-item-main>
@@ -389,14 +389,14 @@
       </q-item>
       <q-item-separator />
 
-      <q-list-header>{{ $t('section.helpers._') }}</q-list-header>
+      <q-list-header>{{ $t('_.helpers._') }}</q-list-header>
       <q-item v-show="matches[80] || !matches">
         <q-item-side icon="space_bar" />
         <q-item-main>Spacing</q-item-main>
       </q-item>
       <q-item to="/helpers/shadows" v-show="matches[81] || !matches">
         <q-item-side icon="layers" />
-        <q-item-main>{{ $t('section.helpers.shadows._') }}</q-item-main>
+        <q-item-main>{{ $t('_.helpers.shadows._') }}</q-item-main>
       </q-item>
       <q-item v-show="matches[82] || !matches">
         <q-item-side icon="visibility_off" />
@@ -412,7 +412,7 @@
       </q-item>
       <q-item-separator />
 
-      <q-list-header>{{ $t('section.animations._') }}</q-list-header>
+      <q-list-header>{{ $t('_.animations._') }}</q-list-header>
       <q-item v-show="matches[85] || !matches">
         <q-item-side icon="transform" />
         <q-item-main>Transition</q-item-main>
@@ -431,7 +431,7 @@
       </q-item>
       <q-item-separator />
 
-      <q-list-header>{{ $t('section.utils._') }}</q-list-header>
+      <q-list-header>{{ $t('_.utils._') }}</q-list-header>
       <q-item v-show="matches[89] || !matches">
         <q-item-side icon="date_range" />
         <q-item-main>Date Utils</q-item-main>

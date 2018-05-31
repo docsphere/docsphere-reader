@@ -1,7 +1,7 @@
 <template>
   <d-toolbar
     icon="style"
-    :title="$t('section.starting.intro._')"
+    :title="$t('_.starting.intro._')"
     subsection="/"
     edit="1-style/color/index.vue" />
 </template>

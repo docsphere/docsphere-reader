@@ -1,7 +1,7 @@
 <template>
   <d-toolbar
     icon="blur_on"
-    :title="$t('section.style.ripples._')"
+    :title="$t('_.style.ripples._')"
     subsection="/"
     edit="1-style/3-ripples/index.vue" />
 </template>

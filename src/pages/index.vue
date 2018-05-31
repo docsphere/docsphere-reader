@@ -2,7 +2,7 @@
   <q-page class="page-showcase layout-padding">
     <div class="showcase-top text-center">
       <img alt="Quasar logo" src="/assets/logo.svg">
-      <p class="caption">{{ $t('section.home.p1') }}</p>
+      <p class="caption">{{ $t('_.home.p1') }}</p>
     </div>
     <div class="row justify-center" style="width: 850px; max-width: 90vw;">
       <div class="col-xs-6 col-sm-4 col-lg-3"></div>

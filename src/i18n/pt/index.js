@@ -1,11 +1,5 @@
 export default {
   _: {
-    and: 'e',
-    or: 'ou',
-    files: 'arquivos'
-  },
-
-  section: {
     home: {
       p1: 'Use a barra lateral para navegar pelas demos, que exibem apenas alguns dos componentes e recursos do Quasar.'
     },
@@ -136,5 +130,9 @@ export default {
     language: {
       label: 'Idioma'
     }
-  }
+  },
+
+  _and: 'e',
+  _or: 'ou',
+  _files: 'arquivos'
 }

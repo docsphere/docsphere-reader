@@ -1,13 +1,9 @@
 export default {
   _: {
-    and: 'and',
-    or: 'or',
-    files: 'files'
-  },
-
-  section: {
     home: {
-      p1: 'Use sidebar to browse through demos, which showcase only a few of the Quasar components and features.'
+      p1: 'Use sidebar to browse through demos, which showcase only a few of the Quasar components and features. (',
+      p2: 'quick overview of ES6',
+      p3: 'full description'
     },
 
     starting: {
@@ -143,5 +139,9 @@ export default {
     language: {
       label: 'Language'
     }
-  }
+  },
+
+  _and: 'and',
+  _or: 'or',
+  _files: 'files'
 }
