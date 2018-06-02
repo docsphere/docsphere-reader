@@ -13,21 +13,24 @@
     <p>{{ _('p9') }}: <code>red</code>, <code>red-1</code>, <code>red-2</code>, <code>…</code>, <code>red-14</code>. {{ _('p10') }}.</p>
     <h2>{{ _('t3') }}</h2>
     <p>{{ _('p11') }} <code>text-</code> {{ $t('_o') }} <code>bg-</code> {{ _('p12') }}</p>
-    <div v-html="code(1)"></div>
+    <div v-html="c(1)"></div>
     <h2>{{ _('t4') }}</h2>
     <p>{{ _('p13') }} <code>*.vue</code> {{ _('p14') }} <code>$primary</code>, <code>$red-1</code>, {{ _('p15') }}</p>
-    <div v-html="code(2)"></div>
+    <div v-html="c(2)"></div>
     <h2>{{ _('t5') }}</h2>
     <p>{{ _('p16') }}</p>
-    <div v-html="code(3)"></div>
+    <div v-html="c(3)"></div>
     <p>{{ _('p17') }}</p>
-    <div v-html="code(4)"></div>
+    <div v-html="c(4)"></div>
     <p style="color: red;">... (This page is in the process of being finalized!)</p>
   </q-page>
 </template>
 
 <script>
+import translation from 'src/i18n/translation'
+
 export default {
+  mixins: [translation],
   data () {
     return {
       smallcode1: `<style lang="stylus">`
@@ -36,10 +39,6 @@ export default {
   methods: {
     _ (property) {
       return this.$t(`_.style.color.overview.${property}`)
-    },
-    code (id) {
-      const code = require(`./_/code${id}.json`)
-      return code.div
     }
   }
 }

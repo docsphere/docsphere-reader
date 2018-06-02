@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import translation from 'src/translation'
+import translation from 'src/i18n/translation'
 
 export default {
   mixins: [translation],
