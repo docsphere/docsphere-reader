@@ -1,21 +1,10 @@
 <template>
-  <q-toolbar-title style="padding-left: 6px">
-    <q-icon v-if="icon" :name="icon" size="2rem"></q-icon>
-    <span>{{ title }}</span>
-    <span v-if="subsection">
-      <span> - </span>
-      <q-icon v-if="subsection === '/'" name="pageview" size="1.3rem"></q-icon>
-      <q-icon v-else-if="subsection === '/play'" name="play_circle_filled" size="1.3rem"></q-icon>
-      <q-icon v-else-if="subsection === '/showcase'" name="play_circle_filled" size="1.3rem"></q-icon>
-      <q-icon v-else-if="subsection === '/showcase/code'" name="fas fa-file-code" size="1.3rem"></q-icon>
-    </span>
+  <q-toolbar color="dark">
+    <!--<q-btn icon="subject" dense color="white" text-color="black"></q-btn>-->
+    <q-toolbar-title>Last updated: ?*</q-toolbar-title>
     <q-btn v-if="edit"
-      dense
-      no-caps
-      :icon="icons"
-      :color="color"
-      class="float-right"
-      @click="openURL(`https://github.com/slowaways/quasar-documentation-pp/blob/master/src/pages/${edit}`)">
+           flat dense no-caps :icon="icons" :color="color" class="float-right"
+           @click="openURL(`https://github.com/slowaways/quasar-documentation-pp/blob/master/src/pages/${edit}`)">
       <div class="gt-xs">
         <span class="hm" v-if="status === 9">{{ $t('toolbar.edit') }}</span>
         <span class="hm" v-else-if="status === 6">{{ $t('toolbar.complete') }}</span>
@@ -23,7 +12,7 @@
         <q-icon name="fab fa-github"></q-icon>
       </div>
     </q-btn>
-  </q-toolbar-title>
+  </q-toolbar>
 </template>
 
 <script>
@@ -32,19 +21,6 @@ import { openURL } from 'quasar'
 export default {
   name: 'DMeta',
   props: {
-    icon: {
-      type: String,
-      default: ''
-    },
-    title: {
-      type: String,
-      required: true
-    },
-    subsection: {
-      type: String,
-      default: ''
-    },
-
     edit: {
       type: String,
       default: ''
@@ -58,7 +34,7 @@ export default {
   computed: {
     color () {
       if (this.status === 9) {
-        return 'primary'
+        return 'white'
       } else if (this.status === 6) {
         return 'secondary'
       } else {
@@ -83,6 +59,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  .q-toolbar
+    min-height: 30px
+  .q-toolbar-title
+    font-size: 12px
   span.hm
     margin: 0 5px
 </style>

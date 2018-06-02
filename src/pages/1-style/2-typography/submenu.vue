@@ -1,15 +1,15 @@
 <template>
-  <d-tools overview="/style/typography"
+  <d-submenu overview="/style/typography"
            showcase="/style/typography/showcase"
            code="/style/typography/code" />
 </template>
 
 <script>
-import DTools from 'src/components/DTools'
+import DSubmenu from 'src/components/DSubmenu'
 
 export default {
   components: {
-    DTools
+    DSubmenu
   }
 }
 </script>

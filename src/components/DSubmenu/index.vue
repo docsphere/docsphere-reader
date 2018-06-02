@@ -5,7 +5,7 @@
         <q-item-side icon="pageview" />
         <q-tooltip anchor="center right" self="center left">{{ $t('tools.overview') }}</q-tooltip>
       </q-item>
-      <q-item-separator />
+      <q-item-separator v-if="showcase" />
       <q-item v-if="showcase" :to="showcase" exact>
         <q-item-side icon="play_circle_filled" />
         <q-tooltip anchor="center right" self="center left">{{ $t('tools.showcase._') }}</q-tooltip>
@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  name: 'DTools',
+  name: 'DSubmenu',
 
   props: {
     overview: {
@@ -55,4 +55,10 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="stylus" scoped>
+  #tools .q-item-side
+    min-width: 28px
+
+  #tools .q-list
+    border: 0
+</style>

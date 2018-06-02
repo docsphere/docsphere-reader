@@ -30,12 +30,12 @@ export default {
     margin: 0 0 .7em
   h2
     font-size: 1.5rem
-    margin: 2em 0 .8em
+    margin: 1.5em 0 .8em
     padding-bottom: .4em
     border-bottom: 1px solid #ddd
   h3
     font-size: 1.17rem
-    margin: 2em 0 1.2em;
+    margin: 1.2em 0 0.9em;
     position: relative;
 
   a, body

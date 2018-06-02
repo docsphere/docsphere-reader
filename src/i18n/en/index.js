@@ -61,31 +61,44 @@ export default {
       color: {
         _: 'Color Palette',
         overview: {
-          p1: 'Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.',
-          p2: 'This page comes really handy after reading',
-          p3: 'You might also want to check',
+          h: [
+            'Brand Colors',
+            'Color List',
+            'Using as CSS Classes',
+            'Using Stylus Variables',
+            'Adding Your Own Colors'
+          ],
+          p: [
+            'Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.',
+            'This page comes really handy after reading ',
+            ' You might also want to check '
+          ],
+          l: [
+            ['https://quasar-framework.org/guide/quasar-theming.html', 'Quasar Theming'],
+            ['https://quasar-framework.org/components/color-utils.html', 'Color Utils']
+          ],
 
-          t1: 'Brand Colors',
+          t1: '',
           p4: 'There can be three main colors used throughout your App, called',
           p5: 'Most of the colors that Quasar Components use are strongly linked with these three colors that you can change. Choosing these colors is the first step one should take when differentiating the design of its own App. You’ll notice immediately on changing their default values that Quasar Components follow these colors as a guideline.',
 
-          t2: 'Color List',
+          t2: '',
           p6: 'Here’s the list of colors provided out of the box. Use them as CSS classes (in HTML templates) or as Stylus variables (in',
           p7: 'tags) within your app’s',
           p8: 'On the following colors there are variations available',
           p9: 'Example of color variation',
           p10: 'See the demo to make a good picture of what variations are. Variation 11 to 14 are color accents',
 
-          t3: 'Using as CSS Classes',
+          t3: '',
           p11: 'Use',
           p12: 'prefixes as class names to change the color of text or the color of the background.',
 
-          t4: 'Using Stylus Variables',
+          t4: '',
           p13: 'In your app’s',
           p14: 'files you can use the colors as',
           p15: 'and so on.',
 
-          t5: 'Adding Your Own Colors',
+          t5: '',
           p16: 'If you want to use colors of your own for components, let’s say we are adding a color named “brand”, all you need to do is add the following CSS into your app:',
           p17: 'Now we can use this color for Quasar components:',
 

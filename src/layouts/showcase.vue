@@ -1,25 +1,28 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh Lpr lFr">
     <q-layout-header>
       <q-toolbar color="primary">
         <q-btn flat dense round @click="leftDrawerOpen = !leftDrawerOpen" aria-label="Menu">
           <q-icon name="menu" />
         </q-btn>
 
-        <router-view name="toolbar" />
+        <router-view name="header" />
 
         <q-btn flat dense round @click="rightDrawerOpen = !rightDrawerOpen" aria-label="Menu">
           <q-icon name="more_vert" />
         </q-btn>
       </q-toolbar>
     </q-layout-header>
+    <q-layout-footer v-model="layoutFooter" :reveal="false">
+      <router-view name="meta" />
+    </q-layout-footer>
 
     <q-layout-drawer v-model="leftDrawerOpen">
       <d-menu></d-menu>
     </q-layout-drawer>
 
     <q-layout-drawer mini side="right" v-model="rightDrawerOpen">
-      <router-view name="tools" />
+      <router-view name="submenu" />
     </q-layout-drawer>
 
     <q-page-container>
@@ -30,18 +33,20 @@
 
 <script>
 import DMenu from 'src/components/DMenu'
+import DMeta from 'src/components/DMeta'
 
 export default {
   name: 'LayoutShowcase',
 
   components: {
-    DMenu
+    DMenu, DMeta
   },
 
   data () {
     return {
       leftDrawerOpen: this.$q.platform.is.desktop,
-      rightDrawerOpen: this.$q.platform.is.desktop
+      rightDrawerOpen: this.$q.platform.is.desktop,
+      layoutFooter: this.$q.platform.is.desktop
     }
   }
 }
@@ -50,7 +55,8 @@ export default {
 <style lang="stylus">
   .q-layout-drawer-right
     position: fixed
-
-  #tools .q-item-side
-    min-width: 24px
+    box-shadow: 0 -8px 8px rgba(0,0,0,0.2), 0 -3px 4px rgba(0,0,0,0.14), 0 -3px 3px -2px rgba(0,0,0,0.12)
+    z-index: 1000
+  .q-layout-footer
+    z-index: 999
 </style>

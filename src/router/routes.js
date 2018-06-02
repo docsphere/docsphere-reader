@@ -6,21 +6,21 @@ export default [
       {
         path: '',
         components: {
-          toolbar: () => import('pages/toolbar'),
+          header: () => import('pages/header'),
           default: () => import('pages/index')
         }
       },
       {
         path: '/settings',
         components: {
-          toolbar: () => import('pages/{settings}/toolbar'),
+          header: () => import('pages/{settings}/header'),
           default: () => import('pages/{settings}')
         }
       },
       {
         path: '/changelog',
         components: {
-          toolbar: () => import('pages/{changelog}/toolbar'),
+          header: () => import('pages/{changelog}/header'),
           default: () => import('pages/{changelog}')
         }
       }
@@ -29,13 +29,15 @@ export default [
 
   {
     path: '/starting/intro',
-    component: () => import('layouts/default'),
+    component: () => import('layouts/showcase'),
     children: [
       {
         path: '',
         components: {
-          toolbar: () => import('pages/0-starting/1-intro/toolbar'),
-          default: () => import('pages/0-starting/1-intro/')
+          header: () => import('pages/0-starting/1-intro/header'),
+          default: () => import('pages/0-starting/1-intro/'),
+          meta: () => import('pages/0-starting/1-intro/meta'),
+          submenu: () => import('pages/0-starting/1-intro/submenu')
         }
       }
     ]
@@ -48,26 +50,29 @@ export default [
       {
         path: '',
         components: {
-          toolbar: () => import('pages/1-style/1-color/toolbar'),
+          header: () => import('pages/1-style/1-color/header'),
+          meta: () => import('pages/1-style/1-color/meta'),
           default: () => import('pages/1-style/1-color/'),
-          tools: () => import('pages/1-style/1-color/tools')
+          submenu: () => import('pages/1-style/1-color/submenu')
         }
       },
 
       {
         path: 'showcase',
         components: {
-          toolbar: () => import('pages/1-style/1-color/showcase/toolbar'),
+          header: () => import('pages/1-style/1-color/showcase/header'),
+          meta: () => import('pages/1-style/1-color/showcase/meta'),
           default: () => import('pages/1-style/1-color/showcase/'),
-          tools: () => import('pages/1-style/1-color/tools')
+          submenu: () => import('pages/1-style/1-color/submenu')
         }
       },
       {
         path: 'showcase/code',
         components: {
-          toolbar: () => import('pages/1-style/1-color/showcase/code/toolbar'),
+          header: () => import('pages/1-style/1-color/showcase/code/header'),
+          meta: () => import('pages/1-style/1-color//showcase/meta'),
           default: () => import('pages/1-style/1-color/showcase/code/'),
-          tools: () => import('pages/1-style/1-color/tools')
+          submenu: () => import('pages/1-style/1-color/submenu')
         }
       }
     ]
@@ -79,26 +84,29 @@ export default [
       {
         path: '',
         components: {
-          toolbar: () => import('pages/1-style/2-typography/toolbar'),
+          header: () => import('pages/1-style/2-typography/header'),
+          meta: () => import('pages/1-style/2-typography/meta'),
           default: () => import('pages/1-style/2-typography/'),
-          tools: () => import('pages/1-style/2-typography/tools')
+          submenu: () => import('pages/1-style/2-typography/submenu')
         }
       },
 
       {
         path: 'showcase',
         components: {
-          toolbar: () => import('pages/1-style/2-typography/showcase/toolbar'),
+          header: () => import('pages/1-style/2-typography/showcase/header'),
+          meta: () => import('pages/1-style/2-typography/showcase/meta'),
           default: () => import('pages/1-style/2-typography/showcase/'),
-          tools: () => import('pages/1-style/2-typography/tools')
+          submenu: () => import('pages/1-style/2-typography/submenu')
         }
       },
       {
         path: 'showcase/code',
         components: {
-          toolbar: () => import('pages/1-style/2-typography/showcase/code/toolbar'),
+          header: () => import('pages/1-style/2-typography/showcase/code/header'),
+          meta: () => import('pages/1-style/2-typography/showcase/code/meta'),
           default: () => import('pages/1-style/2-typography/showcase/code/'),
-          tools: () => import('pages/1-style/2-typography/tools')
+          submenu: () => import('pages/1-style/2-typography/submenu')
         }
       }
     ]
@@ -110,26 +118,29 @@ export default [
       {
         path: '',
         components: {
-          toolbar: () => import('pages/1-style/3-ripples/toolbar'),
+          header: () => import('pages/1-style/3-ripples/header'),
+          meta: () => import('pages/1-style/3-ripples/meta'),
           default: () => import('pages/1-style/3-ripples'),
-          tools: () => import('pages/1-style/3-ripples/tools')
+          submenu: () => import('pages/1-style/3-ripples/submenu')
         }
       },
 
       {
         path: 'showcase',
         components: {
-          toolbar: () => import('pages/1-style/3-ripples/showcase/toolbar'),
+          header: () => import('pages/1-style/3-ripples/showcase/header'),
+          meta: () => import('pages/1-style/3-ripples/showcase/meta'),
           default: () => import('pages/1-style/3-ripples/showcase/'),
-          tools: () => import('pages/1-style/3-ripples/tools')
+          submenu: () => import('pages/1-style/3-ripples/submenu')
         }
       },
       {
         path: 'showcase/code',
         components: {
-          toolbar: () => import('pages/1-style/3-ripples/showcase/code/toolbar'),
+          header: () => import('pages/1-style/3-ripples/showcase/code/header'),
+          meta: () => import('pages/1-style/3-ripples/showcase/code/meta'),
           default: () => import('pages/1-style/3-ripples/showcase/code/'),
-          tools: () => import('pages/1-style/3-ripples/tools')
+          submenu: () => import('pages/1-style/3-ripples/submenu')
         }
       }
     ]

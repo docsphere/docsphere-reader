@@ -1,15 +1,15 @@
 typography<template>
-  <d-tools overview="/style/ripples"
+  <d-submenu overview="/style/ripples"
            showcase="/style/ripples/showcase"
            code="/style/ripples/code" />
 </template>
 
 <script>
-import DTools from 'src/components/DTools'
+import DSubmenu from 'src/components/DSubmenu'
 
 export default {
   components: {
-    DTools
+    DSubmenu
   }
 }
 </script>
