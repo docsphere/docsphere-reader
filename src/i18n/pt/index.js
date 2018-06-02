@@ -133,6 +133,5 @@ export default {
   },
 
   _and: 'e',
-  _or: 'ou',
-  _files: 'arquivos'
+  _or: 'ou'
 }
