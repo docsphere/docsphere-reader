@@ -15,7 +15,7 @@ export default {
       return `<code>${this.codes[--index]}</code>`
     },
     c (id) {
-      const code = require(`./pages/${this.dir}/_/codes/en/${id}.json`)
+      const code = require(`../pages/${this.dir}/_/codes/en/${id}.json`)
       return code.div
     }
   }

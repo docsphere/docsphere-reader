@@ -7,7 +7,7 @@
     <p>{{ _('p4') }} <code>primary</code>, <code>secondary</code> {{ $t('_a') }} <code>tertiary</code>.</p>
     <p>{{ _('p5') }}</p>
     <h2>{{ _('t2') }}</h2>
-    <p>{{ _('p6') }} <code>{{ smallcode1 }}</code>{{ _('p7') }} <code>*.vue</code>:</p>
+    <p>{{ _('p6') }} <code>{{ codes[0] }}</code>{{ _('p7') }} <code>*.vue</code>:</p>
     <p><code>primary</code>, <code>secondary</code>, <code>tertiary</code>, <code>positive</code>, <code>negative</code>, <code>info</code>, <code>warning</code>, <code>white</code>, <code>light</code>, <code>dark</code>, <code>faded</code></p>
     <p>{{ _('p8') }}: <code>red</code>, <code>pink</code>, <code>purple</code>, <code>deep-purple</code>, <code>indigo</code>, <code>blue</code>, <code>light-blue</code>, <code>cyan</code>, <code>teal</code>, <code>green</code>, <code>light-green</code>, <code>lime</code>, <code>yellow</code>, <code>amber</code>, <code>orange</code>, <code>deep-orange</code>, <code>brown</code>, <code>grey</code>, <code>blue-grey</code></p>
     <p>{{ _('p9') }}: <code>red</code>, <code>red-1</code>, <code>red-2</code>, <code>…</code>, <code>red-14</code>. {{ _('p10') }}.</p>
@@ -31,11 +31,17 @@ import translation from 'src/i18n/translation'
 
 export default {
   mixins: [translation],
+
   data () {
     return {
-      smallcode1: `<style lang="stylus">`
+      namespace: 'style.color',
+      dir: '1-style/1-color',
+      codes: [
+        '<style lang="stylus">'
+      ]
     }
   },
+
   methods: {
     _ (property) {
       return this.$t(`_.style.color.overview.${property}`)
