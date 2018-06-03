@@ -1,11 +1,13 @@
 <template>
   <q-scroll-area id="main" class="page-showcase">
-    <div class="showcase-top text-center">
-      <img alt="Quasar logo" src="/assets/logo.svg">
-      <p class="caption">{{ $t('_.home.p1') }}</p>
-    </div>
-    <div class="row justify-center" style="width: 850px; max-width: 90vw;">
-      <div class="col-xs-6 col-sm-4 col-lg-3"></div>
+    <div id="content">
+      <div class="showcase-top text-center">
+        <img alt="Quasar logo" src="/assets/logo.svg">
+        <p class="caption">{{ $t('_.home.p1') }}</p>
+      </div>
+      <div class="row justify-center" style="width: 850px; max-width: 90vw;">
+        <div class="col-xs-6 col-sm-4 col-lg-3"></div>
+      </div>
     </div>
   </q-scroll-area>
 </template>

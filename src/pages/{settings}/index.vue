@@ -1,5 +1,5 @@
 <template>
-  <q-scroll-area id="main" class="no-padding">
+  <q-scroll-area id="main">
     <q-list>
       <q-list-header>{{ $t('settings.general') }}</q-list-header>
       <q-item>

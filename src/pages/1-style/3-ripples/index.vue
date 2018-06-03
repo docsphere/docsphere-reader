@@ -1,5 +1,7 @@
 <template>
-  <q-scroll-area id="main"></q-scroll-area>
+  <q-scroll-area id="main">
+    <div id="content"></div>
+  </q-scroll-area>
 </template>
 
 <script>
