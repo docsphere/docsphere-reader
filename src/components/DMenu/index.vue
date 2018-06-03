@@ -37,23 +37,23 @@
         <q-item-side icon="announcement" />
         <q-item-main>{{ $t('_.starting.intro._') }}</q-item-main>
       </q-item>
-      <q-item to="/starting/platform" v-show="matches[1] || !matches">
+      <q-item v-show="matches[1] || !matches">
         <q-item-side icon="phonelink" />
         <q-item-main>{{ $t('_.starting.platform._') }}</q-item-main>
       </q-item>
-      <q-item to="/starting/events" v-show="matches[2] || !matches">
+      <q-item v-show="matches[2] || !matches">
         <q-item-side icon="event" />
         <q-item-main>{{ $t('_.starting.events._') }}</q-item-main>
       </q-item>
-      <q-item to="/starting/injections" v-show="matches[3] || !matches">
+      <q-item v-show="matches[3] || !matches">
         <q-item-side icon="vertical_align_bottom" />
         <q-item-main>{{ $t('_.starting.injections._') }}</q-item-main>
       </q-item>
-      <q-item to="/starting/i18n" v-show="matches[4] || !matches">
+      <q-item v-show="matches[4] || !matches">
         <q-item-side icon="language" />
         <q-item-main>{{ $t('_.starting.i18n._') }}</q-item-main>
       </q-item>
-      <q-item to="/starting/rtl" v-show="matches[5] || !matches">
+      <q-item v-show="matches[5] || !matches">
         <q-item-side icon="format_list_numbered_rtl" />
         <q-item-main>{{ $t('_.starting.rtl._') }}</q-item-main>
       </q-item>
