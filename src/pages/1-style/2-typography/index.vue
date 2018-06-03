@@ -1,5 +1,7 @@
 <template>
-  <q-page class="padding"></q-page>
+  <q-page>
+    <q-scroll-area id="main"></q-scroll-area>
+  </q-page>
 </template>
 
 <script>

@@ -1,6 +1,8 @@
 <template>
-  <q-page class="padding">
-    <div v-html="code.div"></div>
+  <q-page>
+    <q-scroll-area id="main">
+      <div v-html="code.div"></div>
+    </q-scroll-area>
   </q-page>
 </template>
 
