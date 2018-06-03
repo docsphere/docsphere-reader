@@ -1,5 +1,5 @@
 <template>
-  <d-meta :status="6" edit="1-style/color/index.vue" />
+  <d-meta :status="6" edit="0-starting/1-intro/index.vue" />
 </template>
 
 <script>
