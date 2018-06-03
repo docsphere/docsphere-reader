@@ -31,7 +31,7 @@
       </q-item>
       <q-item-separator class="section" />
 
-      <q-list-header><q-icon name="contact_support" size="2rem" /></q-list-header>
+      <q-list-header><q-icon name="contact_support" size="1.5rem" /> {{ $t('_.starting._') }}</q-list-header>
       <q-item-separator class="partial" />
       <q-item to="/starting/intro" v-show="matches[0] || !matches">
         <q-item-side icon="announcement" />
@@ -59,7 +59,7 @@
       </q-item>
       <q-item-separator class="section" />
 
-      <q-list-header><q-icon name="color_lens" size="2rem" /></q-list-header>
+      <q-list-header><q-icon name="color_lens" size="1.5rem" /> {{ $t('_.style._') }}</q-list-header>
       <q-item-separator class="partial" />
       <q-item to="/style/color" v-show="matches[6] || !matches">
         <q-item-side icon="style" />
@@ -88,7 +88,7 @@
       </q-item>
       <q-item-separator class="section" />
 
-      <q-list-header><q-icon name="web" size="2rem" /></q-list-header>
+      <q-list-header><q-icon name="web" size="1.5rem" /> {{ $t('_.layout._') }}</q-list-header>
       <q-item-separator class="partial" />
       <q-item v-show="matches[12] || !matches">
         <q-item-side icon="play_circle_outline" />
@@ -113,7 +113,7 @@
       </q-item>
       <q-item-separator class="section" />
 
-      <q-list-header><q-icon name="device_hub" size="2rem" /></q-list-header>
+      <q-list-header><q-icon name="device_hub" size="1.5rem" /> {{ $t('_.components._') }}</q-list-header>
       <q-item-separator class="partial" />
       <q-list-header class="subsection">{{ $t('_.components.buttons._') }}</q-list-header>
       <q-item v-show="matches[17] || !matches">
@@ -354,7 +354,7 @@
       </q-item>
       <q-item-separator class="section" />
 
-      <q-list-header><q-icon name="settings_input_hdmi" size="2rem" /></q-list-header>
+      <q-list-header><q-icon name="settings_input_hdmi" size="1.5rem" /> {{ $t('_.plugins._') }}</q-list-header>
       <q-item-separator class="partial" />
       <q-item v-show="matches[72] || !matches">
         <q-item-side icon="cloud_upload" />
@@ -378,7 +378,7 @@
       </q-item>
       <q-item-separator class="section" />
 
-      <q-list-header><q-icon name="touch_app" size="2rem" /></q-list-header>
+      <q-list-header><q-icon name="touch_app" size="1.5rem" /> {{ $t('_.directives._') }}</q-list-header>
       <q-item-separator class="partial" />
       <q-item v-show="matches[77] || !matches">
         <q-item-side icon="touch_app" />
@@ -394,13 +394,13 @@
       </q-item>
       <q-item-separator class="section" />
 
-      <q-list-header><q-icon name="local_hospital" size="2rem" /></q-list-header>
+      <q-list-header><q-icon name="local_hospital" size="1.5rem" /> {{ $t('_.helpers._') }}</q-list-header>
       <q-item-separator class="partial" />
       <q-item v-show="matches[80] || !matches">
         <q-item-side icon="space_bar" />
         <q-item-main>Spacing</q-item-main>
       </q-item>
-      <q-item to="/helpers/shadows" v-show="matches[81] || !matches">
+      <q-item v-show="matches[81] || !matches">
         <q-item-side icon="layers" />
         <q-item-main>{{ $t('_.helpers.shadows._') }}</q-item-main>
       </q-item>
@@ -418,7 +418,7 @@
       </q-item>
       <q-item-separator class="section" />
 
-      <q-list-header><q-icon name="blur_linear" size="2rem" /></q-list-header>
+      <q-list-header><q-icon name="blur_linear" size="1.5rem" /> {{ $t('_.animations._') }}</q-list-header>
       <q-item-separator class="partial" />
       <q-item v-show="matches[85] || !matches">
         <q-item-side icon="transform" />
@@ -438,7 +438,7 @@
       </q-item>
       <q-item-separator class="section" />
 
-      <q-list-header><q-icon name="fas fa-wrench" size="2rem" /></q-list-header>
+      <q-list-header><q-icon name="fas fa-wrench" size="1.5rem" /> {{ $t('_.utils._') }}</q-list-header>
       <q-item-separator class="partial" />
       <q-item v-show="matches[89] || !matches">
         <q-item-side icon="date_range" />
@@ -500,10 +500,10 @@ export default {
   .q-list-header
     text-align: center
     padding-bottom: 0
+    min-height: 32px
   .q-list-header.subsection
     text-align: left
     padding-bottom: 5px
-    min-height: 32px
 
   .q-item-separator-component.section
     height: 3px
