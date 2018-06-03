@@ -1,33 +1,5 @@
 export default [
   {
-    path: '/',
-    component: () => import('layouts/system'),
-    children: [
-      {
-        path: '',
-        components: {
-          header: () => import('pages/header'),
-          default: () => import('pages/index')
-        }
-      },
-      {
-        path: '/settings',
-        components: {
-          header: () => import('pages/{settings}/header'),
-          default: () => import('pages/{settings}')
-        }
-      },
-      {
-        path: '/changelog',
-        components: {
-          header: () => import('pages/{changelog}/header'),
-          default: () => import('pages/{changelog}')
-        }
-      }
-    ]
-  },
-
-  {
     path: '/starting/intro',
     component: () => import('layouts/default'),
     children: [
@@ -147,7 +119,34 @@ export default [
   },
 
   {
-    path: '*',
-    component: () => import('pages/404')
+    path: '/',
+    component: () => import('layouts/system'),
+    children: [
+      {
+        path: '',
+        components: {
+          header: () => import('pages/header'),
+          default: () => import('pages/index')
+        }
+      },
+      {
+        path: '/settings',
+        components: {
+          header: () => import('pages/{settings}/header'),
+          default: () => import('pages/{settings}')
+        }
+      },
+      {
+        path: '/changelog',
+        components: {
+          header: () => import('pages/{changelog}/header'),
+          default: () => import('pages/{changelog}')
+        }
+      },
+      {
+        path: '*',
+        component: () => import('pages/404')
+      }
+    ]
   }
 ]
