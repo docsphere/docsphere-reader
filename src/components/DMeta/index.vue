@@ -36,7 +36,7 @@ export default {
       if (this.status === 9) {
         return 'white'
       } else if (this.status === 6) {
-        return 'secondary'
+        return 'positive'
       } else {
         return 'negative'
       }
