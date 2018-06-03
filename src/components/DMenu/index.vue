@@ -107,7 +107,7 @@
         <q-item-main>{{ $t('_.layout.floating._') }}</q-item-main>
       </q-item>
       <q-item-separator class="partial" />
-      <q-item to="/layout/flexbox" v-show="matches[16] || !matches">
+      <q-item v-show="matches[16] || !matches">
         <q-item-side icon="web" />
         <q-item-main>{{ $t('_.layout.flexbox._') }}</q-item-main>
       </q-item>

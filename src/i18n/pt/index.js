@@ -122,7 +122,7 @@ export default {
     complete: 'Complete esta página no ',
     edit: 'Edite esta página no '
   },
-  tools: {
+  submenu: {
     overview: 'Apresentação',
     showcase: {
       _: 'Mostruário',

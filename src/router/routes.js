@@ -120,7 +120,7 @@ export default [
 
   {
     path: '/',
-    component: () => import('layouts/system'),
+    component: () => import('layouts/default'),
     children: [
       {
         path: '',

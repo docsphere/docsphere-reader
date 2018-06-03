@@ -166,7 +166,7 @@ export default {
     complete: 'Complete this page on ',
     edit: 'Edit this page on '
   },
-  tools: {
+  submenu: {
     overview: 'Overview',
     showcase: {
       _: 'Showcase',
