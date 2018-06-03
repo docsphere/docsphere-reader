@@ -1,8 +1,6 @@
 <template>
   <q-page>
-    <q-scroll-area id="main">
-      <div v-html="code.div"></div>
-    </q-scroll-area>
+    <q-scroll-area id="main"></q-scroll-area>
   </q-page>
 </template>
 
