@@ -354,7 +354,8 @@
       </q-item>
       <q-item-separator class="section" />
 
-      <q-list-header>{{ $t('_.plugins._') }}</q-list-header>
+      <q-list-header><q-icon name="settings_input_hdmi" size="2rem" /></q-list-header>
+      <q-item-separator class="partial" />
       <q-item v-show="matches[72] || !matches">
         <q-item-side icon="cloud_upload" />
         <q-item-main>Cookies</q-item-main>
@@ -377,7 +378,8 @@
       </q-item>
       <q-item-separator class="section" />
 
-      <q-list-header>{{ $t('_.directives._') }}</q-list-header>
+      <q-list-header><q-icon name="touch_app" size="2rem" /></q-list-header>
+      <q-item-separator class="touch_app" />
       <q-item v-show="matches[77] || !matches">
         <q-item-side icon="touch_app" />
         <q-item-main>Panning Touch/Mouse</q-item-main>
@@ -392,7 +394,8 @@
       </q-item>
       <q-item-separator class="section" />
 
-      <q-list-header>{{ $t('_.helpers._') }}</q-list-header>
+      <q-list-header><q-icon name="local_hospital" size="2rem" /></q-list-header>
+      <q-item-separator class="partial" />
       <q-item v-show="matches[80] || !matches">
         <q-item-side icon="space_bar" />
         <q-item-main>Spacing</q-item-main>
@@ -415,7 +418,8 @@
       </q-item>
       <q-item-separator class="section" />
 
-      <q-list-header>{{ $t('_.animations._') }}</q-list-header>
+      <q-list-header><q-icon name="blur_linear" size="2rem" /></q-list-header>
+      <q-item-separator class="partial" />
       <q-item v-show="matches[85] || !matches">
         <q-item-side icon="transform" />
         <q-item-main>Transition</q-item-main>
@@ -434,7 +438,8 @@
       </q-item>
       <q-item-separator class="section" />
 
-      <q-list-header>{{ $t('_.utils._') }}</q-list-header>
+      <q-list-header><q-icon name="fas fa-wrench" size="2rem" /></q-list-header>
+      <q-item-separator class="partial" />
       <q-item v-show="matches[89] || !matches">
         <q-item-side icon="date_range" />
         <q-item-main>Date Utils</q-item-main>
