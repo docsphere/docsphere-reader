@@ -25,7 +25,7 @@ The search for content in the documentation is simple, quick and easy.
 The input text in the **menu** makes it easy to search for any content using keywords and you can do it in your language.
 
 ### Documentation codes in local files
-A JSON file that is processed by the gist is downloaded containing `.vue`, `css`, `script`, or `html` codes that are used in the documentation so that you can access all of the documentation **offline**.
+A JSON file that is processed by the gist is downloaded containing `.vue`, `.js`, `.html`, or `.css` codes that are used in the documentation so that you can access all of the documentation **offline**.
 
 ### Partial Source Code View inside the Showcase (WIP)
 ...

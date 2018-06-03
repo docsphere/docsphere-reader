@@ -14,8 +14,8 @@
       </div>
     </div>
     <q-list no-border link inset-delimiter>
-      <q-search hide-underline clearable v-model="term" @input="search" :placeholder="$t('menu.search')" class="q-ml-sm q-mr-xs" />
-      <q-item-separator />
+      <q-search hide-underline clearable v-model="term" @input="search" :placeholder="$t('menu.search')" class="q-ml-lg q-mr-md" />
+      <q-item-separator class="section" />
 
       <q-item to="/" exact>
         <q-item-side icon="home" />
@@ -29,9 +29,10 @@
         <q-item-side icon="settings" />
         <q-item-main>{{ $t('menu.settings') }}</q-item-main>
       </q-item>
-      <q-item-separator />
+      <q-item-separator class="section" />
 
-      <q-list-header>{{ $t('_.starting._') }}</q-list-header>
+      <q-list-header><q-icon name="contact_support" size="2rem" /></q-list-header>
+      <q-item-separator class="partial" />
       <q-item to="/starting/intro" v-show="matches[0] || !matches">
         <q-item-side icon="announcement" />
         <q-item-main>{{ $t('_.starting.intro._') }}</q-item-main>
@@ -56,9 +57,10 @@
         <q-item-side icon="format_list_numbered_rtl" />
         <q-item-main>{{ $t('_.starting.rtl._') }}</q-item-main>
       </q-item>
-      <q-item-separator />
+      <q-item-separator class="section" />
 
-      <q-list-header>{{ $t('_.style._') }}</q-list-header>
+      <q-list-header><q-icon name="color_lens" size="2rem" /></q-list-header>
+      <q-item-separator class="partial" />
       <q-item to="/style/color" v-show="matches[6] || !matches">
         <q-item-side icon="style" />
         <q-item-main>{{ $t('_.style.color._') }}</q-item-main>
@@ -84,9 +86,10 @@
         <q-item-side icon="space_bar" />
         <q-item-main>{{ $t('_.style.addressbar._') }}</q-item-main>
       </q-item>
-      <q-item-separator />
+      <q-item-separator class="section" />
 
-      <q-list-header>{{ $t('_.layout._') }}</q-list-header>
+      <q-list-header><q-icon name="web" size="2rem" /></q-list-header>
+      <q-item-separator class="partial" />
       <q-item v-show="matches[12] || !matches">
         <q-item-side icon="play_circle_outline" />
         <q-item-main>{{ $t('_.layout.play._') }}</q-item-main>
@@ -108,248 +111,248 @@
         <q-item-side icon="web" />
         <q-item-main>{{ $t('_.layout.flexbox._') }}</q-item-main>
       </q-item>
-      <q-item-separator />
+      <q-item-separator class="section" />
 
-      <q-list-header>{{ $t('_.components._') }}</q-list-header>
-      <q-collapsible :label="$t('_.components.buttons._')">
-        <q-item v-show="matches[17] || !matches">
-          <q-item-side icon="panorama_wide_angle" />
-          <q-item-main>Standard Button</q-item-main>
-        </q-item>
-        <q-item v-show="matches[18] || !matches">
-          <q-item-side icon="group" />
-          <q-item-main>Button Groups</q-item-main>
-        </q-item>
-        <q-item v-show="matches[19] || !matches">
-          <q-item-side icon="details" />
-          <q-item-main>Dropdown Groups</q-item-main>
-        </q-item>
-      </q-collapsible>
-      <q-collapsible :label="$t('_.components.navigation._')">
-        <q-item v-show="matches[20] || !matches">
-          <q-item-side icon="view_day" />
-          <q-item-main>Toolbar</q-item-main>
-        </q-item>
-        <q-item v-show="matches[21] || !matches">
-          <q-item-side icon="tab" />
-          <q-item-main>Tabs</q-item-main>
-        </q-item>
-        <q-item v-show="matches[22] || !matches">
-          <q-item-side icon="vertical_align_center" />
-          <q-item-main>Pull to Refresh</q-item-main>
-        </q-item>
-        <q-item v-show="matches[23] || !matches">
-          <q-item-side icon="content_paste" />
-          <q-item-main>Context Menu</q-item-main>
-        </q-item>
-        <q-item v-show="matches[24] || !matches">
-          <q-item-side icon="skip_next" />
-          <q-item-main>Breadcrumbs</q-item-main>
-        </q-item>
-        <q-item v-show="matches[25] || !matches">
-          <q-item-side icon="linear_scale" />
-          <q-item-main>Pagination</q-item-main>
-        </q-item>
-      </q-collapsible>
-      <q-collapsible :label="$t('_.components.forms._')">
-        <q-item v-show="matches[26] || !matches">
-          <q-item-side icon="text_fields" />
-          <q-item-main>Fields</q-item-main>
-        </q-item>
-        <q-item v-show="matches[27] || !matches">
-          <q-item-side icon="text_format" />
-          <q-item-main>Input Textfield</q-item-main>
-        </q-item>
-        <q-item v-show="matches[28] || !matches">
-          <q-item-side icon="dns" />
-          <q-item-main>Chips Input</q-item-main>
-        </q-item>
-        <q-item v-show="matches[29] || !matches">
-          <q-item-side icon="brush" />
-          <q-item-main>Color Picker</q-item-main>
-        </q-item>
-        <q-item v-show="matches[30] || !matches">
-          <q-item-side icon="more_horiz" />
-          <q-item-main>Autocomplete</q-item-main>
-        </q-item>
-        <q-item v-show="matches[31] || !matches">
-          <q-item-side icon="mode_edit" />
-          <q-item-main>Editor (WYSIWYG)</q-item-main>
-        </q-item>
-        <q-item v-show="matches[32] || !matches">
-          <q-item-side icon="search" />
-          <q-item-main>Search</q-item-main>
-        </q-item>
-        <q-item v-show="matches[33] || !matches">
-          <q-item-side icon="tune" />
-          <q-item-main>Slider</q-item-main>
-        </q-item>
-        <q-item v-show="matches[34] || !matches">
-          <q-item-side icon="linear_scale" />
-          <q-item-main>Range</q-item-main>
-        </q-item>
-        <q-item v-show="matches[35] || !matches">
-          <q-item-side icon="check_box" />
-          <q-item-main>Checkbox</q-item-main>
-        </q-item>
-        <q-item v-show="matches[36] || !matches">
-          <q-item-side icon="repeat" />
-          <q-item-main>Toggle</q-item-main>
-        </q-item>
-        <q-item v-show="matches[37] || !matches">
-          <q-item-side icon="view_compact" />
-          <q-item-main>Button Toggle</q-item-main>
-        </q-item>
-        <q-item v-show="matches[38] || !matches">
-          <q-item-side icon="toc" />
-          <q-item-main>Option Group</q-item-main>
-        </q-item>
-        <q-item v-show="matches[39] || !matches">
-          <q-item-side icon="access_time" />
-          <q-item-main>Date & Time</q-item-main>
-        </q-item>
-        <q-item v-show="matches[40] || !matches">
-          <q-item-side icon="event_note" />
-          <q-item-main>Select</q-item-main>
-        </q-item>
-        <q-item v-show="matches[41] || !matches">
-          <q-item-side icon="star_half" />
-          <q-item-main>Rating</q-item-main>
-        </q-item>
-        <q-item v-show="matches[42] || !matches">
-          <q-item-side icon="timelapse" />
-          <q-item-main>Knob</q-item-main>
-        </q-item>
-        <q-item v-show="matches[43] || !matches">
-          <q-item-side icon="cloud_upload" />
-          <q-item-main>Uploader</q-item-main>
-        </q-item>
-      </q-collapsible>
-      <q-collapsible :label="$t('_.components.grouping._')">
-        <q-item v-show="matches[44] || !matches">
-          <q-item-side icon="contact_mail" />
-          <q-item-main>Card</q-item-main>
-        </q-item>
-        <q-item v-show="matches[45] || !matches">
-          <q-item-side icon="format_line_spacing" />
-          <q-item-main>Collapsible</q-item-main>
-        </q-item>
-        <q-item v-show="matches[46] || !matches">
-          <q-item-side icon="border_all" />
-          <q-item-main>Data Table</q-item-main>
-        </q-item>
-        <q-item v-show="matches[47] || !matches">
-          <q-item-side icon="list" />
-          <q-item-main>List</q-item-main>
-        </q-item>
-        <q-item v-show="matches[48] || !matches">
-          <q-item-side icon="directions_run" />
-          <q-item-main>Stepper</q-item-main>
-        </q-item>
-        <q-item v-show="matches[49] || !matches">
-          <q-item-side icon="format_indent_increase" />
-          <q-item-main>Tree</q-item-main>
-        </q-item>
-      </q-collapsible>
-      <q-collapsible :label="$t('_.components.popups._')">
-        <q-item v-show="matches[50] || !matches">
-          <q-item-side icon="assignment" />
-          <q-item-main>Action Sheet</q-item-main>
-        </q-item>
-        <q-item v-show="matches[51] || !matches">
-          <q-item-side icon="question_answer" />
-          <q-item-main>Dialog</q-item-main>
-        </q-item>
-        <q-item v-show="matches[52] || !matches">
-          <q-item-side icon="settings_overscan" />
-          <q-item-main>Modal</q-item-main>
-        </q-item>
-        <q-item v-show="matches[53] || !matches">
-          <q-item-side icon="warning" />
-          <q-item-main>Notify</q-item-main>
-        </q-item>
-        <q-item v-show="matches[54] || !matches">
-          <q-item-side icon="filter_none" />
-          <q-item-main>Popover</q-item-main>
-        </q-item>
-        <q-item v-show="matches[55] || !matches">
-          <q-item-side icon="speaker_notes" />
-          <q-item-main>Tooltip</q-item-main>
-        </q-item>
-      </q-collapsible>
-      <q-collapsible :label="$t('_.components.progress._')">
-        <q-item v-show="matches[56] || !matches">
-          <q-item-side icon="trending_flat" />
-          <q-item-main>Ajax Bar</q-item-main>
-        </q-item>
-        <q-item v-show="matches[57] || !matches">
-          <q-item-side icon="hourglass_full" />
-          <q-item-main>Loading</q-item-main>
-        </q-item>
-        <q-item v-show="matches[58] || !matches">
-          <q-item-side icon="hourglass_empty" />
-          <q-item-main>Inner Loading</q-item-main>
-        </q-item>
-        <q-item v-show="matches[59] || !matches">
-          <q-item-side icon="sort" />
-          <q-item-main>Progress Bar</q-item-main>
-        </q-item>
-        <q-item v-show="matches[60] || !matches">
-          <q-item-side icon="refresh" />
-          <q-item-main>Spinner</q-item-main>
-        </q-item>
-      </q-collapsible>
-      <q-collapsible :label="$t('_.components.media._')">
-        <q-item v-show="matches[61] || !matches">
-          <q-item-side icon="vibration" />
-          <q-item-main>Carousel</q-item-main>
-        </q-item>
-        <q-item v-show="matches[62] || !matches">
-          <q-item-side icon="theaters" />
-          <q-item-main>Parallax</q-item-main>
-        </q-item>
-        <q-item v-show="matches[63] || !matches">
-          <q-item-side icon="movie" />
-          <q-item-main>Video Embedding</q-item-main>
-        </q-item>
-      </q-collapsible>
-      <q-collapsible :label="$t('_.components.scrolling._')">
-        <q-item v-show="matches[64] || !matches">
-          <q-item-side icon="update" />
-          <q-item-main>Infinite Scroll</q-item-main>
-        </q-item>
-        <q-item v-show="matches[65] || !matches">
-          <q-item-side icon="aspect_ratio" />
-          <q-item-main>Scroll Area</q-item-main>
-        </q-item>
-        <q-item v-show="matches[66] || !matches">
-          <q-item-side icon="low_priority" />
-          <q-item-main>Scroll Fire</q-item-main>
-        </q-item>
-        <q-item v-show="matches[67] || !matches">
-          <q-item-side icon="vertical_align_top" />
-          <q-item-main>Back To Top</q-item-main>
-        </q-item>
-      </q-collapsible>
-      <q-collapsible :label="$t('_.components.others._')">
-        <q-item v-show="matches[68] || !matches">
-          <q-item-side icon="assignment_late" />
-          <q-item-main>Alert</q-item-main>
-        </q-item>
-        <q-item v-show="matches[69] || !matches">
-          <q-item-side icon="loyalty" />
-          <q-item-main>Chip</q-item-main>
-        </q-item>
-        <q-item v-show="matches[70] || !matches">
-          <q-item-side icon="chat" />
-          <q-item-main>Chat</q-item-main>
-        </q-item>
-        <q-item v-show="matches[71] || !matches">
-          <q-item-side icon="date_range" />
-          <q-item-main>Timeline</q-item-main>
-        </q-item>
-      </q-collapsible>
-      <q-item-separator />
+      <q-list-header><q-icon name="device_hub" size="2rem" /></q-list-header>
+      <q-item-separator class="partial" />
+      <q-list-header class="subsection">{{ $t('_.components.buttons._') }}</q-list-header>
+      <q-item v-show="matches[17] || !matches">
+        <q-item-side icon="panorama_wide_angle" />
+        <q-item-main>Standard Button</q-item-main>
+      </q-item>
+      <q-item v-show="matches[18] || !matches">
+        <q-item-side icon="group" />
+        <q-item-main>Button Groups</q-item-main>
+      </q-item>
+      <q-item v-show="matches[19] || !matches">
+        <q-item-side icon="details" />
+        <q-item-main>Dropdown Groups</q-item-main>
+      </q-item>
+        <q-item-separator class="subsection" />
+      <q-list-header class="subsection">{{ $t('_.components.navigation._') }}</q-list-header>
+      <q-item v-show="matches[20] || !matches">
+        <q-item-side icon="view_day" />
+        <q-item-main>Toolbar</q-item-main>
+      </q-item>
+      <q-item v-show="matches[21] || !matches">
+        <q-item-side icon="tab" />
+        <q-item-main>Tabs</q-item-main>
+      </q-item>
+      <q-item v-show="matches[22] || !matches">
+        <q-item-side icon="vertical_align_center" />
+        <q-item-main>Pull to Refresh</q-item-main>
+      </q-item>
+      <q-item v-show="matches[23] || !matches">
+        <q-item-side icon="content_paste" />
+        <q-item-main>Context Menu</q-item-main>
+      </q-item>
+      <q-item v-show="matches[24] || !matches">
+        <q-item-side icon="skip_next" />
+        <q-item-main>Breadcrumbs</q-item-main>
+      </q-item>
+      <q-item v-show="matches[25] || !matches">
+        <q-item-side icon="linear_scale" />
+        <q-item-main>Pagination</q-item-main>
+      </q-item>
+        <q-item-separator class="subsection" />
+      <q-list-header class="subsection">{{ $t('_.components.forms._') }}</q-list-header>
+      <q-item v-show="matches[26] || !matches">
+        <q-item-side icon="text_fields" />
+        <q-item-main>Fields</q-item-main>
+      </q-item>
+      <q-item v-show="matches[27] || !matches">
+        <q-item-side icon="text_format" />
+        <q-item-main>Input Textfield</q-item-main>
+      </q-item>
+      <q-item v-show="matches[28] || !matches">
+        <q-item-side icon="dns" />
+        <q-item-main>Chips Input</q-item-main>
+      </q-item>
+      <q-item v-show="matches[29] || !matches">
+        <q-item-side icon="brush" />
+        <q-item-main>Color Picker</q-item-main>
+      </q-item>
+      <q-item v-show="matches[30] || !matches">
+        <q-item-side icon="more_horiz" />
+        <q-item-main>Autocomplete</q-item-main>
+      </q-item>
+      <q-item v-show="matches[31] || !matches">
+        <q-item-side icon="mode_edit" />
+        <q-item-main>Editor (WYSIWYG)</q-item-main>
+      </q-item>
+      <q-item v-show="matches[32] || !matches">
+        <q-item-side icon="search" />
+        <q-item-main>Search</q-item-main>
+      </q-item>
+      <q-item v-show="matches[33] || !matches">
+        <q-item-side icon="tune" />
+        <q-item-main>Slider</q-item-main>
+      </q-item>
+      <q-item v-show="matches[34] || !matches">
+        <q-item-side icon="linear_scale" />
+        <q-item-main>Range</q-item-main>
+      </q-item>
+      <q-item v-show="matches[35] || !matches">
+        <q-item-side icon="check_box" />
+        <q-item-main>Checkbox</q-item-main>
+      </q-item>
+      <q-item v-show="matches[36] || !matches">
+        <q-item-side icon="repeat" />
+        <q-item-main>Toggle</q-item-main>
+      </q-item>
+      <q-item v-show="matches[37] || !matches">
+        <q-item-side icon="view_compact" />
+        <q-item-main>Button Toggle</q-item-main>
+      </q-item>
+      <q-item v-show="matches[38] || !matches">
+        <q-item-side icon="toc" />
+        <q-item-main>Option Group</q-item-main>
+      </q-item>
+      <q-item v-show="matches[39] || !matches">
+        <q-item-side icon="access_time" />
+        <q-item-main>Date & Time</q-item-main>
+      </q-item>
+      <q-item v-show="matches[40] || !matches">
+        <q-item-side icon="event_note" />
+        <q-item-main>Select</q-item-main>
+      </q-item>
+      <q-item v-show="matches[41] || !matches">
+        <q-item-side icon="star_half" />
+        <q-item-main>Rating</q-item-main>
+      </q-item>
+      <q-item v-show="matches[42] || !matches">
+        <q-item-side icon="timelapse" />
+        <q-item-main>Knob</q-item-main>
+      </q-item>
+      <q-item v-show="matches[43] || !matches">
+        <q-item-side icon="cloud_upload" />
+        <q-item-main>Uploader</q-item-main>
+      </q-item>
+        <q-item-separator class="subsection" />
+      <q-list-header class="subsection">{{ $t('_.components.grouping._') }}</q-list-header>
+      <q-item v-show="matches[44] || !matches">
+        <q-item-side icon="contact_mail" />
+        <q-item-main>Card</q-item-main>
+      </q-item>
+      <q-item v-show="matches[45] || !matches">
+        <q-item-side icon="format_line_spacing" />
+        <q-item-main>Collapsible</q-item-main>
+      </q-item>
+      <q-item v-show="matches[46] || !matches">
+        <q-item-side icon="border_all" />
+        <q-item-main>Data Table</q-item-main>
+      </q-item>
+      <q-item v-show="matches[47] || !matches">
+        <q-item-side icon="list" />
+        <q-item-main>List</q-item-main>
+      </q-item>
+      <q-item v-show="matches[48] || !matches">
+        <q-item-side icon="directions_run" />
+        <q-item-main>Stepper</q-item-main>
+      </q-item>
+      <q-item v-show="matches[49] || !matches">
+        <q-item-side icon="format_indent_increase" />
+        <q-item-main>Tree</q-item-main>
+      </q-item>
+        <q-item-separator class="subsection" />
+      <q-list-header class="subsection">{{ $t('_.components.popups._') }}</q-list-header>
+      <q-item v-show="matches[50] || !matches">
+        <q-item-side icon="assignment" />
+        <q-item-main>Action Sheet</q-item-main>
+      </q-item>
+      <q-item v-show="matches[51] || !matches">
+        <q-item-side icon="question_answer" />
+        <q-item-main>Dialog</q-item-main>
+      </q-item>
+      <q-item v-show="matches[52] || !matches">
+        <q-item-side icon="settings_overscan" />
+        <q-item-main>Modal</q-item-main>
+      </q-item>
+      <q-item v-show="matches[53] || !matches">
+        <q-item-side icon="warning" />
+        <q-item-main>Notify</q-item-main>
+      </q-item>
+      <q-item v-show="matches[54] || !matches">
+        <q-item-side icon="filter_none" />
+        <q-item-main>Popover</q-item-main>
+      </q-item>
+      <q-item v-show="matches[55] || !matches">
+        <q-item-side icon="speaker_notes" />
+        <q-item-main>Tooltip</q-item-main>
+      </q-item>
+        <q-item-separator class="subsection" />
+      <q-list-header class="subsection">{{ $t('_.components.progress._') }}</q-list-header>
+      <q-item v-show="matches[56] || !matches">
+        <q-item-side icon="trending_flat" />
+        <q-item-main>Ajax Bar</q-item-main>
+      </q-item>
+      <q-item v-show="matches[57] || !matches">
+        <q-item-side icon="hourglass_full" />
+        <q-item-main>Loading</q-item-main>
+      </q-item>
+      <q-item v-show="matches[58] || !matches">
+        <q-item-side icon="hourglass_empty" />
+        <q-item-main>Inner Loading</q-item-main>
+      </q-item>
+      <q-item v-show="matches[59] || !matches">
+        <q-item-side icon="sort" />
+        <q-item-main>Progress Bar</q-item-main>
+      </q-item>
+      <q-item v-show="matches[60] || !matches">
+        <q-item-side icon="refresh" />
+        <q-item-main>Spinner</q-item-main>
+      </q-item>
+        <q-item-separator class="subsection" />
+      <q-list-header class="subsection">{{ $t('_.components.media._') }}</q-list-header>
+      <q-item v-show="matches[61] || !matches">
+        <q-item-side icon="vibration" />
+        <q-item-main>Carousel</q-item-main>
+      </q-item>
+      <q-item v-show="matches[62] || !matches">
+        <q-item-side icon="theaters" />
+        <q-item-main>Parallax</q-item-main>
+      </q-item>
+      <q-item v-show="matches[63] || !matches">
+        <q-item-side icon="movie" />
+        <q-item-main>Video Embedding</q-item-main>
+      </q-item>
+        <q-item-separator class="subsection" />
+      <q-list-header class="subsection">{{ $t('_.components.scrolling._') }}</q-list-header>
+      <q-item v-show="matches[64] || !matches">
+        <q-item-side icon="update" />
+        <q-item-main>Infinite Scroll</q-item-main>
+      </q-item>
+      <q-item v-show="matches[65] || !matches">
+        <q-item-side icon="aspect_ratio" />
+        <q-item-main>Scroll Area</q-item-main>
+      </q-item>
+      <q-item v-show="matches[66] || !matches">
+        <q-item-side icon="low_priority" />
+        <q-item-main>Scroll Fire</q-item-main>
+      </q-item>
+      <q-item v-show="matches[67] || !matches">
+        <q-item-side icon="vertical_align_top" />
+        <q-item-main>Back To Top</q-item-main>
+      </q-item>
+        <q-item-separator class="subsection" />
+      <q-list-header class="subsection">{{ $t('_.components.others._') }}</q-list-header>
+      <q-item v-show="matches[68] || !matches">
+        <q-item-side icon="assignment_late" />
+        <q-item-main>Alert</q-item-main>
+      </q-item>
+      <q-item v-show="matches[69] || !matches">
+        <q-item-side icon="loyalty" />
+        <q-item-main>Chip</q-item-main>
+      </q-item>
+      <q-item v-show="matches[70] || !matches">
+        <q-item-side icon="chat" />
+        <q-item-main>Chat</q-item-main>
+      </q-item>
+      <q-item v-show="matches[71] || !matches">
+        <q-item-side icon="date_range" />
+        <q-item-main>Timeline</q-item-main>
+      </q-item>
+      <q-item-separator class="section" />
 
       <q-list-header>{{ $t('_.plugins._') }}</q-list-header>
       <q-item v-show="matches[72] || !matches">
@@ -372,7 +375,7 @@
         <q-item-side icon="visibility" />
         <q-item-main>App Visibility</q-item-main>
       </q-item>
-      <q-item-separator />
+      <q-item-separator class="section" />
 
       <q-list-header>{{ $t('_.directives._') }}</q-list-header>
       <q-item v-show="matches[77] || !matches">
@@ -387,7 +390,7 @@
         <q-item-side icon="touch_app" />
         <q-item-main>Touch/Mouse Hold</q-item-main>
       </q-item>
-      <q-item-separator />
+      <q-item-separator class="section" />
 
       <q-list-header>{{ $t('_.helpers._') }}</q-list-header>
       <q-item v-show="matches[80] || !matches">
@@ -410,7 +413,7 @@
         <q-item-side icon="more_horiz" />
         <q-item-main>Other Helpers Classes</q-item-main>
       </q-item>
-      <q-item-separator />
+      <q-item-separator class="section" />
 
       <q-list-header>{{ $t('_.animations._') }}</q-list-header>
       <q-item v-show="matches[85] || !matches">
@@ -429,7 +432,7 @@
         <q-item-side icon="fab fa-css3-alt" />
         <q-item-main>Animation CSS Helpers</q-item-main>
       </q-item>
-      <q-item-separator />
+      <q-item-separator class="section" />
 
       <q-list-header>{{ $t('_.utils._') }}</q-list-header>
       <q-item v-show="matches[89] || !matches">
@@ -489,6 +492,18 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  .q-list-header
+    text-align: center
+    padding-bottom: 0
+  .q-list-header.subsection
+    text-align: left
+    padding-bottom: 5px
+    min-height: 32px
+
+  .q-item-separator-component.section
+    height: 3px
+  .q-item-separator-component.subsection
+    height: 1px
   .q-item-separator-component.partial
     margin: 6px auto
     width: 30px
