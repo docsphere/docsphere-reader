@@ -29,7 +29,7 @@ export default [
 
   {
     path: '/starting/intro',
-    component: () => import('layouts/showcase'),
+    component: () => import('layouts/default'),
     children: [
       {
         path: '',
@@ -45,7 +45,7 @@ export default [
 
   {
     path: '/style/color',
-    component: () => import('layouts/showcase'),
+    component: () => import('layouts/default'),
     children: [
       {
         path: '',
@@ -79,7 +79,7 @@ export default [
   },
   {
     path: '/style/typography',
-    component: () => import('layouts/showcase'),
+    component: () => import('layouts/default'),
     children: [
       {
         path: '',
@@ -113,7 +113,7 @@ export default [
   },
   {
     path: '/style/ripples',
-    component: () => import('layouts/showcase'),
+    component: () => import('layouts/default'),
     children: [
       {
         path: '',
