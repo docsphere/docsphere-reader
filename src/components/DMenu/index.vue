@@ -379,7 +379,7 @@
       <q-item-separator class="section" />
 
       <q-list-header><q-icon name="touch_app" size="2rem" /></q-list-header>
-      <q-item-separator class="touch_app" />
+      <q-item-separator class="partial" />
       <q-item v-show="matches[77] || !matches">
         <q-item-side icon="touch_app" />
         <q-item-main>Panning Touch/Mouse</q-item-main>
