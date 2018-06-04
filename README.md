@@ -9,7 +9,6 @@ In addition, we have created several features that make it easy to study and sea
 We want to create resources that meet those goals. Some features are listed below:
 - Partial Source Code View inside the Showcase
 - Component Builder with source code
-- Offline Code View
 
 See the projects tab for more details!
 
