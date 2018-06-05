@@ -1,6 +1,8 @@
 <template>
   <q-scroll-area id="standard">
-    <div id="main" v-html="code.div"></div>
+    <div id="main">
+      <div id="content" v-html="code.div"></div>
+    </div>
   </q-scroll-area>
 </template>
 
