@@ -21,7 +21,7 @@
       <d-menu></d-menu>
     </q-layout-drawer>
 
-    <q-layout-drawer mini side="right" v-model="$store.state.layout.right">
+    <q-layout-drawer mini side="right" v-model="viewSubmenu">
       <router-view name="submenu" />
     </q-layout-drawer>
 
@@ -50,6 +50,11 @@ export default {
     return {
       leftDrawerOpen: this.$q.platform.is.desktop,
       layoutFooter: true
+    }
+  },
+  computed: {
+    viewSubmenu () {
+      return !!this.$store.state.layout.right
     }
   },
 

@@ -3,7 +3,7 @@
     <q-btn v-if="edit"
            flat dense no-caps :icon="icons" :color="color"
            @click="openURL(`https://github.com/slowaways/quasar-documentation-pp/blob/master/src/pages/${edit}`)">
-      <div class="gt-xs">
+      <div>
         <span class="hm" v-if="status === 9">{{ $t('toolbar.edit') }}</span>
         <span class="hm" v-else-if="status === 6">{{ $t('toolbar.complete') }}</span>
         <span class="hm" v-else>{{ $t('toolbar.start') }}</span>
@@ -13,7 +13,7 @@
     <q-toolbar-title class="text-center">
       <!--<q-chip class="q-mr-md" dense square icon="translate" color="grey-4" text-color="black">{{ progress }}</q-chip>-->
     </q-toolbar-title>
-    <q-chip class="q-ml-md" dense v-if="$store.state.layout.anchorToggle">
+    <q-chip class="desktop-only q-ml-md" dense v-if="$store.state.layout.anchorToggle">
       <q-icon name="subject" size="1.3rem" />
       <q-toggle v-model="$store.state.layout.anchor" checked-icon="visibility" unchecked-icon="visibility_off"/>
     </q-chip>
