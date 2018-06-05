@@ -12,7 +12,7 @@ We want to create resources that meet those goals. Some features are listed belo
 
 See the projects tab for more details!
 
-## Resources
+## Features
 ### Internationalization (i18n)
 We want the documentation to be available in any language so that it can reach everyone.
 
@@ -30,6 +30,9 @@ A JSON file that is processed by the gist is downloaded containing `.vue`, `.js`
 ...
 
 ### Component Builder with Source Code (WIP)
+...
+
+### Anchor links to faster navigation and orientation (WIP)
 ...
 
 ## Screenshots
