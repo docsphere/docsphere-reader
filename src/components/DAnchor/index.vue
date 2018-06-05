@@ -4,7 +4,7 @@
     :nodes="nodes" node-key="id"
     :selected.sync="selected" ref="anchor">
     <div slot="default-header" slot-scope="prop" class="row items-center">
-      <a v-if="prop.node.h" :href="`/${route}#${prop.node.h[0]}`">{{ prop.node.h[1] }}</a>
+      <a v-if="prop.node.h" data-scroll :href="`/${route}#${prop.node.h[0]}`">{{ prop.node.h[1] }}</a>
     </div>
   </q-tree>
 </template>
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style lang="stylus">
-  #anchor span
+  #anchor a
     color #286fa3
     font-weight 600
   #anchor.anchor-fixed
@@ -54,4 +54,7 @@ export default {
     cursor auto
   #anchor .q-tree-node-link:hover
     background none
+  #anchor .q-tree-node-header
+    margin 0
+    border-radius 0
 </style>
