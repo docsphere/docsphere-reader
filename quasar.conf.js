@@ -89,7 +89,8 @@ module.exports = function (ctx) {
         'Notify',
         'Dialog',
         'LocalStorage',
-        'SessionStorage'
+        'SessionStorage',
+        'Screen'
       ],
       iconSet: ctx.theme.mat ? 'material-icons' : 'ionicons'
     },

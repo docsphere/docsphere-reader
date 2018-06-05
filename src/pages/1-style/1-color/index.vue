@@ -1,5 +1,8 @@
 <template>
-  <div id="main" class="row">
+  <div id="main" :class="row">
+    <div id="anchor" :class="anchor">
+      <d-anchor :nodes="nodes" />
+    </div>
     <div id="content" :class="content">
       <h1>{{ $t('_.style.color._') }}</h1>
       <p v-html="p(1)"></p>
@@ -30,22 +33,19 @@
       <div v-html="c(4)"></div>
       <p style="color: red;">... (This page is in the process of being finalized!)</p>
     </div>
-    <div id="anchor" :class="anchor">
-      <d-anchor :nodes="nodes" />
-    </div>
   </div>
 </template>
 
 <script>
 import Translation from 'src/i18n/translation'
-import Anchor from 'src/layouts/anchor'
+import Flexbox from 'src/layouts/flexbox'
 import DAnchor from 'src/components/DAnchor'
 
 export default {
   components: {
     DAnchor
   },
-  mixins: [Translation, Anchor],
+  mixins: [Translation, Flexbox],
 
   data () {
     return {

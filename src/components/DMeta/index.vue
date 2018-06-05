@@ -13,7 +13,7 @@
     <q-toolbar-title class="text-center">
       <!--<q-chip class="q-mr-md" dense square icon="translate" color="grey-4" text-color="black">{{ progress }}</q-chip>-->
     </q-toolbar-title>
-    <q-chip class="desktop-only q-ml-md" dense v-if="$store.state.layout.anchorToggle">
+    <q-chip class="q-ml-md" dense v-if="$store.state.layout.anchorToggle">
       <q-icon name="subject" size="1.3rem" />
       <q-toggle v-model="$store.state.layout.anchor" checked-icon="visibility" unchecked-icon="visibility_off"/>
     </q-chip>

@@ -84,8 +84,6 @@ export default {
     padding 1rem 0 1rem 1.5rem
   #content
     padding 0 1.5rem 0 0
-  #anchor
-    border-left 1px solid #e0e0e0
 
   .q-layout-drawer-right
     box-shadow: 0 -8px 8px rgba(0,0,0,0.2), 0 -3px 4px rgba(0,0,0,0.14), 0 -3px 3px -2px rgba(0,0,0,0.12)
