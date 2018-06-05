@@ -86,19 +86,4 @@ export default {
 
   .q-item-link .q-item-side, .q-item-division .q-item-side
     text-align: center
-
-  #standard
-    position absolute
-    left 0
-    top 0
-    width 100%
-    height 100%
-    margin 0
-    padding 0
-  #main
-    padding 1rem 0 1rem 1.5rem
-  #content
-    padding 0 1.5rem 0 0
-  #anchor
-    border-left 1px solid #e0e0e0
 </style>

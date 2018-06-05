@@ -1,6 +1,6 @@
 <template>
-  <q-scroll-area id="standard">
-    <div id="main">
+  <div id="main">
+    <div id="content">
       <q-card>
         <q-card-title>v0.16.0</q-card-title>
         <q-card-separator />
@@ -26,11 +26,9 @@
         </q-card-main>
       </q-card>
     </div>
-  </q-scroll-area>
+  </div>
 </template>
 
-<script>
-export default {}
-</script>
+<script></script>
 
 <style scoped></style>

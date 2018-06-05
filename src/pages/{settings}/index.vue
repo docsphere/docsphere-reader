@@ -1,19 +1,17 @@
 <template>
-  <q-scroll-area id="standard">
-    <q-list>
-      <q-list-header>{{ $t('settings.general') }}</q-list-header>
-      <q-item>
-        <q-item-side icon="language" />
-        <q-item-main>
-          <q-select
-            :stack-label="$t('settings.language.label')"
-            v-model="general.language.default" :options="general.language.options"
-            @input="setLanguage" />
-        </q-item-main>
-      </q-item>
-      <q-item-separator />
-    </q-list>
-  </q-scroll-area>
+  <q-list>
+    <q-list-header>{{ $t('settings.general') }}</q-list-header>
+    <q-item>
+      <q-item-side icon="language" />
+      <q-item-main>
+        <q-select
+          :stack-label="$t('settings.language.label')"
+          v-model="general.language.default" :options="general.language.options"
+          @input="setLanguage" />
+      </q-item-main>
+    </q-item>
+    <q-item-separator />
+  </q-list>
 </template>
 
 <script>

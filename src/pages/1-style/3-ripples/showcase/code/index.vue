@@ -1,9 +1,7 @@
 <template>
-  <q-scroll-area id="standard">
-    <div id="main">
-      <div id="content" v-html="code.div"></div>
-    </div>
-  </q-scroll-area>
+  <div id="main">
+    <div id="content" v-html="code.div"></div>
+  </div>
 </template>
 
 <script>
