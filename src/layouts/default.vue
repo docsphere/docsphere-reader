@@ -7,6 +7,10 @@
         </q-btn>
 
         <router-view name="header" />
+
+        <q-btn v-if="$store.state.layout.rightToggle" flat dense round @click="toggleSubmenu()" aria-label="Submenu">
+          <q-icon name="more_vert" />
+        </q-btn>
       </q-toolbar>
     </q-layout-header>
     <q-layout-footer v-model="layoutFooter" :reveal="false">
@@ -46,6 +50,16 @@ export default {
     return {
       leftDrawerOpen: this.$q.platform.is.desktop,
       layoutFooter: true
+    }
+  },
+
+  methods: {
+    toggleSubmenu () {
+      if (this.$store.state.layout.right) {
+        this.$store.commit('layout/setRight', false)
+      } else {
+        this.$store.commit('layout/setRight', true)
+      }
     }
   }
 }

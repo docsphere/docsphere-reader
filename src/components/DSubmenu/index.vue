@@ -55,9 +55,11 @@ export default {
 
   mounted () {
     this.$store.commit('layout/setRight', true)
+    this.$store.commit('layout/setRightToggle', true)
   },
   beforeDestroy () {
     this.$store.commit('layout/setRight', false)
+    this.$store.commit('layout/setRightToggle', false)
   }
 }
 </script>

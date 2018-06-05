@@ -37,6 +37,9 @@ export const setRightBehavior = (state, val) => {
 export const setRightBreakpoint = (state, val) => {
   state.rightBreakpoint = val
 }
+export const setRightToggle = (state, val) => {
+  state.rightToggle = val
+}
 
 export const setTopLeft = (state, val) => {
   state.topleft = val

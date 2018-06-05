@@ -12,6 +12,7 @@ export default {
   rightBehavior: 'default',
   leftBreakpoint: 992,
   rightBreakpoint: 992,
+  rightToggle: false,
 
   topleft: 'h',
   topcenter: 'H',
