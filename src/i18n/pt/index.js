@@ -7,31 +7,40 @@ export default {
     starting: {
       _: 'Começando',
       intro: {
-        _: 'Introdução para Iniciantes'
+        _: ['intro', 'Introdução para Iniciantes']
       },
-      platform: {_: 'Detecção de Plataforma'},
-      events: {_: 'Global Event Bus'},
-      injections: {_: 'Vue Prototype Injections'},
-      i18n: {_: 'Internacionalização (i18n)'},
-      rtl: {_: 'Suporte RTL'}
+      platform: {
+        _: 'Detecção de Plataforma'
+      },
+      events: {
+        _: 'Global Event Bus'},
+      injections: {
+        _: 'Vue Prototype Injections'
+      },
+      i18n: {
+        _: 'Internacionalização (i18n)'
+      },
+      rtl: {
+        _: 'Suporte RTL'
+      }
     },
 
     style: {
       _: 'Estilo',
       color: {
-        _: 'Paleta de cores',
+        _: ['color', 'Paleta de cores'],
         overview: {
           h: [
-            'Cores principais',
-            'Lista de cores',
-            'Usando como classes CSS',
-            'Usando Variáveis Stylus',
-            'Adicionando suas próprias cores'
+            ['brand-colors', 'Cores principais'],
+            ['color-list', 'Lista de cores'],
+            ['using-as-css-classes', 'Usando como classes CSS'],
+            ['using-stylus-variables', 'Usando Variáveis Stylus'],
+            ['adding-your-own-colors', 'Adicionando suas próprias cores']
           ],
           p: [
             'Quasar Framework oferece uma ampla seleção de cores "fora da caixa". Você pode usar as cores como variáveis Stylus em seu código CSS ou diretamente como classes CSS em seus templates HTML.',
-            'Esta página é muito útil depois de ler',
-            'Você também pode querer verificar'
+            'Esta página é muito útil depois de ler ',
+            'Você também pode querer verificar '
           ],
           l: [
             ['https://quasar-framework.org/guide/quasar-theming.html', 'Quasar Theming'],
@@ -65,62 +74,102 @@ export default {
         showcase: {}
       },
       typography: {
-        _: 'Tipografia'
+        _: ['typography', 'Tipografia']
       },
       ripples: {
-        _: 'Materiais Ripples'
+        _: ['ripples', 'Materiais Ripples']
       },
       stylus: {
-        _: 'Variáveis Stylus'
+        _: ['styles', 'Variáveis Stylus']
       },
       icons: {
-        _: 'Ícones'
+        _: ['icons', 'Ícones']
       },
       addressbar: {
-        _: 'Cor da barra de endereço'
+        _: ['addressbar', 'Cor da barra de endereço']
       }
     },
 
     layout: {
       _: 'Layout',
-      play: {_: 'Play with Layout'},
-      drawer: {_: 'Drawer Panels'},
-      sticky: {_: 'Page Sticky'},
-      floating: {_: 'Floating Action Button'},
-      flexbox: {_: 'Flexbox'}
+      play: {
+        _: 'Play with Layout'
+      },
+      drawer: {
+        _: 'Drawer Panels'
+      },
+      sticky: {
+        _: 'Page Sticky'
+      },
+      floating: {
+        _: 'Floating Action Button'
+      },
+      flexbox: {
+        _: 'Flexbox'
+      }
     },
 
     components: {
       _: 'Componentes',
-      buttons: {_: 'Botões'},
-      navigation: {_: 'Navegação'},
-      forms: {_: 'Formulários'},
-      grouping: {_: 'Agrupamento'},
-      popups: {_: 'Popups'},
-      progress: {_: 'Progresso'},
-      media: {_: 'Media'},
-      scrolling: {_: 'Rolagem'},
-      others: {_: 'Outros componentes'}
+      buttons: {
+        _: 'Botões'
+      },
+      navigation: {
+        _: 'Navegação'
+      },
+      forms: {
+        _: 'Formulários'
+      },
+      grouping: {
+        _: 'Agrupamento'
+      },
+      popups: {
+        _: 'Popups'
+      },
+      progress: {
+        _: 'Progresso'
+      },
+      media: {
+        _: 'Media'
+      },
+      scrolling: {
+        _: 'Rolagem'
+      },
+      others: {
+        _: 'Outros componentes'
+      }
     },
 
-    plugins: {_: 'Plugins'},
+    plugins: {
+      _: 'Plugins'
+    },
 
-    directives: {_: 'Diretivas'},
+    directives: {
+      _: 'Diretivas'
+    },
 
     helpers: {
       _: 'Ajudadores',
-      shadows: {_: 'Sombras'}
+      shadows: {
+        _: 'Sombras'
+      }
     },
 
-    animations: {_: 'Animações'},
+    animations: {
+      _: 'Animações'
+    },
 
-    utils: {_: 'Utilidades'}
+    utils: {
+      _: 'Utilidades'
+    }
   },
 
-  toolbar: {
-    start: 'Comece esta página no ',
-    complete: 'Complete esta página no ',
-    edit: 'Edite esta página no '
+  meta: {
+    github: {
+      start: 'Comece esta página no ',
+      complete: 'Complete esta página no ',
+      edit: 'Edite esta página no '
+    }
   },
   submenu: {
     overview: 'Apresentação',
@@ -128,7 +177,7 @@ export default {
       _: 'Mostruário',
       code: 'Código do Mostruário'
     },
-    changelog: 'Changelog WIP',
+    changelog: 'Changelog (WIP)',
     builder: {_: 'Construtor'}
   },
 
@@ -146,5 +195,6 @@ export default {
   },
 
   _and: 'e',
-  _or: 'ou'
+  _or: 'ou',
+  _f: 'arquivos'
 }

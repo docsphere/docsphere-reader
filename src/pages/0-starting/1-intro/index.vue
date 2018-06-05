@@ -1,8 +1,8 @@
 <template>
   <div id="main" :class="row">
-    <d-anchor id="anchor" :class="anchor" :nodes="nodes" />
+    <d-anchor id="anchor" :class="anchor" :nodes="nodes" :route="route" />
     <div id="content" :class="content">
-      <h1>{{ $t('_.starting.intro._') }}</h1>
+      <h1 v-html="h(0)"></h1>
       <p v-html="p(1) + l(1) + $t('_a') + l(2) + p(2) + l(3) + p(3)"></p>
       <p v-html="p(4) + l(4) + '.'"></p>
       <p v-html="p(5)"></p>
@@ -52,26 +52,35 @@ export default {
     return {
       nodes: [
         {
-          label: this.$t('_.starting.intro._'),
+          id: 1,
+          h: this.$t('_.starting.intro._'),
           children: [
             {
-              label: this.$t('_.starting.intro.overview.h[0]'),
+              id: 2,
+              h: this.$t('_.starting.intro.overview.h[0]'),
               children: [
-                { label: this.$t('_.starting.intro.overview.h[1]') }
+                {
+                  id: 3,
+                  h: this.$t('_.starting.intro.overview.h[1]')
+                }
               ]
             },
             {
-              label: this.$t('_.starting.intro.overview.h[2]')
+              id: 4,
+              h: this.$t('_.starting.intro.overview.h[2]')
             },
             {
-              label: this.$t('_.starting.intro.overview.h[3]')
+              id: 5,
+              h: this.$t('_.starting.intro.overview.h[3]')
             }
           ]
         }
       ],
 
+      route: 'starting/intro',
       namespace: 'starting.intro',
       dir: '0-starting/1-intro',
+
       codes: [
         '*.vue',
         '&lt;style&gt;',
@@ -86,4 +95,4 @@ export default {
 }
 </script>
 
-<style lang="stylus"></style>
+<style lang="stylus" scoped></style>

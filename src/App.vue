@@ -44,6 +44,10 @@ export default {
     text-decoration: none
     outline: 0
     cursor: pointer
+  a.headerlink
+    color: #286fa3
+  a.headerlink:hover
+    background-color: #cde3f3
   a:not([data-scroll]):not(.search-result):not(.support-button):not(.headerlink):hover:not(.button)
     color: #286fa3
     background-color: #cde3f3

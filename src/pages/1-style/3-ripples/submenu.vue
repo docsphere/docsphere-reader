@@ -1,7 +1,5 @@
-typography<template>
-  <d-submenu overview="/style/ripples"
-           showcase="/style/ripples/showcase"
-           code="/style/ripples/code" />
+<template>
+  <d-submenu overview="/style/ripples" showcase />
 </template>
 
 <script>

@@ -1,7 +1,18 @@
 export default {
   methods: {
     h (index) {
-      return this.$t(`_.${this.namespace}.overview.h[${--index}]`)
+      let h = null
+      if (index === 0) {
+        h = this.$t(`_.${this.namespace}._`)
+      } else {
+        h = this.$t(`_.${this.namespace}.overview.h[${--index}]`)
+      }
+
+      if (h) {
+        return `<a id="${h[0]}" href="/${this.route}#${h[0]}" class="headerlink">${h[1]}</a>`
+      } else {
+        return ''
+      }
     },
     p (index) {
       return this.$t(`_.${this.namespace}.overview.p[${--index}]`)

@@ -1,7 +1,5 @@
 <template>
-  <d-submenu overview="/style/typography"
-           showcase="/style/typography/showcase"
-           code="/style/typography/code" />
+  <d-submenu overview="/style/typography" showcase />
 </template>
 
 <script>

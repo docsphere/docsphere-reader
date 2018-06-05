@@ -35,7 +35,7 @@
       <q-item-separator class="partial" />
       <q-item to="/starting/intro" v-show="matches[0] || !matches">
         <q-item-side icon="announcement" />
-        <q-item-main>{{ $t('_.starting.intro._') }}</q-item-main>
+        <q-item-main>{{ $t('_.starting.intro._[1]') }}</q-item-main>
       </q-item>
       <q-item v-show="matches[1] || !matches">
         <q-item-side icon="phonelink" />
@@ -63,28 +63,28 @@
       <q-item-separator class="partial" />
       <q-item to="/style/color" v-show="matches[6] || !matches">
         <q-item-side icon="style" />
-        <q-item-main>{{ $t('_.style.color._') }}</q-item-main>
+        <q-item-main>{{ $t('_.style.color._[1]') }}</q-item-main>
       </q-item>
       <q-item to="/style/typography" v-show="matches[7] || !matches">
         <q-item-side icon="format_bold" />
-        <q-item-main>{{ $t('_.style.typography._') }}</q-item-main>
+        <q-item-main>{{ $t('_.style.typography._[1]') }}</q-item-main>
       </q-item>
       <q-item to="/style/ripples" v-show="matches[8] || !matches">
         <q-item-side icon="blur_on" />
-        <q-item-main>{{ $t('_.style.ripples._') }}</q-item-main>
+        <q-item-main>{{ $t('_.style.ripples._[1]') }}</q-item-main>
       </q-item>
       <q-item-separator class="partial" />
       <q-item v-show="matches[9] || !matches">
         <q-item-side icon="border_style" />
-        <q-item-main>{{ $t('_.style.stylus._') }}</q-item-main>
+        <q-item-main>{{ $t('_.style.stylus._[1]') }}</q-item-main>
       </q-item>
       <q-item v-show="matches[10] || !matches">
         <q-item-side icon="insert_emoticon" />
-        <q-item-main>{{ $t('_.style.icons._') }}</q-item-main>
+        <q-item-main>{{ $t('_.style.icons._[1]') }}</q-item-main>
       </q-item>
       <q-item v-show="matches[11] || !matches">
         <q-item-side icon="space_bar" />
-        <q-item-main>{{ $t('_.style.addressbar._') }}</q-item-main>
+        <q-item-main>{{ $t('_.style.addressbar._[1]') }}</q-item-main>
       </q-item>
       <q-item-separator class="section" />
 

@@ -7,13 +7,13 @@ export default {
     starting: {
       _: 'Getting started',
       intro: {
-        _: 'Introduction for Beginners',
+        _: ['intro', 'Introduction for Beginners'],
         overview: {
           h: [
-            'Single File Vue Components',
-            'CSS preprocessors',
-            'Using Quasar Directive',
-            'Using Quasar Components'
+            ['single-file-vue-components', 'Single File Vue Components'],
+            ['css-preprocessors', 'CSS preprocessors'],
+            ['using-quasar-directive', 'Using Quasar Directive'],
+            ['using-quasar-components', 'Using Quasar Components']
           ],
           p: [
             'Before you begin with Quasar, it is a good idea to get acquainted with ES6 and have a fairly good knowledge about how Vue works. (',
@@ -49,24 +49,34 @@ export default {
           ]
         }
       },
-      platform: {_: 'Platform Detection'},
-      events: {_: 'Global Event Bus'},
-      injections: {_: 'Vue Prototype Injections'},
-      i18n: {_: 'Internationalization (i18n)'},
-      rtl: {_: 'RTL Support'}
+      platform: {
+        _: 'Platform Detection'
+      },
+      events: {
+        _: 'Global Event Bus'
+      },
+      injections: {
+        _: 'Vue Prototype Injections'
+      },
+      i18n: {
+        _: 'Internationalization (i18n)'
+      },
+      rtl: {
+        _: 'RTL Support'
+      }
     },
 
     style: {
       _: 'Style',
       color: {
-        _: 'Color Palette',
+        _: ['color', 'Color Palette'],
         overview: {
           h: [
-            'Brand Colors',
-            'Color List',
-            'Using as CSS Classes',
-            'Using Stylus Variables',
-            'Adding Your Own Colors'
+            ['brand-colors', 'Brand Colors'],
+            ['color-list', 'Color List'],
+            ['using-as-css-classes', 'Using as CSS Classes'],
+            ['using-stylus-variables', 'Using Stylus Variables'],
+            ['adding-your-own-colors', 'Adding Your Own Colors']
           ],
           p: [
             'Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.',
@@ -107,29 +117,39 @@ export default {
         showcase: {}
       },
       typography: {
-        _: 'Typography'
+        _: ['typography', 'Typography']
       },
       ripples: {
-        _: 'Material Ripples'
+        _: ['ripples', 'Material Ripples']
       },
       stylus: {
-        _: 'Stylus Variables'
+        _: ['styles', 'Stylus Variables']
       },
       icons: {
-        _: 'Icons'
+        _: ['icons', 'Icons']
       },
       addressbar: {
-        _: 'Addressbar Color'
+        _: ['addressbar', 'Addressbar Color']
       }
     },
 
     layout: {
       _: 'Layout',
-      play: {_: 'Play with Layout'},
-      drawer: {_: 'Drawer Panels'},
-      sticky: {_: 'Page Sticky'},
-      floating: {_: 'Floating Action Button'},
-      flexbox: {_: 'Flexbox'}
+      play: {
+        _: 'Play with Layout'
+      },
+      drawer: {
+        _: 'Drawer Panels'
+      },
+      sticky: {
+        _: 'Page Sticky'
+      },
+      floating: {
+        _: 'Floating Action Button'
+      },
+      flexbox: {
+        _: 'Flexbox'
+      }
     },
 
     components: {
@@ -137,34 +157,62 @@ export default {
       buttons: {
         _: 'Buttons'
       },
-      navigation: {_: 'Navigation'},
-      forms: {_: 'Forms'},
-      grouping: {_: 'Grouping'},
-      popups: {_: 'Popups'},
-      progress: {_: 'Progress'},
-      media: {_: 'Media'},
-      scrolling: {_: 'Scrolling'},
-      others: {_: 'Others Components'}
+      navigation: {
+        _: 'Navigation'
+      },
+      forms: {
+        _: 'Forms'
+      },
+      grouping: {
+        _: 'Grouping'
+      },
+      popups: {
+        _: 'Popups'
+      },
+      progress: {
+        _: 'Progress'
+      },
+      media: {
+        _: 'Media'
+      },
+      scrolling: {
+        _: 'Scrolling'
+      },
+      others: {
+        _: 'Others Components'
+      }
     },
 
-    plugins: {_: 'Plugins'},
+    plugins: {
+      _: 'Plugins'
+    },
 
-    directives: {_: 'Directives'},
+    directives: {
+      _: 'Directives'
+    },
 
     helpers: {
       _: 'Helpers',
-      shadows: {_: 'Shadows'}
+      shadows: {
+        _: 'Shadows'
+      }
     },
 
-    animations: {_: 'Animations'},
+    animations: {
+      _: 'Animations'
+    },
 
-    utils: {_: 'Utils'}
+    utils: {
+      _: 'Utils'
+    }
   },
 
-  toolbar: {
-    start: 'Start this page on ',
-    complete: 'Complete this page on ',
-    edit: 'Edit this page on '
+  meta: {
+    github: {
+      start: 'Start this page on ',
+      complete: 'Complete this page on ',
+      edit: 'Edit this page on '
+    }
   },
   submenu: {
     overview: 'Overview',
@@ -172,7 +220,7 @@ export default {
       _: 'Showcase',
       code: 'Showcase Code'
     },
-    changelog: 'Changelog WIP',
+    changelog: 'Changelog (WIP)',
     builder: {_: 'Builder'}
   },
 

@@ -1,5 +1,5 @@
 <template>
-  <d-header icon="format_bold" :title="$t('_.style.typography._')" subsection="/showcase/code" />
+  <d-header icon="format_bold" :title="$t('_.style.typography._[1]')" subsection="/showcase/code" />
 </template>
 
 <script>

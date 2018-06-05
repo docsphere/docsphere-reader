@@ -1,5 +1,5 @@
 <template>
-  <d-submenu overview="/style/color" showcase="/style/color/showcase" />
+  <d-submenu overview="/style/color" showcase />
 </template>
 
 <script>

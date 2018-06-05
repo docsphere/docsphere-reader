@@ -1,10 +1,8 @@
 <template>
   <div id="main" :class="row">
-    <div id="anchor" :class="anchor">
-      <d-anchor :nodes="nodes" />
-    </div>
+    <d-anchor id="anchor" :class="anchor" :nodes="nodes" :route="route" />
     <div id="content" :class="content">
-      <h1>{{ $t('_.style.color._') }}</h1>
+      <h1 v-html="h(0)"></h1>
       <p v-html="p(1)"></p>
       <p v-html="p(2) + l(1) + '.' + p(3) + l(2) + '.'"></p>
 
@@ -51,28 +49,37 @@ export default {
     return {
       nodes: [
         {
-          label: this.$t('_.style.color._'),
+          id: 1,
+          h: this.$t('_.style.color._'),
           children: [
             {
-              label: this.$t('_.style.color.overview.h[0]')
+              id: 2,
+              h: this.$t('_.style.color.overview.h[0]')
             },
             {
-              label: this.$t('_.style.color.overview.h[1]')
+              id: 3,
+              h: this.$t('_.style.color.overview.h[1]')
             },
             {
-              label: this.$t('_.style.color.overview.h[2]')
+              id: 4,
+              h: this.$t('_.style.color.overview.h[2]')
             },
             {
-              label: this.$t('_.style.color.overview.h[3]')
+              id: 5,
+              h: this.$t('_.style.color.overview.h[3]')
             },
             {
-              label: this.$t('_.style.color.overview.h[4]')
+              id: 6,
+              h: this.$t('_.style.color.overview.h[4]')
             }
           ]
         }
       ],
+
+      route: 'style/color',
       namespace: 'style.color',
       dir: '1-style/1-color',
+
       codes: [
         '<style lang="stylus">'
       ]

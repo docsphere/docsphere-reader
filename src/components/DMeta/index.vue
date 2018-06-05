@@ -4,9 +4,9 @@
            flat dense no-caps :icon="icons" :color="color"
            @click="openURL(`https://github.com/slowaways/quasar-documentation-pp/blob/master/src/pages/${edit}`)">
       <div>
-        <span class="hm" v-if="status === 9">{{ $t('toolbar.edit') }}</span>
-        <span class="hm" v-else-if="status === 6">{{ $t('toolbar.complete') }}</span>
-        <span class="hm" v-else>{{ $t('toolbar.start') }}</span>
+        <span class="hm" v-if="status === 9">{{ $t('meta.github.edit') }}</span>
+        <span class="hm" v-else-if="status === 6">{{ $t('meta.github.complete') }}</span>
+        <span class="hm" v-else>{{ $t('meta.github.start') }}</span>
         <q-icon name="fab fa-github"></q-icon>
       </div>
     </q-btn>
@@ -46,7 +46,7 @@ export default {
       } else if (this.status === 6) {
         return 'positive'
       } else {
-        return 'negative'
+        return 'red-6'
       }
     },
     icons () {
