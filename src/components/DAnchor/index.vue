@@ -1,5 +1,8 @@
 <template>
-  <q-tree default-expand-all :nodes="nodes" node-key="label" :selected.sync="selected" />
+  <q-tree
+    default-expand-all
+    :nodes="nodes" node-key="label"
+    :selected.sync="selected" />
 </template>
 
 <script>
@@ -28,6 +31,9 @@ export default {
 </script>
 
 <style lang="stylus">
+  #anchor span
+    color #286fa3
+    font-weight 600
   #anchor.anchor-fixed
     border-left 1px solid #e0e0e0
   #anchor.anchor-on-top
