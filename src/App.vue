@@ -68,8 +68,8 @@ export default {
     margin: 0 2px
     border-radius: 2px
     border: 1px solid #e6e6e6
-    white-space: nowrap
     box-shadow: 0 1px 1px rgba(0,0,0,.125)
+    white-space pre-wrap
 
   code, pre
     font-family: 'Roboto Mono',Monaco,courier,monospace
