@@ -1,6 +1,6 @@
 <template>
-  <q-scroll-area id="main">
-    <div id="content">
+  <q-scroll-area id="standard">
+    <div id="main">
       <p class="caption">Headings</p>
       <div v-for="heading in headings" :key="heading.class" class="row items-center q-mb-lg">
         <div class="col-sm-3 col-12">

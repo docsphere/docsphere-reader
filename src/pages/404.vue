@@ -1,6 +1,6 @@
 <template>
-  <q-scroll-area id="main">
-    <div id="content" class="text-center">
+  <q-scroll-area id="standard">
+    <div id="main" class="text-center">
       <p>
         <img src="~assets/sad.svg" style="width:30vw;max-width:150px;">
       </p>

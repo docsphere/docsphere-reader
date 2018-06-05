@@ -1,6 +1,6 @@
 <template>
-  <q-scroll-area id="main">
-    <div id="content">
+  <q-scroll-area id="standard">
+    <div id="main">
       <p class="caption">Main Colors</p>
       <div class="main-color shadow-1 row inline flex-center text-white" v-for="color in main" :key="color" :class="`bg-${color}`">
         {{ color }}

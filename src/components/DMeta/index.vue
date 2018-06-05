@@ -1,9 +1,10 @@
 <template>
   <q-toolbar color="dark">
-    <!--<q-btn icon="subject" dense color="white" text-color="black"></q-btn>-->
-    <q-toolbar-title>Last updated: ?*</q-toolbar-title>
+    <q-toolbar-title class="text-center">
+      <!--<q-chip class="q-mr-md" dense square icon="translate" color="grey-4" text-color="black">{{ progress }}</q-chip>-->
+    </q-toolbar-title>
     <q-btn v-if="edit"
-           flat dense no-caps :icon="icons" :color="color" class="float-right"
+           flat dense no-caps :icon="icons" :color="color"
            @click="openURL(`https://github.com/slowaways/quasar-documentation-pp/blob/master/src/pages/${edit}`)">
       <div class="gt-xs">
         <span class="hm" v-if="status === 9">{{ $t('toolbar.edit') }}</span>
@@ -12,6 +13,10 @@
         <q-icon name="fab fa-github"></q-icon>
       </div>
     </q-btn>
+    <q-chip class="q-ml-md" dense v-if="$store.state.layout.anchorToggle">
+      <q-icon name="subject" size="1.3rem" />
+      <q-toggle v-model="$store.state.layout.anchor" checked-icon="visibility" unchecked-icon="visibility_off"/>
+    </q-chip>
   </q-toolbar>
 </template>
 
@@ -25,10 +30,13 @@ export default {
       type: String,
       default: ''
     },
-
     status: {
       type: Number,
       default: 1
+    },
+    translation: {
+      type: Number,
+      default: 0
     }
   },
   computed: {
@@ -49,6 +57,15 @@ export default {
       } else {
         return 'note_add'
       }
+    },
+    progress () {
+      const locale = this.$i18n.locale
+      return `${this.translation}% (${locale})`
+    },
+
+    navigation: {
+      get () { return true },
+      set (val) {}
     }
   },
 

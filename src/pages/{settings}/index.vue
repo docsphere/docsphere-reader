@@ -1,5 +1,5 @@
 <template>
-  <q-scroll-area id="main">
+  <q-scroll-area id="standard">
     <q-list>
       <q-list-header>{{ $t('settings.general') }}</q-list-header>
       <q-item>

@@ -1,6 +1,6 @@
 <template>
-  <q-scroll-area id="main">
-    <div id="content">
+  <q-scroll-area id="standard">
+    <div id="main">
       <q-card>
         <q-card-title>v0.16.0</q-card-title>
         <q-card-separator />

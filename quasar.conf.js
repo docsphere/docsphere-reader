@@ -76,10 +76,13 @@ module.exports = function (ctx) {
         'QAutocomplete',
         'QChipsInput',
         'QScrollArea',
-        'QToggle'
+        'QPopover',
+        'QToggle',
+        'QTree'
       ],
       directives: [
-        'Ripple'
+        'Ripple',
+        'CloseOverlay'
       ],
       // Quasar plugins
       plugins: [

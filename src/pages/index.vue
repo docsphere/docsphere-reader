@@ -1,6 +1,6 @@
 <template>
-  <q-scroll-area id="main" class="page-showcase">
-    <div id="content">
+  <q-scroll-area id="standard" class="page-showcase">
+    <div id="main">
       <div class="showcase-top text-center">
         <img alt="Quasar logo" src="/assets/logo.svg">
         <p class="caption">{{ $t('_.home.p1') }}</p>
