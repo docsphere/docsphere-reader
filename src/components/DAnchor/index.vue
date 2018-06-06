@@ -4,7 +4,7 @@
     :nodes="nodes" node-key="id"
     :selected.sync="selected" ref="anchor">
     <div slot="default-header" slot-scope="prop" class="row items-center">
-      <a v-if="prop.node.h" :href="`/${route}#${prop.node.h[0]}`">{{ prop.node.h[1] }}</a>
+      <a v-if="prop.node.h" :href="`${$route.path}#${prop.node.h[0]}`">{{ prop.node.h[1] }}</a>
     </div>
   </q-tree>
 </template>
@@ -16,10 +16,6 @@ export default {
   props: {
     nodes: {
       type: Array,
-      required: true
-    },
-    route: {
-      type: String,
       required: true
     }
   },

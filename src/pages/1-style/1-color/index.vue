@@ -1,7 +1,7 @@
 <template>
   <q-page :class="row">
     <q-scroll-area id="anchor" :class="anchor">
-      <d-anchor :nodes="nodes" :route="route" />
+      <d-anchor :nodes="nodes" />
     </q-scroll-area>
     <q-scroll-area id="content" :class="content">
       <h1 v-html="h(0)"></h1>
@@ -78,7 +78,6 @@ export default {
         }
       ],
 
-      route: 'style/color',
       namespace: 'style.color',
       dir: '1-style/1-color',
 
