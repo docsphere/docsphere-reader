@@ -42,14 +42,12 @@ export default {
   #anchor a
     color #286fa3
     font-weight 600
-  #anchor.anchor-fixed
+  #anchor.anchor-on-right
     border-left 1px solid #e0e0e0
   #anchor.anchor-on-top
     border-bottom 1px solid #e0e0e0
     padding-bottom 5px
     margin-bottom 20px
-  #anchor.anchor-fixed > .q-tree-node
-    position fixed
   #anchor .q-tree-node-link
     cursor auto
   #anchor .q-tree-node-link:hover

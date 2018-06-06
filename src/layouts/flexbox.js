@@ -23,7 +23,7 @@ export default {
         if (this.$q.screen.lt.md) {
           return 'anchor-on-top'
         } else {
-          return 'col-3 anchor-fixed'
+          return 'col-3 anchor-on-right'
         }
       } else {
         return 'hidden'
