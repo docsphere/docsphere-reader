@@ -1,6 +1,6 @@
 <template>
-  <div id="main">
-    <div id="content">
+  <q-page class="row">
+    <q-scroll-area id="content" class="col">
       <p class="caption">Main Colors</p>
       <div class="main-color shadow-1 row inline flex-center text-white" v-for="color in main" :key="color" :class="`bg-${color}`">
         {{ color }}
@@ -26,8 +26,8 @@
           <div class="detailed-color column flex-center" v-for="n in 14" :key="n" :class="`bg-${color}-${n}`">{{ color }}-{{ n }}</div>
         </q-tab-pane>
       </q-tabs>
-    </div>
-  </div>
+    </q-scroll-area>
+  </q-page>
 </template>
 
 <script>

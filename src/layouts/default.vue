@@ -30,11 +30,7 @@
     </q-layout-drawer>
 
     <q-page-container>
-      <q-page>
-        <q-scroll-area class="standard">
-          <router-view />
-        </q-scroll-area>
-      </q-page>
+      <router-view />
     </q-page-container>
   </q-layout>
 </template>
@@ -69,10 +65,9 @@ export default {
     margin 0
     padding 0
 
-  #main
-    padding 1rem 0 1rem 1.5rem
-  #content
-    padding 0 1.5rem 0 0
+  #content:not(.no-padding) .scroll:not(.overflow-hidden),
+  #content:not(.no-padding) .scroll.overflow-hidden > div
+    padding 1rem 1.5rem 1rem 1.5rem
 
   .q-layout-drawer-right
     box-shadow: 0 -8px 8px rgba(0,0,0,0.2), 0 -3px 4px rgba(0,0,0,0.14), 0 -3px 3px -2px rgba(0,0,0,0.12)

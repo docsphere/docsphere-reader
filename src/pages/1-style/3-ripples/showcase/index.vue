@@ -1,14 +1,16 @@
 <template>
-  <q-page class="padding docs-ripple row justify-center">
-    <div style="width: 500px; max-width: 90vw;">
-      <p class="caption">
-        <span class="desktop-only">Click</span>
-        <span class="mobile-only">Tap</span>
-        on the area below to see it in action.
-      </p>
+  <q-page class="row">
+    <q-scroll-area id="content" class="col">
+      <div style="width: 500px; max-width: 90vw; margin: 0 auto;" class="docs-ripple">
+        <p class="caption">
+          <span class="desktop-only">Click</span>
+          <span class="mobile-only">Tap</span>
+          on the area below to see it in action.
+        </p>
 
-      <div v-ripple class="relative-position" :class="classes" />
-    </div>
+        <div v-ripple class="relative-position" :class="classes" />
+      </div>
+    </q-scroll-area>
   </q-page>
 </template>
 
@@ -42,7 +44,7 @@ export default {
 <style lang="stylus">
   @import '~variables'
 
-  .docs-ripple > div > .relative-position
+  .docs-ripple > .relative-position
     height 150px
     border-radius 3px
     cursor pointer

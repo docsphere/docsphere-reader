@@ -1,6 +1,6 @@
 <template>
-  <div id="main">
-    <div id="content">
+  <q-page class="row">
+    <q-scroll-area id="content" class="col">
       <q-card>
         <q-card-title>v0.16.0</q-card-title>
         <q-card-separator />
@@ -25,10 +25,10 @@
           </ul>
         </q-card-main>
       </q-card>
-    </div>
-  </div>
+    </q-scroll-area>
+  </q-page>
 </template>
 
 <script></script>
 
-<style scoped></style>
+<style></style>

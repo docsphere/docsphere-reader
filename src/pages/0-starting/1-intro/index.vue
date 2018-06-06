@@ -1,7 +1,9 @@
 <template>
-  <div id="main" :class="row">
-    <d-anchor id="anchor" :class="anchor" :nodes="nodes" :route="route" />
-    <div id="content" :class="content">
+  <q-page :class="row">
+    <q-scroll-area id="anchor" :class="anchor">
+      <d-anchor :nodes="nodes" :route="route" />
+    </q-scroll-area>
+    <q-scroll-area id="content" :class="content">
       <h1 v-html="h(0)"></h1>
       <p v-html="p(1) + l(1) + $t('_a') + l(2) + p(2) + l(3) + p(3)"></p>
       <p v-html="p(4) + l(4) + '.'"></p>
@@ -33,8 +35,8 @@
 
       <h2 v-html="h(4)"></h2>
       <p style="color: red;">... (This page is in the process of being finalized!)</p>
-    </div>
-  </div>
+    </q-scroll-area>
+  </q-page>
 </template>
 
 <script>

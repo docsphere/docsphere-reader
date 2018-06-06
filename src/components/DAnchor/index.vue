@@ -57,4 +57,6 @@ export default {
   #anchor .q-tree-node-header
     margin 0
     border-radius 0
+  #anchor .scroll
+    padding-top 12px
 </style>

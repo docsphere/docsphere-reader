@@ -1,6 +1,6 @@
 <template>
-  <div id="main">
-    <div id="content">
+  <q-page class="row">
+    <q-scroll-area id="content" class="col">
       <p class="caption">Headings</p>
       <div v-for="heading in headings" :key="heading.class" class="row items-center q-mb-lg">
         <div class="col-sm-3 col-12">
@@ -57,8 +57,8 @@
         <dt>Malesuada porta</dt>
         <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
       </dl>
-    </div>
-  </div>
+    </q-scroll-area>
+  </q-page>
 </template>
 
 <script>
