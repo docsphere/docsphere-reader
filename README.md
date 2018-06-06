@@ -3,7 +3,7 @@
 
 > All-in-one Quasar Documentation: Overview, Showcase (Examples), Showcase Code (Source Code of Showcase) and Changelog.
 
-The purpose of this project is to bring together the theoretical, examples, source code and changelogs of the Quasar documentation in one place.
+The purpose of this project is to bring together the theoretical, Showcase, Source Code of Showcase and Changelogs of the Quasar documentation in one place.
 In addition, we have created several features that make it easy to study and search for specific information within the Quasar documentation.
 
 We want to create resources that meet those goals. Some features are listed below:
@@ -17,7 +17,7 @@ See the projects tab for more details!
 We want the documentation to be available in any language so that it can reach everyone.
 
 Currently available in 2 languages: English and Portuguese.
-Wait for the Contributing.MD file to initiate a contribution to this repository.
+Wait for the CONTRIBUTING.md file to initiate a contribution to this repository.
 
 ### Menu search engine based in keywords and i18n
 The search for content in the documentation is simple, quick and easy.
