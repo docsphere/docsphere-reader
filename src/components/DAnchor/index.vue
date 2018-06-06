@@ -4,7 +4,14 @@
     :nodes="nodes" node-key="id"
     :selected.sync="selected" ref="anchor">
     <div slot="default-header" slot-scope="prop" class="row items-center">
-      <a v-if="prop.node.h" :href="`${$route.path}#${prop.node.h[0]}`">{{ prop.node.h[1] }}</a>
+      <a v-if="prop.node.id !== 0"
+         :href="`${$route.path}#${$t(`_.${namespace}.overview.h[${prop.node.id-1}][0]`)}`">
+        <span>{{ $t(`_.${namespace}.overview.h[${prop.node.id-1}][1]`) }}</span>
+      </a>
+      <a v-else
+         :href="`${$route.path}#${$t(`_.${namespace}._[0]`)}`">
+        <span>{{ $t(`_.${namespace}._[1]`) }}</span>
+      </a>
     </div>
   </q-tree>
 </template>
@@ -16,6 +23,10 @@ export default {
   props: {
     nodes: {
       type: Array,
+      required: true
+    },
+    namespace: {
+      type: String,
       required: true
     }
   },

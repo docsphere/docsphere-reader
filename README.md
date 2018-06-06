@@ -1,7 +1,7 @@
 # Quasar Documentation++
 (WORKING IN PROGRESS)
 
-> All-in-one Quasar Documentation: Overview, Showcase (Examples), Showcase Code (Source Code of Showcase) and Changelog.
+> All-in-one Quasar Framework Documentation: Overview, Showcase (Examples), Showcase Code (Source Code of Showcase) and Changelog.
 
 The purpose of this project is to bring together the theoretical, Showcase, Source Code of Showcase and Changelogs of the Quasar documentation in one place.
 In addition, we have created several features that make it easy to study and search for specific information within the Quasar documentation.

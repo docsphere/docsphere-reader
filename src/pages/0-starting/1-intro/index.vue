@@ -1,7 +1,7 @@
 <template>
   <q-page :class="row">
     <q-scroll-area id="anchor" :class="anchor">
-      <d-anchor :nodes="nodes" />
+      <d-anchor :nodes="nodes" :namespace="namespace" />
     </q-scroll-area>
     <q-scroll-area id="content" :class="content">
       <h1 v-html="h(0)"></h1>
@@ -54,26 +54,21 @@ export default {
     return {
       nodes: [
         {
-          id: 1,
-          h: this.$t('_.starting.intro._'),
+          id: 0,
           children: [
             {
-              id: 2,
-              h: this.$t('_.starting.intro.overview.h[0]'),
+              id: 1,
               children: [
                 {
-                  id: 3,
-                  h: this.$t('_.starting.intro.overview.h[1]')
+                  id: 2
                 }
               ]
             },
             {
-              id: 4,
-              h: this.$t('_.starting.intro.overview.h[2]')
+              id: 3
             },
             {
-              id: 5,
-              h: this.$t('_.starting.intro.overview.h[3]')
+              id: 4
             }
           ]
         }

@@ -1,7 +1,7 @@
 <template>
   <q-page :class="row">
     <q-scroll-area id="anchor" :class="anchor">
-      <d-anchor :nodes="nodes" />
+      <d-anchor :nodes="nodes" :namespace="namespace" />
     </q-scroll-area>
     <q-scroll-area id="content" :class="content">
       <h1 v-html="h(0)"></h1>
@@ -51,29 +51,13 @@ export default {
     return {
       nodes: [
         {
-          id: 1,
-          h: this.$t('_.style.color._'),
+          id: 0,
           children: [
-            {
-              id: 2,
-              h: this.$t('_.style.color.overview.h[0]')
-            },
-            {
-              id: 3,
-              h: this.$t('_.style.color.overview.h[1]')
-            },
-            {
-              id: 4,
-              h: this.$t('_.style.color.overview.h[2]')
-            },
-            {
-              id: 5,
-              h: this.$t('_.style.color.overview.h[3]')
-            },
-            {
-              id: 6,
-              h: this.$t('_.style.color.overview.h[4]')
-            }
+            { id: 1 },
+            { id: 2 },
+            { id: 3 },
+            { id: 4 },
+            { id: 5 }
           ]
         }
       ],
@@ -98,7 +82,7 @@ export default {
     _ (property) {
       return this.$t(`_.style.color.overview.${property}`)
     },
-    e1 () {
+    e1 () { // Exception 1
       if (this.$i18n.locale === 'en') {
         return ` ${this.$t('_f')}`
       }

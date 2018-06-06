@@ -78,11 +78,14 @@ module.exports = function (ctx) {
         'QScrollArea',
         'QPopover',
         'QToggle',
-        'QTree'
+        'QTree',
+        'QScrollObservable'
       ],
       directives: [
         'Ripple',
-        'CloseOverlay'
+        'CloseOverlay',
+        'Scroll',
+        'ScrollFire'
       ],
       // Quasar plugins
       plugins: [
