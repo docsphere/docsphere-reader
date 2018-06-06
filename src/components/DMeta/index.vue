@@ -1,19 +1,27 @@
 <template>
   <q-toolbar color="dark">
     <q-btn v-if="edit"
-           flat dense no-caps :icon="icons" :color="color"
+           flat dense no-caps
+           :icon="icons" :color="color"
            @click="openURL(`https://github.com/slowaways/quasar-documentation-pp/blob/master/src/pages/${edit}`)">
-      <div>
+      <div class="gt-xs">
         <span class="hm" v-if="status === 9">{{ $t('meta.github.edit') }}</span>
         <span class="hm" v-else-if="status === 6">{{ $t('meta.github.complete') }}</span>
         <span class="hm" v-else>{{ $t('meta.github.start') }}</span>
         <q-icon name="fab fa-github"></q-icon>
       </div>
     </q-btn>
-    <q-toolbar-title class="text-center">
-      <!--<q-chip class="q-mr-md" dense square icon="translate" color="grey-4" text-color="black">{{ progress }}</q-chip>-->
-    </q-toolbar-title>
-    <q-chip class="q-ml-md" dense v-if="$store.state.layout.anchorToggle">
+    <!--
+    <q-chip class="q-ml-sm" dense square>
+      <q-icon name="translate" size="1.3rem" />
+      <span>{{ progress }}</span>
+    </q-chip>
+    <q-chip class="q-ml-sm" dense square>
+      <q-icon name="language" size="1.3rem" />
+      <span>6912 of 6912</span>
+    </q-chip>-->
+
+    <q-chip class="anchor-toggle" dense square v-if="$store.state.layout.anchorToggle">
       <q-icon name="subject" size="1.3rem" />
       <q-toggle v-model="$store.state.layout.anchor" checked-icon="visibility" unchecked-icon="visibility_off"/>
     </q-chip>
@@ -37,6 +45,10 @@ export default {
     translation: {
       type: Number,
       default: 0
+    },
+    languages: {
+      type: Number,
+      default: 0
     }
   },
   computed: {
@@ -44,7 +56,7 @@ export default {
       if (this.status === 9) {
         return 'white'
       } else if (this.status === 6) {
-        return 'positive'
+        return 'green-6'
       } else {
         return 'red-6'
       }
@@ -60,12 +72,7 @@ export default {
     },
     progress () {
       const locale = this.$i18n.locale
-      return `${this.translation}% (${locale})`
-    },
-
-    navigation: {
-      get () { return true },
-      set (val) {}
+      return `100% (${locale})`
     }
   },
 
@@ -78,8 +85,12 @@ export default {
 <style lang="stylus" scoped>
   .q-toolbar
     min-height: 30px
-  .q-toolbar-title
-    font-size: 12px
   span.hm
     margin: 0 5px
+
+  .anchor-toggle
+    position absolute
+    height 22px
+    top 7px
+    right 12px
 </style>
