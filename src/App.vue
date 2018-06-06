@@ -82,6 +82,9 @@ export default {
   hightlight, code, pre
     background-color: #f8f8f8
 
+  .scroll .full-width
+    user-select text
+
   .padding
     padding: 1rem 2rem
 

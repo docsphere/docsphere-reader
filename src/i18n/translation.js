@@ -9,21 +9,49 @@ export default {
       }
 
       if (h) {
-        return `<a id="${h[0]}" href="/${this.route}#${h[0]}" class="headerlink">${h[1]}</a>`
+        return `<a id="${h[0]}" href="${this.$route.path}#${h[0]}" class="headerlink">${h[1]}</a>`
       } else {
         return ''
       }
     },
-    p (index) {
-      return this.$t(`_.${this.namespace}.overview.p[${--index}]`)
+    t (index) {
+      return this.$t(`_.${this.namespace}.overview.t[${--index}]`)
     },
     l (index) {
       const l = this.$t(`_.${this.namespace}.overview.l[${--index}]`)
       return `<a href="${l[0]}" target="_blank">${l[1]}</a>`
     },
 
-    sm (index) {
-      return `<code>${this.codes[--index]}</code>`
+    sc (index, separator = '', final = '.') {
+      let code = this.codes[--index]
+
+      if (code.constructor === Array) {
+        let codes = ''
+
+        switch (separator) {
+          case 'a':
+            separator = this.$t('_a')
+            break
+          case 'o':
+            separator = this.$t('_o')
+            break
+        }
+
+        const codeLength = code.length
+        for (let i = 0; i < codeLength; i++) {
+          if (code[codeLength - 1] === code[i]) {
+            codes += `<code>${code[i]}</code>${final}`
+          } else if (separator && code[codeLength - 2] === code[i]) {
+            codes += `<code>${code[i]}</code>${separator} `
+          } else {
+            codes += `<code>${code[i]}</code>, `
+          }
+        }
+
+        return codes
+      }
+
+      return `<code>${code}</code>`
     },
     c (id) {
       const code = require(`../pages/${this.dir}/_/codes/en/${id}.json`)

@@ -17,21 +17,22 @@
         </q-btn>
       </q-toolbar>
     </q-layout-header>
-    <q-layout-footer v-model="layoutFooter" :reveal="false">
-      <router-view name="meta" />
-    </q-layout-footer>
 
     <q-layout-drawer v-model="leftDrawerOpen">
       <d-menu></d-menu>
     </q-layout-drawer>
 
-    <q-layout-drawer mini side="right" v-model="$store.state.layout.right">
-      <router-view name="submenu" />
-    </q-layout-drawer>
-
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-layout-footer v-model="layoutFooter" :reveal="false">
+      <router-view name="meta" />
+    </q-layout-footer>
+
+    <q-layout-drawer mini side="right" v-model="$store.state.layout.right">
+      <router-view name="submenu" />
+    </q-layout-drawer>
   </q-layout>
 </template>
 
