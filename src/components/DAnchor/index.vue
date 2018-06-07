@@ -47,9 +47,7 @@ export default {
       }
     })
 
-    const hash = this.$route.hash
-    const id = hash.substring(1)
-
+    const id = this.$route.hash.replace(/^\D+/g, '')
     if (id === (Number(id) + '')) {
       this.anchor(id)
     }
