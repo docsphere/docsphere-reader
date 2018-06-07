@@ -21,9 +21,9 @@
       <span>6912 of 6912</span>
     </q-chip>-->
 
-    <q-chip class="anchor-toggle" dense square v-if="$store.state.layout.metaToggle">
+    <q-chip class="anchor-toggle" dense square v-if="metaToggle">
       <q-icon name="subject" size="1.3rem" />
-      <q-toggle v-model="$store.state.layout.meta" checked-icon="visibility" unchecked-icon="visibility_off"/>
+      <q-toggle v-model="meta" checked-icon="visibility" unchecked-icon="visibility_off"/>
     </q-chip>
   </q-toolbar>
 </template>
@@ -73,6 +73,18 @@ export default {
     progress () {
       const locale = this.$i18n.locale
       return `100% (${locale})`
+    },
+
+    metaToggle () {
+      return this.$store.state.layout.metaToggle
+    },
+    meta: {
+      get () {
+        return this.$store.state.layout.meta
+      },
+      set (value) {
+        this.$store.commit('layout/setMeta', value)
+      }
     }
   },
 
