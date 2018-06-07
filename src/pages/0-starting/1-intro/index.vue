@@ -34,7 +34,7 @@
       <div v-html="c(6)"></div>
 
       <h2 v-html="h(4)"></h2>
-      <p style="color: red;">... (This page is in the process of being finalized!)</p>
+      <p style="color: red;">... (This page is still under construction!)</p>
     </q-scroll-area>
   </q-page>
 </template>

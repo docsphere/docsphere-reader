@@ -26,7 +26,7 @@
       <router-view />
     </q-page-container>
 
-    <q-layout-footer v-model="footer" :reveal="false">
+    <q-layout-footer v-model="footer">
       <router-view name="footer" />
     </q-layout-footer>
 
@@ -76,15 +76,6 @@ export default {
 </script>
 
 <style lang="stylus">
-  .q-scrollarea.standard
-    position absolute
-    left 0
-    top 0
-    width 100%
-    height 100%
-    margin 0
-    padding 0
-
   #content:not(.no-padding) .scroll:not(.overflow-hidden),
   #content:not(.no-padding) .scroll.overflow-hidden > div
     padding 1rem 1.5rem 1rem 1.5rem

@@ -4,19 +4,14 @@ const { getScrollTarget, setScrollPosition } = scroll
 export default {
   methods: {
     anchor (id) {
-      let Id = null
-      if (id.constructor === String) {
-        Id = id
-      } else {
-        if (id) {
-          Id = this.$t(`_.${this.namespace}.overview.h[${id - 1}][0]`)
-        } else {
-          Id = this.$t(`_.${this.namespace}._[0]`)
-        }
+      if (id[0] === '#') {
+        id = id.substring(1)
       }
 
-      const Anchor = document.getElementById(Id)
-      if (Id) {
+      this.$store.commit('page/setAnchor', Number(id))
+
+      const Anchor = document.getElementById(id)
+      if (id) {
         let target = getScrollTarget(Anchor)
         let offset = Anchor.offsetTop - Anchor.scrollHeight
         let duration = 300

@@ -31,15 +31,16 @@
       <div v-html="c(3)"></div>
       <p v-html="t(17)"></p>
       <div v-html="c(4)"></div>
-      <p style="color: red;">... (This page is in the process of being finalized!)</p>
+      <p style="color: red;">... (This page is still under construction!)</p>
     </q-scroll-area>
   </q-page>
 </template>
 
 <script>
+import DAnchor from '/src/components/DAnchor'
+
 import Translation from '/src/i18n/translation'
 import Flexbox from '/src/layouts/flexbox'
-import DAnchor from '/src/components/DAnchor'
 
 export default {
   components: {
@@ -79,9 +80,6 @@ export default {
   },
 
   methods: {
-    _ (property) {
-      return this.$t(`_.style.color.overview.${property}`)
-    },
     e1 () { // Exception 1
       if (this.$i18n.locale === 'en') {
         return ` ${this.$t('_f')}`

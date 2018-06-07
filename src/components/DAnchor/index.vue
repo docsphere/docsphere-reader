@@ -27,25 +27,32 @@ export default {
       required: true
     }
   },
-  data () {
-    return {
-      node: 0
-    }
-  },
   computed: {
     selected: {
       get () {
-        return this.node
+        return this.$store.state.page.anchor
       },
       set (value) {
         this.anchor(value)
-        this.node = value
       }
     }
   },
 
   mounted () {
     this.$store.commit('layout/setMetaToggle', true)
+
+    this.$router.afterEach((to, from) => {
+      if (to.hash) {
+        this.anchor(to.hash)
+      }
+    })
+
+    const hash = this.$route.hash
+    const id = hash.substring(1)
+
+    if (id === (Number(id) + '')) {
+      this.anchor(id)
+    }
   },
   beforeDestroy () {
     this.$store.commit('layout/setMetaToggle', false)
