@@ -33,7 +33,7 @@ export default {
         return this.$store.state.page.anchor
       },
       set (value) {
-        this.anchor(value)
+        this.$router.push(this.$route.path + '#' + value)
       }
     }
   },
