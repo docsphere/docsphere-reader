@@ -13,7 +13,7 @@ export default {
 
         id = '' + id
         const Anchor = document.getElementById(id)
-        if (id) {
+        if (typeof Anchor === 'object') {
           let target = getScrollTarget(Anchor)
           let offset = Anchor.offsetTop - Anchor.scrollHeight
           let duration = 300
