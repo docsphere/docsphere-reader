@@ -4,8 +4,8 @@
     :nodes="nodes" node-key="id"
     :selected.sync="selected">
     <div slot="default-header" slot-scope="prop">
-      <b v-if="prop.node.id" @click="anchor(prop.node.id)">{{ $t(`_.${namespace}.overview.h[${prop.node.id - 1}][1]`) }}</b>
-      <b v-else @click="anchor(prop.node.id)">{{ $t(`_.${namespace}._[1]`) }}</b>
+      <b v-if="prop.node.id">{{ $t(`_.${namespace}.overview.h[${prop.node.id - 1}][1]`) }}</b>
+      <b v-else>{{ $t(`_.${namespace}._[1]`) }}</b>
     </div>
   </q-tree>
 </template>
@@ -29,7 +29,18 @@ export default {
   },
   data () {
     return {
-      selected: 0
+      node: 0
+    }
+  },
+  computed: {
+    selected: {
+      get () {
+        return this.node
+      },
+      set (value) {
+        this.anchor(value)
+        this.node = value
+      }
     }
   },
 
