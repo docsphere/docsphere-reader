@@ -1,9 +1,9 @@
 <template>
   <q-page :class="row">
-    <q-scroll-area id="anchor" :class="anchor">
+    <q-scroll-area id="anchor" :class="meta">
       <d-anchor :nodes="nodes" :namespace="namespace" />
     </q-scroll-area>
-    <q-scroll-area id="content" :class="content">
+    <q-scroll-area id="content" :class="main">
       <h1 v-html="h(0)"></h1>
       <p v-html="t(1)"></p>
       <p v-html="t(2) + l(1) + '.' + t(3) + l(2) + '.'"></p>
@@ -37,9 +37,9 @@
 </template>
 
 <script>
-import Translation from 'src/i18n/translation'
-import Flexbox from 'src/layouts/flexbox'
-import DAnchor from 'src/components/DAnchor'
+import Translation from '/src/i18n/translation'
+import Flexbox from '/src/layouts/flexbox'
+import DAnchor from '/src/components/DAnchor'
 
 export default {
   components: {

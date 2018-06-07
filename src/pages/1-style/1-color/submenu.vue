@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import DSubmenu from 'src/components/DSubmenu'
+import DSubmenu from '/src/components/DSubmenu'
 
 export default {
   components: {

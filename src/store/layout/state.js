@@ -24,8 +24,8 @@ export default {
   bottomcenter: 'F',
   bottomright: 'f',
 
+  // Main
   scrolling: true,
-
-  anchor: false,
-  anchorToggle: false
+  meta: false,
+  metaToggle: false
 }

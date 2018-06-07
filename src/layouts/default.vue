@@ -27,7 +27,7 @@
     </q-page-container>
 
     <q-layout-footer v-model="layoutFooter" :reveal="false">
-      <router-view name="meta" />
+      <router-view name="footer" />
     </q-layout-footer>
 
     <q-layout-drawer mini side="right" v-model="$store.state.layout.right">
@@ -37,14 +37,14 @@
 </template>
 
 <script>
-import DMenu from 'src/components/DMenu'
-import DMeta from 'src/components/DMeta'
+import DMenu from '/src/components/DMenu'
+import DFooter from '/src/components/DFooter'
 
 export default {
   name: 'LayoutDefault',
 
   components: {
-    DMenu, DMeta
+    DMenu, DFooter
   },
 
   data () {
@@ -69,6 +69,13 @@ export default {
   #content:not(.no-padding) .scroll:not(.overflow-hidden),
   #content:not(.no-padding) .scroll.overflow-hidden > div
     padding 1rem 1.5rem 1rem 1.5rem
+
+  .meta-on-right
+    border-left 1px solid #e0e0e0
+  .meta-on-top
+    border-bottom 1px solid #e0e0e0
+    padding-bottom 5px
+    margin-bottom 20px
 
   .q-layout-drawer-right
     box-shadow: 0 -8px 8px rgba(0,0,0,0.2), 0 -3px 4px rgba(0,0,0,0.14), 0 -3px 3px -2px rgba(0,0,0,0.12)

@@ -466,7 +466,7 @@
 
 <script>
 import { openURL } from 'quasar'
-import menu from 'src/i18n/menu.json'
+import menu from '/src/i18n/menu.json'
 
 export default {
   name: 'DMenu',

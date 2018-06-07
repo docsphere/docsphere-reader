@@ -1,9 +1,9 @@
 <template>
   <q-page :class="row">
-    <q-scroll-area id="anchor" :class="anchor">
+    <q-scroll-area id="anchor" :class="meta">
       <d-anchor :nodes="nodes" :namespace="namespace" />
     </q-scroll-area>
-    <q-scroll-area id="content" :class="content">
+    <q-scroll-area id="content" :class="main">
       <h1 v-html="h(0)"></h1>
       <p v-html="t(1) + l(1) + $t('_a') + l(2) + t(2) + l(3) + t(3)"></p>
       <p v-html="t(4) + l(4) + '.'"></p>
@@ -40,15 +40,17 @@
 </template>
 
 <script>
-import Translation from 'src/i18n/translation'
-import Flexbox from 'src/layouts/flexbox'
-import DAnchor from 'src/components/DAnchor'
+import DAnchor from '/src/components/DAnchor'
+
+import Translation from '/src/i18n/translation'
+import Flexbox from '/src/layouts/flexbox'
+import Navigator from '/src/layouts/navigator'
 
 export default {
   components: {
     DAnchor
   },
-  mixins: [Translation, Flexbox],
+  mixins: [Translation, Flexbox, Navigator],
 
   data () {
     return {
@@ -59,17 +61,11 @@ export default {
             {
               id: 1,
               children: [
-                {
-                  id: 2
-                }
+                { id: 2 }
               ]
             },
-            {
-              id: 3
-            },
-            {
-              id: 4
-            }
+            { id: 3 },
+            { id: 4 }
           ]
         }
       ],

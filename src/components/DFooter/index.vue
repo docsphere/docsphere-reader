@@ -21,9 +21,9 @@
       <span>6912 of 6912</span>
     </q-chip>-->
 
-    <q-chip class="anchor-toggle" dense square v-if="$store.state.layout.anchorToggle">
+    <q-chip class="anchor-toggle" dense square v-if="$store.state.layout.metaToggle">
       <q-icon name="subject" size="1.3rem" />
-      <q-toggle v-model="$store.state.layout.anchor" checked-icon="visibility" unchecked-icon="visibility_off"/>
+      <q-toggle v-model="$store.state.layout.meta" checked-icon="visibility" unchecked-icon="visibility_off"/>
     </q-chip>
   </q-toolbar>
 </template>
@@ -32,7 +32,7 @@
 import { openURL } from 'quasar'
 
 export default {
-  name: 'DMeta',
+  name: 'DFooter',
   props: {
     edit: {
       type: String,

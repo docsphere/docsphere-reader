@@ -72,7 +72,6 @@ export const setBottomRight = (state, val) => {
 export const setScrolling = (state, val) => {
   state.scrolling = val
 }
-
-export const setAnchorToggle = (state, val) => {
-  state.anchorToggle = val
+export const setMetaToggle = (state, val) => {
+  state.metaToggle = val
 }

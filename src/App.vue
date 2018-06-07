@@ -36,7 +36,12 @@ export default {
   h3
     font-size: 1.17rem
     margin: 1.2em 0 0.9em;
-    position: relative;
+  .header-link
+    color #286fa3
+    padding 6px
+    cursor pointer
+  .header-link:hover
+    background-color: #cde3f3
 
   a, body
     color: #34495e;
@@ -44,20 +49,16 @@ export default {
     text-decoration: none
     outline: 0
     cursor: pointer
-  a.headerlink
-    color #286fa3
-    padding 6px
-  a.headerlink:hover
-    background-color: #cde3f3
-  a:not([data-scroll]):not(.search-result):not(.support-button):not(.headerlink):hover:not(.button)
+  a:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):hover:not(.button)
     color: #286fa3
     background-color: #cde3f3
-  a:not([data-scroll]):not(.search-result):not(.support-button):not(.headerlink)
+  a:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link)
     color: #4e9bd4
     font-weight: 700
     padding: 0 2px
     transition: all .3s ease
     border-bottom: 1px dotted #4e9bd4
+
   blockquote
     margin: 0 0 16px;
   blockquote p
@@ -72,15 +73,12 @@ export default {
     white-space: pre-wrap
     display inline-block
     box-shadow: 0 1px 1px rgba(0,0,0,.125)
-
   code, pre
+    background-color: #f8f8f8
     font-family: 'Roboto Mono',Monaco,courier,monospace
     font-size: .8em
     -webkit-font-smoothing: initial
     -moz-osx-font-smoothing: initial
-
-  hightlight, code, pre
-    background-color: #f8f8f8
 
   .scroll .full-width
     user-select text

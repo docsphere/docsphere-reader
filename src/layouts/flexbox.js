@@ -7,8 +7,9 @@ export default {
         return 'row reverse'
       }
     },
-    content () {
-      if (this.$store.state.layout.anchor) {
+
+    main () {
+      if (this.$store.state.layout.meta) {
         if (this.$q.screen.lt.md) {
           return ''
         } else {
@@ -18,12 +19,12 @@ export default {
         return 'col-12'
       }
     },
-    anchor () {
-      if (this.$store.state.layout.anchor) {
+    meta () {
+      if (this.$store.state.layout.meta) {
         if (this.$q.screen.lt.md) {
-          return 'anchor-on-top'
+          return 'meta-on-top'
         } else {
-          return 'col-3 anchor-on-right'
+          return 'col-3 meta-on-right'
         }
       } else {
         return 'hidden'

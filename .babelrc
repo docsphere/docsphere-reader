@@ -17,6 +17,11 @@
     ]
   ],
   "plugins": [
+    ["module-resolver", {
+      "alias": {
+        "/src": "./src"
+      }
+    }],
     [
       "@babel/transform-runtime", {
         "polyfill": false,

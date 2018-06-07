@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import DHeader from 'src/components/DHeader'
+import DHeader from '/src/components/DHeader'
 
 export default {
   components: {

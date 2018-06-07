@@ -2,23 +2,20 @@
   <q-tree
     default-expand-all
     :nodes="nodes" node-key="id"
-    :selected.sync="selected" ref="anchor">
-    <div slot="default-header" slot-scope="prop" class="row items-center">
-      <a v-if="prop.node.id !== 0"
-         :href="`${$route.path}#${$t(`_.${namespace}.overview.h[${prop.node.id-1}][0]`)}`">
-        <span>{{ $t(`_.${namespace}.overview.h[${prop.node.id-1}][1]`) }}</span>
-      </a>
-      <a v-else
-         :href="`${$route.path}#${$t(`_.${namespace}._[0]`)}`">
-        <span>{{ $t(`_.${namespace}._[1]`) }}</span>
-      </a>
+    :selected.sync="selected">
+    <div slot="default-header" slot-scope="prop">
+      <b v-if="prop.node.id" @click="anchor(prop.node.id)">{{ $t(`_.${namespace}.overview.h[${prop.node.id - 1}][1]`) }}</b>
+      <b v-else @click="anchor(prop.node.id)">{{ $t(`_.${namespace}._[1]`) }}</b>
     </div>
   </q-tree>
 </template>
 
 <script>
+import Navigator from '/src/layouts/navigator'
+
 export default {
   name: 'DAnchor',
+  mixins: [Navigator],
 
   props: {
     nodes: {
@@ -32,36 +29,25 @@ export default {
   },
   data () {
     return {
-      selected: 1
+      selected: 0
     }
   },
 
   mounted () {
-    this.$store.commit('layout/setAnchorToggle', true)
+    this.$store.commit('layout/setMetaToggle', true)
   },
   beforeDestroy () {
-    this.$store.commit('layout/setAnchorToggle', false)
+    this.$store.commit('layout/setMetaToggle', false)
   }
 }
 </script>
 
 <style lang="stylus">
-  #anchor a
+  #anchor .q-tree
+    padding-top 12px
+  #anchor b
     color #286fa3
-    font-weight 600
-  #anchor.anchor-on-right
-    border-left 1px solid #e0e0e0
-  #anchor.anchor-on-top
-    border-bottom 1px solid #e0e0e0
-    padding-bottom 5px
-    margin-bottom 20px
-  #anchor .q-tree-node-link
-    cursor auto
-  #anchor .q-tree-node-link:hover
-    background none
   #anchor .q-tree-node-header
     margin 0
     border-radius 0
-  #anchor .scroll
-    padding-top 12px
 </style>
