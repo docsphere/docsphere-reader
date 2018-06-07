@@ -18,7 +18,7 @@ export default {
 
           setScrollPosition(target, offset, duration)
 
-          this.$store.commit('page/setAnchor', id)
+          this.$store.commit('page/setAnchor', Number(id))
         }
 
         return true
