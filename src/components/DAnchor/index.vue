@@ -33,6 +33,11 @@ export default {
         return this.$store.state.page.anchor
       },
       set (value) {
+        if (value === null) {
+          this.anchor(this.selected)
+          return
+        }
+
         this.$router.push(this.$route.path + '#' + value)
       }
     }
