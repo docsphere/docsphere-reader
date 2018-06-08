@@ -7,13 +7,13 @@ export default {
     starting: {
       _: 'Getting started',
       intro: {
-        _: ['intro', 'Introduction for Beginners'],
+        _: 'Introduction for Beginners',
         overview: {
           h: [
-            ['single-file-vue-components', 'Single File Vue Components'],
-            ['css-preprocessors', 'CSS preprocessors'],
-            ['using-quasar-directive', 'Using Quasar Directive'],
-            ['using-quasar-components', 'Using Quasar Components']
+            'Single File Vue Components',
+            'CSS preprocessors',
+            'Using Quasar Directive',
+            'Using Quasar Components'
           ],
           t: [
             'Before you begin with Quasar, it is a good idea to get acquainted with ES6 and have a fairly good knowledge about how Vue works. (',
@@ -69,14 +69,14 @@ export default {
     style: {
       _: 'Style',
       color: {
-        _: ['color', 'Color Palette'],
+        _: 'Color Palette',
         overview: {
           h: [
-            ['brand-colors', 'Brand Colors'],
-            ['color-list', 'Color List'],
-            ['using-as-css-classes', 'Using as CSS Classes'],
-            ['using-stylus-variables', 'Using Stylus Variables'],
-            ['adding-your-own-colors', 'Adding Your Own Colors']
+            'Brand Colors',
+            'Color List',
+            'Using as CSS Classes',
+            'Using Stylus Variables',
+            'Adding Your Own Colors'
           ],
           t: [
             'Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.',
@@ -109,19 +109,19 @@ export default {
         showcase: {}
       },
       typography: {
-        _: ['typography', 'Typography']
+        _: 'Typography'
       },
       ripples: {
-        _: ['ripples', 'Material Ripples']
+        _: 'Material Ripples'
       },
       stylus: {
-        _: ['styles', 'Stylus Variables']
+        _: 'Stylus Variables'
       },
       icons: {
-        _: ['icons', 'Icons']
+        _: 'Icons'
       },
       addressbar: {
-        _: ['addressbar', 'Addressbar Color']
+        _: 'Addressbar Color'
       }
     },
 

@@ -1,5 +1,5 @@
 <template>
-  <q-toolbar color="dark">
+  <q-toolbar color="dark" id="d-footer">
     <q-btn v-if="edit"
            flat dense no-caps
            :icon="icons" :color="color"
@@ -22,8 +22,8 @@
     </q-chip>-->
 
     <q-chip class="anchor-toggle" dense square v-if="metaToggle">
-      <q-icon name="subject" size="1.3rem" />
-      <q-toggle v-model="meta" checked-icon="visibility" unchecked-icon="visibility_off"/>
+      <q-icon name="link" size="1.3rem" class="q-mr-xs" />
+      <q-toggle v-model="meta" checked-icon="visibility" unchecked-icon="visibility_off" />
     </q-chip>
   </q-toolbar>
 </template>
@@ -94,15 +94,18 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-  .q-toolbar
+<style lang="stylus">
+  #d-footer.q-toolbar
     min-height: 30px
-  span.hm
+  #d-footer span.hm
     margin: 0 5px
 
-  .anchor-toggle
+  #d-footer .anchor-toggle
     position absolute
     height 22px
     top 7px
     right 12px
+
+  #d-footer .q-toggle-handle
+    height: 20px
 </style>

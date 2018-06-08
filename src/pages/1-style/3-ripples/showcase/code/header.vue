@@ -1,5 +1,5 @@
 <template>
-  <d-header icon="blur_on" :title="$t('_.style.ripples._[1]')" subsection="/showcase/code" />
+  <d-header icon="blur_on" :title="$t('_.style.ripples._')" subsection="/showcase/code" />
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <d-header icon="style" :title="$t('_.starting.intro._[1]')" />
+  <d-header icon="style" :title="$t('_.starting.intro._')" />
 </template>
 
 <script>

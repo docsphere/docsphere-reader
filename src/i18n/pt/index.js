@@ -7,13 +7,14 @@ export default {
     starting: {
       _: 'Começando',
       intro: {
-        _: ['intro', 'Introdução para Iniciantes']
+        _: 'Introdução para Iniciantes'
       },
       platform: {
         _: 'Detecção de Plataforma'
       },
       events: {
-        _: 'Global Event Bus'},
+        _: 'Global Event Bus'
+      },
       injections: {
         _: 'Vue Prototype Injections'
       },
@@ -28,14 +29,14 @@ export default {
     style: {
       _: 'Estilo',
       color: {
-        _: ['color', 'Paleta de cores'],
+        _: 'Paleta de cores',
         overview: {
           h: [
-            ['brand-colors', 'Cores principais'],
-            ['color-list', 'Lista de cores'],
-            ['using-as-css-classes', 'Usando como classes CSS'],
-            ['using-stylus-variables', 'Usando Variáveis Stylus'],
-            ['adding-your-own-colors', 'Adicionando suas próprias cores']
+            'Cores principais',
+            'Lista de cores',
+            'Usando como classes CSS',
+            'Usando Variáveis Stylus',
+            'Adicionando suas próprias cores'
           ],
           t: [
             'Quasar Framework oferece uma ampla seleção de cores "fora da caixa". Você pode usar as cores como variáveis Stylus em seu código CSS ou diretamente como classes CSS em seus templates HTML.',
@@ -63,19 +64,19 @@ export default {
         showcase: {}
       },
       typography: {
-        _: ['typography', 'Tipografia']
+        _: 'Tipografia'
       },
       ripples: {
-        _: ['ripples', 'Materiais Ripples']
+        _: 'Materiais Ripples'
       },
       stylus: {
-        _: ['styles', 'Variáveis Stylus']
+        _: 'Variáveis Stylus'
       },
       icons: {
-        _: ['icons', 'Ícones']
+        _: 'Ícones'
       },
       addressbar: {
-        _: ['addressbar', 'Cor da barra de endereço']
+        _: 'Cor da barra de endereço'
       }
     },
 

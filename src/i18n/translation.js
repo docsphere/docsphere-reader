@@ -9,7 +9,7 @@ export default {
       }
 
       if (h) {
-        return `<a id="${index}" href="${this.$route.path}#${index}" class="header-link">${h[1]}</a>`
+        return `<a id="${index}" href="${this.$route.path}#${index}" class="header-link">${h}</a>`
       } else {
         return ''
       }

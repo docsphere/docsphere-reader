@@ -4,8 +4,8 @@
     :nodes="nodes" node-key="id"
     :selected.sync="selected">
     <div slot="default-header" slot-scope="prop">
-      <b v-if="prop.node.id">{{ $t(`_.${namespace}.overview.h[${prop.node.id - 1}][1]`) }}</b>
-      <b v-else>{{ $t(`_.${namespace}._[1]`) }}</b>
+      <b v-if="prop.node.id">{{ $t(`_.${namespace}.overview.h[${prop.node.id - 1}]`) }}</b>
+      <b v-else>{{ $t(`_.${namespace}._`) }}</b>
     </div>
   </q-tree>
 </template>
