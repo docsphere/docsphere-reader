@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import DAnchor from '/src/components/DAnchor'
+import DAnchor from '/src/components/DPage/DAnchor'
 
 import Translation from '/src/i18n/translation'
 import Flexbox from '/src/layouts/flexbox'
