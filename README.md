@@ -1,27 +1,27 @@
 # Quasar Documentation++
 (WORKING IN PROGRESS)
 
-> All-in-one Quasar Framework Documentation: Overview, Showcase (Examples), Showcase Code (Source Code of Showcase) and Changelog.
+> All-in-one Documentation of Quasar Framework.
 
-The purpose of this project is to bring together the theoretical, Showcase, Source Code of Showcase and Changelogs of the Quasar documentation in one place.
-In addition, we have created several features that make it easy to study and search for specific information within the Quasar documentation.
+The proposal of this project is to join in one place, all the documentation of the Quasar Framework: the theoretical part ([quasar-framework.org](https://quasar-framework.org/ "quasar-framework.org")), showcases ([Quasar Play](https://quasar-framework.org/quasar-play/android/index.html#/showcase "Quasar Play")),  showcases source codes ([from github](https://github.com/quasarframework/quasar-play/tree/dev/src/pages/showcase "from github")) and Changelogs.
 
-We want to create resources that meet those goals. Some features are listed below:
-- Partial Source Code View inside the Showcase
-- Component Builder with source code
+You can clone this repository and run on a **web server**, all the documentation of Quasar Framework completely **offline** on your computer, and also **compile** for **mobile** and **desktop** devices.
 
+In addition, we have created several features that make it easy to study and search for specific information within the Quasar Documentation++.
+
+Some features of this documentation are listed below!
 See the projects tab for more details!
 
 ## Features
 ### Internationalization (i18n)
-We want the documentation to be available in any language so that it can reach everyone.
+We want the documentation to be available in any language so that it can reach **everyone**.
 
 Currently available in 2 languages: English (en) and Portuguese (pt).
 Wait for the CONTRIBUTING.md file to initiate a contribution to this repository.
 
 ### Menu search engine based in keywords and i18n
 The search for content in the documentation is simple, fast and easy.
-The search input text in the **menu** makes it easy to search for any content using keywords and you can do it in your favorite language.
+The search input text in the **menu** makes it easy to search for **any content** using keywords and you can do it in your favorite language.
 
 ### Documentation codes in local files
 A JSON file that is processed by the Gist is downloaded and stored in **local files**. These files contain `.vue`, `.js`, `.html`, or `.css` codes that are used in the documentation so that you can access all of the documentation **offline**.
