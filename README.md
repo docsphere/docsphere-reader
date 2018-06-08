@@ -16,12 +16,12 @@ See the projects tab for more details!
 ### Internationalization (i18n)
 We want the documentation to be available in any language so that it can reach everyone.
 
-Currently available in 2 languages: English and Portuguese.
+Currently available in 2 languages: English (en) and Portuguese (pt).
 Wait for the CONTRIBUTING.md file to initiate a contribution to this repository.
 
 ### Menu search engine based in keywords and i18n
-The search for content in the documentation is simple, quick and easy.
-The input text in the **menu** makes it easy to search for any content using keywords and you can do it in your language.
+The search for content in the documentation is simple, fast and easy.
+The search input text in the **menu** makes it easy to search for any content using keywords and you can do it in your favorite language.
 
 ### Documentation codes in local files
 A JSON file that is processed by the Gist is downloaded and stored in **local files**. These files contain `.vue`, `.js`, `.html`, or `.css` codes that are used in the documentation so that you can access all of the documentation **offline**.
@@ -41,7 +41,7 @@ A JSON file that is processed by the Gist is downloaded and stored in **local fi
 (Coming soon) Individual Changelog
 
 ## Contributing
-Wait for the Contributing.MD file to initiate a contribution to this repository.
+Wait for the CONTRIBUTING.md file to initiate a contribution to this repository.
 
 ## License
 Copyright (c) 2018 - Rodrigo Vieira (Slowaways)
