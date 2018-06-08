@@ -47,7 +47,7 @@ import DNav from '/src/components/DPage/DNav'
 
 import Translation from '/src/i18n/translation'
 import Flexbox from '/src/layouts/flexbox'
-import Navigator from '/src/layouts/navigator'
+import Navigator from '/src/pages/navigator'
 
 export default {
   components: {

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Navigator from '/src/layouts/navigator'
+import Navigator from '/src/pages/navigator'
 
 export default {
   name: 'DAnchor',
