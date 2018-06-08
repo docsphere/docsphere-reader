@@ -35,12 +35,15 @@
 
       <h2 v-html="h(4)"></h2>
       <p style="color: red;">... (This page is still under construction!)</p>
+
+      <d-nav :next="next" />
     </q-scroll-area>
   </q-page>
 </template>
 
 <script>
 import DAnchor from '/src/components/DPage/DAnchor'
+import DNav from '/src/components/DPage/DNav'
 
 import Translation from '/src/i18n/translation'
 import Flexbox from '/src/layouts/flexbox'
@@ -48,7 +51,7 @@ import Navigator from '/src/layouts/navigator'
 
 export default {
   components: {
-    DAnchor
+    DAnchor, DNav
   },
   mixins: [Translation, Flexbox, Navigator],
 
@@ -81,6 +84,10 @@ export default {
         'v-ripple',
         'v-',
         '/quasar.conf.js'
+      ],
+
+      next: [
+        'starting/platform', this.$t('_.starting.platform._')
       ]
     }
   }

@@ -32,19 +32,22 @@
       <p v-html="t(17)"></p>
       <div v-html="c(4)"></div>
       <p style="color: red;">... (This page is still under construction!)</p>
+
+      <d-nav :prev="prev" :next="next" />
     </q-scroll-area>
   </q-page>
 </template>
 
 <script>
 import DAnchor from '/src/components/DPage/DAnchor'
+import DNav from '/src/components/DPage/DNav'
 
 import Translation from '/src/i18n/translation'
 import Flexbox from '/src/layouts/flexbox'
 
 export default {
   components: {
-    DAnchor
+    DAnchor, DNav
   },
   mixins: [Translation, Flexbox],
 
@@ -75,6 +78,13 @@ export default {
         ['red', 'red-1', 'red-2', '…', 'red-14'],
         ['text-', 'bg-'],
         ['$primary', '$red-1']
+      ],
+
+      prev: [
+        'starting/rtl', this.$t('_.starting.rtl._')
+      ],
+      next: [
+        'starting/platform', this.$t('_.starting.platform._')
       ]
     }
   },
