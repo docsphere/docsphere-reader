@@ -59,6 +59,7 @@ export default {
   },
   beforeDestroy () {
     this.$store.commit('layout/setMetaToggle', false)
+    this.$store.commit('page/setAnchor', 0)
   }
 }
 </script>
