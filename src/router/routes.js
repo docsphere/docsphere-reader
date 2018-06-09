@@ -2,14 +2,21 @@ export default [
   {
     path: '/starting/intro',
     component: () => import('layouts/default'),
+    meta: {
+      layout: {
+        submenu: {
+          showcase: false
+        }
+      }
+    },
+
     children: [
       {
         path: '',
         components: {
           header: () => import('pages/0-starting/1-intro/header'),
           default: () => import('pages/0-starting/1-intro/'),
-          footer: () => import('pages/0-starting/1-intro/footer'),
-          submenu: () => import('pages/0-starting/1-intro/submenu')
+          footer: () => import('pages/0-starting/1-intro/footer')
         }
       }
     ]
@@ -18,14 +25,21 @@ export default [
   {
     path: '/style/color',
     component: () => import('layouts/default'),
+    meta: {
+      layout: {
+        submenu: {
+          showcase: true
+        }
+      }
+    },
+
     children: [
       {
         path: '',
         components: {
           header: () => import('pages/1-style/1-color/header'),
           footer: () => import('pages/1-style/1-color/footer'),
-          default: () => import('pages/1-style/1-color/'),
-          submenu: () => import('pages/1-style/1-color/submenu')
+          default: () => import('pages/1-style/1-color/')
         }
       },
 
@@ -34,8 +48,7 @@ export default [
         components: {
           header: () => import('pages/1-style/1-color/showcase/header'),
           footer: () => import('pages/1-style/1-color/showcase/footer'),
-          default: () => import('pages/1-style/1-color/showcase/'),
-          submenu: () => import('pages/1-style/1-color/submenu')
+          default: () => import('pages/1-style/1-color/showcase/')
         }
       },
       {
@@ -43,8 +56,7 @@ export default [
         components: {
           header: () => import('pages/1-style/1-color/showcase/code/header'),
           footer: () => import('pages/1-style/1-color//showcase/footer'),
-          default: () => import('pages/1-style/1-color/showcase/code/'),
-          submenu: () => import('pages/1-style/1-color/submenu')
+          default: () => import('pages/1-style/1-color/showcase/code/')
         }
       }
     ]
@@ -52,14 +64,21 @@ export default [
   {
     path: '/style/typography',
     component: () => import('layouts/default'),
+    meta: {
+      layout: {
+        submenu: {
+          showcase: true
+        }
+      }
+    },
+
     children: [
       {
         path: '',
         components: {
           header: () => import('pages/1-style/2-typography/header'),
           footer: () => import('pages/1-style/2-typography/footer'),
-          default: () => import('pages/1-style/2-typography/'),
-          submenu: () => import('pages/1-style/2-typography/submenu')
+          default: () => import('pages/1-style/2-typography/')
         }
       },
 
@@ -68,8 +87,7 @@ export default [
         components: {
           header: () => import('pages/1-style/2-typography/showcase/header'),
           footer: () => import('pages/1-style/2-typography/showcase/footer'),
-          default: () => import('pages/1-style/2-typography/showcase/'),
-          submenu: () => import('pages/1-style/2-typography/submenu')
+          default: () => import('pages/1-style/2-typography/showcase/')
         }
       },
       {
@@ -77,8 +95,7 @@ export default [
         components: {
           header: () => import('pages/1-style/2-typography/showcase/code/header'),
           footer: () => import('pages/1-style/2-typography/showcase/code/footer'),
-          default: () => import('pages/1-style/2-typography/showcase/code/'),
-          submenu: () => import('pages/1-style/2-typography/submenu')
+          default: () => import('pages/1-style/2-typography/showcase/code/')
         }
       }
     ]
@@ -86,14 +103,21 @@ export default [
   {
     path: '/style/ripples',
     component: () => import('layouts/default'),
+    meta: {
+      layout: {
+        submenu: {
+          showcase: true
+        }
+      }
+    },
+
     children: [
       {
         path: '',
         components: {
           header: () => import('pages/1-style/3-ripples/header'),
           footer: () => import('pages/1-style/3-ripples/footer'),
-          default: () => import('pages/1-style/3-ripples'),
-          submenu: () => import('pages/1-style/3-ripples/submenu')
+          default: () => import('pages/1-style/3-ripples')
         }
       },
 
@@ -102,8 +126,7 @@ export default [
         components: {
           header: () => import('pages/1-style/3-ripples/showcase/header'),
           footer: () => import('pages/1-style/3-ripples/showcase/footer'),
-          default: () => import('pages/1-style/3-ripples/showcase/'),
-          submenu: () => import('pages/1-style/3-ripples/submenu')
+          default: () => import('pages/1-style/3-ripples/showcase/')
         }
       },
       {
@@ -111,8 +134,7 @@ export default [
         components: {
           header: () => import('pages/1-style/3-ripples/showcase/code/header'),
           footer: () => import('pages/1-style/3-ripples/showcase/code/footer'),
-          default: () => import('pages/1-style/3-ripples/showcase/code/'),
-          submenu: () => import('pages/1-style/3-ripples/submenu')
+          default: () => import('pages/1-style/3-ripples/showcase/code/')
         }
       }
     ]
@@ -121,6 +143,12 @@ export default [
   {
     path: '/',
     component: () => import('layouts/default'),
+    meta: {
+      layout: {
+        submenu: false
+      }
+    },
+
     children: [
       {
         path: '',

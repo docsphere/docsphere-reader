@@ -30,8 +30,10 @@
       <router-view name="footer" />
     </q-layout-footer>
 
-    <q-layout-drawer mini side="right" v-model="right">
-      <router-view name="submenu" />
+    <q-layout-drawer v-if="$route.matched[0].meta.layout.submenu" mini side="right" v-model="right">
+      <d-submenu
+        :overview="$route.matched[0].path"
+        :showcase="$route.matched[0].meta.layout.submenu.showcase" />
     </q-layout-drawer>
   </q-layout>
 </template>
@@ -39,14 +41,24 @@
 <script>
 import DMenu from '/src/components/DMenu'
 import DFooter from '/src/components/DFooter'
+import DSubmenu from '/src/components/DSubmenu'
 
 export default {
   name: 'LayoutDefault',
 
   components: {
-    DMenu, DFooter
+    DMenu, DFooter, DSubmenu
   },
 
+  data () {
+    return {
+      meta: {
+        submenu: {
+          showcase: false
+        }
+      }
+    }
+  },
   computed: {
     footer () {
       return this.$store.state.layout.footer
