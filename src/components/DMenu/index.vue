@@ -5,12 +5,11 @@
         <img class="q-mr-xs" src="/assets/logo.svg" style="height: 75px; float: right;">
       </div>
       <div class="col-7">
-        <q-btn class="q-mb-xs" dense no-caps outline size="sm" icon="fa fa-ambulance" label="Support Quasar"
-               style="color: goldenrod;"
-               @click="openURL('https://quasar-framework.org/support-quasar-framework.html')"
-        />
         <div class="text-weight-thin q-mb-xs">Quasar v0.16.2</div>
         <div>Documentation++</div>
+        <q-btn class="q-mt-xs" style="color: goldenrod;"
+               dense no-caps outline size="sm" icon="fa fa-ambulance" label="Support Quasar"
+               @click="openURL('https://quasar-framework.org/support-quasar-framework.html')"/>
       </div>
     </div>
     <q-list no-border link inset-delimiter>

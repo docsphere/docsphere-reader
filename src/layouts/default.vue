@@ -26,8 +26,8 @@
       <router-view />
     </q-page-container>
 
-    <q-layout-footer v-model="footer">
-      <router-view name="footer" />
+    <q-layout-footer v-if="$route.matched[0].meta.layout.footer" v-model="footer">
+      <d-footer :status="$route.meta.status" :edit="$route.meta.github"></d-footer>
     </q-layout-footer>
 
     <q-layout-drawer v-if="$route.matched[0].meta.layout.submenu" mini side="right" v-model="right">
