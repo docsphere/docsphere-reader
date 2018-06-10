@@ -1,5 +1,5 @@
 <template>
-  <q-toolbar-title style="padding-left: 6px">
+  <q-toolbar-title>
     <q-icon v-if="icon" :name="icon" />
     <q-icon v-else :name="$route.meta.icon" />
 
@@ -8,10 +8,10 @@
 
     <span v-if="subsection">
       <span>- </span>
-      <q-icon v-if="subsection === '/'" name="pageview" size="1.3rem"></q-icon>
-      <q-icon v-else-if="subsection === '/play'" name="play_circle_filled" size="1.3rem"></q-icon>
-      <q-icon v-else-if="subsection === '/showcase'" name="play_circle_filled" size="1.3rem"></q-icon>
-      <q-icon v-else-if="subsection === '/showcase/code'" name="fas fa-file-code" size="1.3rem"></q-icon>
+      <q-icon v-if="subsection === '/'" name="pageview" />
+      <q-icon v-else-if="subsection === '/play'" name="play_circle_filled" />
+      <q-icon v-else-if="subsection === '/showcase'" name="play_circle_filled" />
+      <q-icon v-else-if="subsection === '/showcase/code'" name="fas fa-file-code" />
     </span>
   </q-toolbar-title>
 </template>
@@ -50,6 +50,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  .q-toolbar-title
+    padding-left: 6px
   .q-icon
     font-size: 1.5rem
+  span .q-icon
+    font-size: 1.3rem
 </style>
