@@ -219,7 +219,8 @@ export default {
   menu: {
     search: '',
     home: 'Home',
-    settings: 'Settings'
+    settings: 'Settings',
+    changelog: 'Changelog'
   },
 
   settings: {

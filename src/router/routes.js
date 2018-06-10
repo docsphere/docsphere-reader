@@ -4,6 +4,8 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/1-intro',
+      namespace: 'starting.intro',
+      icon: 'announcement',
 
       layouts: {
         footer: true,
@@ -17,10 +19,7 @@ export default [
     children: [
       {
         path: '',
-        components: {
-          header: () => import('pages/0-starting/1-intro/header'),
-          default: () => import('pages/0-starting/1-intro/')
-        },
+        component: () => import('pages/0-starting/1-intro/'),
         meta: {
           status: 6,
           github: '0-starting/1-intro/index.vue'
@@ -34,6 +33,8 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '1-style/1-color',
+      namespace: 'style.color',
+      icon: 'style',
 
       layouts: {
         footer: true,
@@ -47,10 +48,7 @@ export default [
     children: [
       {
         path: '',
-        components: {
-          header: () => import('pages/1-style/1-color/header'),
-          default: () => import('pages/1-style/1-color/')
-        },
+        component: () => import('pages/1-style/1-color/'),
         meta: {
           status: 6,
           github: '1-style/1-color/index.vue'
@@ -59,10 +57,7 @@ export default [
 
       {
         path: 'showcase',
-        components: {
-          header: () => import('pages/1-style/1-color/showcase/header'),
-          default: () => import('pages/1-style/1-color/showcase/')
-        },
+        component: () => import('pages/1-style/1-color/showcase/'),
         meta: {
           status: 9,
           github: '1-style/1-color/showcase/index.vue'
@@ -70,10 +65,7 @@ export default [
       },
       {
         path: 'showcase/code',
-        components: {
-          header: () => import('pages/1-style/1-color/showcase/code/header'),
-          default: () => import('pages/1-style/1-color/showcase/code/')
-        },
+        component: () => import('pages/1-style/1-color/showcase/code/'),
         meta: {
           status: 9,
           github: '1-style/1-color/showcase/code/index.vue'
@@ -86,6 +78,8 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '1-style/2-typography',
+      namespace: 'style.typography',
+      icon: 'format_bold',
 
       layouts: {
         footer: true,
@@ -99,10 +93,7 @@ export default [
     children: [
       {
         path: '',
-        components: {
-          header: () => import('pages/1-style/2-typography/header'),
-          default: () => import('pages/1-style/2-typography/')
-        },
+        component: () => import('pages/1-style/2-typography/'),
         meta: {
           status: 1,
           github: '1-style/2-typography/index.vue'
@@ -111,10 +102,7 @@ export default [
 
       {
         path: 'showcase',
-        components: {
-          header: () => import('pages/1-style/2-typography/showcase/header'),
-          default: () => import('pages/1-style/2-typography/showcase/')
-        },
+        component: () => import('pages/1-style/2-typography/showcase/'),
         meta: {
           status: 9,
           github: '1-style/2-typography/showcase/index.vue'
@@ -122,10 +110,7 @@ export default [
       },
       {
         path: 'showcase/code',
-        components: {
-          header: () => import('pages/1-style/2-typography/showcase/code/header'),
-          default: () => import('pages/1-style/2-typography/showcase/code/')
-        },
+        component: () => import('pages/1-style/2-typography/showcase/code/'),
         meta: {
           status: 9,
           github: '1-style/2-typography/showcase/code/index.vue'
@@ -138,6 +123,8 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '1-style/3-ripples',
+      namespace: 'style.ripples',
+      icon: 'blur_on',
 
       layouts: {
         footer: true,
@@ -151,10 +138,7 @@ export default [
     children: [
       {
         path: '',
-        components: {
-          header: () => import('pages/1-style/3-ripples/header'),
-          default: () => import('pages/1-style/3-ripples')
-        },
+        component: () => import('pages/1-style/3-ripples'),
         meta: {
           status: 1,
           github: '1-style/3-ripples/index.vue'
@@ -163,10 +147,7 @@ export default [
 
       {
         path: 'showcase',
-        components: {
-          header: () => import('pages/1-style/3-ripples/showcase/header'),
-          default: () => import('pages/1-style/3-ripples/showcase/')
-        },
+        component: () => import('pages/1-style/3-ripples/showcase/'),
         meta: {
           status: 9,
           github: '1-style/3-ripples/showcase/index.vue'
@@ -174,10 +155,7 @@ export default [
       },
       {
         path: 'showcase/code',
-        components: {
-          header: () => import('pages/1-style/3-ripples/showcase/code/header'),
-          default: () => import('pages/1-style/3-ripples/showcase/code/')
-        },
+        component: () => import('pages/1-style/3-ripples/showcase/code/'),
         meta: {
           status: 9,
           github: '1-style/3-ripples/showcase/code/index.vue'
@@ -199,23 +177,26 @@ export default [
     children: [
       {
         path: '',
-        components: {
-          header: () => import('pages/header'),
-          default: () => import('pages/index')
+        component: () => import('pages/index'),
+        meta: {
+          icon: 'home',
+          menu: 'home'
         }
       },
       {
         path: '/settings',
-        components: {
-          header: () => import('pages/{settings}/header'),
-          default: () => import('pages/{settings}')
+        component: () => import('pages/{settings}'),
+        meta: {
+          icon: 'settings',
+          menu: 'settings'
         }
       },
       {
         path: '/changelog',
-        components: {
-          header: () => import('pages/{changelog}/header'),
-          default: () => import('pages/{changelog}')
+        component: () => import('pages/{changelog}'),
+        meta: {
+          icon: 'assignment',
+          menu: 'changelog'
         }
       },
       {

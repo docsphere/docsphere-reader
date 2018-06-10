@@ -174,7 +174,8 @@ export default {
   menu: {
     search: 'Pesquisar',
     home: 'Página inicial',
-    settings: 'Configurações'
+    settings: 'Configurações',
+    changelog: 'Changelog'
   },
 
   settings: {
