@@ -26,14 +26,16 @@
       <router-view />
     </q-page-container>
 
-    <q-layout-footer v-if="$route.matched[0].meta.layout.footer" v-model="footer">
-      <d-footer :status="$route.meta.status" :edit="$route.meta.github"></d-footer>
+    <q-layout-footer v-if="$route.matched[0].meta.layouts.footer" v-model="footer">
+      <d-footer
+        :status="$route.meta.status"
+        :edit="$route.meta.github" />
     </q-layout-footer>
 
-    <q-layout-drawer v-if="$route.matched[0].meta.layout.submenu" mini side="right" v-model="right">
+    <q-layout-drawer v-if="$route.matched[0].meta.layouts.submenu" mini side="right" v-model="right">
       <d-submenu
         :overview="$route.matched[0].path"
-        :showcase="$route.matched[0].meta.layout.submenu.showcase" />
+        :showcase="$route.matched[0].meta.pages.showcase" />
     </q-layout-drawer>
   </q-layout>
 </template>
@@ -83,6 +85,9 @@ export default {
 
   created () {
     this.left = this.$q.platform.is.desktop
+  },
+  mounted () {
+    console.log(this.$route)
   }
 }
 </script>

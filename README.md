@@ -3,7 +3,7 @@
 
 > All-in-one Documentation of Quasar Framework.
 
-The proposal of this project is to join in one place, all the documentation of the Quasar Framework: the theoretical part ([quasar-framework.org](https://quasar-framework.org/ "quasar-framework.org")), showcases ([Quasar Play](https://quasar-framework.org/quasar-play/android/index.html#/showcase "Quasar Play")),  showcases source codes ([from github](https://github.com/quasarframework/quasar-play/tree/dev/src/pages/showcase "from github")) and Changelogs.
+The proposal of this project is to join in one place, all the documentation of the Quasar Framework: the theoretical part ([quasar-framework.org](https://quasar-framework.org/ "quasar-framework.org")), showcases ([Quasar Play](https://quasar-framework.org/quasar-play/android/index.html#/showcase "Quasar Play")),  showcases source codes ([from github](https://github.com/quasarframework/quasar-play/tree/dev/src/pages/showcase "from github")) and changelogs.
 
 You can clone this repository and run on a **web server**, all the documentation of Quasar Framework completely **offline** on your computer, and also **compile** for **mobile** and **desktop** devices.
 

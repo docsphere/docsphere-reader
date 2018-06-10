@@ -5,11 +5,12 @@ export default [
     meta: {
       dir: '0-starting/1-intro',
 
-      layout: {
+      layouts: {
         footer: true,
-        submenu: {
-          showcase: false
-        }
+        submenu: true
+      },
+      pages: {
+        showcase: false
       }
     },
 
@@ -34,11 +35,12 @@ export default [
     meta: {
       dir: '1-style/1-color',
 
-      layout: {
+      layouts: {
         footer: true,
-        submenu: {
-          showcase: true
-        }
+        submenu: true
+      },
+      pages: {
+        showcase: true
       }
     },
 
@@ -85,11 +87,12 @@ export default [
     meta: {
       dir: '1-style/2-typography',
 
-      layout: {
+      layouts: {
         footer: true,
-        submenu: {
-          showcase: true
-        }
+        submenu: true
+      },
+      pages: {
+        showcase: true
       }
     },
 
@@ -136,11 +139,12 @@ export default [
     meta: {
       dir: '1-style/3-ripples',
 
-      layout: {
+      layouts: {
         footer: true,
-        submenu: {
-          showcase: true
-        }
+        submenu: true
+      },
+      pages: {
+        showcase: true
       }
     },
 
@@ -186,7 +190,7 @@ export default [
     path: '/',
     component: () => import('layouts/default'),
     meta: {
-      layout: {
+      layouts: {
         footer: false,
         submenu: false
       }
