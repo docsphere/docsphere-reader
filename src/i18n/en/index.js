@@ -8,6 +8,7 @@ export default {
       _: 'Getting started',
       intro: {
         _: 'Introduction for Beginners',
+        _progress: '30',
         overview: {
           h: [
             'Single File Vue Components',
@@ -70,6 +71,7 @@ export default {
       _: 'Style',
       color: {
         _: 'Color Palette',
+        _progress: '30',
         overview: {
           h: [
             'Brand Colors',
@@ -199,12 +201,15 @@ export default {
     }
   },
 
-  meta: {
+  footer: {
     github: {
       start: 'Start this page on ',
       complete: 'Complete this page on ',
       edit: 'Edit this page on '
-    }
+    },
+    progress: 'Translation Progress',
+    translations: 'Translations available',
+    anchor: 'Anchor navigation'
   },
   submenu: {
     overview: 'Overview',
@@ -215,7 +220,6 @@ export default {
     changelog: 'Changelog (WIP)',
     builder: {_: 'Builder'}
   },
-
   menu: {
     search: '',
     home: 'Home',

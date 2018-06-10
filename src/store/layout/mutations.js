@@ -73,9 +73,7 @@ export const setScrolling = (state, val) => {
   state.scrolling = val
 }
 export const setMeta = (state, val) => {
-  if (val) {
-    state.left = false
-  }
+  state.left = !val
 
   state.meta = val
 }

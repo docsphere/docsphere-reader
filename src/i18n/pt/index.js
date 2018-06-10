@@ -154,12 +154,15 @@ export default {
     }
   },
 
-  meta: {
+  footer: {
     github: {
       start: 'Comece esta página no ',
       complete: 'Complete esta página no ',
       edit: 'Edite esta página no '
-    }
+    },
+    progress: 'Progresso da tradução',
+    translations: 'Traduções disponíveis',
+    anchor: 'Navegação por âncoras'
   },
   submenu: {
     overview: 'Apresentação',
@@ -170,7 +173,6 @@ export default {
     changelog: 'Changelog (WIP)',
     builder: {_: 'Construtor'}
   },
-
   menu: {
     search: 'Pesquisar',
     home: 'Página inicial',

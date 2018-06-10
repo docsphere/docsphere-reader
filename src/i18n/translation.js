@@ -8,11 +8,7 @@ export default {
         h = this.$t(`_.${this.namespace}.overview.h[${index - 1}]`)
       }
 
-      if (h) {
-        return `<a id="${index}" href="${this.$route.path}#${index}" class="header-link">${h}</a>`
-      } else {
-        return ''
-      }
+      return `<span id="${index}" class="header-link">${h}</span>`
     },
     t (index) {
       return this.$t(`_.${this.namespace}.overview.t[${--index}]`)

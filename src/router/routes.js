@@ -3,8 +3,8 @@ export default [
     path: '/starting/intro',
     component: () => import('layouts/default'),
     meta: {
-      dir: '0-starting/1-intro',
       namespace: 'starting.intro',
+      dir: '0-starting/1-intro',
       icon: 'announcement',
 
       layouts: {
@@ -22,7 +22,7 @@ export default [
         component: () => import('pages/0-starting/1-intro/'),
         meta: {
           status: 6,
-          github: '0-starting/1-intro/index.vue'
+          github: '0-starting/1-intro'
         }
       }
     ]
@@ -32,8 +32,8 @@ export default [
     path: '/style/color',
     component: () => import('layouts/default'),
     meta: {
-      dir: '1-style/1-color',
       namespace: 'style.color',
+      dir: '1-style/1-color',
       icon: 'style',
 
       layouts: {
@@ -51,7 +51,7 @@ export default [
         component: () => import('pages/1-style/1-color/'),
         meta: {
           status: 6,
-          github: '1-style/1-color/index.vue'
+          github: '1-style/1-color'
         }
       },
 
@@ -60,7 +60,7 @@ export default [
         component: () => import('pages/1-style/1-color/showcase/'),
         meta: {
           status: 9,
-          github: '1-style/1-color/showcase/index.vue'
+          github: '1-style/1-color/showcase'
         }
       },
       {
@@ -68,7 +68,7 @@ export default [
         component: () => import('pages/1-style/1-color/showcase/code/'),
         meta: {
           status: 9,
-          github: '1-style/1-color/showcase/code/index.vue'
+          github: '1-style/1-color/showcase/code'
         }
       }
     ]
@@ -77,8 +77,8 @@ export default [
     path: '/style/typography',
     component: () => import('layouts/default'),
     meta: {
-      dir: '1-style/2-typography',
       namespace: 'style.typography',
+      dir: '1-style/2-typography',
       icon: 'format_bold',
 
       layouts: {
@@ -96,7 +96,7 @@ export default [
         component: () => import('pages/1-style/2-typography/'),
         meta: {
           status: 1,
-          github: '1-style/2-typography/index.vue'
+          github: '1-style/2-typography'
         }
       },
 
@@ -105,7 +105,7 @@ export default [
         component: () => import('pages/1-style/2-typography/showcase/'),
         meta: {
           status: 9,
-          github: '1-style/2-typography/showcase/index.vue'
+          github: '1-style/2-typography/showcase'
         }
       },
       {
@@ -113,7 +113,7 @@ export default [
         component: () => import('pages/1-style/2-typography/showcase/code/'),
         meta: {
           status: 9,
-          github: '1-style/2-typography/showcase/code/index.vue'
+          github: '1-style/2-typography/showcase/code'
         }
       }
     ]
@@ -122,8 +122,8 @@ export default [
     path: '/style/ripples',
     component: () => import('layouts/default'),
     meta: {
-      dir: '1-style/3-ripples',
       namespace: 'style.ripples',
+      dir: '1-style/3-ripples',
       icon: 'blur_on',
 
       layouts: {
@@ -141,7 +141,7 @@ export default [
         component: () => import('pages/1-style/3-ripples'),
         meta: {
           status: 1,
-          github: '1-style/3-ripples/index.vue'
+          github: '1-style/3-ripples'
         }
       },
 
@@ -150,7 +150,7 @@ export default [
         component: () => import('pages/1-style/3-ripples/showcase/'),
         meta: {
           status: 9,
-          github: '1-style/3-ripples/showcase/index.vue'
+          github: '1-style/3-ripples/showcase'
         }
       },
       {
@@ -158,7 +158,7 @@ export default [
         component: () => import('pages/1-style/3-ripples/showcase/code/'),
         meta: {
           status: 9,
-          github: '1-style/3-ripples/showcase/code/index.vue'
+          github: '1-style/3-ripples/showcase/code'
         }
       }
     ]

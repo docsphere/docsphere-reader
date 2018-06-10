@@ -14,7 +14,7 @@
     </div>
     <q-list no-border link inset-delimiter>
       <q-search hide-underline clearable v-model="term" @input="search" :placeholder="$t('menu.search')" class="q-ml-lg q-mr-md" />
-      <q-item-separator class="section" />
+      <q-item-separator class="page" />
 
       <q-item to="/" exact>
         <q-item-side icon="home" />
@@ -28,7 +28,7 @@
         <q-item-side icon="settings" />
         <q-item-main>{{ $t('menu.settings') }}</q-item-main>
       </q-item>
-      <q-item-separator class="section" />
+      <q-item-separator class="page" />
 
       <q-list-header><q-icon name="contact_support" size="1.5rem" /> {{ $t('_.starting._') }}</q-list-header>
       <q-item-separator class="partial" />
@@ -56,7 +56,7 @@
         <q-item-side icon="format_list_numbered_rtl" />
         <q-item-main>{{ $t('_.starting.rtl._') }}</q-item-main>
       </q-item>
-      <q-item-separator class="section" />
+      <q-item-separator class="page" />
 
       <q-list-header><q-icon name="color_lens" size="1.5rem" /> {{ $t('_.style._') }}</q-list-header>
       <q-item-separator class="partial" />
@@ -72,7 +72,7 @@
         <q-item-side icon="blur_on" />
         <q-item-main>{{ $t('_.style.ripples._') }}</q-item-main>
       </q-item>
-      <q-item-separator class="partial" />
+      <q-item-separator />
       <q-item v-show="matches[9] || !matches">
         <q-item-side icon="border_style" />
         <q-item-main>{{ $t('_.style.stylus._') }}</q-item-main>
@@ -85,7 +85,7 @@
         <q-item-side icon="space_bar" />
         <q-item-main>{{ $t('_.style.addressbar._') }}</q-item-main>
       </q-item>
-      <q-item-separator class="section" />
+      <q-item-separator class="page" />
 
       <q-list-header><q-icon name="web" size="1.5rem" /> {{ $t('_.layout._') }}</q-list-header>
       <q-item-separator class="partial" />
@@ -105,16 +105,16 @@
         <q-item-side icon="play_for_work" />
         <q-item-main>{{ $t('_.layout.floating._') }}</q-item-main>
       </q-item>
-      <q-item-separator class="partial" />
+      <q-item-separator />
       <q-item v-show="matches[16] || !matches">
         <q-item-side icon="web" />
         <q-item-main>{{ $t('_.layout.flexbox._') }}</q-item-main>
       </q-item>
-      <q-item-separator class="section" />
+      <q-item-separator class="page" />
 
       <q-list-header><q-icon name="device_hub" size="1.5rem" /> {{ $t('_.components._') }}</q-list-header>
       <q-item-separator class="partial" />
-      <q-list-header class="subsection">{{ $t('_.components.buttons._') }}</q-list-header>
+      <q-list-header class="subpage">{{ $t('_.components.buttons._') }}</q-list-header>
       <q-item v-show="matches[17] || !matches">
         <q-item-side icon="panorama_wide_angle" />
         <q-item-main>Standard Button</q-item-main>
@@ -127,8 +127,8 @@
         <q-item-side icon="details" />
         <q-item-main>Dropdown Groups</q-item-main>
       </q-item>
-        <q-item-separator class="subsection" />
-      <q-list-header class="subsection">{{ $t('_.components.navigation._') }}</q-list-header>
+        <q-item-separator class="subpage" />
+      <q-list-header class="subpage">{{ $t('_.components.navigation._') }}</q-list-header>
       <q-item v-show="matches[20] || !matches">
         <q-item-side icon="view_day" />
         <q-item-main>Toolbar</q-item-main>
@@ -153,8 +153,8 @@
         <q-item-side icon="linear_scale" />
         <q-item-main>Pagination</q-item-main>
       </q-item>
-        <q-item-separator class="subsection" />
-      <q-list-header class="subsection">{{ $t('_.components.forms._') }}</q-list-header>
+        <q-item-separator class="subpage" />
+      <q-list-header class="subpage">{{ $t('_.components.forms._') }}</q-list-header>
       <q-item v-show="matches[26] || !matches">
         <q-item-side icon="text_fields" />
         <q-item-main>Fields</q-item-main>
@@ -227,8 +227,8 @@
         <q-item-side icon="cloud_upload" />
         <q-item-main>Uploader</q-item-main>
       </q-item>
-        <q-item-separator class="subsection" />
-      <q-list-header class="subsection">{{ $t('_.components.grouping._') }}</q-list-header>
+        <q-item-separator class="subpage" />
+      <q-list-header class="subpage">{{ $t('_.components.grouping._') }}</q-list-header>
       <q-item v-show="matches[44] || !matches">
         <q-item-side icon="contact_mail" />
         <q-item-main>Card</q-item-main>
@@ -253,8 +253,8 @@
         <q-item-side icon="format_indent_increase" />
         <q-item-main>Tree</q-item-main>
       </q-item>
-        <q-item-separator class="subsection" />
-      <q-list-header class="subsection">{{ $t('_.components.popups._') }}</q-list-header>
+        <q-item-separator class="subpage" />
+      <q-list-header class="subpage">{{ $t('_.components.popups._') }}</q-list-header>
       <q-item v-show="matches[50] || !matches">
         <q-item-side icon="assignment" />
         <q-item-main>Action Sheet</q-item-main>
@@ -279,8 +279,8 @@
         <q-item-side icon="speaker_notes" />
         <q-item-main>Tooltip</q-item-main>
       </q-item>
-        <q-item-separator class="subsection" />
-      <q-list-header class="subsection">{{ $t('_.components.progress._') }}</q-list-header>
+        <q-item-separator class="subpage" />
+      <q-list-header class="subpage">{{ $t('_.components.progress._') }}</q-list-header>
       <q-item v-show="matches[56] || !matches">
         <q-item-side icon="trending_flat" />
         <q-item-main>Ajax Bar</q-item-main>
@@ -301,8 +301,8 @@
         <q-item-side icon="refresh" />
         <q-item-main>Spinner</q-item-main>
       </q-item>
-        <q-item-separator class="subsection" />
-      <q-list-header class="subsection">{{ $t('_.components.media._') }}</q-list-header>
+        <q-item-separator class="subpage" />
+      <q-list-header class="subpage">{{ $t('_.components.media._') }}</q-list-header>
       <q-item v-show="matches[61] || !matches">
         <q-item-side icon="vibration" />
         <q-item-main>Carousel</q-item-main>
@@ -315,8 +315,8 @@
         <q-item-side icon="movie" />
         <q-item-main>Video Embedding</q-item-main>
       </q-item>
-        <q-item-separator class="subsection" />
-      <q-list-header class="subsection">{{ $t('_.components.scrolling._') }}</q-list-header>
+        <q-item-separator class="subpage" />
+      <q-list-header class="subpage">{{ $t('_.components.scrolling._') }}</q-list-header>
       <q-item v-show="matches[64] || !matches">
         <q-item-side icon="update" />
         <q-item-main>Infinite Scroll</q-item-main>
@@ -333,8 +333,8 @@
         <q-item-side icon="vertical_align_top" />
         <q-item-main>Back To Top</q-item-main>
       </q-item>
-        <q-item-separator class="subsection" />
-      <q-list-header class="subsection">{{ $t('_.components.others._') }}</q-list-header>
+        <q-item-separator class="subpage" />
+      <q-list-header class="subpage">{{ $t('_.components.others._') }}</q-list-header>
       <q-item v-show="matches[68] || !matches">
         <q-item-side icon="assignment_late" />
         <q-item-main>Alert</q-item-main>
@@ -351,7 +351,7 @@
         <q-item-side icon="date_range" />
         <q-item-main>Timeline</q-item-main>
       </q-item>
-      <q-item-separator class="section" />
+      <q-item-separator class="page" />
 
       <q-list-header><q-icon name="settings_input_hdmi" size="1.5rem" /> {{ $t('_.plugins._') }}</q-list-header>
       <q-item-separator class="partial" />
@@ -375,7 +375,7 @@
         <q-item-side icon="visibility" />
         <q-item-main>App Visibility</q-item-main>
       </q-item>
-      <q-item-separator class="section" />
+      <q-item-separator class="page" />
 
       <q-list-header><q-icon name="touch_app" size="1.5rem" /> {{ $t('_.directives._') }}</q-list-header>
       <q-item-separator class="partial" />
@@ -391,7 +391,7 @@
         <q-item-side icon="touch_app" />
         <q-item-main>Touch/Mouse Hold</q-item-main>
       </q-item>
-      <q-item-separator class="section" />
+      <q-item-separator class="page" />
 
       <q-list-header><q-icon name="local_hospital" size="1.5rem" /> {{ $t('_.helpers._') }}</q-list-header>
       <q-item-separator class="partial" />
@@ -415,7 +415,7 @@
         <q-item-side icon="more_horiz" />
         <q-item-main>Other Helpers Classes</q-item-main>
       </q-item>
-      <q-item-separator class="section" />
+      <q-item-separator class="page" />
 
       <q-list-header><q-icon name="blur_linear" size="1.5rem" /> {{ $t('_.animations._') }}</q-list-header>
       <q-item-separator class="partial" />
@@ -435,7 +435,7 @@
         <q-item-side icon="fab fa-css3-alt" />
         <q-item-main>Animation CSS Helpers</q-item-main>
       </q-item>
-      <q-item-separator class="section" />
+      <q-item-separator class="page" />
 
       <q-list-header><q-icon name="fas fa-wrench" size="1.5rem" /> {{ $t('_.utils._') }}</q-list-header>
       <q-item-separator class="partial" />
@@ -500,13 +500,13 @@ export default {
     text-align: center
     padding-bottom: 0
     min-height: 32px
-  .q-list-header.subsection
+  .q-list-header.subpage
     text-align: left
     padding-bottom: 5px
 
-  .q-item-separator-component.section
+  .q-item-separator-component.page
     height: 3px
-  .q-item-separator-component.subsection
+  .q-item-separator-component.subpage
     height: 1px
   .q-item-separator-component.partial
     margin: 6px auto

@@ -84,7 +84,7 @@ export default {
         'starting/rtl', this.$t('_.starting.rtl._')
       ],
       next: [
-        'starting/platform', this.$t('_.starting.platform._')
+        'style/typography', this.$t('_.style.typography._')
       ]
     }
   },

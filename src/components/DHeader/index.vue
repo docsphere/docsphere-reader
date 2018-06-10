@@ -4,14 +4,14 @@
     <q-icon v-else :name="$route.meta.icon" />
 
     <span v-if="section"> {{ $t(`_.${section}._`) }} </span>
-    <span v-else> {{ $t(`menu.${$route.meta.menu}`) }} </span>
+    <span v-else> {{ $t(`menu.${$route.matched[1].meta.menu}`) }} </span>
 
-    <span v-if="subsection">
+    <span v-if="child">
       <span>- </span>
-      <q-icon v-if="subsection === '/'" name="pageview" />
-      <q-icon v-else-if="subsection === '/play'" name="play_circle_filled" />
-      <q-icon v-else-if="subsection === '/showcase'" name="play_circle_filled" />
-      <q-icon v-else-if="subsection === '/showcase/code'" name="fas fa-file-code" />
+      <q-icon v-if="child === '/'" name="pageview" />
+      <q-icon v-else-if="child === '/play'" name="play_circle_filled" />
+      <q-icon v-else-if="child === '/showcase'" name="play_circle_filled" />
+      <q-icon v-else-if="child === '/showcase/code'" name="fas fa-file-code" />
     </span>
   </q-toolbar-title>
 </template>
@@ -38,7 +38,7 @@ export default {
   },
 
   computed: {
-    subsection () {
+    child () {
       if (this.matched[0].path) {
         return this.matched[1].path.substr(this.matched[0].path.length)
       }

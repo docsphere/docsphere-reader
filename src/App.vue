@@ -39,9 +39,6 @@ export default {
   .header-link
     color #286fa3
     padding 6px
-    cursor pointer
-  .header-link:hover
-    background-color: #cde3f3
 
   a, body
     color: #34495e;

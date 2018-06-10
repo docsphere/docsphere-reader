@@ -1,29 +1,34 @@
 <template>
   <q-toolbar color="dark" id="d-footer">
-    <q-btn v-if="edit"
-           flat dense no-caps
-           :icon="icons" :color="color"
-           @click="openURL(`https://github.com/slowaways/quasar-documentation-pp/blob/master/src/pages/${edit}`)">
+    <q-btn v-if="edit" flat dense no-caps :icon="icons" :color="color" @click="openURL(`${base}${edit}/index.vue`)">
       <div class="gt-xs">
-        <span class="hm" v-if="status === 9">{{ $t('meta.github.edit') }}</span>
-        <span class="hm" v-else-if="status === 6">{{ $t('meta.github.complete') }}</span>
-        <span class="hm" v-else>{{ $t('meta.github.start') }}</span>
+        <span class="hm" v-if="status === 9">{{ $t('footer.github.edit') }}</span>
+        <span class="hm" v-else-if="status === 6">{{ $t('footer.github.complete') }}</span>
+        <span class="hm" v-else>{{ $t('footer.github.start') }}</span>
         <q-icon name="fab fa-github"></q-icon>
       </div>
     </q-btn>
-    <!--
-    <q-chip class="q-ml-sm" dense square>
+    <!--<q-chip class="q-ml-sm" dense square>
       <q-icon name="translate" size="1.3rem" />
-      <span>{{ progress }}</span>
+      <span><b> {{ progress }}</b> ({{ $i18n.locale }})</span>
+      <q-tooltip anchor="top middle" self="bottom middle" :offset="[10, 10]">
+        {{ $t('footer.progress') }}
+      </q-tooltip>
     </q-chip>
     <q-chip class="q-ml-sm" dense square>
       <q-icon name="language" size="1.3rem" />
-      <span>6912 of 6912</span>
+      <span> #{{ languages }} of 2</span>
+      <q-tooltip anchor="top middle" self="bottom middle" :offset="[10, 10]">
+        {{ $t('footer.translations') }}
+      </q-tooltip>
     </q-chip>-->
 
     <q-chip class="anchor-toggle" dense square v-if="metaToggle">
       <q-icon name="link" size="1.3rem" class="q-mr-xs" />
       <q-toggle v-model="meta" checked-icon="visibility" unchecked-icon="visibility_off" />
+      <q-tooltip anchor="top middle" self="bottom middle" :offset="[10, 10]">
+        {{ $t('footer.anchor') }}
+      </q-tooltip>
     </q-chip>
   </q-toolbar>
 </template>
@@ -33,6 +38,7 @@ import { openURL } from 'quasar'
 
 export default {
   name: 'DFooter',
+
   props: {
     edit: {
       type: String,
@@ -41,14 +47,11 @@ export default {
     status: {
       type: Number,
       default: 1
-    },
-    translation: {
-      type: Number,
-      default: 0
-    },
-    languages: {
-      type: Number,
-      default: 0
+    }
+  },
+  data () {
+    return {
+      base: 'https://github.com/slowaways/quasar-documentation-pp/blob/master/src/pages/'
     }
   },
   computed: {
@@ -71,8 +74,14 @@ export default {
       }
     },
     progress () {
-      const locale = this.$i18n.locale
-      return `100% (${locale})`
+      const namespace = this.$route.matched[0].meta.namespace
+      let progress = this.$t(`_.${namespace}._progress`)
+
+      if (progress === `_.${namespace}._progress`) {
+        progress = 0
+      }
+
+      return `${progress}%`
     },
 
     metaToggle () {
