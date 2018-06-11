@@ -3,7 +3,6 @@ export default [
     path: '/starting/intro',
     component: () => import('layouts/default'),
     meta: {
-      namespace: 'starting.intro',
       dir: '0-starting/1-intro',
       icon: 'announcement',
 
@@ -21,8 +20,7 @@ export default [
         path: '',
         component: () => import('pages/0-starting/1-intro/'),
         meta: {
-          status: 6,
-          github: '0-starting/1-intro'
+          status: 6
         }
       }
     ]
@@ -32,7 +30,6 @@ export default [
     path: '/style/color',
     component: () => import('layouts/default'),
     meta: {
-      namespace: 'style.color',
       dir: '1-style/1-color',
       icon: 'style',
 
@@ -50,8 +47,7 @@ export default [
         path: '',
         component: () => import('pages/1-style/1-color/'),
         meta: {
-          status: 6,
-          github: '1-style/1-color'
+          status: 6
         }
       },
 
@@ -59,16 +55,14 @@ export default [
         path: 'showcase',
         component: () => import('pages/1-style/1-color/showcase/'),
         meta: {
-          status: 9,
-          github: '1-style/1-color/showcase'
+          status: 9
         }
       },
       {
         path: 'showcase/code',
         component: () => import('pages/1-style/1-color/showcase/code/'),
         meta: {
-          status: 9,
-          github: '1-style/1-color/showcase/code'
+          status: 9
         }
       }
     ]
@@ -77,7 +71,6 @@ export default [
     path: '/style/typography',
     component: () => import('layouts/default'),
     meta: {
-      namespace: 'style.typography',
       dir: '1-style/2-typography',
       icon: 'format_bold',
 
@@ -95,8 +88,7 @@ export default [
         path: '',
         component: () => import('pages/1-style/2-typography/'),
         meta: {
-          status: 1,
-          github: '1-style/2-typography'
+          status: 1
         }
       },
 
@@ -104,16 +96,14 @@ export default [
         path: 'showcase',
         component: () => import('pages/1-style/2-typography/showcase/'),
         meta: {
-          status: 9,
-          github: '1-style/2-typography/showcase'
+          status: 9
         }
       },
       {
         path: 'showcase/code',
         component: () => import('pages/1-style/2-typography/showcase/code/'),
         meta: {
-          status: 9,
-          github: '1-style/2-typography/showcase/code'
+          status: 9
         }
       }
     ]
@@ -122,7 +112,6 @@ export default [
     path: '/style/ripples',
     component: () => import('layouts/default'),
     meta: {
-      namespace: 'style.ripples',
       dir: '1-style/3-ripples',
       icon: 'blur_on',
 
@@ -140,8 +129,7 @@ export default [
         path: '',
         component: () => import('pages/1-style/3-ripples'),
         meta: {
-          status: 1,
-          github: '1-style/3-ripples'
+          status: 1
         }
       },
 
@@ -149,16 +137,14 @@ export default [
         path: 'showcase',
         component: () => import('pages/1-style/3-ripples/showcase/'),
         meta: {
-          status: 9,
-          github: '1-style/3-ripples/showcase'
+          status: 9
         }
       },
       {
         path: 'showcase/code',
         component: () => import('pages/1-style/3-ripples/showcase/code/'),
         meta: {
-          status: 9,
-          github: '1-style/3-ripples/showcase/code'
+          status: 9
         }
       }
     ]

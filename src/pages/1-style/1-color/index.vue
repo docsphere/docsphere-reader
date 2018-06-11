@@ -1,7 +1,7 @@
 <template>
   <q-page :class="row">
     <q-scroll-area id="anchor" :class="meta">
-      <d-anchor :nodes="nodes" :namespace="namespace" />
+      <d-anchor :nodes="nodes" />
     </q-scroll-area>
     <q-scroll-area id="content" :class="main">
       <d-h h="1-0" />
@@ -66,9 +66,6 @@ export default {
           ]
         }
       ],
-
-      namespace: 'style.color',
-      dir: '1-style/1-color',
 
       codes: [
         ['primary', 'secondary', 'tertiary'],

@@ -6,7 +6,7 @@
           <q-icon name="menu" />
         </q-btn>
 
-        <d-header :icon="_[0].meta.icon" :section="_[0].meta.namespace" :matched="_" />
+        <d-header :icon="_[0].meta.icon" :matched="_" />
 
         <q-btn v-if="$store.state.layout.rightToggle" flat dense round @click="right = !right">
           <q-icon name="more_vert" />
@@ -23,7 +23,7 @@
     </q-page-container>
 
     <q-layout-footer v-if="_[0].meta.layouts.footer" v-model="footer">
-      <d-footer :status="$route.meta.status" :edit="$route.meta.github" />
+      <d-footer :status="$route.meta.status" />
     </q-layout-footer>
 
     <q-layout-drawer v-if="_[0].meta.layouts.submenu" mini side="right" v-model="right">
@@ -78,20 +78,22 @@ export default {
       const base = root.substr(1)
       let relative = child.substr(root.length)
 
+      this.$store.commit('page/setBase', base)
+      this.$store.commit('page/setRelative', relative)
+      this.$store.commit('page/setAbsolute', base + relative)
+
       if (relative === '/') {
         relative = '/overview'
       }
 
-      const absolute = base + relative
-
       if (root) {
-        this.$store.commit('page/setBase', base)
-        this.$store.commit('page/setRelative', relative)
-        this.$store.commit('page/setAbsolute', absolute)
-
         this.$store.commit('i18n/setBase', base.replace(/\//g, '.'))
         this.$store.commit('i18n/setRelative', relative.substr(1).replace(/\//g, '.'))
-        this.$store.commit('i18n/setAbsolute', absolute.replace(/\//g, '.'))
+        this.$store.commit('i18n/setAbsolute', (base + relative).replace(/\//g, '.'))
+      } else {
+        this.$store.commit('i18n/setBase', '')
+        this.$store.commit('i18n/setRelative', '')
+        this.$store.commit('i18n/setAbsolute', '')
       }
     }
   },

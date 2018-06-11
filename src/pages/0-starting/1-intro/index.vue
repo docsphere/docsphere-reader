@@ -1,7 +1,7 @@
 <template>
   <q-page :class="row">
     <q-scroll-area id="anchor" :class="meta">
-      <d-anchor :nodes="nodes" :namespace="namespace" />
+      <d-anchor :nodes="nodes" />
     </q-scroll-area>
     <q-scroll-area id="content" :class="main">
       <d-h h="1-0" />
@@ -48,13 +48,12 @@ import DH from '/src/components/DH'
 
 import Translation from '/src/i18n/translation'
 import Flexbox from '/src/layouts/flexbox'
-import Navigator from '/src/pages/navigator'
 
 export default {
   components: {
     DAnchor, DNav, DH
   },
-  mixins: [Translation, Flexbox, Navigator],
+  mixins: [Translation, Flexbox],
 
   data () {
     return {
@@ -73,9 +72,6 @@ export default {
           ]
         }
       ],
-
-      namespace: 'starting.intro',
-      dir: '0-starting/1-intro',
 
       codes: [
         '*.vue',

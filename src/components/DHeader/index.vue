@@ -3,7 +3,7 @@
     <q-icon v-if="icon" :name="icon" />
     <q-icon v-else :name="$route.meta.icon" />
 
-    <span v-if="section"> {{ $t(`_.${section}._`) }} </span>
+    <span v-if="$store.state.i18n.base"> {{ $t(`_.${$store.state.i18n.base}._`) }} </span>
     <span v-else> {{ $t(`menu.${$route.matched[1].meta.menu}`) }} </span>
 
     <span v-if="child">
@@ -26,11 +26,6 @@ export default {
       default: ''
     },
 
-    section: {
-      type: String,
-      default: ''
-    },
-
     matched: {
       type: Array,
       default: Array
@@ -39,11 +34,13 @@ export default {
 
   computed: {
     child () {
+      let child = ''
+
       if (this.matched[0].path) {
-        return this.matched[1].path.substr(this.matched[0].path.length)
+        child = this.matched[1].path.substr(this.matched[0].path.length)
       }
 
-      return ''
+      return child
     }
   }
 }

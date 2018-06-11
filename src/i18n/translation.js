@@ -1,10 +1,12 @@
 export default {
   methods: {
     t (index) {
-      return this.$t(`_.${this.namespace}.overview.t[${--index}]`)
+      const base = this.$store.state.i18n.base
+      return this.$t(`_.${base}.overview.t[${--index}]`)
     },
     l (index) {
-      const l = this.$t(`_.${this.namespace}.overview.l[${--index}]`)
+      const base = this.$store.state.i18n.base
+      const l = this.$t(`_.${base}.overview.l[${--index}]`)
       return `<a href="${l[0]}" target="_blank">${l[1]}</a>`
     },
 
@@ -40,7 +42,8 @@ export default {
       return `<code>${code}</code>`
     },
     c (id) {
-      const code = require(`../pages/${this.dir}/_/codes/en/${id}.json`)
+      const dir = this.$route.matched[0].meta.dir
+      const code = require(`../pages/${dir}/_/codes/en/${id}.json`)
       return code.div
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <q-toolbar color="dark" id="d-footer">
-    <q-btn v-if="edit" flat dense no-caps :icon="icons" :color="color" @click="openURL(`${base}${edit}/index.vue`)">
+    <q-btn v-if="relative" flat dense no-caps :icon="icons" :color="color" @click="openURL(`${base}${relative}/index.vue`)">
       <div class="gt-xs">
         <span class="hm" v-if="status === 9">{{ $t('footer.github.edit') }}</span>
         <span class="hm" v-else-if="status === 6">{{ $t('footer.github.complete') }}</span>
@@ -40,10 +40,6 @@ export default {
   name: 'DFooter',
 
   props: {
-    edit: {
-      type: String,
-      default: ''
-    },
     status: {
       type: Number,
       default: 1
@@ -55,6 +51,9 @@ export default {
     }
   },
   computed: {
+    relative () {
+      return this.$route.matched[0].meta.dir + this.$store.state.page.relative
+    },
     color () {
       if (this.status === 9) {
         return 'white'
