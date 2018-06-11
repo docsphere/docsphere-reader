@@ -74,14 +74,14 @@ export default {
       }
     },
     progress () {
-      const namespace = this.$route.matched[0].meta.namespace
-      let progress = this.$t(`_.${namespace}._progress`)
+      // const base = this.$store.state.i18n.base
+      // const relative = this.$store.state.i18n.relative
+      // const absolute = this.$store.state.i18n.absolute
 
-      if (progress === `_.${namespace}._progress`) {
-        progress = 0
-      }
-
-      return `${progress}%`
+      return `0%?`
+    },
+    languages () {
+      return 2
     },
 
     metaToggle () {

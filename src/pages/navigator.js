@@ -16,7 +16,7 @@ export default {
           let offset = Anchor.offsetTop - Anchor.scrollHeight
           let duration = 300
 
-          setScrollPosition(target, offset, duration)
+          setScrollPosition(target, offset + 30, duration)
 
           this.$store.commit('page/setAnchor', Number(id))
         }

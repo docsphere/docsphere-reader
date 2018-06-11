@@ -1,7 +1,3 @@
-export const setAnchor = (state, val) => {
-  state.anchor = val
-}
-
 export const setBase = (state, val) => {
   state.base = val
 }

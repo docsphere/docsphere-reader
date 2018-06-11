@@ -1,13 +1,13 @@
 <template>
   <nav>
-    <a v-if="prev[0]" :href="`/${prev[0]}`">
+    <router-link v-if="prev[0]" :to="`/${prev[0]}`">
       <q-icon name="navigate_before" />
       <span>{{ prev[1] }}</span>
-    </a>
-    <a v-if="next[0]" :href="`/${next[0]}`" class="float-right">
+    </router-link>
+    <router-link v-if="next[0]" :to="`/${next[0]}`" class="float-right">
       <span>{{ next[1] }}</span>
       <q-icon name="navigate_next" />
-    </a>
+    </router-link>
   </nav>
 </template>
 

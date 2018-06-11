@@ -1,15 +1,5 @@
 export default {
   methods: {
-    h (index) {
-      let h = null
-      if (index === 0) {
-        h = this.$t(`_.${this.namespace}._`)
-      } else {
-        h = this.$t(`_.${this.namespace}.overview.h[${index - 1}]`)
-      }
-
-      return `<span id="${index}" class="header-link">${h}</span>`
-    },
     t (index) {
       return this.$t(`_.${this.namespace}.overview.t[${--index}]`)
     },

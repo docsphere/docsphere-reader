@@ -70,8 +70,40 @@ export default {
     }
   },
 
+  methods: {
+    commit () {
+      const root = this.$route.matched[0].path
+      const child = this.$route.matched[1].path
+
+      const base = root.substr(1)
+      let relative = child.substr(root.length)
+
+      if (relative === '/') {
+        relative = '/overview'
+      }
+
+      const absolute = base + relative
+
+      if (root) {
+        this.$store.commit('page/setBase', base)
+        this.$store.commit('page/setRelative', relative)
+        this.$store.commit('page/setAbsolute', absolute)
+
+        this.$store.commit('i18n/setBase', base.replace(/\//g, '.'))
+        this.$store.commit('i18n/setRelative', relative.substr(1).replace(/\//g, '.'))
+        this.$store.commit('i18n/setAbsolute', absolute.replace(/\//g, '.'))
+      }
+    }
+  },
+
   created () {
     this.left = this.$q.platform.is.desktop
+
+    this.$router.afterEach(() => {
+      this.commit()
+    })
+
+    this.commit()
   }
 }
 </script>
