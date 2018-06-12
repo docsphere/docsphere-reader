@@ -26,8 +26,8 @@ The search input text in the **menu** makes it easy to search for **any content*
 ### Documentation codes in local files
 A JSON file that is processed by the Gist is downloaded and stored in **local files**. These files contain `.vue`, `.js`, `.html`, or `.css` codes that are used in the documentation so that you can access all of the documentation **offline**.
 
-### Anchor links to faster navigation and orientation (WIP)
-...
+### Anchor links navigation
+Anchor links work in both hash and history mode and provide **faster navigation** and better **orientation** when navigating through subsections of documentation.
 
 ### Partial Code View in the Showcase (WIP)
 ...
