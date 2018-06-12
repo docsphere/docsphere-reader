@@ -29,11 +29,15 @@ export default {
         return this.$store.state.page.anchor
       },
       set (value) {
-        if (value === null) {
-          this.anchor(this.selected)
+        if (('#' + value) === this.$route.hash) {
+          this.anchor(value)
+          return
+        } else if (value === null) {
+          this.anchor(this.selected, false)
           return
         }
 
+        // TODO Review unnecessary rendering when push routing
         this.$router.push(this.$route.path + '#' + value)
       }
     }
@@ -41,6 +45,9 @@ export default {
 
   mounted () {
     this.$store.commit('layout/setMetaToggle', true)
+    setTimeout(() => {
+      this.$store.commit('page/setScrolling', true)
+    }, 1000)
 
     this.$router.afterEach((to, from) => {
       if (to.hash) {
@@ -56,6 +63,8 @@ export default {
   beforeDestroy () {
     this.$store.commit('layout/setMetaToggle', false)
     this.$store.commit('page/setAnchor', 0)
+    this.$store.commit('page/setAnchors', false)
+    this.$store.commit('page/setScrolling', false)
   }
 }
 </script>

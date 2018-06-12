@@ -1,5 +1,5 @@
 <template>
-  <div :id="id" v-bind:class="stylize" @click="anchor(id)">{{ heading }}</div>
+  <div :id="id" v-bind:class="stylize" @click="anchor(id)" v-scroll-fire="register">{{ heading }}</div>
 </template>
 
 <script>
@@ -40,10 +40,23 @@ export default {
           h = this.$t(`_.${absolute}.h[${this.id - 1}]`)
         }
       } else {
-        // TODO exception
+        // TODO exception?
       }
 
       return h
+    }
+  },
+
+  methods: {
+    register (element) {
+      const Anchor = document.getElementById(element.id)
+      if (typeof Anchor === 'object') {
+        const anchors = this.$store.state.page.anchors
+
+        if (!anchors[element.id]) {
+          this.$store.commit('page/setAnchors', Anchor.offsetTop - Anchor.scrollHeight + 33)
+        }
+      }
     }
   }
 }

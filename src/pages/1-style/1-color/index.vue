@@ -34,6 +34,7 @@
       <p style="color: red;">... (This page is still under construction!)</p>
 
       <d-nav :prev="prev" :next="next" />
+      <q-scroll-observable @scroll="scrolling" />
     </q-scroll-area>
   </q-page>
 </template>
@@ -45,12 +46,13 @@ import DH from '/src/components/DH'
 
 import Translation from '/src/i18n/translation'
 import Flexbox from '/src/layouts/flexbox'
+import Navigator from '/src/pages/navigator'
 
 export default {
   components: {
     DAnchor, DNav, DH
   },
-  mixins: [Translation, Flexbox],
+  mixins: [Translation, Flexbox, Navigator],
 
   data () {
     return {

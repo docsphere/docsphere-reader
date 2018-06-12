@@ -3,7 +3,9 @@ const { getScrollTarget, setScrollPosition } = scroll
 
 export default {
   methods: {
-    anchor (id) {
+    anchor (id, select = true) {
+      this.$store.commit('page/setScrolling', false)
+
       if (typeof id === 'string') {
         id = Number(id.replace(/^\D+/g, ''))
       }
@@ -16,15 +18,37 @@ export default {
           let offset = Anchor.offsetTop - Anchor.scrollHeight
           let duration = 300
 
-          setScrollPosition(target, offset + 30, duration)
+          setScrollPosition(target, offset + 33, duration)
 
-          this.$store.commit('page/setAnchor', Number(id))
+          if (select) {
+            this.select(id)
+          }
+
+          setTimeout(() => {
+            this.$store.commit('page/setScrolling', true)
+          }, 600)
         }
-
-        return true
       }
+    },
+    select (id) {
+      this.$store.commit('page/setAnchor', Number(id))
+    },
+    scrolling (scroll) {
+      if (this.$store.state.page.scrolling) {
+        const position = scroll.position + 60
+        const anchors = this.$store.state.page.anchors
 
-      return false
+        for (let i = 0; i < anchors.length; i++) {
+          if (anchors[i] >= position) {
+            this.select(i - 1)
+            break
+          }
+
+          if (typeof anchors[i + 1] === 'undefined' && position >= anchors[i]) {
+            this.select(i)
+          }
+        }
+      }
     }
   }
 }

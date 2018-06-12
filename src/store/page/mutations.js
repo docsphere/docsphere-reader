@@ -1,6 +1,16 @@
 export const setAnchor = (state, val) => {
   state.anchor = val
 }
+export const setAnchors = (state, val) => {
+  if (val === false) {
+    state.anchors = []
+  } else {
+    state.anchors.push(val)
+  }
+}
+export const setScrolling = (state, val) => {
+  state.scrolling = val
+}
 
 export const setBase = (state, val) => {
   state.base = val
