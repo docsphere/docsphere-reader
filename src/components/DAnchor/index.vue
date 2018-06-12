@@ -29,16 +29,7 @@ export default {
         return this.$store.state.page.anchor
       },
       set (value) {
-        if (('#' + value) === this.$route.hash) {
-          this.anchor(value)
-          return
-        } else if (value === null) {
-          this.anchor(this.selected, false)
-          return
-        }
-
-        // TODO Review unnecessary rendering when push routing
-        this.$router.push(this.$route.path + '#' + value)
+        this.push(value)
       }
     }
   },

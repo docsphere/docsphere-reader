@@ -1,5 +1,5 @@
 <template>
-  <div :id="id" v-bind:class="stylize" @click="$router.push($route.path + '#' + id)" v-scroll-fire="register">{{ heading }}</div>
+  <div :id="id" v-bind:class="stylize" @click="push(id)" v-scroll-fire="register">{{ heading }}</div>
 </template>
 
 <script>
