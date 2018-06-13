@@ -1,10 +1,10 @@
 {
   "name": "quasar-documentation-pp",
-  "version": "0.0.1-dev",
+  "version": "0.1.0-dev",
   "description": "All-in-one Documentation of Quasar Framework",
   "productName": "Quasar Documentation++",
   "cordovaId": "org.cordova.quasar.app",
-  "author": "Rodrigo Vieira <rodrigo@vieira.com>",
+  "author": "Rodrigo Vieira (Slowaways) <rodrigo@vieira.com>",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
