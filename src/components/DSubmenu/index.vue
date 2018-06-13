@@ -1,7 +1,7 @@
 <template>
   <div id="submenu" class="row bg-white" style="height: 100%">
     <q-list highlight>
-      <q-item :to="overview" exact>
+      <q-item :to="overview" v-bind:exact="$store.state.page.relative !== '/'">
         <q-item-side icon="pageview" />
         <q-tooltip anchor="center right" self="center left">{{ $t('submenu.overview') }}</q-tooltip>
       </q-item>
