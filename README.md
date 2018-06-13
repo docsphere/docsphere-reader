@@ -18,15 +18,15 @@ We want the documentation to be available in any language so that it can reach *
 
 Currently available in 2 languages: English (en) and Portuguese (pt).
 
-### Menu search engine based in keywords and i18n
+### Menu search engine based in keywords and i18n (Beta)
 The search for content in the documentation is simple, fast and easy.
 The search input text in the **menu** makes it easy to search for **any content** using keywords and you can do it in your favorite language.
 
 ### Documentation codes in local files
 A JSON file that is processed by the Gist is downloaded and stored in **local files**. These files contain `.vue`, `.js`, `.html`, or `.css` codes that are used in the documentation so that you can access all of the documentation **offline**.
 
-### Anchor links navigation
-Anchor links work in hash and history mode and provide **faster navigation** and better **orientation** when navigating through subsections of documentation.
+### Anchor links navigation (Beta)
+Anchor links work in hash and history mode and provide **faster navigation** and ** better orientation** when navigating through subsections of documentation.
 
 ### Partial Code View in the Showcase (WIP)
 ...
