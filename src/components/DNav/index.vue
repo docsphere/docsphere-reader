@@ -50,10 +50,6 @@ export default {
 
       return ''
     }
-  },
-
-  mounted () {
-    console.log(this._prev())
   }
 }
 </script>

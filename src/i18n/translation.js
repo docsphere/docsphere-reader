@@ -1,8 +1,12 @@
 export default {
   methods: {
     t (index) {
-      const base = this.$store.state.i18n.base
-      return this.$t(`_.${base}.overview.t[${--index}]`)
+      if (typeof index === 'number') {
+        const base = this.$store.state.i18n.base
+        return this.$t(`_.${base}.overview.t[${--index}]`)
+      } else if (typeof index === 'string') {
+        return this.$t(index)
+      }
     },
     l (index) {
       const base = this.$store.state.i18n.base
