@@ -57,8 +57,10 @@
 </template>
 
 <script>
-import { openURL } from 'quasar'
+import { openURL, scroll } from 'quasar'
 import menu from '/src/i18n/menu.json'
+
+const { getScrollTarget, setScrollPosition } = scroll
 
 export default {
   name: 'DMenu',
@@ -84,6 +86,17 @@ export default {
         this.matches = false
       }
     }
+  },
+
+  mounted () {
+    const menu = document.getElementById('menu')
+    const menuActive = (menu.getElementsByClassName('router-link-active'))[0]
+
+    const target = getScrollTarget(menuActive)
+    const offset = menuActive.offsetTop - menuActive.scrollHeight
+    const duration = 300
+
+    setScrollPosition(target, offset - (window.innerHeight / 2), duration)
   }
 }
 </script>
