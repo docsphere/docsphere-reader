@@ -210,7 +210,7 @@ export default [
         path: '',
         component: () => import('pages/1-style/2-typography/'),
         meta: {
-          status: 1
+          status: 0
         }
       },
 
@@ -249,7 +249,7 @@ export default [
         path: '',
         component: () => import('pages/1-style/3-ripples'),
         meta: {
-          status: 1
+          status: 0
         }
       },
 
@@ -286,7 +286,7 @@ export default [
         path: '',
         component: () => import('pages/1-style/4-stylus'),
         meta: {
-          status: 1
+          status: 0
         }
       },
 
@@ -323,7 +323,7 @@ export default [
         path: '',
         component: () => import('pages/1-style/5-icons'),
         meta: {
-          status: 1
+          status: 0
         }
       },
 
@@ -362,7 +362,7 @@ export default [
         path: '',
         component: () => import('pages/1-style/6-addressbar'),
         meta: {
-          status: 1
+          status: 0
         }
       },
 
@@ -405,7 +405,7 @@ export default [
         path: '',
         component: () => import('pages/2-layout/1-play'),
         meta: {
-          status: 1
+          status: 0
         }
       },
 
@@ -442,7 +442,7 @@ export default [
         path: '',
         component: () => import('pages/2-layout/2-drawer'),
         meta: {
-          status: 1
+          status: 0
         }
       },
 
@@ -479,7 +479,7 @@ export default [
         path: '',
         component: () => import('pages/2-layout/3-sticky'),
         meta: {
-          status: 1
+          status: 0
         }
       },
 
@@ -518,7 +518,7 @@ export default [
         path: '',
         component: () => import('pages/2-layout/4-floating'),
         meta: {
-          status: 1
+          status: 0
         }
       },
 
@@ -557,7 +557,7 @@ export default [
         path: '',
         component: () => import('pages/2-layout/5-flexbox'),
         meta: {
-          status: 1
+          status: 0
         }
       },
 
@@ -601,7 +601,7 @@ export default [
         path: '',
         component: () => import('pages/3-components/1-buttons/1-standard'),
         meta: {
-          status: 1
+          status: 0
         }
       },
 
@@ -638,7 +638,7 @@ export default [
         path: '',
         component: () => import('pages/3-components/1-buttons/2-groups'),
         meta: {
-          status: 1
+          status: 0
         }
       },
 
@@ -677,7 +677,7 @@ export default [
         path: '',
         component: () => import('pages/3-components/1-buttons/3-dropdown'),
         meta: {
-          status: 1
+          status: 0
         }
       },
 
@@ -2684,7 +2684,7 @@ export default [
         path: '',
         component: () => import('pages/4-plugins/1-cookies'),
         meta: {
-          status: 1
+          status: 0
         }
       },
 
@@ -3521,7 +3521,8 @@ export default [
       layouts: {
         footer: false,
         submenu: false
-      }
+      },
+      pages: {}
     },
 
     children: [
