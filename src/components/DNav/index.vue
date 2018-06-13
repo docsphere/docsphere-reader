@@ -1,11 +1,11 @@
 <template>
   <nav>
-    <router-link v-if="prev[0]" :to="`/${prev[0]}`">
+    <router-link v-if="prev" :to="`/${prev}`">
       <q-icon name="navigate_before" />
-      <span>{{ prev[1] }}</span>
+      <span>{{ $t(`_${prev.replace(/\//g, '.')}._`) }}</span>
     </router-link>
-    <router-link v-if="next[0]" :to="`/${next[0]}`" class="float-right">
-      <span>{{ next[1] }}</span>
+    <router-link v-if="next" :to="`/${next}`" class="float-right">
+      <span>{{ $t(`_${next.replace(/\//g, '.')}._`) }}</span>
       <q-icon name="navigate_next" />
     </router-link>
   </nav>
@@ -15,15 +15,45 @@
 export default {
   name: 'DNav',
 
-  props: {
-    prev: {
-      type: Array,
-      default: Array
-    },
-    next: {
-      type: Array,
-      default: Array
+  data () {
+    return {
+      prev: this._prev(),
+      next: this._next()
     }
+  },
+  methods: {
+    _prev () {
+      const base = this.$store.state.page.base
+      const routes = this.$router.options.routes.slice(0, -1)
+
+      for (let i = 0; i < routes.length; i++) {
+        if ('/' + base === routes[i].path) {
+          if (i > 0) {
+            return routes[i - 1].path
+          }
+        }
+      }
+
+      return ''
+    },
+    _next () {
+      const base = this.$store.state.page.base
+      const routes = this.$router.options.routes.slice(0, -1)
+
+      for (let i = 0; i < routes.length; i++) {
+        if ('/' + base === routes[i].path) {
+          if (typeof routes[i + i] !== 'undefined') {
+            return routes[i + 1].path
+          }
+        }
+      }
+
+      return ''
+    }
+  },
+
+  mounted () {
+    console.log(this._prev())
   }
 }
 </script>

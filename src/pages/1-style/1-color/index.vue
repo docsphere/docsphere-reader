@@ -33,7 +33,7 @@
       <div v-html="c(4)"></div>
       <p style="color: red;">... (This page is still under construction!)</p>
 
-      <d-nav :prev="prev" :next="next" />
+      <d-nav />
       <q-scroll-observable @scroll="scrolling" />
     </q-scroll-area>
   </q-page>
@@ -78,13 +78,6 @@ export default {
         ['red', 'red-1', 'red-2', '…', 'red-14'],
         ['text-', 'bg-'],
         ['$primary', '$red-1']
-      ],
-
-      prev: [
-        'starting/rtl', this.$t('_.starting.rtl._')
-      ],
-      next: [
-        'style/typography', this.$t('_.style.typography._')
       ]
     }
   },

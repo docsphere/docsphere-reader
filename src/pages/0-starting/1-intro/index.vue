@@ -36,7 +36,7 @@
       <d-h h="2-4" />
       <p style="color: red;">... (This page is still under construction!)</p>
 
-      <d-nav :next="next" />
+      <d-nav />
       <q-scroll-observable @scroll="scrolling" />
     </q-scroll-area>
   </q-page>
@@ -83,10 +83,6 @@ export default {
         'v-ripple',
         'v-',
         '/quasar.conf.js'
-      ],
-
-      next: [
-        'starting/platform', this.$t('_.starting.platform._')
       ]
     }
   }
