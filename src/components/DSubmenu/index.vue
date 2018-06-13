@@ -43,7 +43,7 @@ export default {
 
     showcase: {
       type: Boolean,
-      default: false
+      default: true
     },
     changelog: {
       type: Boolean,

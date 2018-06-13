@@ -22,11 +22,11 @@
       <router-view />
     </q-page-container>
 
-    <q-layout-footer v-if="_[0].meta.layouts.footer" v-model="footer">
+    <q-layout-footer v-if="_[0].meta.layouts.footer !== false" v-model="footer">
       <d-footer :status="$route.meta.status" />
     </q-layout-footer>
 
-    <q-layout-drawer v-if="_[0].meta.layouts.submenu" mini side="right" v-model="right">
+    <q-layout-drawer v-if="_[0].meta.layouts.submenu !== false" mini side="right" v-model="right">
       <d-submenu :overview="_[0].path" :showcase="_[0].meta.pages.showcase" />
     </q-layout-drawer>
   </q-layout>
@@ -101,13 +101,13 @@ export default {
   created () {
     this.left = this.$q.platform.is.desktop
 
+    this.commit()
+
     this.$router.afterEach((to) => {
       if (!to.hash) {
         this.commit()
       }
     })
-
-    this.commit()
 
     this.$store.commit('page/setAnchors', false)
   }

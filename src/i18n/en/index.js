@@ -149,55 +149,129 @@ export default {
     components: {
       _: 'Components',
       buttons: {
-        _: 'Buttons'
+        _: 'Buttons',
+        standard: { _: 'Standard Buttons' },
+        groups: { _: 'Button Groups' },
+        dropdown: { _: 'Dropdown Groups' }
       },
       navigation: {
-        _: 'Navigation'
+        _: 'Navigation',
+        toolbar: { _: 'Toolbar' },
+        tabs: { _: 'Tabs' },
+        pull: { _: 'Pull to Refresh' },
+        context: { _: 'Context Menu' },
+        breadcrumbs: { _: 'Breadcrumbs' },
+        pagination: { _: 'Pagination' }
       },
       forms: {
-        _: 'Forms'
+        _: 'Forms',
+        fields: { _: 'Fields' },
+        input: { _: 'Input Textfield' },
+        chips: { _: 'Chips Input' },
+        color: { _: 'Color Picker' },
+        autocomplete: { _: 'Autocomplete' },
+        editor: { _: 'Editor (WYSIWYG)' },
+        search: { _: 'Search' },
+        slider: { _: 'Slider' },
+        range: { _: 'Range' },
+        checkbox: { _: 'Checkbox' },
+        toggle: { _: 'Toggle' },
+        button: { _: 'Button Toggle' },
+        option: { _: 'Option Group' },
+        datetime: { _: 'Date & Time' },
+        select: { _: 'Select' },
+        rating: { _: 'Rating' },
+        knob: { _: 'Knob' },
+        uploader: { _: 'Uploader' }
       },
       grouping: {
-        _: 'Grouping'
+        _: 'Grouping',
+        card: { _: 'Card' },
+        collapsible: { _: 'Collapsible' },
+        table: { _: 'Data Table' },
+        list: { _: 'List' },
+        stepper: { _: 'Stepper' },
+        tree: { _: 'Tree' }
       },
       popups: {
-        _: 'Popups'
+        _: 'Popups',
+        sheet: { _: 'Action Sheet' },
+        dialog: { _: 'Dialog' },
+        modal: { _: 'Modal' },
+        notify: { _: 'Notify' },
+        popover: { _: 'Popover' },
+        tooltip: { _: 'Tooltip' }
       },
       progress: {
-        _: 'Progress'
+        _: 'Progress',
+        ajax: { _: 'Ajax Bar' },
+        loading: { _: 'Loading' },
+        inner: { _: 'Inner Loading' },
+        bar: { _: 'Progress Bar' },
+        spinner: { _: 'Spinner' }
       },
       media: {
-        _: 'Media'
+        _: 'Media',
+        carousel: { _: 'Carousel' },
+        parallax: { _: 'Parallax' },
+        video: { _: 'Video Embedding' }
       },
       scrolling: {
-        _: 'Scrolling'
+        _: 'Scrolling',
+        infinite: { _: 'Infinite Scroll' },
+        area: { _: 'Scroll Area' },
+        fire: { _: 'Scroll Fire' },
+        top: { _: 'Back to Top' }
       },
       others: {
-        _: 'Others Components'
+        _: 'Others Components',
+        alert: { _: 'Alert' },
+        chip: { _: 'Chip' },
+        chat: { _: 'Chat' },
+        timeline: { _: 'Timeline' }
       }
     },
 
     plugins: {
-      _: 'Plugins'
+      _: 'Plugins',
+      cookies: { _: 'Cookies' },
+      storage: { _: 'Web Storage' },
+      screen: { _: 'Screen' },
+      fullscreen: { _: 'App Fullscreen' },
+      visibility: { _: 'App Visibility' }
     },
 
     directives: {
-      _: 'Directives'
+      _: 'Directives',
+      panning: { _: 'Panning Touch/Mouse' },
+      swipe: { _: 'Swipe Touch/Mouse' },
+      hold: { _: 'Touch/Mouse Hold' }
     },
 
     helpers: {
       _: 'Helpers',
-      shadows: {
-        _: 'Shadows'
-      }
+      spacing: { _: 'Spacing' },
+      shadows: { _: 'Shadows' },
+      visibility: { _: 'Visibility' },
+      positioning: { _: 'Positioning' },
+      others: { _: 'Others Helpers Classes' }
     },
 
     animations: {
-      _: 'Animations'
+      _: 'Animations',
+      transition: { _: 'Transition' },
+      slide: { _: 'Slide' },
+      js: { _: 'JS Animations' },
+      css: { _: 'Animation CSS Helpers' }
     },
 
     utils: {
-      _: 'Utils'
+      _: 'Utils',
+      date: { _: 'Date Utils' },
+      color: { _: 'Color Utils' },
+      dom: { _: 'Dom Utils' },
+      formatter: { _: 'Formatter Utils' },
+      others: { _: 'Others Utils' }
     }
   },
 
