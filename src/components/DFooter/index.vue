@@ -8,7 +8,7 @@
         <q-icon name="fab fa-github"></q-icon>
       </div>
     </q-btn>
-    <!--<q-chip class="q-ml-sm" dense square>
+    <q-chip class="q-ml-sm" dense square>
       <q-icon name="translate" size="1.3rem" />
       <span><b> {{ progress }}</b> ({{ $i18n.locale }})</span>
       <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">
@@ -17,11 +17,11 @@
     </q-chip>
     <q-chip class="q-ml-sm" dense square>
       <q-icon name="language" size="1.3rem" />
-      <span> #{{ languages }} of 2</span>
+      <span> #{{ languages }}</span>
       <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">
         {{ $t('footer.translations') }}
       </q-tooltip>
-    </q-chip>-->
+    </q-chip>
 
     <q-chip class="anchor-toggle" dense square v-if="metaToggle">
       <q-icon name="link" size="1.3rem" class="q-mr-xs" />
@@ -73,14 +73,38 @@ export default {
       }
     },
     progress () {
-      // const base = this.$store.state.i18n.base
-      // const relative = this.$store.state.i18n.relative
-      // const absolute = this.$store.state.i18n.absolute
+      // i18n
+      // |-> paths
+      const absolute = this.$store.state.i18n.absolute
 
-      return `0%?`
+      // Subsections
+      let total = Number(this.$t(`_.${absolute}._subsections_`))
+      let percent = '?'
+
+      if (!isNaN(total)) {
+        const current = this.$t(`_.${absolute}.h`).length
+        percent = ~~((current / total) * 100)
+      }
+
+      return `${percent}%`
     },
     languages () {
-      return 2
+      // i18n
+      // |-> paths
+      const absolute = this.$store.state.i18n.absolute
+      // |-> meta data
+      const languages = Object.keys(this.$i18n.messages)
+      // |->-> en->updated
+      const enUpdated = this.$t(`_.${absolute}._updated_`, 'en')
+
+      let available = 1
+      for (let i = 0; i < languages.length; i++) {
+        if (this.$t(`_.${absolute}._updated_`, languages[i]) !== enUpdated) {
+          available++
+        }
+      }
+
+      return `${available} ${this.$t('footer.of')} ${languages.length}`
     },
 
     metaToggle () {

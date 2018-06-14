@@ -8,8 +8,10 @@ export default {
       _: 'Getting started',
       intro: {
         _: 'Introduction for Beginners',
-        _progress: '30',
         overview: {
+          _updated_: '2018-06-14T15:29:43.957Z',
+          _subsections_: '15',
+
           h: [
             'Single File Vue Components',
             'CSS preprocessors',
@@ -71,8 +73,10 @@ export default {
       _: 'Style',
       color: {
         _: 'Color Palette',
-        _progress: '30',
         overview: {
+          _updated_: '2018-06-14T15:35:51.537Z',
+          _subsections_: '8',
+
           h: [
             'Brand Colors',
             'Color List',
@@ -283,7 +287,8 @@ export default {
     },
     progress: 'Translation Progress',
     translations: 'Translations available',
-    anchor: 'Anchor navigation'
+    anchor: 'Anchor navigation',
+    of: 'of'
   },
   submenu: {
     overview: 'Overview',
@@ -309,6 +314,6 @@ export default {
   },
 
   _a: ' and ',
-  _o: 'or',
-  _f: 'files'
+  _o: ' or ',
+  _f: ' files '
 }

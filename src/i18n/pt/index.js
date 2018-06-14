@@ -31,6 +31,8 @@ export default {
       color: {
         _: 'Paleta de cores',
         overview: {
+          _updated_: '2018-06-14T15:34:07.984Z',
+
           h: [
             'Cores principais',
             'Lista de cores',
@@ -162,7 +164,8 @@ export default {
     },
     progress: 'Progresso da tradução',
     translations: 'Traduções disponíveis',
-    anchor: 'Navegação por âncoras'
+    anchor: 'Navegação por âncoras',
+    of: 'de'
   },
   submenu: {
     overview: 'Apresentação',
