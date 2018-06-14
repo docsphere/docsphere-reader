@@ -1,5 +1,11 @@
 <template>
-  <q-scroll-area id="menu" style="width: 100%; height: 100%;" :class="$q.theme === 'mat' ? 'bg-grey-3' : null">
+  <q-scroll-area id="menu" :class="$q.theme === 'mat' ? 'bg-grey-3' : null">
+    <transition appear enter-active-class="animated zoomIn" leave-active-class="animated zoomOut">
+      <q-list id="search" class="fixed" no-border link inset-delimiter>
+        <q-search hide-underline clearable v-model="term" @input="search" :placeholder="$t('menu.search')" />
+      </q-list>
+    </transition>
+
     <div class="row flex-center bg-white" style="height: 115px;">
       <div class="col-5">
         <img class="q-mr-xs" src="/assets/logo.svg" style="height: 75px; float: right;">
@@ -12,10 +18,6 @@
                @click="openURL('https://quasar-framework.org/support-quasar-framework.html')"/>
       </div>
     </div>
-
-    <q-list no-border link inset-delimiter>
-      <q-search hide-underline clearable v-model="term" @input="search" :placeholder="$t('menu.search')" class="q-ml-lg q-mr-md" />
-    </q-list>
     <q-item-separator class="list" />
 
     <q-list no-border link inset-delimiter>
@@ -48,11 +50,15 @@
         <q-item :key="`${index}-i`" :to="item.path" v-show="matches[index] || !matches">
           <q-item-side :icon="item.meta.icon" />
           <q-item-main>{{ $t(`_${item.path.replace(/\//g, '.')}._`) }}</q-item-main>
+          <q-item-side right>
+            <q-icon class="float-right" name="fiber_manual_record" :color="colorize(item.meta.status)" />
+          </q-item-side>
         </q-item>
 
         <q-item-separator v-if="item.meta.menu.separator" :key="`${index}-s2`" :class="item.meta.menu.separator" />
       </template>
     </q-list>
+    <q-scroll-observable @scroll="scrolling" />
   </q-scroll-area>
 </template>
 
@@ -68,7 +74,8 @@ export default {
   data () {
     return {
       term: null,
-      matches: false
+      matches: false,
+      scrolled: false
     }
   },
 
@@ -85,6 +92,20 @@ export default {
       } else {
         this.matches = false
       }
+    },
+
+    colorize (status) {
+      if (status === 9) {
+        return 'transparent'
+      } else if (status === 6) {
+        return 'warning'
+      } else {
+        return 'negative'
+      }
+    },
+
+    scrolling (scroll) {
+      this.scrolled = scroll.position > 115
     }
   },
 
@@ -101,25 +122,44 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-  .q-list-header
+<style lang="stylus">
+  #menu
+    width 100%
+    height calc(100% - 40px)
+    margin-top 40px
+  #menu .q-item-section + .q-item-section
+    margin-left 0
+  #menu .q-list-header
     text-align: center
     padding-bottom: 0
     min-height: 32px
-  .q-list-header.subpage
+  #menu .q-list-header.subpage
     text-align: left
     padding-bottom: 5px
 
-  .q-item-separator-component.list
+  #menu .q-item-separator-component.list
     height 3px
     margin 0
-
-  .q-item-separator-component.page
+  #menu .q-item-separator-component.page
     height: 3px
-  .q-item-separator-component.subpage
+  #menu .q-item-separator-component.subpage
     height: 1px
-  .q-item-separator-component.partial
+  #menu .q-item-separator-component.partial
     margin: 6px auto
     width: 30px
     height: 3px
+
+  #search
+    margin-left: 24px
+    margin-right: 16px
+  #search.fixed
+    position fixed
+    top 0
+    width 300px
+    padding-left 24px
+    padding-right 16px
+    margin 0
+    background-color #eee
+    z-index 1
+    box-shadow 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px rgba(0,0,0,0.14), 0 1px 10px rgba(0,0,0,0.12)
 </style>

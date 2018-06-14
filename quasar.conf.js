@@ -99,8 +99,7 @@ module.exports = function (ctx) {
       iconSet: ctx.theme.mat ? 'material-icons' : 'ionicons'
     },
     // animations: 'all' --- includes all animations
-    animations: [
-    ],
+    animations: ['zoomIn', 'zoomOut'],
     pwa: {
       // workboxPluginMode: 'InjectManifest',
       // workboxOptions: {},

@@ -5,6 +5,7 @@ export default [
     meta: {
       dir: '0-starting/1-intro',
       icon: 'announcement',
+      status: 6,
 
       menu: {
         header: {
@@ -157,6 +158,7 @@ export default [
     meta: {
       dir: '1-style/1-color',
       icon: 'style',
+      status: 6,
 
       menu: {
         header: {
