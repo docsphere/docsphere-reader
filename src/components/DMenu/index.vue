@@ -94,7 +94,7 @@ export default {
           // Default search
           if (lang !== 'en') {
             this.matches = menu['en'].map((item, index) => {
-              return item.indexOf(term) !== -1 || this.matches[index] === true
+              return this.matches[index] === true || item.indexOf(term) !== -1
             })
           }
         }
