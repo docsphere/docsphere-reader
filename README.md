@@ -21,6 +21,7 @@ Currently available in 2 languages: English (en) and Portuguese (pt).
 ### Menu search engine based in keywords and i18n (Beta)
 The search for content in the documentation is simple, fast and easy.
 The search input text in the **menu** makes it easy to search for **any content** using keywords and you can do it in your favorite language.
+If the defined language is not English, by default a search is still performed using keywords in English, if the search term is not founded or has not been set in another language.
 
 ### Documentation codes in local files
 A JSON file that is processed by the Gist is downloaded and stored in **local files**. These files contain `.vue`, `.js`, `.html`, or `.css` codes that are used in the documentation so that you can access all of the documentation **offline**.
