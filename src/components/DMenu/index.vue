@@ -58,7 +58,6 @@
         <q-item-separator v-if="item.meta.menu.separator" :key="`${index}-s2`" :class="item.meta.menu.separator" />
       </template>
     </q-list>
-    <q-scroll-observable @scroll="scrolling" />
   </q-scroll-area>
 </template>
 
@@ -74,8 +73,7 @@ export default {
   data () {
     return {
       term: null,
-      matches: false,
-      scrolled: false
+      matches: false
     }
   },
 
@@ -85,10 +83,14 @@ export default {
     search (term) {
       if (term.length > 0) {
         term = term.toLowerCase()
+
         const lang = this.$q.localStorage.get.item('setting.language')
-        this.matches = menu[lang].map(item => {
-          return item.indexOf(term) !== -1
-        })
+
+        if (typeof menu[lang] === 'object') {
+          this.matches = menu[lang].map(item => {
+            return item.indexOf(term) !== -1
+          })
+        }
       } else {
         this.matches = false
       }
@@ -102,22 +104,20 @@ export default {
       } else {
         return 'negative'
       }
-    },
-
-    scrolling (scroll) {
-      this.scrolled = scroll.position > 115
     }
   },
 
   mounted () {
     const menu = document.getElementById('menu')
-    const menuActive = (menu.getElementsByClassName('router-link-active'))[0]
+    const active = (menu.getElementsByClassName('router-link-active'))[0]
 
-    const target = getScrollTarget(menuActive)
-    const offset = menuActive.offsetTop - menuActive.scrollHeight
-    const duration = 300
+    if (typeof active === 'object') {
+      const target = getScrollTarget(active)
+      const offset = active.offsetTop - active.scrollHeight
+      const duration = 300
 
-    setScrollPosition(target, offset - (window.innerHeight / 2), duration)
+      setScrollPosition(target, offset - (window.innerHeight / 2), duration)
+    }
   }
 }
 </script>
@@ -149,17 +149,13 @@ export default {
     width: 30px
     height: 3px
 
-  #search
-    margin-left: 24px
-    margin-right: 16px
   #search.fixed
     position fixed
     top 0
     width 300px
     padding-left 24px
     padding-right 16px
-    margin 0
     background-color #eee
-    z-index 1
     box-shadow 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px rgba(0,0,0,0.14), 0 1px 10px rgba(0,0,0,0.12)
+    z-index 1
 </style>
