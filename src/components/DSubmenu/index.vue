@@ -3,29 +3,29 @@
     <q-list highlight>
       <q-item :to="overview" v-bind:exact="$store.state.page.relative !== '/'">
         <q-item-side icon="pageview" />
-        <q-tooltip anchor="center right" self="center left">{{ $t('submenu.overview') }}</q-tooltip>
+        <q-tooltip v-if="$q.platform.is.desktop" anchor="center right" self="center left">{{ $t('submenu.overview') }}</q-tooltip>
       </q-item>
       <q-item-separator v-if="showcase" />
 
       <q-item v-if="showcase" :to="`${overview}/showcase`" exact>
         <q-item-side icon="play_circle_filled" />
-        <q-tooltip anchor="center right" self="center left">{{ $t('submenu.showcase._') }}</q-tooltip>
+        <q-tooltip v-if="$q.platform.is.desktop" anchor="center right" self="center left">{{ $t('submenu.showcase._') }}</q-tooltip>
       </q-item>
       <q-item v-if="showcase" :to="`${overview}/showcase/code`">
         <q-item-side icon="fas fa-file-code" />
-        <q-tooltip anchor="center right" self="center left">{{ $t('submenu.showcase.code') }}</q-tooltip>
+        <q-tooltip v-if="$q.platform.is.desktop" anchor="center right" self="center left">{{ $t('submenu.showcase.code') }}</q-tooltip>
       </q-item>
       <q-item-separator />
 
       <q-item class="bg-red-3">
         <q-item-side icon="assignment" />
-        <q-tooltip anchor="center right" self="center left">{{ $t('submenu.changelog') }}</q-tooltip>
+        <q-tooltip v-if="$q.platform.is.desktop" anchor="center right" self="center left">{{ $t('submenu.changelog') }}</q-tooltip>
       </q-item>
       <q-item-separator />
 
       <q-item v-if="builder" class="bg-red-3">
         <q-item-side icon="build" />
-        <q-tooltip anchor="center right" self="center left">{{ $t('submenu.builder') }}</q-tooltip>
+        <q-tooltip v-if="$q.platform.is.desktop" anchor="center right" self="center left">{{ $t('submenu.builder') }}</q-tooltip>
       </q-item>
     </q-list>
   </div>

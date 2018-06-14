@@ -11,14 +11,14 @@
     <!--<q-chip class="q-ml-sm" dense square>
       <q-icon name="translate" size="1.3rem" />
       <span><b> {{ progress }}</b> ({{ $i18n.locale }})</span>
-      <q-tooltip anchor="top middle" self="bottom middle" :offset="[10, 10]">
+      <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">
         {{ $t('footer.progress') }}
       </q-tooltip>
     </q-chip>
     <q-chip class="q-ml-sm" dense square>
       <q-icon name="language" size="1.3rem" />
       <span> #{{ languages }} of 2</span>
-      <q-tooltip anchor="top middle" self="bottom middle" :offset="[10, 10]">
+      <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">
         {{ $t('footer.translations') }}
       </q-tooltip>
     </q-chip>-->
@@ -26,7 +26,7 @@
     <q-chip class="anchor-toggle" dense square v-if="metaToggle">
       <q-icon name="link" size="1.3rem" class="q-mr-xs" />
       <q-toggle v-model="meta" checked-icon="visibility" unchecked-icon="visibility_off" />
-      <q-tooltip anchor="top middle" self="bottom middle" :offset="[10, 10]">
+      <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">
         {{ $t('footer.anchor') }}
       </q-tooltip>
     </q-chip>
