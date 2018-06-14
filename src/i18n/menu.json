@@ -3,7 +3,7 @@
     "introduction for beginners",
     "platform detection",
     "global event bus",
-    "vue prototype bus",
+    "vue prototype injections",
     "internationalization i18n",
     "rtl support",
 
@@ -114,12 +114,12 @@
     "other utils"
   ],
   "pt": [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
+    "introdução para iniciantes",
+    "detecção de plataforma",
+    "evento global bus",
+    "injeções de protótipos vue",
+    "internacionalização i18n",
+    "suporte rtl",
 
     "paleta de cores",
     "tipografia texto fonte",
