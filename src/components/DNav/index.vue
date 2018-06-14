@@ -1,10 +1,10 @@
 <template>
   <nav>
-    <router-link v-if="prev" :to="`/${prev}`">
+    <router-link v-if="prev" :to="`${prev}`">
       <q-icon name="navigate_before" />
       <span>{{ $t(`_${prev.replace(/\//g, '.')}._`) }}</span>
     </router-link>
-    <router-link v-if="next" :to="`/${next}`" class="float-right">
+    <router-link v-if="next" :to="`${next}`" class="float-right">
       <span>{{ $t(`_${next.replace(/\//g, '.')}._`) }}</span>
       <q-icon name="navigate_next" />
     </router-link>
