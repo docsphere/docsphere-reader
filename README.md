@@ -47,6 +47,9 @@ Bitcoin:
 
 13YRbtrnXerWNpmXsh33AjPMPyq52kqVAx
 
+Ethereum:
+0x9906f187a174ff89fe9adce75be4bfb3fdd600c6
+
 Nano:
 
 nano_1beny7hmi4be8yogbyb6esusqto851jibetr8rh7cjcgo39ymwzupazi89y4
