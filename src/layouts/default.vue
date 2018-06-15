@@ -99,7 +99,9 @@ export default {
   },
 
   created () {
-    this.left = this.$q.platform.is.desktop
+    if (this.$q.platform.is.desktop) {
+      this.$store.commit('layout/setLeft', true)
+    }
 
     this.commit()
 

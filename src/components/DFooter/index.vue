@@ -115,6 +115,10 @@ export default {
         return this.$store.state.layout.meta
       },
       set (value) {
+        if (this.$q.platform.is.desktop) {
+          this.$store.state.layout.left = !value
+        }
+
         this.$store.commit('layout/setMeta', value)
       }
     }

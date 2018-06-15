@@ -1,8 +1,8 @@
 <template>
   <q-tree
     default-expand-all
-    :nodes="nodes" node-key="id"
-    :selected.sync="selected">
+    :nodes="nodes" node-key="id" :selected.sync="selected"
+    v-bind:class="stylize">
     <div slot="default-header" slot-scope="prop">
       <b v-if="prop.node.id">{{ $t(`_.${$store.state.i18n.absolute}.h[${prop.node.id - 1}]`) }}</b>
       <b v-else>{{ $t(`_.${$store.state.i18n.base}._`) }}</b>
@@ -31,20 +31,22 @@ export default {
       set (value) {
         this.push(value)
       }
+    },
+    stylize () {
+      if (this.$q.platform.is.mobile && !this.$q.screen.lt.lg) {
+        return 'fixed'
+      } else {
+        return null
+      }
     }
   },
 
   mounted () {
     this.$store.commit('layout/setMetaToggle', true)
+
     setTimeout(() => {
       this.$store.commit('page/setScrolling', true)
     }, 1000)
-
-    this.$router.afterEach((to, from) => {
-      if (to.hash) {
-        this.anchor(to.hash)
-      }
-    })
 
     const id = this.$route.hash.replace(/^\D+/g, '')
     if (id === (Number(id) + '')) {
@@ -63,6 +65,7 @@ export default {
 <style lang="stylus">
   #anchor .q-tree
     padding-top 12px
+    width 100%
   #anchor b
     color #286fa3
   #anchor .q-tree-node-header

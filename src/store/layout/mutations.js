@@ -73,8 +73,6 @@ export const setScrolling = (state, val) => {
   state.scrolling = val
 }
 export const setMeta = (state, val) => {
-  state.left = !val
-
   state.meta = val
 }
 export const setMetaToggle = (state, val) => {

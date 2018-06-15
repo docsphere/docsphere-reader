@@ -1,7 +1,7 @@
 export default {
   header: true,
   footer: true,
-  left: true,
+  left: false,
   right: false,
 
   headerReveal: false,

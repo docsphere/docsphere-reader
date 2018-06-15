@@ -56,7 +56,10 @@ export default {
   },
 
   mounted () {
-    this.$store.commit('layout/setRight', true)
+    if (this.$q.platform.is.desktop) {
+      this.$store.commit('layout/setRight', true)
+    }
+
     this.$store.commit('layout/setRightToggle', true)
   },
   beforeDestroy () {
