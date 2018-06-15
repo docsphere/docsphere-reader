@@ -37,7 +37,7 @@ Anchor links work in hash and history mode and provide **faster navigation** and
 ...
 
 ## Screenshots
-![Change Log](src/assets/screenshot/general.jpg)
+![Change Log](src/assets/screenshot/general.png)
 
 (Coming soon) Individual Changelog
 
