@@ -82,7 +82,7 @@ export default {
       // Subsections
       let percent = '?'
 
-      if (enUpdated !== updated) {
+      if (this.$i18n.locale === 'en' || enUpdated !== updated) {
         let total = Number(this.$t(`_.${absolute}._subsections_`))
 
         if (!isNaN(total)) {
