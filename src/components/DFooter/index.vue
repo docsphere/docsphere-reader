@@ -76,14 +76,19 @@ export default {
       // i18n
       // |-> paths
       const absolute = this.$store.state.i18n.absolute
+      const enUpdated = this.$t(`_.${absolute}._updated_`, 'en')
+      const updated = this.$t(`_.${absolute}._updated_`)
 
       // Subsections
-      let total = Number(this.$t(`_.${absolute}._subsections_`))
       let percent = '?'
 
-      if (!isNaN(total)) {
-        const current = this.$t(`_.${absolute}.h`).length
-        percent = ~~((current / total) * 100)
+      if (enUpdated !== updated) {
+        let total = Number(this.$t(`_.${absolute}._subsections_`))
+
+        if (!isNaN(total)) {
+          const current = this.$t(`_.${absolute}.h`).length
+          percent = ~~((current / total) * 100)
+        }
       }
 
       return `${percent}%`
