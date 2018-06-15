@@ -39,8 +39,6 @@ Anchor links work in hash and history mode and provide **faster navigation** and
 ## Screenshots
 ![Change Log](src/assets/screenshot/general.png)
 
-(Coming soon) Individual Changelog
-
 ## Contributing
 Wait for the CONTRIBUTING.md file to initiate a contribution to this repository.
 
