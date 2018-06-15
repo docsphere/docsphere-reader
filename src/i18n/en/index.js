@@ -303,7 +303,8 @@ export default {
     search: '',
     home: 'Home',
     settings: 'Settings',
-    changelog: 'Changelog'
+    changelog: 'Changelog',
+    _404: '404 Error - Not Found'
   },
 
   settings: {

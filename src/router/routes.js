@@ -3554,7 +3554,10 @@ export default [
       },
       {
         path: '*',
-        component: () => import('pages/404')
+        component: () => import('pages/404'),
+        meta: {
+          menu: '_404'
+        }
       }
     ]
   }

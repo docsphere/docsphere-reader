@@ -180,7 +180,8 @@ export default {
     search: 'Pesquisar',
     home: 'Página inicial',
     settings: 'Configurações',
-    changelog: 'Changelog'
+    changelog: 'Changelog',
+    _404: 'Erro 404 - Não encontrado'
   },
 
   settings: {
