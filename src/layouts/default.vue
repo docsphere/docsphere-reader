@@ -106,9 +106,7 @@ export default {
     this.commit()
 
     this.$router.afterEach((to) => {
-      if (!to.hash) {
-        this.commit()
-      }
+      this.commit()
     })
 
     this.$store.commit('page/setAnchors', false)
