@@ -3,7 +3,7 @@
   "version": "0.1.0-dev",
   "description": "All-in-one Documentation of Quasar Framework",
   "productName": "Quasar Documentation++",
-  "cordovaId": "org.cordova.quasar.app",
+  "cordovaId": "tech.slayer.qd-pp",
   "author": "Rodrigo Vieira (Slowaways) <rodrigo@vieira.com>",
   "private": true,
   "scripts": {

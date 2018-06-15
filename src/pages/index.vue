@@ -2,7 +2,7 @@
   <q-page class="row">
     <q-scroll-area id="content" class="col">
       <div class="showcase-top text-center">
-        <img alt="Quasar logo" src="/assets/logo.svg">
+        <img alt="Quasar logo" src="statics/logo.svg">
         <p class="caption">{{ $t('_.home.p1') }}</p>
       </div>
       <div class="row justify-center" style="width: 850px; max-width: 90vw;">

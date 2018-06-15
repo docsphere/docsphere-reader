@@ -286,7 +286,7 @@ export default {
       edit: 'Edit this page on '
     },
     progress: 'Translation Progress',
-    translations: 'Translations available',
+    translations: 'Available translations',
     anchor: 'Anchor navigation',
     of: 'of'
   },

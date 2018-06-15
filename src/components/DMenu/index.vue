@@ -8,7 +8,7 @@
 
     <div class="row flex-center bg-white" style="height: 115px;">
       <div class="col-5">
-        <img class="q-mr-xs" src="/assets/logo.svg" style="height: 75px; float: right;">
+        <img class="q-mr-xs" src="statics/logo.svg" style="height: 75px; float: right;">
       </div>
       <div class="col-7">
         <div class="text-weight-thin q-mb-xs">Quasar v0.16.0</div>

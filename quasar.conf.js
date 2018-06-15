@@ -141,7 +141,7 @@ module.exports = function (ctx) {
       }
     },
     cordova: {
-      // id: 'org.cordova.quasar.app'
+      id: 'tech.slayer.qd-pp'
     },
     electron: {
       // bundler: 'builder', // or 'packager'
