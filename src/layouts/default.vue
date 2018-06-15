@@ -104,7 +104,6 @@ export default {
     }
 
     this.commit()
-
     this.$router.afterEach((to) => {
       this.commit()
     })

@@ -44,6 +44,15 @@ Anchor links work in hash and history mode and provide **faster navigation** and
 ## Contributing
 Wait for the CONTRIBUTING.md file to initiate a contribution to this repository.
 
+## Donate
+Bitcoin:
+
+13YRbtrnXerWNpmXsh33AjPMPyq52kqVAx
+
+Nano:
+
+nano_1beny7hmi4be8yogbyb6esusqto851jibetr8rh7cjcgo39ymwzupazi89y4
+
 ## License
 Copyright (c) 2018-Present - Rodrigo Vieira (Slowaways)
 
