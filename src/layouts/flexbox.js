@@ -9,7 +9,7 @@ export default {
     },
 
     main () {
-      if (this.$store.state.layout.meta) {
+      if (this.$store.state.layout.meta && this.nodes.length > 0) {
         if (this.$q.screen.lt.lg) {
           return ''
         } else {

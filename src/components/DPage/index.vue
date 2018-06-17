@@ -1,12 +1,12 @@
 <template>
   <q-page :class="row">
-    <q-scroll-area id="anchor" :class="meta">
+    <q-scroll-area v-if="nodes.length > 0" id="anchor" :class="meta">
       <d-anchor :nodes="nodes" />
     </q-scroll-area>
     <q-scroll-area id="content" :class="main">
       <slot></slot>
-      <d-nav />
-      <q-scroll-observable @scroll="scrolling" />
+      <d-nav v-if="!disableNav" />
+      <q-scroll-observable v-if="nodes.length > 0" @scroll="scrolling" />
     </q-scroll-area>
   </q-page>
 </template>
@@ -23,11 +23,17 @@ export default {
     DAnchor, DNav
   },
   props: {
-    nodes: Array,
-    required: true
+    nodes: {
+      type: Array,
+      default: Array
+    },
+    disableNav: {
+      type: Boolean,
+      default: true
+    }
   },
   mixins: [Flexbox, Navigator]
 }
 </script>
 
-<style lang="stylus" scoped></style>
+<style lang="stylus"></style>

@@ -7,27 +7,167 @@
 
     <d-h h="2-1" />
     <p v-html="t(6) + sc(1) + t(7)"></p>
-    <div v-html="c(1)"></div>
+    <d-code>
+      <tr>
+        <td id="file-code1-vue-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-code1-vue-LC1" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">template</span>&gt;</td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-code1-vue-LC2" class="blob-code blob-code-inner js-file-line">&nbsp;&nbsp;<span class="pl-c"><span class="pl-c">&lt;!--</span> you define your Vue template here <span class="pl-c">--&gt;</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-code1-vue-LC3" class="blob-code blob-code-inner js-file-line">&lt;/<span class="pl-ent">template</span>&gt;</td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-code1-vue-LC4" class="blob-code blob-code-inner js-file-line">
+        </td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-code1-vue-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-code1-vue-LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"><span class="pl-c">//</span> This is where your Javascript goes</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-code1-vue-LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"><span class="pl-c">//</span> to define your Vue component, which</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-code1-vue-LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"><span class="pl-c">//</span> can be a Layout, a Page or your own</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-code1-vue-LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"><span class="pl-c">//</span> component used throughout the app.</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-code1-vue-LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"></span></td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-code1-vue-LC11" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-k">export</span>&nbsp;<span class="pl-c1">default</span> {</span></td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-code1-vue-LC12" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">&nbsp;&nbsp;<span class="pl-c"><span class="pl-c">//</span></span></span></td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-code1-vue-LC13" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">}</span></td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-code1-vue-LC14" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-code1-vue-LC15" class="blob-code blob-code-inner js-file-line">
+        </td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-code1-vue-LC16" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">&lt;<span class="pl-ent">style</span>&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-code1-vue-LC17" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"><span class="pl-c">/*</span> This is where your CSS goes <span class="pl-c">*/</span></span></span></td>
+      </tr>
+      <tr>
+        <td id="file-code1-vue-L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="file-code1-vue-LC18" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">&lt;/<span class="pl-ent">style</span>&gt;</span></td>
+      </tr>
+    </d-code>
 
     <d-h h="3-2" />
     <p v-html="t(8) + sc(2) + t(9) + l(5) + t(10) + sc(3) + t('_o') + sc(4) + ').'"></p>
     <p v-html="t(11)"></p>
-    <div v-html="c(2)"></div>
+    <d-code>
+      <tr>
+        <td id="file-code2-vue-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-code2-vue-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">&lt;!--</span> notice lang="stylus" <span class="pl-c">--&gt;</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-code2-vue-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-code2-vue-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">&lt;<span class="pl-ent">style</span>&nbsp;<span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span></span><span class="pl-s">stylus<span class="pl-pds">"</span></span>&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="file-code2-vue-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-code2-vue-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-e">.some-div</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-code2-vue-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-code2-vue-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">&nbsp;&nbsp;<span class="pl-c1">font-size</span>&nbsp;<span class="pl-c1">15<span class="pl-k">px</span></span></span></td>
+      </tr>
+      <tr>
+        <td id="file-code2-vue-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-code2-vue-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">&lt;/<span class="pl-ent">style</span>&gt;</span></td>
+      </tr>
+    </d-code>
     <p v-html="t(12) + sc(2) + t(13)"></p>
 
     <d-h h="2-3" />
     <p v-html="t(14) + l(6) + t(15)"></p>
     <p v-html="t(16)"></p>
-    <div v-html="c(3)"></div>
+    <d-code>
+      <tr>
+        <td id="file-code3-vue-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-code3-vue-LC1" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">div</span>&nbsp;<span class="pl-e">v-ripple</span>&gt;Click Me&lt;/<span class="pl-ent">div</span>&gt;</td>
+      </tr>
+    </d-code>
     <blockquote>
       <p v-html="t(17) + sc(5) + t(18) + sc(6) + '.'"></p>
     </blockquote>
     <p v-html="t(19) + sc(7) + t(20)"></p>
-    <div v-html="c(4)"></div>
+    <d-code type="js">
+      <tr>
+        <td id="file-code1-js-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-code1-js-LC1" class="blob-code blob-code-inner js-file-line">framework<span class="pl-k">:</span> {</td>
+      </tr>
+      <tr>
+        <td id="file-code1-js-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-code1-js-LC2" class="blob-code blob-code-inner js-file-line">  directives<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>Ripple<span class="pl-pds">'</span></span>]</td>
+      </tr>
+      <tr>
+        <td id="file-code1-js-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-code1-js-LC3" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+    </d-code>
     <p v-html="t(21) + sc(7)"></p>
-    <div v-html="c(5)"></div>
+    <d-code type="js">
+      <tr>
+        <td id="file-code2-js-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-code2-js-LC1" class="blob-code blob-code-inner js-file-line">framework<span class="pl-k">:</span> {</td>
+      </tr>
+      <tr>
+        <td id="file-code2-js-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-code2-js-LC2" class="blob-code blob-code-inner js-file-line">  directives<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>Ripple<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>TouchPan<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>TouchSwipe<span class="pl-pds">'</span></span>]</td>
+      </tr>
+      <tr>
+        <td id="file-code2-js-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-code2-js-LC3" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+    </d-code>
     <p v-html="t(22)"></p>
-    <div v-html="c(6)"></div>
+    <d-code>
+      <tr>
+        <td id="file-_-vue-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-_-vue-LC1" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">div</span>&nbsp;<span class="pl-e">v-touch-pan</span>=<span class="pl-s1"><span class="pl-pds">"</span>handler<span class="pl-pds">"</span></span>&gt;...&lt;/<span class="pl-ent">div</span>&gt;</td>
+      </tr>
+      <tr>
+        <td id="file-_-vue-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-_-vue-LC2" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">div</span>&nbsp;<span class="pl-e">v-touch-swipe</span>=<span class="pl-s1"><span class="pl-pds">"</span>handler<span class="pl-pds">"</span></span>&gt;...&lt;/<span class="pl-ent">div</span>&gt;</td>
+      </tr>
+      <tr>
+        <td id="file-_-vue-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-_-vue-LC3" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">div</span>&nbsp;<span class="pl-e">v-ripple</span>&gt;Click me. I got ripples.&lt;/<span class="pl-ent">div</span>&gt;</td>
+      </tr>
+    </d-code>
 
     <d-h h="2-4" />
     <p style="color: red;">... (This page is still under construction!)</p>
@@ -35,17 +175,10 @@
 </template>
 
 <script>
-import DPage from '/src/components/DPage'
-
-import DH from '/src/components/DH'
-
-import Translation from '/src/i18n/translation'
+import Page from '/src/pages/page'
 
 export default {
-  components: {
-    DPage, DH
-  },
-  mixins: [Translation],
+  mixins: [Page],
 
   data () {
     return {
@@ -78,5 +211,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus" scoped></style>
