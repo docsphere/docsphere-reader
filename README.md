@@ -48,6 +48,7 @@ Bitcoin:
 13YRbtrnXerWNpmXsh33AjPMPyq52kqVAx
 
 Ethereum:
+
 0x9906f187a174ff89fe9adce75be4bfb3fdd600c6
 
 Nano:

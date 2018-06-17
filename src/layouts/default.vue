@@ -2,13 +2,13 @@
   <q-layout view="lHh Lpr lFr">
     <q-layout-header>
       <q-toolbar color="primary">
-        <q-btn flat dense round @click="left = !left">
+        <q-btn dense round @click="left = !left">
           <q-icon name="menu" />
         </q-btn>
 
         <d-header :icon="_[0].meta.icon" :matched="_" />
 
-        <q-btn v-if="$store.state.layout.rightToggle" flat dense round @click="right = !right">
+        <q-btn v-if="$store.state.layout.rightToggle" dense round @click="right = !right">
           <q-icon name="more_vert" />
         </q-btn>
       </q-toolbar>

@@ -82,5 +82,19 @@ export default {
     padding 6px
     cursor pointer
   .dh:hover
-    background-color #cde3f3
+    color #4e9bd4
+
+  .h3:before {
+    content: '# ';
+  }
+  .h1:hover:after,
+  .h2:hover:after,
+  .h3:hover:after,
+  .h4:hover:after,
+  .h5:hover:after,
+  .h6:hover:after {
+    content: ' #';
+    color: #286fa3;
+    font-weight: bold;
+  }
 </style>

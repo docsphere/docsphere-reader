@@ -68,6 +68,7 @@ export default {
     width 100%
   #anchor b
     color #286fa3
+    font-size 15px
   #anchor .q-tree-node-header
     margin 0
     border-radius 0

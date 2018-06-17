@@ -13,10 +13,10 @@ export default {
         if (this.$q.screen.lt.lg) {
           return ''
         } else {
-          return 'col-9'
+          return 'col-9 content'
         }
       } else {
-        return 'col-12'
+        return 'col-12 content'
       }
     },
     meta () {

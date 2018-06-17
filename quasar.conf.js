@@ -8,14 +8,14 @@ module.exports = function (ctx) {
       'i18n'
     ],
     css: [
-      'app.styl'
+      'app.styl', 'embed-light.styl', 'quasar-framework.org.styl'
     ],
     extras: [
       ctx.theme.mat ? 'roboto-font' : null,
-      'material-icons',
       ctx.theme.ios ? 'ionicons' : null,
-      // 'mdi',
+      'material-icons',
       'fontawesome'
+      // 'mdi',
     ],
     supportIE: false,
     build: {

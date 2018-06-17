@@ -134,15 +134,6 @@ pre .xml .cdata {
 .highlight.stylus .code:after {
   content: 'STYLUS';
 }
-body {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 15px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #34495e;
-  background: #fff;
-  margin: 0;
-}
 a {
   text-decoration: none;
   color: #34495e;
@@ -168,23 +159,6 @@ hr {
   padding: 0;
 }
 
-code,
-pre {
-  font-family: 'Roboto Mono', Monaco, courier, monospace;
-  font-size: 0.8em;
-  background-color: #f8f8f8;
-  -webkit-font-smoothing: initial;
-  -moz-osx-font-smoothing: initial;
-}
-code {
-  color: #286fa3;
-  padding: 2px 5px;
-  margin: 0 2px;
-  border-radius: 2px;
-  border: 1px solid #e6e6e6;
-  white-space: nowrap;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.125);
-}
 em {
   color: #57a0d6;
 }
@@ -212,7 +186,7 @@ iframe {
   -ms-flex-align: stretch;
   -ms-grid-row-align: stretch;
   -ms-flex-align: stretch;
-      align-items: stretch;
+  align-items: stretch;
   -ms-flex-pack: start;
   justify-content: flex-start;
 }
@@ -721,7 +695,7 @@ div.demo-links:not(.demo-always-visible) {
   -ms-flex-align: center;
   -ms-grid-row-align: center;
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
@@ -758,17 +732,7 @@ div.demo-links:not(.demo-always-visible) {
     display: block;
   }
 }
-.content {
-  padding: 0;
-  margin: 10px auto 0 300px;
-  max-width: 750px;
-}
-.content.with-previewer {
-  max-width: none;
-}
-.content.centered {
-  margin: 10px auto;
-}
+
 .content ul {
   padding-left: 1.25em;
   line-height: 1.4em;
@@ -865,8 +829,8 @@ div.demo-links:not(.demo-always-visible) {
   padding: 0;
 }
 .content blockquote p {
-  padding: 0.5em 1.5em;
-  border-left: 5px solid #4e9bd4;
+  padding: 0.5em 1em;
+  background-color: #fafafa !important
   letter-spacing: 0.5px;
 }
 .content iframe {
@@ -891,7 +855,7 @@ div.demo-links:not(.demo-always-visible) {
 .content table tr {
   vertical-align: top;
 }
-.content table tr:nth-child(2n) {
+.content table:not(.js-file-line-container) tr:nth-child(2n) {
   background: #f8f8f8;
 }
 .content figure table {
