@@ -55,34 +55,40 @@ export default {
         for (let i = 0; i < anchors.length; i++) {
           if (anchors[i] >= position) {
             this.select(i - 1)
+            this.push(i - 1, false)
             break
           }
 
           if (typeof anchors[i + 1] === 'undefined' && position >= anchors[i]) {
+            this.push(i, false)
             this.select(i)
           }
         }
       }
     },
 
-    push (value) {
-      if (('#' + value) === this.$route.hash) {
-        this.anchor(value)
-        return
-      } else if (value === null) {
-        this.anchor(this.selected, false)
-        return
+    push (value, anchor = true) {
+      if (anchor) {
+        if (('#' + value) === this.$route.hash) {
+          this.anchor(value)
+          return
+        } else if (value === null) {
+          this.anchor(this.selected, false)
+          return
+        }
       }
 
       this.$router.push(this.$route.path + '#' + value)
       // TODO Prevent moving to the top on mobile devices by changing routes
 
-      if (this.$q.platform.is.desktop) {
-        this.anchor(value)
-      } else {
-        setTimeout(() => {
+      if (anchor) {
+        if (this.$q.platform.is.desktop) {
           this.anchor(value)
-        }, 600)
+        } else {
+          setTimeout(() => {
+            this.anchor(value)
+          }, 600)
+        }
       }
     }
   }
