@@ -25,19 +25,21 @@ The search input text in the **menu** makes it easy to search for **any content*
 If the defined language is not English and if the search term is not found or has not been set in current language, by default a search is still performed using keywords in English.
 
 ### Documentation codes in local files (Beta)
-A JSON file that is processed by the Gist is downloaded and stored in **local files**. These files contain `.vue`, `.js`, `.html`, or `.css` codes that are used in the documentation so that you can access the codes of the documentation **offline**.
+This documentation uses the same **syntax code highlight** that Github uses and the code is inserted into the templates of the documentation pages using tables with the Vue `v-pre` directive (when necessary). So you can access the codes of the documentation **offline** and we can also use i18n (eg. for translate code comments or headers with anchors).
 
-### Anchor links navigation (Beta)
+### Navigation using anchored links (RC)
 Anchor links work in hash and history mode and provide **faster navigation** and **better orientation** when navigating through subsections of documentation.
 
 ### Partial Code View in the Showcase (WIP)
 ...
 
-### Component Builder with Source Code (WIP)
+### Component Builder with Source Code Output (WIP)
 ...
 
 ## Screenshots
-![Change Log](src/assets/screenshot/general.png)
+<p align="center">
+  <img src="src/assets/screenshot/general.png" width="600" height="600" />
+</p>
 
 ## Contributing
 Wait for the CONTRIBUTING.md file to initiate a contribution to this repository.
