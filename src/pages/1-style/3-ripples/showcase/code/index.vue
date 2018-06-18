@@ -220,7 +220,7 @@
 import Standard from '/src/pages/standard'
 
 export default {
-  mixins: [Page]
+  mixins: [Standard]
 }
 </script>
 

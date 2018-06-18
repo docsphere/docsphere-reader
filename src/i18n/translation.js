@@ -1,5 +1,6 @@
 export default {
   methods: {
+    // Texts
     t (index) {
       if (typeof index === 'number') {
         const base = this.$store.state.i18n.base
@@ -8,11 +9,13 @@ export default {
         return this.$t(index)
       }
     },
+    // Links
     l (index) {
       const base = this.$store.state.i18n.base
       const l = this.$t(`_.${base}.overview.links[${--index}]`)
       return `<a href="${l[0]}" target="_blank">${l[1]}</a>`
     },
+    // Small Codes
     sc (index, separator = '', final = '.') {
       let code = this.codes[--index]
 
