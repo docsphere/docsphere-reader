@@ -175,10 +175,10 @@
 </template>
 
 <script>
-import Page from '/src/pages/page'
+import Standard from '/src/pages/standard'
 
 export default {
-  mixins: [Page],
+  mixins: [Standard],
 
   data () {
     return {
