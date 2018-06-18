@@ -7,7 +7,7 @@
 
     <d-page-h h="2-1" />
     <p v-html="t(6) + sc(1) + t(7)"></p>
-    <d-code>
+    <d-page-code>
       <tr>
         <td id="file-code1-vue-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-code1-vue-LC1" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">template</span>&gt;</td>
@@ -82,12 +82,12 @@
         <td id="file-code1-vue-L18" class="blob-num js-line-number" data-line-number="18"></td>
         <td id="file-code1-vue-LC18" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">&lt;/<span class="pl-ent">style</span>&gt;</span></td>
       </tr>
-    </d-code>
+    </d-page-code>
 
     <d-page-h h="3-2" />
     <p v-html="t(8) + sc(2) + t(9) + l(5) + t(10) + sc(3) + t('_o') + sc(4) + ').'"></p>
     <p v-html="t(11)"></p>
-    <d-code>
+    <d-page-code>
       <tr>
         <td id="file-code2-vue-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-code2-vue-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">&lt;!--</span> notice lang="stylus" <span class="pl-c">--&gt;</span></span></td>
@@ -108,23 +108,23 @@
         <td id="file-code2-vue-L5" class="blob-num js-line-number" data-line-number="5"></td>
         <td id="file-code2-vue-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">&lt;/<span class="pl-ent">style</span>&gt;</span></td>
       </tr>
-    </d-code>
+    </d-page-code>
     <p v-html="t(12) + sc(2) + t(13)"></p>
 
     <d-page-h h="2-3" />
     <p v-html="t(14) + l(6) + t(15)"></p>
     <p v-html="t(16)"></p>
-    <d-code>
+    <d-page-code>
       <tr>
         <td id="file-code3-vue-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-code3-vue-LC1" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">div</span>&nbsp;<span class="pl-e">v-ripple</span>&gt;Click Me&lt;/<span class="pl-ent">div</span>&gt;</td>
       </tr>
-    </d-code>
+    </d-page-code>
     <blockquote>
       <p v-html="t(17) + sc(5) + t(18) + sc(6) + '.'"></p>
     </blockquote>
     <p v-html="t(19) + sc(7) + t(20)"></p>
-    <d-code type="js">
+    <d-page-code type="js">
       <tr>
         <td id="file-code1-js-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-code1-js-LC1" class="blob-code blob-code-inner js-file-line">framework<span class="pl-k">:</span> {</td>
@@ -137,9 +137,9 @@
         <td id="file-code1-js-L3" class="blob-num js-line-number" data-line-number="3"></td>
         <td id="file-code1-js-LC3" class="blob-code blob-code-inner js-file-line">}</td>
       </tr>
-    </d-code>
+    </d-page-code>
     <p v-html="t(21) + sc(7)"></p>
-    <d-code type="js">
+    <d-page-code type="js">
       <tr>
         <td id="file-code2-js-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-code2-js-LC1" class="blob-code blob-code-inner js-file-line">framework<span class="pl-k">:</span> {</td>
@@ -152,9 +152,9 @@
         <td id="file-code2-js-L3" class="blob-num js-line-number" data-line-number="3"></td>
         <td id="file-code2-js-LC3" class="blob-code blob-code-inner js-file-line">}</td>
       </tr>
-    </d-code>
+    </d-page-code>
     <p v-html="t(22)"></p>
-    <d-code>
+    <d-page-code>
       <tr>
         <td id="file-code4-vue-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-code4-vue-LC1" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">div</span>&nbsp;<span class="pl-e">v-touch-pan</span>=<span class="pl-s1"><span class="pl-pds">"</span>handler<span class="pl-pds">"</span></span>&gt;...&lt;/<span class="pl-ent">div</span>&gt;</td>
@@ -167,7 +167,7 @@
         <td id="file-code4-vue-L3" class="blob-num js-line-number" data-line-number="3"></td>
         <td id="file-code4-vue-LC3" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">div</span>&nbsp;<span class="pl-e">v-ripple</span>&gt;Click me. I got ripples.&lt;/<span class="pl-ent">div</span>&gt;</td>
       </tr>
-    </d-code>
+    </d-page-code>
 
     <d-page-h h="2-4" />
     <p style="color: red;">... (This page is still under construction!)</p>

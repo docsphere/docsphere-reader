@@ -1,6 +1,6 @@
 <template>
   <d-page disable-nav>
-    <d-code v-pre>
+    <d-page-code v-pre>
       <tr>
         <td id="file-style-ripples-examples-vue-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-style-ripples-examples-vue-LC1" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">template</span>&gt;</td>
@@ -212,7 +212,7 @@
         <td id="file-style-ripples-examples-vue-L52" class="blob-num js-line-number" data-line-number="52"></td>
         <td id="file-style-ripples-examples-vue-LC52" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">&lt;/<span class="pl-ent">style</span>&gt;</span></td>
       </tr>
-    </d-code>
+    </d-page-code>
   </d-page>
 </template>
 

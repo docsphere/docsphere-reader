@@ -307,6 +307,9 @@ export default {
     _404: '404 Error - Not Found'
   },
 
+  system: {
+    support: 'Support Quasar'
+  },
   settings: {
     general: 'General Settings',
     language: {

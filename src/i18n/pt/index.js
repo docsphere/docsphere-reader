@@ -184,6 +184,9 @@ export default {
     _404: 'Erro 404 - Não encontrado'
   },
 
+  system: {
+    support: 'Ajude o Quasar'
+  },
   settings: {
     general: 'Configurações gerais',
     language: {

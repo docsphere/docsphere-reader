@@ -14,7 +14,7 @@
         <div class="text-weight-thin q-mb-xs">Quasar v0.16.0</div>
         <div>Documentation++</div>
         <q-btn class="q-mt-xs" style="color: goldenrod;"
-               dense no-caps outline size="sm" icon="fa fa-ambulance" label="Support Quasar"
+               dense no-caps outline size="sm" icon="fa fa-ambulance" :label="$t('system.support')"
                @click="openURL('https://quasar-framework.org/support-quasar-framework.html')"/>
       </div>
     </div>

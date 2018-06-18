@@ -1,7 +1,7 @@
 <template>
   <q-page :class="row">
     <q-scroll-area v-if="nodes.length > 0" id="anchor" :class="meta">
-      <d-anchor :nodes="nodes" />
+      <d-page-anchor :nodes="nodes" />
     </q-scroll-area>
     <q-scroll-area id="content" :class="main">
       <slot></slot>
@@ -29,7 +29,7 @@ export default {
     },
     disableNav: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   mixins: [Flexbox, Navigator]

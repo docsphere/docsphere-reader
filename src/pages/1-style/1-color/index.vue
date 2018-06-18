@@ -16,7 +16,7 @@
 
     <d-page-h h="2-3" />
     <p v-html="t(11) + sc(7, 'o', '') + t(12)"></p>
-    <d-code>
+    <d-page-code>
       <tr>
         <td id="file-style-color-01-vue-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-style-color-01-vue-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">&lt;!--</span> changing text color <span class="pl-c">--&gt;</span></span></td>
@@ -38,11 +38,11 @@
         <td id="file-style-color-01-vue-L5" class="blob-num js-line-number" data-line-number="5"></td>
         <td id="file-style-color-01-vue-LC5" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">p</span>&nbsp;<span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>bg-positive<span class="pl-pds">"</span></span>&gt;...&lt;/<span class="pl-ent">p</span>&gt;</td>
       </tr>
-    </d-code>
+    </d-page-code>
 
     <d-page-h h="2-4" />
     <p v-html="t(13) + sc(3) + t(14) + sc(8, ',', '') + t(15)"></p>
-    <d-code>
+    <d-page-code>
       <tr>
         <td id="file-style-color-02-vue-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-style-color-02-vue-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">&lt;!--</span> Notice lang="stylus" <span class="pl-c">--&gt;</span></span></td>
@@ -79,11 +79,11 @@
         <td id="file-style-color-02-vue-L9" class="blob-num js-line-number" data-line-number="9"></td>
         <td id="file-style-color-02-vue-LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">&lt;/<span class="pl-ent">style</span>&gt;</span></td>
       </tr>
-    </d-code>
+    </d-page-code>
 
     <d-page-h h="2-5" />
     <p v-html="t(16)"></p>
-    <d-code type="css">
+    <d-page-code type="css">
       <tr>
         <td id="file-style-color-03-css-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-style-color-03-css-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-e">.text-brand</span> {</td>
@@ -108,14 +108,14 @@
         <td id="file-style-color-03-css-L6" class="blob-num js-line-number" data-line-number="6"></td>
         <td id="file-style-color-03-css-LC6" class="blob-code blob-code-inner js-file-line">}</td>
       </tr>
-    </d-code>
+    </d-page-code>
     <p v-html="t(17)"></p>
-    <d-code>
+    <d-page-code>
       <tr>
         <td id="file-style-color-04-vue-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-style-color-04-vue-LC1" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">q-input</span>&nbsp;<span class="pl-e">color</span>=<span class="pl-s"><span class="pl-pds">"</span>brand<span class="pl-pds">"</span></span> ... /&gt;</td>
       </tr>
-    </d-code>
+    </d-page-code>
     <p style="color: red;">... (This page is still under construction!)</p>
   </d-page>
 </template>
