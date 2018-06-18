@@ -14,7 +14,7 @@ Some features of this documentation are listed below!
 See the projects tab for more details!
 
 ## Features
-### Internationalization (i18n)
+### Internationalization with i18n
 We want the documentation to be available in any language so that it can reach **everyone**.
 
 Currently available in 2 languages: English (en) and Portuguese (pt).

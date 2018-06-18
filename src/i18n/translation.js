@@ -13,7 +13,6 @@ export default {
       const l = this.$t(`_.${base}.overview.l[${--index}]`)
       return `<a href="${l[0]}" target="_blank">${l[1]}</a>`
     },
-
     sc (index, separator = '', final = '.') {
       let code = this.codes[--index]
 
@@ -44,11 +43,6 @@ export default {
       }
 
       return `<code>${code}</code>`
-    },
-    c (id) {
-      const dir = this.$route.matched[0].meta.dir
-      const code = require(`../pages/${dir}/_/codes/en/${id}.json`)
-      return code.div
     }
   }
 }

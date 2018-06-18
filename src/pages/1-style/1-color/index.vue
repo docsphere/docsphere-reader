@@ -1,20 +1,20 @@
 <template>
   <d-page :nodes="nodes">
-    <d-h h="1-0" />
+    <d-page-h h="1-0" />
     <p v-html="t(1)"></p>
     <p v-html="t(2) + l(1) + '.' + t(3) + l(2) + '.'"></p>
 
-    <d-h h="2-1" />
+    <d-page-h h="2-1" />
     <p v-html="t(4) + sc(1, 'a')"></p>
     <p v-html="t(5)"></p>
 
-    <d-h h="2-2" />
+    <d-page-h h="2-2" />
     <p v-html="t(6) + sc(2) + t(7) + sc(3) + e1() + ':'"></p>
     <p v-html="sc(4)"></p>
     <p v-html="t(8) + sc(5, 'a')"></p>
     <p v-html="t(9) + sc(6) + t(10)"></p>
 
-    <d-h h="2-3" />
+    <d-page-h h="2-3" />
     <p v-html="t(11) + sc(7, 'o', '') + t(12)"></p>
     <d-code>
       <tr>
@@ -40,7 +40,7 @@
       </tr>
     </d-code>
 
-    <d-h h="2-4" />
+    <d-page-h h="2-4" />
     <p v-html="t(13) + sc(3) + t(14) + sc(8, ',', '') + t(15)"></p>
     <d-code>
       <tr>
@@ -81,7 +81,7 @@
       </tr>
     </d-code>
 
-    <d-h h="2-5" />
+    <d-page-h h="2-5" />
     <p v-html="t(16)"></p>
     <d-code type="css">
       <tr>

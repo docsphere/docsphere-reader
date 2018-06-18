@@ -6,7 +6,7 @@
 import Navigator from '/src/pages/navigator'
 
 export default {
-  name: 'DH',
+  name: 'DPageH',
   mixins: [Navigator],
 
   props: {

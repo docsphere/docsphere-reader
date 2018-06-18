@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'DNav',
+  name: 'DPageNav',
 
   data () {
     return {

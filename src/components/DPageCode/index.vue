@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'DCode',
+  name: 'DPageCode',
 
   props: {
     type: String,

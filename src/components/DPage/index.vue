@@ -5,22 +5,22 @@
     </q-scroll-area>
     <q-scroll-area id="content" :class="main">
       <slot></slot>
-      <d-nav v-if="!disableNav" />
+      <d-page-nav v-if="!disableNav" />
       <q-scroll-observable v-if="nodes.length > 0" @scroll="scrolling" />
     </q-scroll-area>
   </q-page>
 </template>
 
 <script>
-import DAnchor from '/src/components/DAnchor'
-import DNav from '/src/components/DNav'
+import DPageAnchor from '/src/components/DPageAnchor'
+import DPageNav from '/src/components/DPageNav'
 
 import Flexbox from '/src/layouts/flexbox'
 import Navigator from '/src/pages/navigator'
 
 export default {
   components: {
-    DAnchor, DNav
+    DPageAnchor, DPageNav
   },
   props: {
     nodes: {

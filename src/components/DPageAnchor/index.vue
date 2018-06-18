@@ -14,7 +14,7 @@
 import Navigator from '/src/pages/navigator'
 
 export default {
-  name: 'DAnchor',
+  name: 'DPageAnchor',
   mixins: [Navigator],
 
   props: {
