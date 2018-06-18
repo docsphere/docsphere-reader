@@ -3,14 +3,14 @@ export default {
     t (index) {
       if (typeof index === 'number') {
         const base = this.$store.state.i18n.base
-        return this.$t(`_.${base}.overview.t[${--index}]`)
+        return this.$t(`_.${base}.overview.texts[${--index}]`)
       } else if (typeof index === 'string') {
         return this.$t(index)
       }
     },
     l (index) {
       const base = this.$store.state.i18n.base
-      const l = this.$t(`_.${base}.overview.l[${--index}]`)
+      const l = this.$t(`_.${base}.overview.links[${--index}]`)
       return `<a href="${l[0]}" target="_blank">${l[1]}</a>`
     },
     sc (index, separator = '', final = '.') {

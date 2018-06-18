@@ -37,7 +37,7 @@ export default {
         if (this.id === '0') {
           h = this.$t(`_.${base}._`)
         } else {
-          h = this.$t(`_.${absolute}.h[${this.id - 1}]`)
+          h = this.$t(`_.${absolute}.headers[${this.id - 1}]`)
         }
       } else {
         // TODO exception?

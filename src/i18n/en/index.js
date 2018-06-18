@@ -1,4 +1,5 @@
 export default {
+  // Sections
   _: {
     home: {
       p1: 'Use sidebar to browse through demos, which showcase only a few of the Quasar components and features.'
@@ -12,13 +13,13 @@ export default {
           _updated_: '2018-06-14T15:29:43.957Z',
           _subsections_: '15',
 
-          h: [
+          headers: [
             'Single File Vue Components',
             'CSS preprocessors',
             'Using Quasar Directive',
             'Using Quasar Components'
           ],
-          t: [
+          texts: [
             'Before you begin with Quasar, it is a good idea to get acquainted with ES6 and have a fairly good knowledge about how Vue works. (',
             ' – don’t worry, you don’t need to understand ALL of ES6). For devs experienced with reactive UIs, ',
             ' itself takes half a day at most to read top-to-bottom and will help you understand how Quasar components can be used and configured.',
@@ -42,7 +43,7 @@ export default {
             'Let’s take another example. We now also want TouchPan and TouchSwipe directives, so we add them too in ',
             'Now we can write in your Vue files template:'
           ],
-          l: [
+          links: [
             ['https://github.com/lukehoban/es6features', 'quick overview of ES6'],
             ['http://es6-features.org/#Constants', 'full description'],
             ['https://vuejs.org/v2/guide/', 'the Vue documentation'],
@@ -77,14 +78,14 @@ export default {
           _updated_: '2018-06-14T15:35:51.537Z',
           _subsections_: '8',
 
-          h: [
+          headers: [
             'Brand Colors',
             'Color List',
             'Using as CSS Classes',
             'Using Stylus Variables',
             'Adding Your Own Colors'
           ],
-          t: [
+          texts: [
             'Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.',
             'This page comes really handy after reading ',
             ' You might also want to check ',
@@ -102,7 +103,7 @@ export default {
             'If you want to use colors of your own for components, let’s say we are adding a color named “brand”, all you need to do is add the following CSS into your app:',
             'Now we can use this color for Quasar components:'
           ],
-          l: [
+          links: [
             ['https://quasar-framework.org/guide/quasar-theming.html', 'Quasar Theming'],
             ['https://quasar-framework.org/components/color-utils.html', 'Color Utils']
           ],
@@ -310,6 +311,7 @@ export default {
   system: {
     support: 'Support Quasar'
   },
+  changelog: {},
   settings: {
     general: 'General Settings',
     language: {

@@ -1,4 +1,5 @@
 export default {
+  // Sections
   _: {
     home: {
       p1: 'Use a barra lateral para navegar pelas demos, que exibem apenas alguns dos componentes e recursos do Quasar.'
@@ -33,14 +34,14 @@ export default {
         overview: {
           _updated_: '2018-06-14T15:34:07.984Z',
 
-          h: [
+          headers: [
             'Cores principais',
             'Lista de cores',
             'Usando como classes CSS',
             'Usando Variáveis Stylus',
             'Adicionando suas próprias cores'
           ],
-          t: [
+          texts: [
             'Quasar Framework oferece uma ampla seleção de cores "fora da caixa". Você pode usar as cores como variáveis Stylus em seu código CSS ou diretamente como classes CSS em seus templates HTML.',
             'Esta página é muito útil depois de ler ',
             ' Você também pode querer verificar ',
@@ -58,7 +59,7 @@ export default {
             'Se você quiser usar cores próprias para componentes, digamos que estamos adicionando uma cor chamada "brand", tudo o que você precisa fazer é adicionar o seguinte CSS ao seu aplicativo:',
             'Agora podemos usar essa cor para os componentes do Quasar:'
           ],
-          l: [
+          links: [
             ['https://quasar-framework.org/guide/quasar-theming.html', 'Quasar Theming'],
             ['https://quasar-framework.org/components/color-utils.html', 'Color Utils']
           ]
@@ -187,6 +188,7 @@ export default {
   system: {
     support: 'Ajude o Quasar'
   },
+  changelog: {},
   settings: {
     general: 'Configurações gerais',
     language: {
