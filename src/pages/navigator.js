@@ -48,20 +48,25 @@ export default {
       this.$store.commit('page/setAnchor', Number(id))
     },
     scrolling (scroll) {
-      if (this.$store.state.page.scrolling) {
+      if (this.$store.state.page.scrolling && scroll.position > 5) {
         const position = scroll.position + 60
         const anchors = this.$store.state.page.anchors
+        let additional = 0
+
+        if (this.$store.state.page.relative !== '/') {
+          additional = 1
+        }
 
         for (let i = 0; i < anchors.length; i++) {
           if (anchors[i] >= position) {
-            this.select(i - 1)
-            this.push(i - 1, false)
+            this.select(i - 1 + additional)
+            this.push(i - 1 + additional, false)
             break
           }
 
           if (typeof anchors[i + 1] === 'undefined' && position >= anchors[i]) {
-            this.push(i, false)
-            this.select(i)
+            this.select(i + additional)
+            this.push(i + additional, false)
           }
         }
       }

@@ -64,10 +64,30 @@ export default {
             ['https://quasar-framework.org/components/color-utils.html', 'Color Utils']
           ]
         },
-        showcase: {}
+        showcase: {
+          _updated_: '2018-06-18T18:22:35.095Z',
+          _subsections_: '2',
+
+          headers: [
+            'Cores principais',
+            'Paleta completa'
+          ]
+        }
       },
       typography: {
-        _: 'Tipografia'
+        _: 'Tipografia',
+        showcase: {
+          _updated_: '2018-06-18T23:06:21.765Z',
+          _subsections_: '5',
+
+          headers: [
+            'Cabeçalhos',
+            'Tracejado',
+            'Citações',
+            'Listas de Definição - Vertical',
+            'Listas de Definição - Horizontal'
+          ]
+        }
       },
       ripples: {
         _: 'Materiais Ripples'

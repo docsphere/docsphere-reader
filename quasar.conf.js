@@ -8,7 +8,7 @@ module.exports = function (ctx) {
       'i18n'
     ],
     css: [
-      'app.styl', 'embed-light.styl', 'quasar-framework.org.styl'
+      'app.styl', 'embed-light.styl'
     ],
     extras: [
       ctx.theme.mat ? 'roboto-font' : null,

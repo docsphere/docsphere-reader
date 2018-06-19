@@ -77,6 +77,9 @@ export default {
   .h3
     font-size 1.17rem
     margin 1.2em 0 0.9em
+  .h3:first-child
+    margin-top 0
+
   .dh
     color #286fa3
     padding 6px

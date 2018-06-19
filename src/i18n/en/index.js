@@ -113,10 +113,30 @@ export default {
 
           t6: 'Dynamic Change of Brand Colors (Dynamic Theme Colors)'
         },
-        showcase: {}
+        showcase: {
+          _updated_: '2018-06-18T18:22:21.789Z',
+          _subsections_: '2',
+
+          headers: [
+            'Main Colors',
+            'Full Pallete'
+          ]
+        }
       },
       typography: {
-        _: 'Typography'
+        _: 'Typography',
+        showcase: {
+          _updated_: '2018-06-18T23:06:14.053Z',
+          _subsections_: '5',
+
+          headers: [
+            'Headings',
+            'Weights',
+            'Blockquotes',
+            'Definition Lists - Vertical',
+            'Definition Lists - Horizontal'
+          ]
+        }
       },
       ripples: {
         _: 'Material Ripples'

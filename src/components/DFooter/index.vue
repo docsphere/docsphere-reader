@@ -8,14 +8,14 @@
         <q-icon name="fab fa-github"></q-icon>
       </div>
     </q-btn>
-    <q-chip class="q-ml-sm" dense square>
+    <q-chip v-if="$store.state.page.relative !== '/showcase/code'" class="q-ml-sm" dense square>
       <q-icon name="translate" size="1.3rem" />
       <span><b> {{ progress }}</b> ({{ $i18n.locale }})</span>
       <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">
         {{ $t('footer.progress') }}
       </q-tooltip>
     </q-chip>
-    <q-chip class="q-ml-sm" dense square>
+    <q-chip v-if="$store.state.page.relative !== '/showcase/code'" class="q-ml-sm" dense square>
       <q-icon name="language" size="1.3rem" />
       <span> #{{ languages }}</span>
       <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">

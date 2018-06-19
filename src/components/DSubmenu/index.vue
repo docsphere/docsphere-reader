@@ -7,7 +7,7 @@
       </q-item>
       <q-item-separator v-if="showcase" />
 
-      <q-item v-if="showcase" :to="`${overview}/showcase`" exact>
+      <q-item v-if="showcase" :to="`${overview}/showcase`" v-bind:exact="$store.state.page.relative !== '/showcase'">
         <q-item-side icon="play_circle_filled" />
         <q-tooltip v-if="$q.platform.is.desktop" anchor="center right" self="center left">{{ $t('submenu.showcase._') }}</q-tooltip>
       </q-item>

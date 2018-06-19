@@ -26,7 +26,13 @@ export default {
   computed: {
     selected: {
       get () {
-        return this.$store.state.page.anchor
+        const anchor = this.$store.state.page.anchor
+
+        if (this.$store.state.page.relative !== '/' && anchor === 0) {
+          return anchor + 1
+        }
+
+        return anchor
       },
       set (value) {
         this.push(value)
