@@ -19,6 +19,18 @@
       </div>
     </div>
     <q-item-separator class="list" />
+    <div class="row bg-white">
+      <div class="col text-center">
+        <q-btn-group flat>
+          <q-btn icon="forum" @click="openURL('http://forum.quasar-framework.org/')" />
+          <q-btn icon="fab fa-github" @click="openURL('https://github.com/quasarframework/quasar')" />
+          <q-btn icon="fab fa-discord" @click="openURL('https://discord.gg/5TDhbDg')" />
+          <q-btn icon="fab fa-twitter" @click="openURL('https://twitter.com/quasarframework')" />
+          <q-btn icon="email" @click="openURL('mailto:razvan.stoenescu@gmail.com')" />
+        </q-btn-group>
+      </div>
+    </div>
+    <q-item-separator class="list" />
 
     <q-list no-border link inset-delimiter>
       <q-item to="/" exact>
