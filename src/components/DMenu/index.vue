@@ -136,6 +136,8 @@ export default {
     margin-top 40px
   #menu .q-item-section + .q-item-section
     margin-left 0
+  #menu .q-item-side-right
+    min-width 21px
   #menu .q-list-header
     text-align: center
     padding-bottom: 0

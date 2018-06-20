@@ -1,13 +1,14 @@
 <template>
   <q-page class="row">
-    <q-scroll-area id="content" class="col">
-      <div class="showcase-top text-center">
-        <img alt="Quasar logo" src="statics/logo.svg">
-        <p class="caption">{{ $t('_.home.p1') }}</p>
+    <q-scroll-area id="content" class="col home">
+      <div class="intro text-center">
+        <img alt="Quasar Platforms" src="statics/quasar/responsive-logo.png">
+        <h1>Quasar Documentation++ <span class="text-negative">(WIP)</span></h1>
+        <p class="caption"><span v-html="$t('_.home.texts[0]')"></span><a href="https://quasar-framework.org/" target="_blank">Quasar Framework</a>!</p>
+        <p class="caption"><span></span>{{ $t('_.home.texts[1]') }} Rodrigo Vieira (<a href="https://github.com/slowaways/" target="_blank">@slowaways</a>)</p>
+        <hr>
       </div>
-      <div class="row justify-center" style="width: 850px; max-width: 90vw;">
-        <div class="col-xs-6 col-sm-4 col-lg-3"></div>
-      </div>
+      <div class="about"></div>
     </q-scroll-area>
   </q-page>
 </template>
@@ -15,10 +16,7 @@
 <script></script>
 
 <style lang="stylus">
-  .showcase-top img
-    width: 100px
-    height: 100px
-    margin-bottom: 30px
-  .showcase-top
-    margin-bottom: 35px
+  .home .intro img
+      padding-top: 30px;
+      padding-bottom: 30px;
 </style>

@@ -2,7 +2,10 @@ export default {
   // Sections
   _: {
     home: {
-      p1: 'Use sidebar to browse through demos, which showcase only a few of the Quasar components and features.'
+      texts: [
+        'An <b>alternative documentation</b> of ',
+        'Created by'
+      ]
     },
 
     starting: {
@@ -333,9 +336,13 @@ export default {
   },
   changelog: {},
   settings: {
-    general: 'General Settings',
-    language: {
-      label: 'Language'
+    general: {
+      _: 'General Settings',
+      language: { _: 'Language' }
+    },
+    appearance: {
+      _: 'Appearance',
+      background: { _: 'Background Color' }
     }
   },
 

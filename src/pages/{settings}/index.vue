@@ -2,12 +2,12 @@
   <q-page class="row">
     <q-scroll-area id="content" class="col no-padding">
       <q-list>
-        <q-list-header>{{ $t('settings.general') }}</q-list-header>
+        <q-list-header>{{ $t('settings.general._') }}</q-list-header>
         <q-item>
           <q-item-side icon="language" />
           <q-item-main>
             <q-select
-              :stack-label="$t('settings.language.label')"
+              :stack-label="$t('settings.general.language._')"
               v-model="general.language.default" :options="general.language.options"
               @input="setLanguage" />
           </q-item-main>

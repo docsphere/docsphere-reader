@@ -2,7 +2,10 @@ export default {
   // Sections
   _: {
     home: {
-      p1: 'Use a barra lateral para navegar pelas demos, que exibem apenas alguns dos componentes e recursos do Quasar.'
+      texts: [
+        'Uma <b>documentação alternativa</b> do ',
+        'Criado por'
+      ]
     },
 
     starting: {
@@ -210,9 +213,13 @@ export default {
   },
   changelog: {},
   settings: {
-    general: 'Configurações gerais',
-    language: {
-      label: 'Idioma'
+    general: {
+      _: 'Configurações gerais',
+      language: { _: 'Idioma' }
+    },
+    appearance: {
+      _: 'Aparência',
+      background: { _: 'Cor de fundo' }
     }
   },
 

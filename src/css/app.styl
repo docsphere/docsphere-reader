@@ -15,6 +15,21 @@
     -webkit-font-smoothing initial
     -moz-osx-font-smoothing initial
 
+  a
+    color #34495e
+    text-decoration none
+    outline 0
+    cursor pointer
+  a:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):hover:not(.button)
+    color #286fa3
+    background-color #cde3f3
+  a:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link)
+    color #4e9bd4
+    font-weight 700
+    padding 0 2px
+    transition all .3s ease
+    border-bottom 1px dotted #4e9bd4
+
 #content:not(.overview):not(.showcase):not(.showcase-code)
   h1, h2, h3
     font-weight 600
@@ -32,21 +47,6 @@
     margin 1.2em 0 0.9em
 
 #content.overview
-  a
-    color #34495e
-    text-decoration none
-    outline 0
-    cursor pointer
-  a:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):hover:not(.button)
-    color #286fa3
-    background-color #cde3f3
-  a:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link)
-    color #4e9bd4
-    font-weight 700
-    padding 0 2px
-    transition all .3s ease
-    border-bottom 1px dotted #4e9bd4
-
   blockquote
     margin 2.5em 0
     padding 0
