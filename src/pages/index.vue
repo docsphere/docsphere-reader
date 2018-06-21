@@ -5,7 +5,7 @@
         <img alt="Quasar Platforms" src="statics/quasar/responsive-logo.png">
         <h1>Quasar Documentation++ <span class="text-negative">(WIP)</span></h1>
         <p class="caption"><span v-html="$t('_.home.texts[0]')"></span><a href="https://quasar-framework.org/" target="_blank">Quasar Framework</a>!</p>
-        <p class="caption"><span></span>{{ $t('_.home.texts[1]') }} Rodrigo Vieira (<a href="https://github.com/slowaways/" target="_blank">@slowaways</a>)</p>
+        <p class="caption"><span></span>{{ $t('_.home.texts[1]') }}<a href="https://github.com/slowaways/" target="_blank">@slowaways</a></p>
         <hr>
       </div>
       <div class="about"></div>

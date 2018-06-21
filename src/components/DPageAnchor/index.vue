@@ -56,7 +56,9 @@ export default {
 
     const id = this.$route.hash.replace(/^\D+/g, '')
     if (id === (Number(id) + '')) {
-      this.anchor(id)
+      setTimeout(() => {
+        this.anchor(id)
+      }, 500)
     }
   },
   beforeDestroy () {

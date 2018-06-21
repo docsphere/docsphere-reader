@@ -1,5 +1,5 @@
 <template>
-  <div :id="id" v-bind:class="stylize" @click="push(id)" v-scroll-fire="register">{{ heading }}</div>
+  <div :id="id" v-bind:class="stylize" @click="push(id)">{{ heading }}</div>
 </template>
 
 <script>
@@ -58,6 +58,10 @@ export default {
         }
       }
     }
+  },
+
+  mounted () {
+    this.register(this.$el)
   }
 }
 </script>
