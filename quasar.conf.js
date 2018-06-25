@@ -19,6 +19,7 @@ module.exports = function (ctx) {
     ],
     supportIE: false,
     build: {
+      publicPath: 'quasar-documentation-pp',
       scopeHoisting: true,
       vueRouterMode: 'history',
       // vueCompiler: true,
