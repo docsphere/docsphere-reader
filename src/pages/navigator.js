@@ -31,7 +31,7 @@ export default {
               }
             }
 
-            window.scrollTo(0, offset + 40 + additional)
+            window.scrollTo(0, offset + 90 + additional)
           }
 
           if (select) {
