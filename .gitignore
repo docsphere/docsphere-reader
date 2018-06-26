@@ -3,6 +3,7 @@
 .thumbs.db
 node_modules
 /bin
+/dist
 /src-cordova
 /src-electron
 /src-pwa

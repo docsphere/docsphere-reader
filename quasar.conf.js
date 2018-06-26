@@ -19,7 +19,6 @@ module.exports = function (ctx) {
     ],
     supportIE: false,
     build: {
-      publicPath: 'quasar-documentation-pp',
       scopeHoisting: true,
       vueRouterMode: 'history',
       // vueCompiler: true,
@@ -146,7 +145,7 @@ module.exports = function (ctx) {
       }
     },
     cordova: {
-      id: 'tech.slayer.qd-pp'
+      id: 'br.com.quasarframework.doc'
     },
     electron: {
       // bundler: 'builder', // or 'packager'
