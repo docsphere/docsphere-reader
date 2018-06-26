@@ -1,14 +1,20 @@
 <template>
-  <q-page :class="row">
-    <q-scroll-area v-if="nodes.length > 0" id="anchor" :class="meta">
-      <d-page-anchor :nodes="nodes" />
-    </q-scroll-area>
-    <q-scroll-area id="content" :class="main">
-      <slot></slot>
-      <d-page-nav v-if="!disableNav" />
-      <q-scroll-observable v-if="nodes.length > 0" @scroll="scrolling" />
-    </q-scroll-area>
-  </q-page>
+  <q-tabs id="page" color="tertiary" style="width: 100%">
+    <q-route-tab v-if="overview" :to="overview" slot="title" icon="pageview" />
+    <q-route-tab v-if="showcase" :to="showcase" slot="title" icon="play_circle_filled" />
+    <q-route-tab v-if="code" :to="code" slot="title" icon="fas fa-file-code" />
+
+    <q-page :class="row" style="min-height: calc(100vh - 134px)">
+      <q-scroll-area v-if="nodes.length > 0" id="anchor" :class="meta">
+        <d-page-anchor :nodes="nodes" />
+      </q-scroll-area>
+      <q-scroll-area id="content" :class="main">
+        <slot></slot>
+        <d-page-nav v-if="!disableNav" />
+        <q-scroll-observable v-if="nodes.length > 0" @scroll="scrolling" />
+      </q-scroll-area>
+    </q-page>
+  </q-tabs>
 </template>
 
 <script>
@@ -34,6 +40,23 @@ export default {
     }
   },
   computed: {
+    overview () {
+      return this.$route.matched[0].path
+    },
+    showcase () {
+      if (this.$route.matched[0].meta.pages.showcase !== false) {
+        return this.overview + '/showcase'
+      }
+      return false
+    },
+    code () {
+      if (this.$route.matched[0].meta.pages.showcase !== false) {
+        return this.showcase + '/code'
+      }
+
+      return false
+    },
+
     row () {
       let classes = ''
 
@@ -87,4 +110,7 @@ export default {
 }
 </script>
 
-<style lang="stylus"></style>
+<style lang="stylus">
+  #page .q-tabs-head
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px rgba(0,0,0,0.14), 0 1px 10px rgba(0,0,0,0.12)
+</style>

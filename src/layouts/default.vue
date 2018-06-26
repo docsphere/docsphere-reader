@@ -7,10 +7,6 @@
         </q-btn>
 
         <d-header :icon="_[0].meta.icon" :matched="_" />
-
-        <q-btn v-if="$store.state.layout.rightToggle" dense round @click="right = !right">
-          <q-icon name="more_vert" />
-        </q-btn>
       </q-toolbar>
     </q-layout-header>
 
@@ -25,24 +21,19 @@
     <q-layout-footer v-if="_[0].meta.layouts.footer !== false" v-model="footer">
       <d-footer :status="$route.meta.status" />
     </q-layout-footer>
-
-    <q-layout-drawer v-if="_[0].meta.layouts.submenu !== false" mini side="right" v-model="right">
-      <d-submenu :overview="_[0].path" :showcase="_[0].meta.pages.showcase" />
-    </q-layout-drawer>
   </q-layout>
 </template>
 
 <script>
 import DMenu from '/src/components/DMenu'
 import DFooter from '/src/components/DFooter'
-import DSubmenu from '/src/components/DSubmenu'
 import DHeader from '/src/components/DHeader'
 
 export default {
   name: 'LayoutDefault',
 
   components: {
-    DMenu, DFooter, DSubmenu, DHeader
+    DMenu, DFooter, DHeader
   },
 
   computed: {
@@ -58,14 +49,6 @@ export default {
       },
       set (val) {
         this.$store.commit('layout/setLeft', val)
-      }
-    },
-    right: {
-      get () {
-        return this.$store.state.layout.right
-      },
-      set (value) {
-        this.$store.commit('layout/setRight', value)
       }
     }
   },
