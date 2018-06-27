@@ -70,6 +70,7 @@ export default {
   .h1, .h2, .h3, .h4
     font-weight 600
     color #286fa3
+    user-select none
   .h1
     font-size 2rem
     margin 0 0 .7em
