@@ -141,9 +141,9 @@ export default {
     padding 0
     box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px rgba(0,0,0,0.14), 0 1px 10px rgba(0,0,0,0.12)
     z-index 2
-  #submenu a
+  #submenu a, #submenu button
     padding: 4px 9px
-  #submenu a.active
+  #submenu a.active, #submenu button.active
     background-color #757575!important
 
   #submenu .q-btn-inner .q-icon
