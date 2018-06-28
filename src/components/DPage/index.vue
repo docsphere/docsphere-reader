@@ -131,8 +131,6 @@ export default {
 </script>
 
 <style lang="stylus">
-  #page
-    width: 100%
   #content, #content > div.scroll
     min-height calc(100vh - 122px)
 
@@ -147,7 +145,7 @@ export default {
     box-shadow none
   #submenu a, #submenu button
     border-radius 0
-    padding: 4px 9px
+    padding: 6px 12px
   #submenu a.active, #submenu button.active
     background-color white !important
     color: black
