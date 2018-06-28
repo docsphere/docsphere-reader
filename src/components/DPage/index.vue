@@ -141,7 +141,6 @@ export default {
     padding 0
     box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px rgba(0,0,0,0.14), 0 1px 6px rgba(0,0,0,0.12)
     overflow visible
-    z-index 2
   #submenu .q-toolbar-title
     overflow visible
   #submenu .q-btn-group
