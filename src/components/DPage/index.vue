@@ -5,13 +5,13 @@
         <q-btn-group v-bind:class="$q.screen.lt.md ? 'mobile' : null">
           <q-btn v-if="overview" :to="overview"
                  v-bind:class="active('/')"
-                 :label="$t('submenu.overview')" icon="pageview" no-caps />
+                 :label="$t('submenu.overview')" icon="pageview" no-caps flat />
           <q-btn v-if="showcase" :to="showcase"
                  v-bind:class="active('/showcase')"
-                 :label="$t('submenu.showcase._')" icon="play_circle_filled" no-caps />
+                 :label="$t('submenu.showcase._')" icon="play_circle_filled" no-caps flat />
           <q-btn v-if="code" :to="code"
                  v-bind:class="active('/showcase/code')"
-                 :label="$t('submenu.showcase.code')" icon="fas fa-file-code" no-caps />
+                 :label="$t('submenu.showcase.code')" icon="fas fa-file-code" no-caps flat />
         </q-btn-group>
       </q-toolbar-title>
     </q-toolbar>
@@ -139,16 +139,24 @@ export default {
   #submenu
     min-height 36px
     padding 0
-    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px rgba(0,0,0,0.14), 0 1px 10px rgba(0,0,0,0.12)
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px rgba(0,0,0,0.14), 0 1px 6px rgba(0,0,0,0.12)
+    overflow visible
     z-index 2
+  #submenu .q-toolbar-title
+    overflow visible
+  #submenu .q-btn-group
+    box-shadow none
   #submenu a, #submenu button
+    border-radius 0
     padding: 4px 9px
   #submenu a.active, #submenu button.active
-    background-color #757575!important
+    background-color white !important
+    color: black
+    box-shadow: 0 10px 0 0 #fff;
 
   #submenu .q-btn-inner .q-icon
     margin 0
-  #submenu .q-btn-inner div
+  #submenu .q-btn-inner div:not(.focus-helper)
     margin-left 6px
   #submenu .q-btn-group.mobile .q-btn-inner div
     display none
