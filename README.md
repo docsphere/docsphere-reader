@@ -55,7 +55,7 @@ Ethereum:
 
 Nano:
 
-nano_1beny7hmi4be8yogbyb6esusqto851jibetr8rh7cjcgo39ymwzupazi89y4
+nano_3xkwoas9qt6pimkkdgoxiwe8r1usmmpo4j7wd8njssoh5xefih4so6sqxhfq
 
 ## License
 Copyright (c) 2018-Present - Rodrigo Vieira (Slowaways)
