@@ -318,7 +318,7 @@ export default {
     overview: 'Overview',
     showcase: {
       _: 'Showcase',
-      code: 'Showcase Code'
+      code: 'Code'
     },
     changelog: 'Changelog (WIP)',
     builder: {_: 'Builder'}

@@ -1,10 +1,21 @@
 <template>
-  <q-tabs id="page" color="tertiary" style="width: 100%">
-    <q-route-tab v-if="overview" :to="overview" slot="title" icon="pageview" />
-    <q-route-tab v-if="showcase" :to="showcase" slot="title" icon="play_circle_filled" />
-    <q-route-tab v-if="code" :to="code" slot="title" icon="fas fa-file-code" />
-
-    <q-page :class="row" style="min-height: calc(100vh - 134px)">
+  <q-page id="page">
+    <q-toolbar id="submenu" color="tertiary">
+      <q-toolbar-title class="text-center">
+        <q-btn-group v-bind:class="$q.screen.lt.md ? 'mobile' : null">
+          <q-btn v-if="overview" :to="overview"
+                 v-bind:class="active('/')"
+                 :label="$t('submenu.overview')" icon="pageview" no-caps />
+          <q-btn v-if="showcase" :to="showcase"
+                 v-bind:class="active('/showcase')"
+                 :label="$t('submenu.showcase._')" icon="play_circle_filled" no-caps />
+          <q-btn v-if="code" :to="code"
+                 v-bind:class="active('/showcase/code')"
+                 :label="$t('submenu.showcase.code')" icon="fas fa-file-code" no-caps />
+        </q-btn-group>
+      </q-toolbar-title>
+    </q-toolbar>
+    <q-page :class="row" style="min-height: calc(100vh - 122px)">
       <q-scroll-area v-if="nodes.length > 0" id="anchor" :class="meta">
         <d-page-anchor :nodes="nodes" />
       </q-scroll-area>
@@ -14,7 +25,7 @@
         <q-scroll-observable v-if="nodes.length > 0" @scroll="scrolling" />
       </q-scroll-area>
     </q-page>
-  </q-tabs>
+  </q-page>
 </template>
 
 <script>
@@ -106,11 +117,39 @@ export default {
 
       return classes
     }
+  },
+  methods: {
+    active (relative) {
+      if (this.$store.state.page.relative === relative) {
+        return 'active'
+      }
+
+      return null
+    }
   }
 }
 </script>
 
 <style lang="stylus">
-  #page .q-tabs-head
+  #page
+    width: 100%
+  #content, #content > div.scroll
+    min-height calc(100vh - 122px)
+
+  #submenu
+    min-height 36px
+    padding 0
     box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px rgba(0,0,0,0.14), 0 1px 10px rgba(0,0,0,0.12)
+    z-index 2
+  #submenu a
+    padding: 4px 9px
+  #submenu a.active
+    background-color #757575!important
+
+  #submenu .q-btn-inner .q-icon
+    margin 0
+  #submenu .q-btn-inner div
+    margin-left 6px
+  #submenu .q-btn-group.mobile .q-btn-inner div
+    display none
 </style>

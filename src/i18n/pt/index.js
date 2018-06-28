@@ -195,7 +195,7 @@ export default {
     overview: 'Apresentação',
     showcase: {
       _: 'Mostruário',
-      code: 'Código do Mostruário'
+      code: 'Código'
     },
     changelog: 'Changelog (WIP)',
     builder: {_: 'Construtor'}
