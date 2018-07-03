@@ -225,5 +225,6 @@ export default {
 
   _a: ' e ',
   _o: ' ou ',
-  _f: ' arquivos '
+  _f: ' arquivos ',
+  _s: 'Código Fonte'
 }

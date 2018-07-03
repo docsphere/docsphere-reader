@@ -348,5 +348,6 @@ export default {
 
   _a: ' and ',
   _o: ' or ',
-  _f: ' files '
+  _f: ' files ',
+  _s: 'Source Code'
 }
