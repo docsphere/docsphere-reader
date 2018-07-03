@@ -316,12 +316,9 @@ export default {
   },
   submenu: {
     overview: 'Overview',
-    showcase: {
-      _: 'Showcase',
-      code: 'Code'
-    },
-    changelog: 'Changelog (WIP)',
-    builder: {_: 'Builder'}
+    showcase: 'Showcase',
+    changelog: 'Changelog',
+    builder: 'Builder'
   },
   menu: {
     search: '',

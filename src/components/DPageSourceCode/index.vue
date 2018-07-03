@@ -1,6 +1,6 @@
 <template>
   <div class="d-page-source-code">
-    <h2>Source Code</h2>
+    <h2>{{ $t('_s') }}</h2>
     <d-page-code v-pre>
       <slot></slot>
     </d-page-code>

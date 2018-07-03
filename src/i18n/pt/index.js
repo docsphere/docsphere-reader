@@ -193,12 +193,9 @@ export default {
   },
   submenu: {
     overview: 'Apresentação',
-    showcase: {
-      _: 'Mostruário',
-      code: 'Código'
-    },
-    changelog: 'Changelog (WIP)',
-    builder: {_: 'Construtor'}
+    showcase: 'Mostruário',
+    changelog: 'Changelog',
+    builder: 'Construtor'
   },
   menu: {
     search: 'Pesquisar',

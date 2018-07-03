@@ -8,7 +8,7 @@
                  :label="$t('submenu.overview')" icon="pageview" no-caps flat />
           <q-btn v-if="showcase" :to="showcase"
                  v-bind:class="active('/showcase')"
-                 :label="$t('submenu.showcase._')" icon="play_circle_filled" no-caps flat />
+                 :label="$t('submenu.showcase')" icon="play_circle_filled" no-caps flat />
         </q-btn-group>
       </q-toolbar-title>
     </q-toolbar>
