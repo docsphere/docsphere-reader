@@ -83,7 +83,7 @@
 
     <d-page-h h="2-5" />
     <p v-html="t(16)"></p>
-    <d-page-code type="css">
+    <d-page-code lang="css">
       <tr>
         <td id="file-style-color-03-css-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-style-color-03-css-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-e">.text-brand</span> {</td>

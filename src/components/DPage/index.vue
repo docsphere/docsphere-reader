@@ -9,9 +9,6 @@
           <q-btn v-if="showcase" :to="showcase"
                  v-bind:class="active('/showcase')"
                  :label="$t('submenu.showcase._')" icon="play_circle_filled" no-caps flat />
-          <q-btn v-if="code" :to="code"
-                 v-bind:class="active('/showcase/code')"
-                 :label="$t('submenu.showcase.code')" icon="fas fa-file-code" no-caps flat />
         </q-btn-group>
       </q-toolbar-title>
     </q-toolbar>

@@ -185,13 +185,6 @@ export default [
         meta: {
           status: 9
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/1-style/1-color/showcase/code/'),
-        meta: {
-          status: 9
-        }
       }
     ]
   },
@@ -219,13 +212,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/1-style/2-typography/showcase/'),
-        meta: {
-          status: 9
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/1-style/2-typography/showcase/code/'),
         meta: {
           status: 9
         }
@@ -261,13 +247,6 @@ export default [
         meta: {
           status: 9
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/1-style/3-ripples/showcase/code/'),
-        meta: {
-          status: 9
-        }
       }
     ]
   },
@@ -295,13 +274,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/1-style/4-stylus/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/1-style/4-stylus/showcase/code/'),
         meta: {
           status: 0
         }
@@ -335,13 +307,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/1-style/5-icons/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -371,13 +336,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/1-style/6-addressbar/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/1-style/6-addressbar/showcase/code/'),
         meta: {
           status: 0
         }
@@ -417,13 +375,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/2-layout/1-play/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -454,13 +405,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/2-layout/2-drawer/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -488,13 +432,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/2-layout/3-sticky/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/2-layout/3-sticky/showcase/code/'),
         meta: {
           status: 0
         }
@@ -530,13 +467,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/2-layout/4-floating/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -566,13 +496,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/2-layout/5-flexbox/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/2-layout/5-flexbox/showcase/code/'),
         meta: {
           status: 0
         }
@@ -613,13 +536,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/1-buttons/1-standard/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -647,13 +563,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/1-buttons/2-groups/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/1-buttons/2-groups/showcase/code/'),
         meta: {
           status: 0
         }
@@ -686,13 +595,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/1-buttons/3-dropdown/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/1-buttons/3-dropdown/showcase/code/'),
         meta: {
           status: 0
         }
@@ -729,13 +631,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/2-navigation/1-toolbar/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -763,13 +658,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/2-navigation/2-tabs/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/2-navigation/2-tabs/showcase/code/'),
         meta: {
           status: 0
         }
@@ -803,13 +691,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/2-navigation/3-pull/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -837,13 +718,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/2-navigation/4-context/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/2-navigation/4-context/showcase/code/'),
         meta: {
           status: 0
         }
@@ -877,13 +751,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/2-navigation/5-breadcrumbs/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -913,13 +780,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/2-navigation/6-pagination/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/2-navigation/6-pagination/showcase/code/'),
         meta: {
           status: 0
         }
@@ -956,13 +816,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/1-fields/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -990,13 +843,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/3-forms/2-input/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/2-input/showcase/code/'),
         meta: {
           status: 0
         }
@@ -1030,13 +876,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/3-chips/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -1064,13 +903,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/3-forms/4-color/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/4-color/showcase/code/'),
         meta: {
           status: 0
         }
@@ -1104,13 +936,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/5-autocomplete/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -1138,13 +963,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/3-forms/6-editor/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/6-editor/showcase/code/'),
         meta: {
           status: 0
         }
@@ -1178,13 +996,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/7-search/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -1212,13 +1023,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/3-forms/8-slider/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/8-slider/showcase/code/'),
         meta: {
           status: 0
         }
@@ -1252,13 +1056,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/9-range/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -1286,13 +1083,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/3-forms/10-checkbox/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/10-checkbox/showcase/code/'),
         meta: {
           status: 0
         }
@@ -1326,13 +1116,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/11-toggle/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -1360,13 +1143,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/3-forms/12-button/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/12-button/showcase/code/'),
         meta: {
           status: 0
         }
@@ -1400,13 +1176,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/13-option/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -1434,13 +1203,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/3-forms/14-datetime/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/14-datetime/showcase/code/'),
         meta: {
           status: 0
         }
@@ -1474,13 +1236,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/15-select/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -1508,13 +1263,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/3-forms/16-rating/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/16-rating/showcase/code/'),
         meta: {
           status: 0
         }
@@ -1548,13 +1296,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/17-knob/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -1584,13 +1325,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/3-forms/18-uploader/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/3-forms/18-uploader/showcase/code/'),
         meta: {
           status: 0
         }
@@ -1627,13 +1361,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/4-grouping/1-card/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -1661,13 +1388,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/4-grouping/2-collapsible/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/4-grouping/2-collapsible/showcase/code/'),
         meta: {
           status: 0
         }
@@ -1701,13 +1421,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/4-grouping/3-table/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -1735,13 +1448,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/4-grouping/4-list/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/4-grouping/4-list/showcase/code/'),
         meta: {
           status: 0
         }
@@ -1775,13 +1481,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/4-grouping/5-stepper/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -1811,13 +1510,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/4-grouping/6-tree/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/4-grouping/6-tree/showcase/code/'),
         meta: {
           status: 0
         }
@@ -1854,13 +1546,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/5-popups/1-sheet/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -1888,13 +1573,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/5-popups/2-dialog/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/5-popups/2-dialog/showcase/code/'),
         meta: {
           status: 0
         }
@@ -1928,13 +1606,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/5-popups/3-modal/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -1962,13 +1633,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/5-popups/4-notify/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/5-popups/4-notify/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2002,13 +1666,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/5-popups/5-popover/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -2038,13 +1695,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/5-popups/6-tooltip/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/5-popups/6-tooltip/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2081,13 +1731,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/6-progress/1-ajax/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -2115,13 +1758,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/6-progress/2-loading/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/6-progress/2-loading/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2155,13 +1791,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/6-progress/3-inner/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -2189,13 +1818,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/6-progress/4-bar/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/6-progress/4-bar/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2228,13 +1850,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/6-progress/5-spinner/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/6-progress/5-spinner/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2271,13 +1886,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/7-media/1-carousel/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -2305,13 +1913,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/7-media/2-parallax/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/7-media/2-parallax/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2344,13 +1945,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/7-media/3-video/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/7-media/3-video/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2387,13 +1981,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/8-scrolling/1-infinite/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -2421,13 +2008,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/8-scrolling/2-area/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/8-scrolling/2-area/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2461,13 +2041,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/8-scrolling/3-fire/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -2497,13 +2070,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/8-scrolling/4-top/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/8-scrolling/4-top/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2540,13 +2106,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/9-others/1-alert/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -2574,13 +2133,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/9-others/2-chip/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/9-others/2-chip/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2614,13 +2166,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/9-others/3-chat/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -2650,13 +2195,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/9-others/4-timeline/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/3-components/9-others/4-timeline/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2696,13 +2234,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/4-plugins/1-cookies/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -2730,13 +2261,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/4-plugins/2-storage/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/4-plugins/2-storage/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2770,13 +2294,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/4-plugins/3-screen/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -2804,13 +2321,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/4-plugins/4-fullscreen/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/4-plugins/4-fullscreen/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2843,13 +2353,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/4-plugins/5-visibility/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/4-plugins/5-visibility/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2889,13 +2392,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/5-directives/1-panning/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -2923,13 +2419,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/5-directives/2-swipe/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/5-directives/2-swipe/showcase/code/'),
         meta: {
           status: 0
         }
@@ -2962,13 +2451,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/5-directives/3-hold/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/5-directives/3-hold/showcase/code/'),
         meta: {
           status: 0
         }
@@ -3008,13 +2490,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/6-helpers/1-spacing/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -3042,13 +2517,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/6-helpers/2-shadows/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/6-helpers/2-shadows/showcase/code/'),
         meta: {
           status: 0
         }
@@ -3082,13 +2550,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/6-helpers/3-visibility/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -3116,13 +2577,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/6-helpers/4-positioning/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/6-helpers/4-positioning/showcase/code/'),
         meta: {
           status: 0
         }
@@ -3155,13 +2609,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/6-helpers/5-others/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/6-helpers/5-others/showcase/code/'),
         meta: {
           status: 0
         }
@@ -3201,13 +2648,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/7-animations/1-transition/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -3235,13 +2675,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/7-animations/2-slide/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/7-animations/2-slide/showcase/code/'),
         meta: {
           status: 0
         }
@@ -3275,13 +2708,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/7-animations/3-js/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -3311,13 +2737,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/7-animations/4-css/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/7-animations/4-css/showcase/code/'),
         meta: {
           status: 0
         }
@@ -3357,13 +2776,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/8-utils/1-date/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -3391,13 +2803,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/8-utils/2-color/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/8-utils/2-color/showcase/code/'),
         meta: {
           status: 0
         }
@@ -3431,13 +2836,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/8-utils/3-dom/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -3468,13 +2866,6 @@ export default [
         meta: {
           status: 0
         }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/8-utils/4-formatter/showcase/code/'),
-        meta: {
-          status: 0
-        }
       }
     ]
   },
@@ -3502,13 +2893,6 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/8-utils/5-others/showcase/'),
-        meta: {
-          status: 0
-        }
-      },
-      {
-        path: 'showcase/code',
-        component: () => import('pages/8-utils/5-others/showcase/code/'),
         meta: {
           status: 0
         }

@@ -23,15 +23,17 @@ export default {
   name: 'DPageCode',
 
   props: {
-    type: String,
-    default: 'vue'
+    lang: {
+      type: String,
+      default: 'vue'
+    }
   },
 
   computed: {
     typing () {
       let type = ''
 
-      switch (this.type) {
+      switch (this.lang) {
         case 'styl':
           type = 'type-stylus'
           break

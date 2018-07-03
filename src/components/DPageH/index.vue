@@ -1,5 +1,5 @@
 <template>
-  <div :id="id" v-bind:class="stylize" @click="push(id)">{{ heading }}</div>
+  <div :id="id" :class="stylize" @click="push(id)">{{ heading }}</div>
 </template>
 
 <script>
@@ -53,7 +53,7 @@ export default {
       if (typeof Anchor === 'object') {
         const anchors = this.$store.state.page.anchors
 
-        if (!anchors[element.id]) {
+        if (!anchors[Anchor.id]) {
           this.$store.commit('page/setAnchors', Anchor.offsetTop - Anchor.scrollHeight + 33)
         }
       }
@@ -71,6 +71,7 @@ export default {
     font-weight 600
     color #286fa3
     user-select none
+
   .h1
     font-size 2rem
     margin 0 0 .7em

@@ -124,7 +124,7 @@
       <p v-html="t(17) + sc(5) + t(18) + sc(6) + '.'"></p>
     </blockquote>
     <p v-html="t(19) + sc(7) + t(20)"></p>
-    <d-page-code type="js">
+    <d-page-code lang="js">
       <tr>
         <td id="file-code1-js-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-code1-js-LC1" class="blob-code blob-code-inner js-file-line">framework<span class="pl-k">:</span> {</td>
@@ -139,7 +139,7 @@
       </tr>
     </d-page-code>
     <p v-html="t(21) + sc(7)"></p>
-    <d-page-code type="js">
+    <d-page-code lang="js">
       <tr>
         <td id="file-code2-js-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-code2-js-LC1" class="blob-code blob-code-inner js-file-line">framework<span class="pl-k">:</span> {</td>
