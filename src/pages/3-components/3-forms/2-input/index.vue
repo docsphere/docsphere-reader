@@ -1,9 +1,13 @@
 <template>
-  <q-page></q-page>
+  <d-page></d-page>
 </template>
 
 <script>
-export default {}
+import Standard from '/src/pages/standard'
+
+export default {
+  mixins: [Standard]
+}
 </script>
 
 <style scoped></style>

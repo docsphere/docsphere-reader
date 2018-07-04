@@ -1,7 +1,7 @@
 <template>
   <div class="d-page-source-code">
     <h2>{{ $t('_s') }}</h2>
-    <d-page-code v-pre>
+    <d-page-code>
       <slot></slot>
     </d-page-code>
   </div>

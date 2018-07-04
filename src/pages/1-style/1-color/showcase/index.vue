@@ -26,7 +26,7 @@
       </q-tab-pane>
     </q-tabs>
 
-    <d-page-source-code>
+    <d-page-source-code v-pre>
       <tr>
         <td id="file-index-vue-L1" class="blob-num js-line-number" data-line-number="1"></td>
         <td id="file-index-vue-LC1" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">template</span>&gt;</td>
