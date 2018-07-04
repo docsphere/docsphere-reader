@@ -3,10 +3,10 @@
 </template>
 
 <script>
-import Standard from '/src/pages/standard'
+import Overview from '/src/pages/overview'
 
 export default {
-  mixins: [Standard]
+  mixins: [Overview]
 }
 </script>
 
