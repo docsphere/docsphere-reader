@@ -1,7 +1,7 @@
 # Quasar Documentation++
 (WORKING IN PROGRESS)
 
-> All-in-one Documentation of Quasar Framework.
+> An Alternative Documentation of Quasar Framework.
 
 The proposal of this project is to join in one place, everything of the Quasar Documentation: the theoretical part ([quasar-framework.org](https://quasar-framework.org/ "quasar-framework.org")), showcases ([Quasar Play](https://quasar-framework.org/quasar-play/android/index.html#/showcase "Quasar Play")),  showcases source codes ([from github](https://github.com/quasarframework/quasar-play/tree/dev/src/pages/showcase "from github")) and changelogs.
 
