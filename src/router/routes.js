@@ -38,15 +38,21 @@ export default [
 
       menu: {},
       layouts: {},
-      pages: {
-        showcase: false
-      }
+      pages: {}
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/0-starting/2-platform/'),
+        meta: {
+          status: 0
+        }
+      },
+
+      {
+        path: 'showcase',
+        component: () => import('pages/0-starting/2-platform/showcase'),
         meta: {
           status: 0
         }
@@ -2216,21 +2222,15 @@ export default [
         }
       },
       layouts: {},
-      pages: {}
+      pages: {
+        showcase: false
+      }
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/4-plugins/1-cookies'),
-        meta: {
-          status: 0
-        }
-      },
-
-      {
-        path: 'showcase',
-        component: () => import('pages/4-plugins/1-cookies/showcase/'),
         meta: {
           status: 0
         }
@@ -2246,21 +2246,15 @@ export default [
 
       menu: {},
       layouts: {},
-      pages: {}
+      pages: {
+        showcase: false
+      }
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/4-plugins/2-storage'),
-        meta: {
-          status: 0
-        }
-      },
-
-      {
-        path: 'showcase',
-        component: () => import('pages/4-plugins/2-storage/showcase/'),
         meta: {
           status: 0
         }
@@ -2276,21 +2270,15 @@ export default [
 
       menu: {},
       layouts: {},
-      pages: {}
+      pages: {
+        showcase: false
+      }
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/4-plugins/3-screen'),
-        meta: {
-          status: 0
-        }
-      },
-
-      {
-        path: 'showcase',
-        component: () => import('pages/4-plugins/3-screen/showcase/'),
         meta: {
           status: 0
         }
@@ -2472,21 +2460,15 @@ export default [
         }
       },
       layouts: {},
-      pages: {}
+      pages: {
+        showcase: false
+      }
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/6-helpers/1-spacing'),
-        meta: {
-          status: 0
-        }
-      },
-
-      {
-        path: 'showcase',
-        component: () => import('pages/6-helpers/1-spacing/showcase/'),
         meta: {
           status: 0
         }
@@ -2532,21 +2514,15 @@ export default [
 
       menu: {},
       layouts: {},
-      pages: {}
+      pages: {
+        showcase: false
+      }
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/6-helpers/3-visibility'),
-        meta: {
-          status: 0
-        }
-      },
-
-      {
-        path: 'showcase',
-        component: () => import('pages/6-helpers/3-visibility/showcase/'),
         meta: {
           status: 0
         }
@@ -2562,21 +2538,15 @@ export default [
 
       menu: {},
       layouts: {},
-      pages: {}
+      pages: {
+        showcase: false
+      }
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/6-helpers/4-positioning'),
-        meta: {
-          status: 0
-        }
-      },
-
-      {
-        path: 'showcase',
-        component: () => import('pages/6-helpers/4-positioning/showcase/'),
         meta: {
           status: 0
         }
@@ -2594,21 +2564,15 @@ export default [
         separator: 'page'
       },
       layouts: {},
-      pages: {}
+      pages: {
+        showcase: false
+      }
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/6-helpers/5-others'),
-        meta: {
-          status: 0
-        }
-      },
-
-      {
-        path: 'showcase',
-        component: () => import('pages/6-helpers/5-others/showcase/'),
         meta: {
           status: 0
         }
@@ -2690,21 +2654,15 @@ export default [
 
       menu: {},
       layouts: {},
-      pages: {}
+      pages: {
+        showcase: false
+      }
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/7-animations/3-js'),
-        meta: {
-          status: 0
-        }
-      },
-
-      {
-        path: 'showcase',
-        component: () => import('pages/7-animations/3-js/showcase/'),
         meta: {
           status: 0
         }
@@ -2722,21 +2680,15 @@ export default [
         separator: 'page'
       },
       layouts: {},
-      pages: {}
+      pages: {
+        showcase: false
+      }
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/7-animations/4-css'),
-        meta: {
-          status: 0
-        }
-      },
-
-      {
-        path: 'showcase',
-        component: () => import('pages/7-animations/4-css/showcase/'),
         meta: {
           status: 0
         }
@@ -2758,21 +2710,15 @@ export default [
         }
       },
       layouts: {},
-      pages: {}
+      pages: {
+        showcase: false
+      }
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/8-utils/1-date'),
-        meta: {
-          status: 0
-        }
-      },
-
-      {
-        path: 'showcase',
-        component: () => import('pages/8-utils/1-date/showcase/'),
         meta: {
           status: 0
         }
@@ -2788,21 +2734,15 @@ export default [
 
       menu: {},
       layouts: {},
-      pages: {}
+      pages: {
+        showcase: false
+      }
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/8-utils/2-color'),
-        meta: {
-          status: 0
-        }
-      },
-
-      {
-        path: 'showcase',
-        component: () => import('pages/8-utils/2-color/showcase/'),
         meta: {
           status: 0
         }
@@ -2818,21 +2758,15 @@ export default [
 
       menu: {},
       layouts: {},
-      pages: {}
+      pages: {
+        showcase: false
+      }
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/8-utils/3-dom'),
-        meta: {
-          status: 0
-        }
-      },
-
-      {
-        path: 'showcase',
-        component: () => import('pages/8-utils/3-dom/showcase/'),
         meta: {
           status: 0
         }
@@ -2848,21 +2782,15 @@ export default [
 
       menu: {},
       layouts: {},
-      pages: {}
+      pages: {
+        showcase: false
+      }
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/8-utils/4-formatter'),
-        meta: {
-          status: 0
-        }
-      },
-
-      {
-        path: 'showcase',
-        component: () => import('pages/8-utils/4-formatter/showcase/'),
         meta: {
           status: 0
         }
@@ -2878,21 +2806,15 @@ export default [
 
       menu: {},
       layouts: {},
-      pages: {}
+      pages: {
+        showcase: false
+      }
     },
 
     children: [
       {
         path: '',
         component: () => import('pages/8-utils/5-others'),
-        meta: {
-          status: 0
-        }
-      },
-
-      {
-        path: 'showcase',
-        component: () => import('pages/8-utils/5-others/showcase/'),
         meta: {
           status: 0
         }
