@@ -123,20 +123,34 @@ export default {
       } else {
         return 'negative'
       }
+    },
+
+    scroll () {
+      const menu = document.getElementById('menu')
+      const active = (menu.getElementsByClassName('router-link-active'))[0]
+
+      if (typeof active === 'object') {
+        const target = getScrollTarget(active)
+        const offset = active.offsetTop - active.scrollHeight
+        const duration = 300
+
+        setScrollPosition(target, offset - (window.innerHeight / 2) + 80, duration)
+      }
     }
   },
 
   mounted () {
-    const menu = document.getElementById('menu')
-    const active = (menu.getElementsByClassName('router-link-active'))[0]
+    setTimeout(() => {
+      this.scroll()
+    }, 1000)
 
-    if (typeof active === 'object') {
-      const target = getScrollTarget(active)
-      const offset = active.offsetTop - active.scrollHeight
-      const duration = 300
-
-      setScrollPosition(target, offset - (window.innerHeight / 2), duration)
-    }
+    this.$router.afterEach((to, from) => {
+      if (!to.hash || (from.path !== to.path)) {
+        setTimeout(() => {
+          this.scroll()
+        }, 1000)
+      }
+    })
   }
 }
 </script>
