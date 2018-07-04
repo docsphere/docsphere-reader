@@ -42,7 +42,7 @@ export default {
 
       for (let i = 0; i < routes.length; i++) {
         if ('/' + base === routes[i].path) {
-          if (typeof routes[i + i] !== 'undefined') {
+          if (typeof routes[i + 1] !== 'undefined') {
             return routes[i + 1].path
           }
         }
