@@ -57,13 +57,6 @@ export default {
       }
       return false
     },
-    code () {
-      if (this.$route.matched[0].meta.pages.showcase !== false) {
-        return this.showcase + '/code'
-      }
-
-      return false
-    },
 
     row () {
       let classes = ''
@@ -89,9 +82,6 @@ export default {
       switch (this.$store.state.page.relative) {
         case '/showcase':
           classes += ' showcase'
-          break
-        case '/showcase/code':
-          classes += ' showcase-code'
           break
         default:
           classes += ' overview'
@@ -121,6 +111,9 @@ export default {
         return 'active'
       }
 
+      return null
+    },
+    push (path) {
       return null
     }
   }
