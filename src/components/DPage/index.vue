@@ -3,11 +3,11 @@
     <q-toolbar id="submenu" color="tertiary">
       <q-toolbar-title class="text-center">
         <q-btn-group v-bind:class="$q.screen.lt.md ? 'mobile' : null">
-          <q-btn v-if="overview" :to="overview"
-                 v-bind:class="active('/')"
+          <q-btn v-if="overview" @click="pRoute('/')"
+                 v-bind:class="pActive('/')"
                  :label="$t('submenu.overview')" icon="pageview" no-caps flat />
-          <q-btn v-if="showcase" :to="showcase"
-                 v-bind:class="active('/showcase')"
+          <q-btn v-if="showcase" @click="pRoute('/showcase')"
+                 v-bind:class="pActive('/showcase')"
                  :label="$t('submenu.showcase')" icon="play_circle_filled" no-caps flat />
         </q-btn-group>
       </q-toolbar-title>
@@ -106,15 +106,33 @@ export default {
     }
   },
   methods: {
-    active (relative) {
+    pActive (relative) {
       if (this.$store.state.page.relative === relative) {
         return 'active'
       }
 
       return null
     },
-    push (path) {
-      return null
+    pRoute (to) {
+      const base = '/' + this.$store.state.page.base
+      const relative = this.$store.state.page.relative
+      let path = base
+
+      if (to !== '/') {
+        path += to
+      }
+
+      if (relative === to) {
+        if (to !== '/showcase') {
+          return this.push('0')
+        } else {
+          return this.push('1')
+        }
+      }
+
+      this.$router.push(path)
+
+      return true
     }
   }
 }
