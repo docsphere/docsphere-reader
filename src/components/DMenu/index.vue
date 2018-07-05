@@ -11,7 +11,7 @@
         <img class="q-mr-xs" src="statics/logo.svg" style="height: 75px; float: right;">
       </div>
       <div class="col-7">
-        <div class="text-weight-thin q-mb-xs">Quasar v0.16.0</div>
+        <div class="text-weight-thin q-mb-xs">Quasar v0.16.x</div>
         <div>Documentation++</div>
         <q-btn class="q-mt-xs" style="color: goldenrod;"
                dense no-caps outline size="sm" icon="fa fa-ambulance" :label="$t('system.support')"
