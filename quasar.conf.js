@@ -67,6 +67,7 @@ module.exports = function (ctx) {
         'QTabPane',
         'QField',
         'QInput',
+        'QRadio',
         'QCollapsible',
         'QSelect',
         'QTooltip',

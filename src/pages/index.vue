@@ -13,7 +13,15 @@
   </q-page>
 </template>
 
-<script></script>
+<script>
+export default {
+  data () {
+    return {
+      radio: 'two'
+    }
+  }
+}
+</script>
 
 <style lang="stylus">
   .home .intro img
