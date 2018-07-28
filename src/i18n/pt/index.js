@@ -8,7 +8,7 @@ export default {
       ]
     },
 
-    framework: {
+    starting: {
       _: 'O Framework',
       introduction: { _: 'Introdução ao Quasar' },
 
@@ -34,29 +34,25 @@ export default {
         electron: { _: 'Electron' }
       },
       misc: {
-        _: 'Outros'
-      }
-    },
-
-    starting: {
-      _: 'Começando',
-      intro: {
-        _: 'Introdução para Iniciantes'
-      },
-      platform: {
-        _: 'Detecção de Plataforma'
-      },
-      events: {
-        _: 'Global Event Bus'
-      },
-      injections: {
-        _: 'Vue Prototype Injections'
-      },
-      i18n: {
-        _: 'Internacionalização (i18n)'
-      },
-      rtl: {
-        _: 'Suporte RTL'
+        _: 'Outros',
+        intro: {
+          _: 'Introdução para Iniciantes'
+        },
+        platform: {
+          _: 'Detecção de Plataforma'
+        },
+        events: {
+          _: 'Global Event Bus'
+        },
+        injections: {
+          _: 'Vue Prototype Injections'
+        },
+        i18n: {
+          _: 'Internacionalização (i18n)'
+        },
+        rtl: {
+          _: 'Suporte RTL'
+        }
       }
     },
 

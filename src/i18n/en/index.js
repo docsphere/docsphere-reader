@@ -8,8 +8,8 @@ export default {
       ]
     },
 
-    framework: {
-      _: 'The Framework',
+    starting: {
+      _: 'Get Starting',
       introduction: { _: 'Introduction to Quasar' },
 
       contribution: { _: 'Contribution Guide' },
@@ -34,72 +34,68 @@ export default {
         electron: { _: 'Electron' }
       },
       misc: {
-        _: 'Misc'
-      }
-    },
+        _: 'Misc',
+        intro: {
+          _: 'Introduction for Beginners',
+          overview: {
+            _updated_: '2018-06-14T15:29:43.957Z',
+            _subsections_: '15',
 
-    starting: {
-      _: 'Getting started',
-      intro: {
-        _: 'Introduction for Beginners',
-        overview: {
-          _updated_: '2018-06-14T15:29:43.957Z',
-          _subsections_: '15',
-
-          headers: [
-            'Single File Vue Components',
-            'CSS preprocessors',
-            'Using Quasar Directive',
-            'Using Quasar Components'
-          ],
-          texts: [
-            'Before you begin with Quasar, it is a good idea to get acquainted with ES6 and have a fairly good knowledge about how Vue works. (',
-            ' – don’t worry, you don’t need to understand ALL of ES6). For devs experienced with reactive UIs, ',
-            ' itself takes half a day at most to read top-to-bottom and will help you understand how Quasar components can be used and configured.',
-            'If you are a total beginner to Vue and reactive UI libraries and want a good tutorial, we recommend you take a look at the ',
-            'After reading the Vue documentation, let’s clear up some of the most frequently asked questions, like “How can I use Quasar components, Vue properties, methods and events”.',
-            'You’ll be building your Quasar app using ',
-            ' files which contain multiple sections: ‘template’ (HTML), ‘script’ (Javascript) and ‘style’ (CSS).',
-            'For the ',
-            'tag, you can also use whatever CSS preprocessor you want. ',
-            ' is available out of the box. For SCSS/SASS or LESS, you’ll need to install their Webpack loaders (example: ',
-            'After installing the loader you need (remember Stylus is already installed for you), you can specify you want your chosen preprocessor to handle the CSS code you’re writing:',
-            'In the above example, you would replace',
-            ' with the preprocessor you’ve chosen.',
-            'Quasar comes with a few custom ',
-            '. These directives can be applied on almost any DOM element or Component.',
-            'Example of a Quasar directive:',
-            'Notice how Ripple is used in the HTML template as',
-            '. Vue directives are prefixed with ',
-            'In order for you to use any of the directives that Quasar supplies, you first need to tell Quasar you want it embedded. Open ',
-            ' file and add the following reference:',
-            'Let’s take another example. We now also want TouchPan and TouchSwipe directives, so we add them too in ',
-            'Now we can write in your Vue files template:'
-          ],
-          links: [
-            ['https://github.com/lukehoban/es6features', 'quick overview of ES6'],
-            ['http://es6-features.org/#Constants', 'full description'],
-            ['https://vuejs.org/v2/guide/', 'the Vue documentation'],
-            ['https://www.udemy.com/vuejs-2-the-complete-guide/learn/v4/overview', 'Udemy Course - Vue JS 2 - The Complete Guide'],
-            ['http://stylus-lang.com/', 'Stylus'],
-            ['https://vuejs.org/v2/guide/custom-directive.html', 'Vue Directives']
-          ]
+            headers: [
+              'Single File Vue Components',
+              'CSS preprocessors',
+              'Using Quasar Directive',
+              'Using Quasar Components'
+            ],
+            texts: [
+              'Before you begin with Quasar, it is a good idea to get acquainted with ES6 and have a fairly good knowledge about how Vue works. (',
+              ' – don’t worry, you don’t need to understand ALL of ES6). For devs experienced with reactive UIs, ',
+              ' itself takes half a day at most to read top-to-bottom and will help you understand how Quasar components can be used and configured.',
+              'If you are a total beginner to Vue and reactive UI libraries and want a good tutorial, we recommend you take a look at the ',
+              'After reading the Vue documentation, let’s clear up some of the most frequently asked questions, like “How can I use Quasar components, Vue properties, methods and events”.',
+              'You’ll be building your Quasar app using ',
+              ' files which contain multiple sections: ‘template’ (HTML), ‘script’ (Javascript) and ‘style’ (CSS).',
+              'For the ',
+              'tag, you can also use whatever CSS preprocessor you want. ',
+              ' is available out of the box. For SCSS/SASS or LESS, you’ll need to install their Webpack loaders (example: ',
+              'After installing the loader you need (remember Stylus is already installed for you), you can specify you want your chosen preprocessor to handle the CSS code you’re writing:',
+              'In the above example, you would replace',
+              ' with the preprocessor you’ve chosen.',
+              'Quasar comes with a few custom ',
+              '. These directives can be applied on almost any DOM element or Component.',
+              'Example of a Quasar directive:',
+              'Notice how Ripple is used in the HTML template as',
+              '. Vue directives are prefixed with ',
+              'In order for you to use any of the directives that Quasar supplies, you first need to tell Quasar you want it embedded. Open ',
+              ' file and add the following reference:',
+              'Let’s take another example. We now also want TouchPan and TouchSwipe directives, so we add them too in ',
+              'Now we can write in your Vue files template:'
+            ],
+            links: [
+              ['https://github.com/lukehoban/es6features', 'quick overview of ES6'],
+              ['http://es6-features.org/#Constants', 'full description'],
+              ['https://vuejs.org/v2/guide/', 'the Vue documentation'],
+              ['https://www.udemy.com/vuejs-2-the-complete-guide/learn/v4/overview', 'Udemy Course - Vue JS 2 - The Complete Guide'],
+              ['http://stylus-lang.com/', 'Stylus'],
+              ['https://vuejs.org/v2/guide/custom-directive.html', 'Vue Directives']
+            ]
+          }
+        },
+        platform: {
+          _: 'Platform Detection'
+        },
+        events: {
+          _: 'Global Event Bus'
+        },
+        injections: {
+          _: 'Vue Prototype Injections'
+        },
+        i18n: {
+          _: 'Internationalization (i18n)'
+        },
+        rtl: {
+          _: 'RTL Support'
         }
-      },
-      platform: {
-        _: 'Platform Detection'
-      },
-      events: {
-        _: 'Global Event Bus'
-      },
-      injections: {
-        _: 'Vue Prototype Injections'
-      },
-      i18n: {
-        _: 'Internationalization (i18n)'
-      },
-      rtl: {
-        _: 'RTL Support'
       }
     },
 
