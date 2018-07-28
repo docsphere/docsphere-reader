@@ -1,5 +1,392 @@
 export default [
   {
+    path: '/framework/introduction',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/1-introduction',
+      icon: 'grade',
+      status: 0,
+
+      menu: {
+        header: {
+          icon: 'important_devices',
+          name: 'framework'
+        }
+      },
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/1-introduction/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/framework/contribution',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/2-contribution',
+      icon: '',
+      status: 0,
+
+      menu: {},
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/2-contribution/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/framework/roadmap',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/3-roadmap',
+      icon: '',
+      status: 0,
+
+      menu: {},
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/3-roadmap/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/framework/upgrade',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/4-upgrade',
+      icon: '',
+      status: 0,
+
+      menu: {},
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/4-upgrade/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/framework/installation',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/5-installation',
+      icon: '',
+      status: 0,
+
+      menu: {},
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/5-installation/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/framework/modes',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/6-modes',
+      icon: '',
+      status: 0,
+
+      menu: {},
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/6-modes/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/framework/wrappers',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/7-wrappers',
+      icon: '',
+      status: 0,
+
+      menu: {},
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/7-wrappers/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/framework/installation/umd',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/5-installation/1-umd',
+      icon: '',
+      status: 0,
+
+      menu: {
+        sub: 'framework.installation'
+      },
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/5-installation/1-umd/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/framework/installation/quasar',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/5-installation/2-quasar',
+      icon: '',
+      status: 0,
+
+      menu: {},
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/5-installation/2-quasar/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/framework/installation/cli',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/5-installation/3-cli',
+      icon: '',
+      status: 0,
+
+      menu: {},
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/5-installation/3-cli/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/framework/modes/spa',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/6-modes/1-spa',
+      icon: '',
+      status: 0,
+
+      menu: {
+        sub: 'framework.modes'
+      },
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/6-modes/1-spa/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/framework/modes/pwa',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/6-modes/2-pwa',
+      icon: '',
+      status: 0,
+
+      menu: {},
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/6-modes/2-pwa/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/framework/modes/ssr',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/6-modes/3-ssr',
+      icon: '',
+      status: 0,
+
+      menu: {},
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/6-modes/3-ssr/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/framework/wrappers/cordova',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/7-wrappers/1-cordova',
+      icon: '',
+      status: 0,
+
+      menu: {
+        sub: 'framework.wrappers'
+      },
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/7-wrappers/1-cordova/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/framework/wrappers/electron',
+    component: () => import('layouts/default'),
+    meta: {
+      dir: '0-framework/7-wrappers/2-electron',
+      icon: '',
+      status: 0,
+
+      menu: {},
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/0-framework/7-wrappers/2-electron/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+
+  {
     path: '/starting/intro',
     component: () => import('layouts/default'),
     meta: {

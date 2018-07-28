@@ -8,6 +8,36 @@ export default {
       ]
     },
 
+    framework: {
+      _: 'The Framework',
+      introduction: { _: 'Introduction to Quasar' },
+
+      contribution: { _: 'Contribution Guide' },
+      roadmap: { _: 'Roadmap' },
+      upgrade: { _: 'Upgrade Guide' },
+
+      installation: {
+        _: 'Installation',
+        umd: { _: 'UMD / Standalone' },
+        quasar: { _: 'Quasar Starter Kit' },
+        cli: { _: 'Quasar CLI' }
+      },
+      modes: {
+        _: 'Modes',
+        spa: { _: 'SPA' },
+        pwa: { _: 'PWA' },
+        ssr: { _: 'SSR' }
+      },
+      wrappers: {
+        _: 'Wrappers',
+        cordova: { _: 'Cordova' },
+        electron: { _: 'Electron' }
+      },
+      misc: {
+        _: 'Misc'
+      }
+    },
+
     starting: {
       _: 'Getting started',
       intro: {
