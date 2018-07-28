@@ -33,8 +33,8 @@ export default {
         cordova: { _: 'Cordova' },
         electron: { _: 'Electron' }
       },
-      misc: {
-        _: 'Misc',
+      resources: {
+        _: 'Resources',
         intro: {
           _: 'Introduction for Beginners',
           overview: {
@@ -96,6 +96,9 @@ export default {
         rtl: {
           _: 'RTL Support'
         }
+      },
+      misc: {
+        _: 'Misc'
       }
     },
 

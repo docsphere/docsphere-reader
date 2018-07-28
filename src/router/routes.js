@@ -162,7 +162,9 @@ export default [
       icon: '',
       status: 0,
 
-      menu: {},
+      menu: {
+        separator: 'subpage'
+      },
       layouts: {},
       pages: {
         showcase: false
@@ -368,7 +370,9 @@ export default [
       icon: '',
       status: 0,
 
-      menu: {},
+      menu: {
+        separator: 'subpage'
+      },
       layouts: {},
       pages: {
         showcase: false
@@ -385,17 +389,16 @@ export default [
       }
     ]
   },
-
   {
-    path: '/starting/misc/intro',
+    path: '/starting/resources/intro',
     component: () => import('layouts/default'),
     meta: {
-      dir: '0-starting/1-intro/8-misc',
+      dir: '0-starting/1-intro/8-resources',
       icon: 'announcement',
       status: 6,
 
       menu: {
-        sub: 'starting.misc'
+        sub: 'starting.resources'
       },
       layouts: {},
       pages: {
@@ -406,7 +409,7 @@ export default [
     children: [
       {
         path: '',
-        component: () => import('pages/0-starting/8-misc/1-intro/'),
+        component: () => import('pages/0-starting/8-resources/1-intro/'),
         meta: {
           status: 6
         }
@@ -414,10 +417,10 @@ export default [
     ]
   },
   {
-    path: '/starting/misc/platform',
+    path: '/starting/resources/platform',
     component: () => import('layouts/default'),
     meta: {
-      dir: '0-starting/2-platform/8-misc',
+      dir: '0-starting/2-platform/8-resources',
       icon: 'phonelink',
 
       menu: {},
@@ -428,7 +431,7 @@ export default [
     children: [
       {
         path: '',
-        component: () => import('pages/0-starting/8-misc/2-platform/'),
+        component: () => import('pages/0-starting/8-resources/2-platform/'),
         meta: {
           status: 0
         }
@@ -436,7 +439,7 @@ export default [
 
       {
         path: 'showcase',
-        component: () => import('pages/0-starting/8-misc/2-platform/showcase'),
+        component: () => import('pages/0-starting/8-resources/2-platform/showcase'),
         meta: {
           status: 0
         }
@@ -444,10 +447,10 @@ export default [
     ]
   },
   {
-    path: '/starting/misc/events',
+    path: '/starting/resources/events',
     component: () => import('layouts/default'),
     meta: {
-      dir: '0-starting/3-events/8-misc',
+      dir: '0-starting/3-events/8-resources',
       icon: 'event',
 
       menu: {},
@@ -460,7 +463,7 @@ export default [
     children: [
       {
         path: '',
-        component: () => import('pages/0-starting/8-misc/3-events/'),
+        component: () => import('pages/0-starting/8-resources/3-events/'),
         meta: {
           status: 0
         }
@@ -468,10 +471,10 @@ export default [
     ]
   },
   {
-    path: '/starting/misc/injections',
+    path: '/starting/resources/injections',
     component: () => import('layouts/default'),
     meta: {
-      dir: '0-starting/4-injections/8-misc',
+      dir: '0-starting/4-injections/8-resources',
       icon: 'vertical_align_bottom',
 
       menu: {},
@@ -484,7 +487,7 @@ export default [
     children: [
       {
         path: '',
-        component: () => import('pages/0-starting/8-misc/4-injections/'),
+        component: () => import('pages/0-starting/8-resources/4-injections/'),
         meta: {
           status: 0
         }
@@ -492,10 +495,10 @@ export default [
     ]
   },
   {
-    path: '/starting/misc/i18n',
+    path: '/starting/resources/i18n',
     component: () => import('layouts/default'),
     meta: {
-      dir: '0-starting/5-i18n/8-misc',
+      dir: '0-starting/5-i18n/8-resources',
       icon: 'language',
 
       menu: {},
@@ -508,7 +511,7 @@ export default [
     children: [
       {
         path: '',
-        component: () => import('pages/0-starting/8-misc/5-i18n/'),
+        component: () => import('pages/0-starting/8-resources/5-i18n/'),
         meta: {
           status: 0
         }
@@ -516,10 +519,10 @@ export default [
     ]
   },
   {
-    path: '/starting/misc/rtl',
+    path: '/starting/resources/rtl',
     component: () => import('layouts/default'),
     meta: {
-      dir: '0-starting/6-rtl/8-misc',
+      dir: '0-starting/6-rtl/8-resources',
       icon: 'format_list_numbered_rtl',
 
       menu: {
@@ -534,7 +537,7 @@ export default [
     children: [
       {
         path: '',
-        component: () => import('pages/0-starting/8-misc/6-rtl/'),
+        component: () => import('pages/0-starting/8-resources/6-rtl/'),
         meta: {
           status: 0
         }
