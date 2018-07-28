@@ -3230,14 +3230,6 @@ export default [
         }
       },
       {
-        path: '/settings',
-        component: () => import('pages/{settings}'),
-        meta: {
-          icon: 'settings',
-          menu: 'settings'
-        }
-      },
-      {
         path: '/changelog',
         component: () => import('pages/{changelog}'),
         meta: {

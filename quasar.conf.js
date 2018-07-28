@@ -85,7 +85,9 @@ module.exports = function (ctx) {
         'QPopover',
         'QToggle',
         'QTree',
-        'QScrollObservable'
+        'QScrollObservable',
+        'QModal',
+        'QModalLayout'
       ],
       directives: [
         'Ripple',

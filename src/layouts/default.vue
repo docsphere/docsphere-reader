@@ -7,6 +7,10 @@
         </q-btn>
 
         <d-header :icon="_[0].meta.icon" :matched="_" />
+
+        <q-btn dense round @click="opened = !opened">
+          <q-icon name="settings" />
+        </q-btn>
       </q-toolbar>
     </q-layout-header>
 
@@ -21,6 +25,33 @@
     <q-layout-footer v-if="_[0].meta.layouts.footer !== false" v-model="footer">
       <d-footer :status="$route.meta.status" />
     </q-layout-footer>
+
+    <q-modal v-model="opened" :content-css="{minWidth: '100vw', minHeight: '100vh'}">
+      <q-modal-layout>
+        <q-toolbar slot="header">
+          <q-icon name="settings" style="font-size: 1.5rem" />
+          <q-toolbar-title>
+            <span>{{ $t(`menu.settings`) }}</span>
+          </q-toolbar-title>
+          <q-btn color="white" text-color="black" v-close-overlay icon="close" />
+        </q-toolbar>
+
+        <q-list>
+          <q-list-header>{{ $t('settings.general._') }}</q-list-header>
+          <q-item>
+            <q-item-side icon="language" />
+            <q-item-main>
+              <q-select
+                :stack-label="$t('settings.general.language._')"
+                v-model="settings.general.language.default"
+                :options="settings.general.language.options"
+                @input="setLanguage" />
+            </q-item-main>
+          </q-item>
+          <q-item-separator />
+        </q-list>
+      </q-modal-layout>
+    </q-modal>
   </q-layout>
 </template>
 
@@ -36,6 +67,30 @@ export default {
     DMenu, DFooter, DHeader
   },
 
+  data () {
+    return {
+      opened: false,
+      settings: {
+        general: {
+          language: {
+            default: this.$q.localStorage.get.item('setting.language'),
+            options: [
+              {
+                image: 'statics/flags/united-states-of-america.png',
+                label: 'English (US)',
+                value: 'en'
+              },
+              {
+                image: 'statics/flags/brazil.png',
+                label: 'Português (BR)',
+                value: 'pt'
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
   computed: {
     _ () {
       return this.$route.matched
@@ -78,6 +133,10 @@ export default {
         this.$store.commit('i18n/setRelative', '')
         this.$store.commit('i18n/setAbsolute', '')
       }
+    },
+    setLanguage (language) {
+      this.$q.localStorage.set('setting.language', language)
+      this.$i18n.locale = language
     }
   },
 
@@ -117,4 +176,9 @@ export default {
 
   .q-layout-footer
     z-index: 999
+
+  .q-item-image
+    min-width 24px
+    max-width 24px
+    max-height 24px
 </style>

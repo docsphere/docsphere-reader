@@ -41,10 +41,6 @@
         <q-item-side icon="assignment" />
         <q-item-main>Changelog</q-item-main>
       </q-item>
-      <q-item to="/settings">
-        <q-item-side icon="settings" />
-        <q-item-main>{{ $t('menu.settings') }}</q-item-main>
-      </q-item>
     </q-list>
     <q-item-separator class="list" />
 
