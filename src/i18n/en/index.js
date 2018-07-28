@@ -24,14 +24,14 @@ export default {
       },
       modes: {
         _: 'Modes',
-        spa: { _: 'SPA' },
-        pwa: { _: 'PWA' },
-        ssr: { _: 'SSR' }
+        spa: { _: 'Single Page Application' },
+        pwa: { _: 'Progressive Web Apps' },
+        ssr: { _: 'Server Side Rendering' }
       },
       wrappers: {
         _: 'Wrappers',
-        cordova: { _: 'Cordova' },
-        electron: { _: 'Electron' }
+        cordova: { _: 'Cordova Apps' },
+        electron: { _: 'Electron Apps' }
       },
       resources: {
         _: 'Resources',
