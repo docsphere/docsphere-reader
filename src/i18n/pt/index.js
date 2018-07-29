@@ -9,7 +9,7 @@ export default {
     },
 
     starting: {
-      _: 'O Framework',
+      _: 'Começando',
       introduction: { _: 'Introdução ao Quasar' },
 
       contribution: { _: 'Guia de contribuição' },
@@ -23,15 +23,15 @@ export default {
         cli: { _: 'Quasar CLI' }
       },
       modes: {
-        _: 'Modes',
-        spa: { _: 'SPA' },
-        pwa: { _: 'PWA' },
-        ssr: { _: 'SSR' }
+        _: 'Modos',
+        spa: { _: 'Single Page Application' },
+        pwa: { _: 'Progressive Web Apps' },
+        ssr: { _: 'Server Side Rendered' }
       },
       wrappers: {
         _: 'Wrappers',
-        cordova: { _: 'Cordova' },
-        electron: { _: 'Electron' }
+        cordova: { _: 'Cordova Apps' },
+        electron: { _: 'Electron Apps' }
       },
       resources: {
         _: 'Recursos',
@@ -55,7 +55,7 @@ export default {
         }
       },
       misc: {
-        _: 'Misc.'
+        _: 'Outros'
       }
     },
 

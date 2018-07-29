@@ -19,7 +19,7 @@
       <q-scroll-area id="content" :class="main">
         <slot></slot>
         <d-page-nav v-if="!disableNav" />
-        <q-scroll-observable v-if="nodes.length > 0" @scroll="scrolling" :debounce="2000" />
+        <q-scroll-observable v-if="nodes.length > 0" @scroll="scrolling" :debounce="200" />
       </q-scroll-area>
     </q-page>
   </q-page>

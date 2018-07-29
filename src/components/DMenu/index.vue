@@ -57,7 +57,7 @@
 
         <q-item :key="`${index}-i`" :to="item.path" v-show="matches[index] || !matches">
           <q-item-side :icon="item.meta.icon" />
-          <q-item-main>{{ $t(`_${item.path.replace(/\//g, '.')}._`) }}</q-item-main>
+          <q-item-main>{{ $t(`_${item.path.replace(/_$/, '').replace(/\//g, '.')}._`) }}</q-item-main>
           <q-item-side right>
             <q-icon class="float-right" name="fiber_manual_record" :color="colorize(item.meta.status)" />
           </q-item-side>

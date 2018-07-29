@@ -34,7 +34,7 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/2-contribution',
-      icon: '',
+      icon: 'group',
       status: 0,
 
       menu: {},
@@ -59,7 +59,7 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/3-roadmap',
-      icon: '',
+      icon: 'directions',
       status: 0,
 
       menu: {},
@@ -84,7 +84,7 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/4-upgrade',
-      icon: '',
+      icon: 'system_update',
       status: 0,
 
       menu: {},
@@ -105,11 +105,11 @@ export default [
     ]
   },
   {
-    path: '/starting/installation',
+    path: '/starting/installation_',
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/5-installation',
-      icon: '',
+      icon: 'get_app',
       status: 0,
 
       menu: {},
@@ -130,11 +130,11 @@ export default [
     ]
   },
   {
-    path: '/starting/modes',
+    path: '/starting/modes_',
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/6-modes',
-      icon: '',
+      icon: 'library_add',
       status: 0,
 
       menu: {},
@@ -155,11 +155,11 @@ export default [
     ]
   },
   {
-    path: '/starting/wrappers',
+    path: '/starting/wrappers_',
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/7-wrappers',
-      icon: '',
+      icon: 'new_releases',
       status: 0,
 
       menu: {
@@ -186,7 +186,7 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/5-installation/1-umd',
-      icon: '',
+      icon: 'settings_input_hdmi',
       status: 0,
 
       menu: {
@@ -213,7 +213,7 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/5-installation/2-quasar',
-      icon: '',
+      icon: 'important_devices',
       status: 0,
 
       menu: {},
@@ -238,7 +238,7 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/5-installation/3-cli',
-      icon: '',
+      icon: 'queue_play_next',
       status: 0,
 
       menu: {},

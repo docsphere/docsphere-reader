@@ -33,7 +33,7 @@
           <q-toolbar-title>
             <span>{{ $t(`menu.settings`) }}</span>
           </q-toolbar-title>
-          <q-btn color="white" text-color="black" v-close-overlay icon="close" />
+          <q-btn round color="white" text-color="black" v-close-overlay icon="close" />
         </q-toolbar>
 
         <q-list>
@@ -125,9 +125,9 @@ export default {
       }
 
       if (root) {
-        this.$store.commit('i18n/setBase', base.replace(/\//g, '.'))
-        this.$store.commit('i18n/setRelative', relative.substr(1).replace(/\//g, '.'))
-        this.$store.commit('i18n/setAbsolute', (base + relative).replace(/\//g, '.'))
+        this.$store.commit('i18n/setBase', base.replace(/_$/, '').replace(/\//g, '.'))
+        this.$store.commit('i18n/setRelative', relative.substr(1).replace(/_$/, '').replace(/\//g, '.'))
+        this.$store.commit('i18n/setAbsolute', (base + relative).replace(/_$/, '').replace(/\//g, '.'))
       } else {
         this.$store.commit('i18n/setBase', '')
         this.$store.commit('i18n/setRelative', '')
