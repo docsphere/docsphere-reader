@@ -263,7 +263,7 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/6-modes/1-spa',
-      icon: '',
+      icon: 'open_in_browser',
       status: 0,
 
       menu: {
@@ -290,7 +290,7 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/6-modes/2-pwa',
-      icon: '',
+      icon: 'devices_other',
       status: 0,
 
       menu: {},
@@ -315,7 +315,7 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/6-modes/3-ssr',
-      icon: '',
+      icon: 'dns',
       status: 0,
 
       menu: {},
@@ -340,7 +340,7 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/7-wrappers/1-cordova',
-      icon: '',
+      icon: 'stay_current_portrait',
       status: 0,
 
       menu: {
@@ -367,7 +367,7 @@ export default [
     component: () => import('layouts/default'),
     meta: {
       dir: '0-starting/7-wrappers/2-electron',
-      icon: '',
+      icon: 'desktop_windows',
       status: 0,
 
       menu: {
@@ -2444,9 +2444,7 @@ export default [
       icon: 'vertical_align_top',
       dir: '3-components/8-scrolling/4-top',
 
-      menu: {
-        separator: 'subpage'
-      },
+      menu: {},
       layouts: {},
       pages: {}
     },
@@ -2463,6 +2461,32 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/8-scrolling/4-top/showcase/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/components/scrolling/observable',
+    component: () => import('layouts/default'),
+    meta: {
+      icon: 'control_camera',
+      dir: '3-components/8-scrolling/5-observable',
+
+      menu: {
+        separator: 'subpage'
+      },
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/3-components/8-scrolling/5-observable'),
         meta: {
           status: 0
         }
@@ -2566,12 +2590,10 @@ export default [
     path: '/components/others/timeline',
     component: () => import('layouts/default'),
     meta: {
-      icon: 'date_range',
+      icon: 'format_list_bulleted',
       dir: '3-components/9-others/4-timeline',
 
-      menu: {
-        separator: 'subpage'
-      },
+      menu: {},
       layouts: {},
       pages: {}
     },
@@ -2588,6 +2610,62 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/3-components/9-others/4-timeline/showcase/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/components/others/jumbotron',
+    component: () => import('layouts/default'),
+    meta: {
+      icon: 'description',
+      dir: '3-components/9-others/5-jumbotron',
+
+      menu: {},
+      layouts: {},
+      pages: {}
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/3-components/9-others/5-jumbotron'),
+        meta: {
+          status: 0
+        }
+      },
+
+      {
+        path: 'showcase',
+        component: () => import('pages/3-components/9-others/5-jumbotron/showcase/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/components/others/nossr',
+    component: () => import('layouts/default'),
+    meta: {
+      icon: 'power_off',
+      dir: '3-components/9-others/6-nossr',
+
+      menu: {
+        separator: 'subpage'
+      },
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/3-components/9-others/6-nossr'),
         meta: {
           status: 0
         }
@@ -2709,9 +2787,7 @@ export default [
       icon: 'visibility',
       dir: '4-plugins/5-visibility',
 
-      menu: {
-        separator: 'page'
-      },
+      menu: {},
       layouts: {},
       pages: {}
     },
@@ -2728,6 +2804,32 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/4-plugins/5-visibility/showcase/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/plugins/meta',
+    component: () => import('layouts/default'),
+    meta: {
+      icon: 'assignment_late',
+      dir: '4-plugins/6-meta',
+
+      menu: {
+        separator: 'page'
+      },
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/4-plugins/6-meta'),
         meta: {
           status: 0
         }
@@ -3185,11 +3287,11 @@ export default [
     ]
   },
   {
-    path: '/utils/others',
+    path: '/utils/scroll',
     component: () => import('layouts/default'),
     meta: {
-      icon: 'more_horiz',
-      dir: '8-utils/5-others',
+      icon: 'import_export',
+      dir: '8-utils/5-scroll',
 
       menu: {},
       layouts: {},
@@ -3201,7 +3303,31 @@ export default [
     children: [
       {
         path: '',
-        component: () => import('pages/8-utils/5-others'),
+        component: () => import('pages/8-utils/5-scroll'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/utils/others',
+    component: () => import('layouts/default'),
+    meta: {
+      icon: 'more_horiz',
+      dir: '8-utils/6-others',
+
+      menu: {},
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/8-utils/6-others'),
         meta: {
           status: 0
         }

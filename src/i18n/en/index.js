@@ -278,14 +278,17 @@ export default {
         infinite: { _: 'Infinite Scroll' },
         area: { _: 'Scroll Area' },
         fire: { _: 'Scroll Fire' },
-        top: { _: 'Back to Top' }
+        top: { _: 'Back to Top' },
+        observable: { _: 'Scroll Observable' }
       },
       others: {
         _: 'Others Components',
         alert: { _: 'Alert' },
         chip: { _: 'Chip' },
         chat: { _: 'Chat' },
-        timeline: { _: 'Timeline' }
+        timeline: { _: 'Timeline' },
+        jumbotron: { _: 'Jumbotron' },
+        nossr: { _: 'NoSsr' }
       }
     },
 
@@ -293,9 +296,10 @@ export default {
       _: 'Plugins',
       cookies: { _: 'Cookies' },
       storage: { _: 'Web Storage' },
-      screen: { _: 'Screen' },
+      screen: { _: 'Screen Plugin' },
       fullscreen: { _: 'App Fullscreen' },
-      visibility: { _: 'App Visibility' }
+      visibility: { _: 'App Visibility' },
+      meta: { _: 'Meta Plugin' }
     },
 
     directives: {
@@ -328,6 +332,7 @@ export default {
       color: { _: 'Color Utils' },
       dom: { _: 'Dom Utils' },
       formatter: { _: 'Formatter Utils' },
+      scroll: { _: 'Scroll Utils' },
       others: { _: 'Others Utils' }
     }
   },
