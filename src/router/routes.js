@@ -3440,6 +3440,14 @@ export default [
         }
       },
       {
+        path: '/donate',
+        component: () => import('pages/{donate}'),
+        meta: {
+          icon: 'favorite',
+          menu: 'donate'
+        }
+      },
+      {
         path: '*',
         component: () => import('pages/404'),
         meta: {

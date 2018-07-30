@@ -41,6 +41,10 @@
         <q-item-side icon="assignment" />
         <q-item-main>Changelog</q-item-main>
       </q-item>
+      <q-item to="/donate">
+        <q-item-side icon="favorite" />
+        <q-item-main>Donate</q-item-main>
+      </q-item>
     </q-list>
     <q-item-separator class="list" />
 

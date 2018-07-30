@@ -362,6 +362,7 @@ export default {
     home: 'Home',
     settings: 'Settings',
     changelog: 'Changelog',
+    donate: 'Donate',
     _404: '404 Error - Not Found'
   },
 
