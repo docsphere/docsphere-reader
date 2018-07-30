@@ -98,7 +98,9 @@ export default {
         }
       },
       misc: {
-        _: 'Misc'
+        _: 'Misc',
+        ajax: { _: 'Ajax Requests' },
+        serve: { _: 'Opening Dev Server To Public' }
       }
     },
 
