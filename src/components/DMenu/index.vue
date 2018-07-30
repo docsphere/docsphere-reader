@@ -42,7 +42,7 @@
         <q-item-main>Changelog</q-item-main>
       </q-item>
       <q-item to="/donate">
-        <q-item-side icon="favorite" />
+        <q-item-side icon="favorite" color="red" />
         <q-item-main>Donate</q-item-main>
       </q-item>
     </q-list>
