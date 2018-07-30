@@ -2909,9 +2909,7 @@ export default [
       icon: 'touch_app',
       dir: '5-directives/3-hold',
 
-      menu: {
-        separator: 'page'
-      },
+      menu: {},
       layouts: {},
       pages: {}
     },
@@ -2928,6 +2926,32 @@ export default [
       {
         path: 'showcase',
         component: () => import('pages/5-directives/3-hold/showcase/'),
+        meta: {
+          status: 0
+        }
+      }
+    ]
+  },
+  {
+    path: '/directives/scroll',
+    component: () => import('layouts/default'),
+    meta: {
+      icon: 'wrap_text',
+      dir: '5-directives/4-scroll',
+
+      menu: {
+        separator: 'page'
+      },
+      layouts: {},
+      pages: {
+        showcase: false
+      }
+    },
+
+    children: [
+      {
+        path: '',
+        component: () => import('pages/5-directives/4-scroll'),
         meta: {
           status: 0
         }

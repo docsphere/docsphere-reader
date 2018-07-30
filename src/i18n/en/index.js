@@ -306,7 +306,8 @@ export default {
       _: 'Directives',
       panning: { _: 'Panning Touch/Mouse' },
       swipe: { _: 'Swipe Touch/Mouse' },
-      hold: { _: 'Touch/Mouse Hold' }
+      hold: { _: 'Touch/Mouse Hold' },
+      scroll: { _: 'Scroll Directive' }
     },
 
     helpers: {
