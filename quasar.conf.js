@@ -8,7 +8,7 @@ module.exports = function (ctx) {
       'i18n'
     ],
     css: [
-      'app.styl', 'embed-light.styl'
+      'app.styl', 'embed-light.styl', 'gitlab-hightlight.styl'
     ],
     extras: [
       ctx.theme.mat ? 'roboto-font' : null,

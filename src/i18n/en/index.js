@@ -10,7 +10,16 @@ export default {
 
     starting: {
       _: 'Get Starting',
-      introduction: { _: 'Introduction to Quasar' },
+      introduction: {
+        _: 'Introduction to Quasar',
+        overview: {
+          headers: [
+            'What is Quasar?'
+          ],
+          texts: [],
+          links: []
+        }
+      },
 
       contribution: { _: 'Contribution Guide' },
       roadmap: { _: 'Roadmap' },
@@ -69,7 +78,9 @@ export default {
               'In order for you to use any of the directives that Quasar supplies, you first need to tell Quasar you want it embedded. Open ',
               ' file and add the following reference:',
               'Let’s take another example. We now also want TouchPan and TouchSwipe directives, so we add them too in ',
-              'Now we can write in your Vue files template:'
+              'Now we can write in your Vue files template:',
+              'Quasar components have names beginning with “Q” like “QBtn” or “QElementResizeObservable”. In order to use them, you need to add a reference to them in ',
+              'Let’s take the following example with a QBtn and QIcon and then we’ll see how to embed these components in our app:'
             ],
             links: [
               ['https://github.com/lukehoban/es6features', 'quick overview of ES6'],

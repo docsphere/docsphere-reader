@@ -168,8 +168,19 @@
         <td id="file-code4-vue-LC3" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">div</span>&nbsp;<span class="pl-e">v-ripple</span>&gt;Click me. I got ripples.&lt;/<span class="pl-ent">div</span>&gt;</td>
       </tr>
     </d-page-code>
-
     <d-page-h h="2-4" />
+    <p v-html="t(23) + sc(7)"></p>
+    <p v-html="t(24)"></p>
+
+    <d-page-code id="L" library="gitlab" :lines="4">
+<pre class="code highlight"><code class="gitlab">
+<span id="LC1" class="line" lang="vue"><span class="nt">&lt;div&gt;</span></span>
+<span id="LC2" class="line" lang="vue">  <span class="nt">&lt;q-btn</span> <span class="err">@</span><span class="na">click=</span><span class="s">"doSomething"</span><span class="nt">&gt;</span>Do something<span class="nt">&lt;/q-btn&gt;</span></span>
+<span id="LC3" class="line" lang="vue">  <span class="nt">&lt;q-icon</span> <span class="na">name=</span><span class="s">"alarm"</span> <span class="nt">/&gt;</span></span>
+<span id="LC4" class="line" lang="vue"><span class="nt">&lt;/div&gt;</span></span>
+</code></pre>
+    </d-page-code>
+
     <p style="color: red;">... (This page is still under construction!)</p>
   </d-page>
 </template>

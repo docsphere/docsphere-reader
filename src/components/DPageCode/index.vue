@@ -1,15 +1,34 @@
 <template>
-  <div class="gist">
-    <div class="gist-file">
-      <div class="gist-data">
-        <div class="js-gist-file-update-container js-task-list-container file-box">
-          <div class="file">
-            <div itemprop="text" class="blob-wrapper data" v-bind:class="typing">
-              <table class="highlight tab-size js-file-line-container" data-tab-size="8">
-                <tbody>
+  <div>
+    <article class="file-holder snippet-file-content" v-if="library === 'gitlab'">
+      <div class="file-content code js-syntax-highlight white">
+        <div class="line-numbers">
+          <template v-for="(line, index) in lines">
+            <a class="diff-line-num"
+               :data-line-number="line"
+               :href="`${$store.state.page.base}#${id}${line}`"
+               :id="`${id}${line}`"
+               :key="`${index}-l`">
+              <i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+              <span>{{ line }}</span>
+            </a>
+          </template>
+        </div>
+        <div class="blob-content"><slot></slot></div>
+      </div>
+    </article>
+    <div v-else class="gist">
+      <div class="gist-file">
+        <div class="gist-data">
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div class="file">
+              <div itemprop="text" class="blob-wrapper data" v-bind:class="typing">
+                <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+                  <tbody>
                   <slot></slot>
-                </tbody>
-              </table>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -23,9 +42,21 @@ export default {
   name: 'DPageCode',
 
   props: {
+    id: {
+      type: String,
+      default: ''
+    },
+    library: {
+      type: String,
+      default: 'github'
+    },
     lang: {
       type: String,
       default: 'vue'
+    },
+    lines: {
+      type: Number,
+      default: 0
     }
   },
 
