@@ -1,7 +1,7 @@
 <template>
   <div>
-    <article class="file-holder snippet-file-content" v-if="library === 'gitlab'">
-      <div class="file-content code js-syntax-highlight white">
+    <article class="gitlab" v-if="library === 'gitlab'">
+      <div class="file-content code white">
         <div class="line-numbers">
           <template v-for="(line, index) in lines">
             <a class="diff-line-num"

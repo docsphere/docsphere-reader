@@ -2,7 +2,9 @@
   padding 8px 12px
 
 #content
-  code:not(.gitlab)
+  code
+    font-size 90% !important
+  p > code
     color #286fa3
     padding 3px 5px
     margin 0 2px
@@ -27,7 +29,7 @@
   a:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):hover:not(.button)
     color #286fa3
     background-color #cde3f3
-  a:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link)
+  a:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):not(.diff-line-num)
     color #4e9bd4
     font-weight 700
     padding 0 2px
