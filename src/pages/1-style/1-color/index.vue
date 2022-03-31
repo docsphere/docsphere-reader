@@ -121,7 +121,7 @@
 </template>
 
 <script>
-import Overview from '/src/pages/overview'
+import Overview from 'src/pages/overview'
 
 export default {
   mixins: [Overview],
@@ -142,10 +142,10 @@ export default {
       ],
 
       codes: [
-        ['primary', 'secondary', 'tertiary'],
+        ['primary', 'secondary', 'accent'],
         '&lt;style lang=&quot;stylus&quot;&gt;',
         '*.vue',
-        ['primary', 'secondary', 'tertiary', 'positive', 'negative', 'info', 'warning', 'white', 'light', 'dark', 'faded'],
+        ['primary', 'secondary', 'accent', 'positive', 'negative', 'info', 'warning', 'white', 'light', 'dark', 'faded'],
         ['red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey'],
         ['red', 'red-1', 'red-2', '…', 'red-14'],
         ['text-', 'bg-'],
@@ -156,7 +156,7 @@ export default {
 
   methods: {
     e1 () { // Exception 1
-      if (this.$i18n.locale === 'en') {
+      if (this.$i18n.locale === 'en-US') {
         return ` ${this.$t('_f')}`
       }
 

@@ -3,7 +3,9 @@ export default {
   _: {
     home: {
       texts: [
-        'Uma <b>documentação alternativa</b> do ',
+        'Uma ',
+        'documentação alternativa ',
+        'do ',
         'Criado por'
       ]
     },
@@ -231,6 +233,7 @@ export default {
     home: 'Página inicial',
     settings: 'Configurações',
     changelog: 'Changelog',
+    donate: 'Doar',
     _404: 'Erro 404 - Não encontrado'
   },
 

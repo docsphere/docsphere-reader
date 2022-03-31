@@ -1,10 +1,12 @@
 <template>
-  <q-page class="row">
-    <q-scroll-area id="content" class="col">
+  <q-page-container>
+    <q-page id="content" class="q-pa-lg">
       <q-card>
-        <q-card-title>v0.16.0</q-card-title>
-        <q-card-separator />
-        <q-card-main>
+        <q-card-section>
+          <div class="text-h6">v0.16.0</div>
+        </q-card-section>
+        <q-separator />
+        <q-card-section>
           <p>The difference between Quasar v0.15.x and v0.16 is minimal. No big breaking changes as you can see below. The only reason for bumping Quasar's version is to maintain consistency (same major + minor version) with Quasar CLI (which got an important update: webpack 4, babel 7, Workbox, electron-builder support, ionicons v4 and many more).</p>
           <p>Upgrading from v0.15.x should be seamless if you are using Quasar CLI -- which will guide you to do some minor changes to your project folder. Note that Ionicons v4 has breaking changes, so if you are using it in your project, then you need to update each such icon to its new name.</p>
           <h2>Breaking Changes</h2>
@@ -23,10 +25,10 @@
           <ul>
             <li>LayoutDrawer mini mode: still animating when hidden #2059</li>
           </ul>
-        </q-card-main>
+        </q-card-section>
       </q-card>
-    </q-scroll-area>
-  </q-page>
+    </q-page>
+  </q-page-container>
 </template>
 
 <script></script>

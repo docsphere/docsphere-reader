@@ -25,6 +25,7 @@ export default {
 
   // Main
   scrolling: true,
-  meta: false,
+  // TODO rename to anchor?
+  meta: true,
   metaToggle: false
 }

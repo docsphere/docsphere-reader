@@ -1,31 +1,29 @@
 <template>
-  <q-toolbar color="dark" id="d-footer">
-    <q-btn v-if="relative" flat dense no-caps :icon="icons" :color="color" @click="openURL(`${base}${relative}/index.vue`)">
+  <q-toolbar class="bg-dark text-white" id="d-footer">
+    <q-btn v-if="relative" flat dense no-caps class="q-mr-sm" :color="color" @click="openURL(`${base}${relative}/index.vue`)">
       <div class="gt-xs">
+        <q-icon :name="icon" size="20px"></q-icon>
         <span class="hm" v-if="status === 9">{{ $t('footer.github.edit') }}</span>
         <span class="hm" v-else-if="status === 6">{{ $t('footer.github.complete') }}</span>
         <span class="hm" v-else>{{ $t('footer.github.start') }}</span>
-        <q-icon name="fab fa-github"></q-icon>
+        <q-icon name="fab fa-github" size="20px"></q-icon>
       </div>
     </q-btn>
+
     <q-chip class="q-ml-sm" dense square>
-      <q-icon name="translate" size="1.3rem" />
-      <span><b> {{ progress }}</b> ({{ $i18n.locale }})</span>
-      <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">
-        {{ $t('footer.progress') }}
-      </q-tooltip>
+      <q-icon class="q-mr-xs" name="translate" size="20px" />
+      <span>({{ $i18n.locale }}) <b> {{ progress }}</b></span>
+      <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">{{ $t('footer.progress') }}</q-tooltip>
     </q-chip>
     <q-chip class="q-ml-sm" dense square>
-      <q-icon name="language" size="1.3rem" />
-      <span> #{{ languages }}</span>
-      <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">
-        {{ $t('footer.translations') }}
-      </q-tooltip>
+      <q-icon class="q-mr-xs" name="language" size="20px" />
+      <span>#{{ languages }}</span>
+      <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">{{ $t('footer.translations') }}</q-tooltip>
     </q-chip>
 
     <q-chip class="anchor-toggle" dense square v-if="metaToggle">
-      <q-icon name="link" size="1.3rem" class="q-mr-xs" />
-      <q-toggle v-model="meta" checked-icon="visibility" unchecked-icon="visibility_off" />
+      <q-icon name="link" size="20px" class="q-mr-xs" />
+      <q-toggle v-model="layoutMeta" checked-icon="visibility" unchecked-icon="visibility_off" aria-label="Toggle Visibility Anchor" />
       <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">
         {{ $t('footer.anchor') }}
       </q-tooltip>
@@ -63,7 +61,7 @@ export default {
         return 'red-6'
       }
     },
-    icons () {
+    icon () {
       if (this.status === 9) {
         return 'edit'
       } else if (this.status === 6) {
@@ -76,14 +74,14 @@ export default {
       // i18n
       // |-> paths
       const absolute = this.$store.state.i18n.absolute
-      const enUpdated = this.$t(`_.${absolute}._updated_`, 'en')
+      const enUpdated = this.$t(`_.${absolute}._updated_`, 'en-US')
       const updated = this.$t(`_.${absolute}._updated_`)
 
       // Subsections
       let percent = '?'
 
-      if (this.$i18n.locale === 'en' || enUpdated !== updated) {
-        let total = Number(this.$t(`_.${absolute}._subsections_`))
+      if (this.$i18n.locale === 'en-US' || enUpdated !== updated) {
+        const total = Number(this.$t(`_.${absolute}._subsections_`))
 
         if (!isNaN(total)) {
           const current = this.$t(`_.${absolute}.headers`).length
@@ -94,17 +92,15 @@ export default {
       return `${percent}%`
     },
     languages () {
-      // i18n
-      // |-> paths
-      const absolute = this.$store.state.i18n.absolute
-      // |-> meta data
+      // Get # of i18n languages available
       const languages = Object.keys(this.$i18n.messages)
-      // |->-> en->updated
-      const enUpdated = this.$t(`_.${absolute}._updated_`, 'en')
+      // Get default language updated status
+      const enUpdated = this.$t(`_.${this.$store.state.i18n.absolute}._updated_`, 'en-US')
 
+      // Set page content languages available
       let available = 1
       for (let i = 0; i < languages.length; i++) {
-        if (this.$t(`_.${absolute}._updated_`, languages[i]) !== enUpdated) {
+        if (this.$t(`_.${this.$store.state.i18n.absolute}._updated_`, languages[i]) !== enUpdated) {
           available++
         }
       }
@@ -115,13 +111,13 @@ export default {
     metaToggle () {
       return this.$store.state.layout.metaToggle
     },
-    meta: {
+    layoutMeta: {
       get () {
         return this.$store.state.layout.meta
       },
       set (value) {
         if (this.$q.platform.is.desktop) {
-          this.$store.state.layout.left = !value
+          // this.$store.commit('layout/setLeft', !value)
         }
 
         this.$store.commit('layout/setMeta', value)
@@ -135,18 +131,24 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-  #d-footer.q-toolbar
-    min-height: 30px
-  #d-footer span.hm
-    margin: 0 5px
-
-  #d-footer .anchor-toggle
-    position absolute
-    height 22px
-    top 7px
-    right 12px
-
-  #d-footer .q-toggle-handle
-    height: 20px
+<style lang="scss">
+#d-footer {
+  &.q-toolbar {
+    min-height: 30px;
+  }
+  span {
+    &.hm {
+      margin: 0 5px;
+    }
+  }
+  .anchor-toggle {
+    position: absolute;
+    height: 22px;
+    top: 1px;
+    right: 12px;
+  }
+  .q-toggle-handle {
+    height: 20px;
+  }
+}
 </style>

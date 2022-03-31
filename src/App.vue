@@ -1,7 +1,5 @@
 <template>
-  <div id="q-app">
-    <router-view />
-  </div>
+  <router-view />
 </template>
 
 <script>
@@ -9,10 +7,10 @@ export default {
   name: 'App',
 
   mounted () {
-    let lang = this.$q.localStorage.get.item('setting.language')
+    let lang = this.$q.localStorage.getItem('setting.language')
 
     if (lang === null) {
-      lang = 'en'
+      lang = 'en-US'
       this.$q.localStorage.set('setting.language', lang)
     }
 
@@ -20,5 +18,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus"></style>

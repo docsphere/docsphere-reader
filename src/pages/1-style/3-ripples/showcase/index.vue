@@ -75,7 +75,7 @@
       </tr>
       <tr>
         <td id="file-style-ripples-examples-vue-L16" class="blob-num js-line-number" data-line-number="16"></td>
-        <td id="file-style-ripples-examples-vue-LC16" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-k">const</span>&nbsp;<span class="pl-c1">colors</span>&nbsp;<span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>primary<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>amber<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>secondary<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>orange<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>tertiary<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>lime<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>cyan<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>purple<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>brown<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>blue<span class="pl-pds">'</span></span>]</span></td>
+        <td id="file-style-ripples-examples-vue-LC16" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-k">const</span>&nbsp;<span class="pl-c1">colors</span>&nbsp;<span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>primary<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>amber<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>secondary<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>orange<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>accent<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>lime<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>cyan<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>purple<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>brown<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>blue<span class="pl-pds">'</span></span>]</span></td>
       </tr>
       <tr>
         <td id="file-style-ripples-examples-vue-L17" class="blob-num js-line-number" data-line-number="17"></td>
@@ -227,9 +227,9 @@
 </template>
 
 <script>
-import Showcase from '/src/pages/showcase'
+import Showcase from 'src/pages/showcase'
 
-const colors = ['primary', 'amber', 'secondary', 'orange', 'tertiary', 'lime', 'cyan', 'purple', 'brown', 'blue']
+const colors = ['primary', 'amber', 'secondary', 'orange', 'accent', 'lime', 'cyan', 'purple', 'brown', 'blue']
 
 export default {
   mixins: [Showcase],
@@ -252,20 +252,21 @@ export default {
       this.color = colors[this.index]
     }, 3000)
   },
-  beforeDestroy () {
+  beforeUnmount () {
     clearInterval(this.timer)
   }
 }
 </script>
 
-<style lang="stylus">
-  @import '~variables'
-
-  .docs-ripple > .relative-position
-    height 150px
-    border-radius 3px
-    cursor pointer
-    color white
-    transition background 1.5s
-    box-shadow $shadow-2
+<style lang="scss">
+.docs-ripple {
+  & > .relative-position {
+    height: 150px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #fff;
+    transition: background 1.5s;
+    box-shadow: $shadow-2;
+  }
+}
 </style>

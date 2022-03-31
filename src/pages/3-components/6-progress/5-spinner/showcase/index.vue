@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Showcase from '/src/pages/showcase'
+import Showcase from 'src/pages/showcase'
 
 export default {
   mixins: [Showcase]

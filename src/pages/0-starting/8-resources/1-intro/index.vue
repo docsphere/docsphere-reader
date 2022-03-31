@@ -96,7 +96,7 @@
 </template>
 
 <script>
-import Overview from '/src/pages/overview'
+import Overview from 'src/pages/overview'
 
 export default {
   mixins: [Overview],

@@ -1,35 +1,35 @@
 <template>
-  <q-page id="page">
-    <q-toolbar id="submenu" color="tertiary">
-      <q-toolbar-title class="text-center">
+  <q-page-container id="page">
+    <q-toolbar id="submenu" class="bg-grey-8 text-white">
+      <q-toolbar-title class="toolbar-title text-center">
         <q-btn-group v-bind:class="$q.screen.lt.md ? 'mobile' : null">
-          <q-btn v-if="overview" @click="pRoute('/')"
-                 v-bind:class="pActive('/')"
-                 :label="$t('submenu.overview')" icon="pageview" no-caps flat />
-          <q-btn v-if="showcase" @click="pRoute('/showcase')"
-                 v-bind:class="pActive('/showcase')"
-                 :label="$t('submenu.showcase')" icon="play_circle_filled" no-caps flat />
+          <q-btn v-if="overview" @click="pRoute('/')" v-bind:class="pActive('/')" :label="$t('submenu.overview')" icon="pageview" no-caps flat />
+          <q-btn v-if="showcase" @click="pRoute('/showcase')" v-bind:class="pActive('/showcase')" :label="$t('submenu.showcase')" icon="play_circle_filled" no-caps flat />
         </q-btn-group>
       </q-toolbar-title>
     </q-toolbar>
-    <q-page :class="row" style="min-height: calc(100vh - 122px)">
-      <q-scroll-area v-if="nodes.length > 0" id="anchor" :class="meta">
-        <d-page-anchor :nodes="nodes" />
-      </q-scroll-area>
+
+    <q-drawer elevated show-if-above side="right" v-model="layoutMeta">
+      <d-page-anchor v-if="nodes.length > 0" id="anchor" :nodes="nodes" />
+    </q-drawer>
+
+    <q-page style="min-height: calc(100vh - 118px)">
       <q-scroll-area id="content" :class="main">
         <slot></slot>
+
         <d-page-nav v-if="!disableNav" />
-        <q-scroll-observable v-if="nodes.length > 0" @scroll="scrolling" :debounce="200" />
+
+        <q-scroll-observer v-if="nodes.length > 0" @scroll="scrolling" :debounce="200" />
       </q-scroll-area>
     </q-page>
-  </q-page>
+  </q-page-container>
 </template>
 
 <script>
-import DPageAnchor from '/src/components/DPageAnchor'
-import DPageNav from '/src/components/DPageNav'
+import DPageAnchor from 'components/DPageAnchor'
+import DPageNav from 'components/DPageNav'
 
-import Navigator from '/src/pages/navigator'
+import Navigator from 'pages/navigator'
 
 export default {
   components: {
@@ -58,48 +58,24 @@ export default {
       return false
     },
 
-    row () {
-      let classes = ''
-
-      if (!this.$q.screen.lt.lg) {
-        classes = 'row reverse'
+    // Set CSS classes
+    layoutMeta: {
+      get () {
+        return this.$store.state.layout.meta
+      },
+      set (value) {
+        this.$store.commit('layout/setMeta', value)
       }
-
-      return classes
     },
-
     main () {
       let classes = ''
 
-      if (this.$store.state.layout.meta && this.nodes.length > 0) {
-        if (!this.$q.screen.lt.lg) {
-          classes = 'col-9'
-        }
-      } else {
-        classes = 'col-12'
-      }
-
       switch (this.$store.state.page.relative) {
         case '/showcase':
-          classes += ' showcase'
+          classes = 'showcase'
           break
         default:
-          classes += ' overview'
-      }
-
-      return classes
-    },
-    meta () {
-      let classes = ''
-
-      if (this.$store.state.layout.meta) {
-        if (this.$q.screen.lt.lg) {
-          classes = 'meta-on-top'
-        } else {
-          classes = 'col-3 meta-on-right'
-        }
-      } else {
-        classes = 'hidden'
+          classes = 'overview'
       }
 
       return classes
@@ -107,7 +83,9 @@ export default {
   },
   methods: {
     pActive (relative) {
-      if (this.$store.state.page.relative === relative) {
+      if (relative === '/' && (this.$store.state.page.relative === relative || this.$store.state.page.relative === '')) {
+        return 'active'
+      } else if (this.$store.state.page.relative === relative) {
         return 'active'
       }
 
@@ -138,31 +116,54 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-  #content, #content > div.scroll
-    min-height calc(100vh - 122px)
+<style lang="scss">
+#content,
+#content > div.scroll {
+  min-height: calc(100vh - 118px);
+}
+#content:not(.no-padding) > div.scroll > div.q-scrollarea__content {
+  padding: 20px;
+}
 
-  #submenu
-    min-height 36px
-    padding 0
-    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px rgba(0,0,0,0.14), 0 1px 6px rgba(0,0,0,0.12)
-    overflow visible
-  #submenu .q-toolbar-title
-    overflow visible
-  #submenu .q-btn-group
-    box-shadow none
-  #submenu a, #submenu button
-    border-radius 0
-    padding: 6px 12px
-  #submenu a.active, #submenu button.active
-    background-color white !important
-    color: black
-    box-shadow: 0 10px 0 0 #fff;
+#submenu {
+  min-height: 36px;
+  padding: 0;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px rgba(0,0,0,0.14), 0 1px 6px rgba(0,0,0,0.12);
+  overflow: visible;
 
-  #submenu .q-btn-inner .q-icon
-    margin 0
-  #submenu .q-btn-inner div:not(.focus-helper)
-    margin-left 6px
-  #submenu .q-btn-group.mobile .q-btn-inner div
-    display none
+  .toolbar-title {
+    overflow: visible;
+  }
+  .q-btn-group {
+    box-shadow: none;
+    &.mobile {
+      .q-btn-inner {
+        div {
+          display: none;
+        }
+      }
+    }
+  }
+  .q-btn-inner {
+    .q-icon {
+      margin: 0;
+    }
+    div {
+      &:not(.focus-helper) {
+        margin-left: 6px;
+      }
+    }
+  }
+}
+#submenu a,
+#submenu button {
+  border-radius: 0;
+  padding: 6px 12px;
+}
+#submenu a.active,
+#submenu button.active {
+  background-color: #fff !important;
+  color: #000;
+  box-shadow: 0 10px 0 0 #fff;
+}
 </style>

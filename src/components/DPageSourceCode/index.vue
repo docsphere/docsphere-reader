@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import DPageCode from '/src/components/DPageCode'
+import DPageCode from 'components/DPageCode'
 
 export default {
   name: 'DPageSourceCode',
@@ -19,4 +19,4 @@ export default {
 }
 </script>
 
-<style lang="stylus"></style>
+<style lang="scss"></style>

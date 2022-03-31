@@ -1,4 +1,5 @@
-export default [
+
+const routes = [
   {
     path: '/starting/introduction',
     component: () => import('layouts/default'),
@@ -190,7 +191,7 @@ export default [
       status: 0,
 
       menu: {
-        sub: 'starting.installation'
+        subheader: 'starting.installation'
       },
       layouts: {},
       pages: {
@@ -267,7 +268,7 @@ export default [
       status: 0,
 
       menu: {
-        sub: 'starting.modes'
+        subheader: 'starting.modes'
       },
       layouts: {},
       pages: {
@@ -344,7 +345,7 @@ export default [
       status: 0,
 
       menu: {
-        sub: 'starting.wrappers'
+        subheader: 'starting.wrappers'
       },
       layouts: {},
       pages: {
@@ -398,7 +399,7 @@ export default [
       status: 6,
 
       menu: {
-        sub: 'starting.resources'
+        subheader: 'starting.resources'
       },
       layouts: {},
       pages: {
@@ -552,7 +553,7 @@ export default [
       icon: '',
 
       menu: {
-        sub: 'starting.misc'
+        subheader: 'starting.misc'
       },
       layouts: {},
       pages: {
@@ -960,7 +961,7 @@ export default [
           icon: 'device_hub',
           name: 'components'
         },
-        sub: 'components.buttons'
+        subheader: 'components.buttons'
       },
       layouts: {},
       pages: {}
@@ -1055,7 +1056,7 @@ export default [
       icon: 'view_day',
 
       menu: {
-        sub: 'components.navigation'
+        subheader: 'components.navigation'
       },
       layouts: {},
       pages: {}
@@ -1240,7 +1241,7 @@ export default [
       icon: 'text_fields',
 
       menu: {
-        sub: 'components.forms'
+        subheader: 'components.forms'
       },
       layouts: {},
       pages: {}
@@ -1785,7 +1786,7 @@ export default [
       dir: '3-components/4-grouping/1-card',
 
       menu: {
-        sub: 'components.grouping'
+        subheader: 'components.grouping'
       },
       layouts: {},
       pages: {}
@@ -1970,7 +1971,7 @@ export default [
       dir: '3-components/5-popups/1-sheet',
 
       menu: {
-        sub: 'components.popups'
+        subheader: 'components.popups'
       },
       layouts: {},
       pages: {}
@@ -2155,7 +2156,7 @@ export default [
       dir: '3-components/6-progress/1-ajax',
 
       menu: {
-        sub: 'components.progress'
+        subheader: 'components.progress'
       },
       layouts: {},
       pages: {}
@@ -2310,7 +2311,7 @@ export default [
       dir: '3-components/7-media/1-carousel',
 
       menu: {
-        sub: 'components.media'
+        subheader: 'components.media'
       },
       layouts: {},
       pages: {}
@@ -2405,7 +2406,7 @@ export default [
       dir: '3-components/8-scrolling/1-infinite',
 
       menu: {
-        sub: 'components.scrolling'
+        subheader: 'components.scrolling'
       },
       layouts: {},
       pages: {}
@@ -2554,7 +2555,7 @@ export default [
       dir: '3-components/9-others/1-alert',
 
       menu: {
-        sub: 'components.others'
+        subheader: 'components.others'
       },
       layouts: {},
       pages: {}
@@ -3457,3 +3458,5 @@ export default [
     ]
   }
 ]
+
+export default routes

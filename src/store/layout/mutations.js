@@ -12,6 +12,7 @@ export const setFooterReveal = (state, val) => {
   state.footerReveal = val
 }
 
+// TODO change to Sidebar? Menu?
 export const setLeft = (state, val) => {
   state.left = val
 }

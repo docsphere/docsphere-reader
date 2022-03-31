@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Navigator from '/src/pages/navigator'
+import Navigator from 'pages/navigator'
 
 export default {
   name: 'DPageH',
@@ -24,7 +24,7 @@ export default {
     stylize () {
       const fields = this.h.split('-')
 
-      let h = `h${fields[0]}`
+      const h = `h${fields[0]}`
 
       return `dh ${h}`
     },
@@ -66,44 +66,52 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-  .h1, .h2, .h3, .h4
-    font-weight 600
-    color #286fa3
-    user-select none
-
-  .h1
-    font-size 2rem
-    margin 0 0 .7em
-  .h2
-    font-size 1.5rem
-    margin 1.5em 0 .8em
-    padding-bottom .4em
-    border-bottom 1px solid #ddd
-  .h3
-    font-size 1.17rem
-    margin 1.2em 0 0.9em
-  .h3:first-child
-    margin-top 0
-
-  .dh
-    color #286fa3
-    padding 6px
-    cursor pointer
-  .dh:hover
-    color #4e9bd4
-
-  .h3:before {
+<style lang="scss">
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-weight: 600;
+  color: #286fa3;
+  user-select: none;
+}
+.h1 {
+  font-size: 2rem;
+  margin: 0 0 0.7em;
+}
+.h2 {
+  font-size: 1.5rem;
+  margin: 1.5em 0 0.8em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #ddd;
+}
+.h3 {
+  font-size: 1.17rem;
+  margin: 1.2em 0 0.9em;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:before {
     content: '# ';
   }
-  .h1:hover:after,
-  .h2:hover:after,
-  .h3:hover:after,
-  .h4:hover:after,
-  .h5:hover:after,
-  .h6:hover:after {
-    content: ' #';
-    color: #286fa3;
-    font-weight: bold;
+}
+.dh {
+  color: #286fa3;
+  padding: 6px;
+  cursor: pointer;
+  &:hover {
+    color: #4e9bd4;
   }
+}
+.h1:hover:after,
+.h2:hover:after,
+.h3:hover:after,
+.h4:hover:after,
+.h5:hover:after,
+.h6:hover:after {
+  content: ' #';
+  color: #286fa3;
+  font-weight: bold;
+}
+
 </style>

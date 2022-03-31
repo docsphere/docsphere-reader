@@ -1,17 +1,14 @@
 <template>
-  <q-tree
-    default-expand-all
-    :nodes="nodes" node-key="id" :selected.sync="selected"
-    v-bind:class="stylize">
-    <div slot="default-header" slot-scope="prop">
-      <b v-if="prop.node.id">{{ $t(`_.${$store.state.i18n.absolute}.headers[${prop.node.id - 1}]`) }}</b>
+  <q-tree default-expand-all :nodes="nodes" node-key="id" v-model:selected="selected" v-bind:class="stylize">
+    <template v-slot:default-header="props">
+      <b v-if="props.node.id">{{ $t(`_.${$store.state.i18n.absolute}.headers[${props.node.id - 1}]`) }}</b>
       <b v-else>{{ $t(`_.${$store.state.i18n.base}._`) }}</b>
-    </div>
+    </template>
   </q-tree>
 </template>
 
 <script>
-import Navigator from '/src/pages/navigator'
+import Navigator from 'pages/navigator'
 
 export default {
   name: 'DPageAnchor',
@@ -26,11 +23,13 @@ export default {
   computed: {
     selected: {
       get () {
-        const anchor = this.$store.state.page.anchor
+        let anchor = this.$store.state.page.anchor
 
-        if (this.$store.state.page.relative !== '/' && anchor === 0) {
-          return anchor + 1
+        if (this.$store.state.page.relative !== '' && anchor === 0) {
+          anchor = anchor + 1
         }
+
+        // console.log('Anchor: ', this.$store.state.page.relative, anchor)
 
         return anchor
       },
@@ -42,11 +41,16 @@ export default {
       if (this.$q.platform.is.mobile && !this.$q.screen.lt.lg) {
         return 'fixed'
       } else {
-        return null
+        return 'q-ma-xs'
       }
     }
   },
 
+  // @ Methods
+  methods: {
+    getNodeLabel () {}
+  },
+  // @ Events
   mounted () {
     this.$store.commit('layout/setMetaToggle', true)
 
@@ -61,7 +65,7 @@ export default {
       }, 500)
     }
   },
-  beforeDestroy () {
+  beforeUnmount () {
     this.$store.commit('layout/setMetaToggle', false)
     this.$store.commit('page/setAnchor', 0)
     this.$store.commit('page/setAnchors', false)
@@ -70,14 +74,22 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-  #anchor .q-tree
-    padding-top 12px
-    width 100%
-  #anchor b
-    color #286fa3
-    font-size 15px
-  #anchor .q-tree-node-header
-    margin 0
-    border-radius 0
+<style lang="scss">
+#anchor {
+  .q-tree {
+    padding-top: 12px;
+    width: 100%;
+  }
+  b {
+    color: #1A496B;
+    font-size: 15px;
+  }
+  .q-tree-node-header {
+    margin: 0;
+    border-radius: 0;
+  }
+  .q-tree__node--selected {
+    background-color: peachpuff;
+  }
+}
 </style>

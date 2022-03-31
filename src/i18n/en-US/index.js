@@ -3,7 +3,9 @@ export default {
   _: {
     home: {
       texts: [
-        'An <b>alternative documentation</b> of ',
+        'An ',
+        'alternative documentation ',
+        'of ',
         'Created by'
       ]
     },
@@ -369,7 +371,7 @@ export default {
     builder: 'Builder'
   },
   menu: {
-    search: '',
+    search: 'Search',
     home: 'Home',
     settings: 'Settings',
     changelog: 'Changelog',

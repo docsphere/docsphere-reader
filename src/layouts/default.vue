@@ -1,70 +1,71 @@
 <template>
-  <q-layout view="lHh Lpr lFr">
-    <q-layout-header>
-      <q-toolbar color="primary">
-        <q-btn dense round @click="left = !left">
-          <q-icon name="menu" />
-        </q-btn>
+  <q-layout view="lHh LpR lFf">
+    <q-header elevated>
+      <q-toolbar id="toolbar" color="primary">
+        <q-btn flat class="filled" icon="menu" aria-label="Toggle Menu" @click="left = !left" />
 
-        <d-header :icon="_[0].meta.icon" :matched="_" />
+        <q-toolbar-title>
+          <q-icon class="q-mb-xs q-mr-sm" :name="headerTitleIcon" />
+          {{ headerTitleText }}
+        </q-toolbar-title>
 
-        <q-btn dense round @click="opened = !opened">
-          <q-icon name="settings" />
-        </q-btn>
+        <q-btn flat class="filled" icon="settings" aria-label="Configuration" @click="opened = true" />
       </q-toolbar>
-    </q-layout-header>
+    </q-header>
 
-    <q-layout-drawer v-model="left">
+    <q-drawer elevated show-if-above side="left" :model-value="left">
       <d-menu></d-menu>
-    </q-layout-drawer>
+    </q-drawer>
 
-    <q-page-container>
-      <router-view />
-    </q-page-container>
+    <router-view />
 
-    <q-layout-footer v-if="_[0].meta.layouts.footer !== false" v-model="footer">
+    <q-footer elevated v-if="this.$route.matched[0].meta.layouts.footer !== false" :model-value="this.$store.state.layout.footer">
       <d-footer :status="$route.meta.status" />
-    </q-layout-footer>
+    </q-footer>
 
-    <q-modal v-model="opened" :content-css="{minWidth: '100vw', minHeight: '100vh'}">
-      <q-modal-layout>
-        <q-toolbar slot="header">
-          <q-icon name="settings" style="font-size: 1.5rem" />
-          <q-toolbar-title>
-            <span>{{ $t(`menu.settings`) }}</span>
-          </q-toolbar-title>
-          <q-btn round color="white" text-color="black" v-close-overlay icon="close" />
-        </q-toolbar>
-
-        <q-list>
-          <q-list-header>{{ $t('settings.general._') }}</q-list-header>
-          <q-item>
-            <q-item-side icon="language" />
-            <q-item-main>
-              <q-select
-                :stack-label="$t('settings.general.language._')"
-                v-model="settings.general.language.default"
-                :options="settings.general.language.options"
-                @input="setLanguage" />
-            </q-item-main>
-          </q-item>
-          <q-item-separator />
-        </q-list>
-      </q-modal-layout>
-    </q-modal>
+    <q-dialog v-model="opened" :maximized="$q.platform.is.mobile ? true : false">
+      <q-layout view="Lhh lpR fff" container class="bg-white">
+        <q-header class="bg-primary" elevated>
+          <q-toolbar class="q-pr-none">
+            <q-icon name="settings" style="font-size: 1.5rem" />
+            <q-toolbar-title>{{ $t('menu.settings') }}</q-toolbar-title>
+            <q-btn v-close-popup flat class="filled" color="white" text-color="white" icon="close" />
+          </q-toolbar>
+        </q-header>
+        <q-page-container>
+          <q-page>
+            <q-list>
+              <q-item>
+                <q-item-section>
+                  <q-item-label header>{{ $t('settings.general._') }}</q-item-label>
+                </q-item-section>
+              </q-item>
+              <q-item>
+                <q-item-section avatar>
+                  <q-icon name="language" />
+                </q-item-section>
+                <q-item-section>
+                  <q-select v-model="settings.general.language.default" :label="$t('settings.general.language._')" :options="settings.general.language.options" emit-value map-options @update:model-value="setLanguage" />
+                </q-item-section>
+              </q-item>
+              <q-separator />
+            </q-list>
+          </q-page>
+        </q-page-container>
+      </q-layout>
+    </q-dialog>
   </q-layout>
 </template>
 
 <script>
-import DMenu from '/src/components/DMenu'
-import DFooter from '/src/components/DFooter'
-import DHeader from '/src/components/DHeader'
+import DMenu from 'components/DMenu'
+import DFooter from 'components/DFooter'
 
 export default {
   name: 'LayoutDefault',
 
   components: {
-    DMenu, DFooter, DHeader
+    DMenu, DFooter
   },
 
   data () {
@@ -73,17 +74,17 @@ export default {
       settings: {
         general: {
           language: {
-            default: this.$q.localStorage.get.item('setting.language'),
+            default: this.$q.localStorage.getItem('setting.language'),
             options: [
               {
-                image: 'statics/flags/united-states-of-america.png',
+                image: 'flags/united-states-of-america.png',
                 label: 'English (US)',
-                value: 'en'
+                value: 'en-US'
               },
               {
-                image: 'statics/flags/brazil.png',
+                image: 'flags/brazil.png',
                 label: 'Português (BR)',
-                value: 'pt'
+                value: 'pt-BR'
               }
             ]
           }
@@ -92,12 +93,17 @@ export default {
     }
   },
   computed: {
-    _ () {
-      return this.$route.matched
+    headerTitleIcon () {
+      return this.$route.matched[0].meta.icon ?? this.$route.meta.icon
     },
-    footer () {
-      return this.$store.state.layout.footer
+    headerTitleText () {
+      if (this.$store.state.i18n.base) {
+        return this.$t(`_.${this.$store.state.i18n.base}._`)
+      } else {
+        return this.$t(`menu.${this.$route.matched[1].meta.menu}`)
+      }
     },
+
     left: {
       get () {
         return this.$store.state.layout.left
@@ -109,18 +115,21 @@ export default {
   },
 
   methods: {
-    commit () {
+    configureLanguage () {
+      // Route
       const root = this.$route.matched[0].path
       const child = this.$route.matched[1].path
 
       const base = root.substr(1)
       let relative = child.substr(root.length)
 
+      // console.log(relative)
+
       this.$store.commit('page/setBase', base)
       this.$store.commit('page/setRelative', relative)
       this.$store.commit('page/setAbsolute', base + relative)
 
-      if (relative === '/') {
+      if (relative === '/' || relative === '') {
         relative = '/overview'
       }
 
@@ -145,10 +154,10 @@ export default {
       this.$store.commit('layout/setLeft', true)
     }
 
-    this.commit()
+    this.configureLanguage()
     this.$router.afterEach((to, from) => {
       if (!to.hash || (from.path !== to.path)) {
-        this.commit()
+        this.configureLanguage()
       }
     })
 
@@ -157,28 +166,13 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-  #content:not(.no-padding) .scroll:not(.overflow-hidden),
-  #content:not(.no-padding) .scroll.overflow-hidden > div
-    padding 1rem 1.5rem 1rem 1.5rem
+<style lang="scss">
+// Header
+#toolbar {
+  padding: 0;
+}
 
-  .meta-on-right
-    border-left 1px solid #e0e0e0
-    box-shadow 0 0 8px rgba(0,0,0,0.2)
-  .meta-on-top
-    border-bottom 1px solid #e0e0e0
-    padding-bottom 5px
-    margin-bottom 20px
-
-  .q-layout-drawer-right
-    box-shadow: 0 -8px 8px rgba(0,0,0,0.2), 0 -3px 4px rgba(0,0,0,0.14), 0 -3px 3px -2px rgba(0,0,0,0.12)
-    max-width 60px
-
-  .q-layout-footer
-    z-index: 999
-
-  .q-item-image
-    min-width 24px
-    max-width 24px
-    max-height 24px
+.q-footer {
+  z-index: 999;
+}
 </style>

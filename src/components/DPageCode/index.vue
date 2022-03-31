@@ -3,12 +3,8 @@
     <article class="gitlab" v-if="library === 'gitlab'">
       <div class="file-content code white">
         <div class="line-numbers">
-          <template v-for="(line, index) in lines">
-            <a class="diff-line-num"
-               :data-line-number="line"
-               :href="`${$store.state.page.base}#${id}${line}`"
-               :id="`${id}${line}`"
-               :key="`${index}-l`">
+          <template v-for="(line, index) in lines" :key="`${index}-l`">
+            <a class="diff-line-num" :data-line-number="line" :href="`${$store.state.page.base}#${id}${line}`" :id="`${id}${line}`">
               <i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
               <span>{{ line }}</span>
             </a>
@@ -87,4 +83,4 @@ export default {
 }
 </script>
 
-<style lang="stylus"></style>
+<style lang="scss"></style>

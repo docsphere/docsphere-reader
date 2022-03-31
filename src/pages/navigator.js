@@ -1,5 +1,5 @@
 import { scroll } from 'quasar'
-const { getScrollTarget, setScrollPosition } = scroll
+const { getScrollTarget, setVerticalScrollPosition } = scroll
 
 export default {
   methods: {
@@ -14,12 +14,12 @@ export default {
         id = '' + id
         const Anchor = document.getElementById(id)
         if (typeof Anchor === 'object') {
-          let target = getScrollTarget(Anchor)
-          let offset = Anchor.offsetTop - Anchor.scrollHeight
-          let duration = 300
+          const target = getScrollTarget(Anchor)
+          const offset = Anchor.offsetTop - Anchor.scrollHeight
+          const duration = 300
 
           if (this.$q.platform.is.desktop) {
-            setScrollPosition(target, offset + 33, duration)
+            setVerticalScrollPosition(target, offset + 33, duration)
           } else {
             let additional = 0
             if (this.$q.screen.lt.lg) {
@@ -48,12 +48,14 @@ export default {
       this.$store.commit('page/setAnchor', Number(id))
     },
     scrolling (scroll) {
-      if (this.$store.state.page.scrolling && scroll.position > 5) {
-        const position = scroll.position + 60
+      // console.log(this.$store.state.page.scrolling, scroll.position)
+
+      if (this.$store.state.page.scrolling && scroll.position.top > 5) {
+        const position = scroll.position.top + 60
         const anchors = this.$store.state.page.anchors
         let additional = 0
 
-        if (this.$store.state.page.relative !== '/') {
+        if (this.$store.state.page.relative !== '') {
           additional = 1
         }
 
