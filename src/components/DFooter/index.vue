@@ -10,18 +10,18 @@
       </div>
     </q-btn>
 
-    <q-chip class="q-ml-sm" dense square>
+    <q-chip class="languages-progress q-mr-sm q-ml-none" dense square>
       <q-icon class="q-mr-xs" name="translate" size="20px" />
       <span>({{ $i18n.locale }}) <b> {{ progress }}</b></span>
       <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">{{ $t('footer.progress') }}</q-tooltip>
     </q-chip>
-    <q-chip class="q-ml-sm" dense square>
+    <q-chip class="languages-available q-mr-sm q-ml-none" dense square>
       <q-icon class="q-mr-xs" name="language" size="20px" />
       <span>#{{ languages }}</span>
       <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">{{ $t('footer.translations') }}</q-tooltip>
     </q-chip>
 
-    <q-chip class="anchor-toggle" dense square v-if="metaToggle">
+    <q-chip class="anchor-toggle q-mr-none q-ml-none" dense square v-if="metaToggle">
       <q-icon name="link" size="20px" class="q-mr-xs" />
       <q-toggle v-model="layoutMeta" checked-icon="visibility" unchecked-icon="visibility_off" aria-label="Toggle Visibility Anchor" />
       <q-tooltip v-if="$q.platform.is.desktop" anchor="top middle" self="bottom middle" :offset="[10, 10]">
@@ -152,6 +152,12 @@ export default {
   }
   .q-toggle-handle {
     height: 20px;
+  }
+
+  @media only screen and (max-width: 374px)  {
+    .languages-available {
+      display: none;
+    }
   }
 }
 </style>
