@@ -1,8 +1,8 @@
 <template>
   <q-toolbar class="bg-dark text-white" id="d-footer">
     <q-btn v-if="relative" flat dense no-caps class="q-mr-sm" :color="color" @click="openURL(`${base}${relative}/index.vue`)">
+      <q-icon :name="icon" size="20px"></q-icon>
       <div class="gt-xs">
-        <q-icon :name="icon" size="20px"></q-icon>
         <span class="hm" v-if="status === 9">{{ $t('footer.github.edit') }}</span>
         <span class="hm" v-else-if="status === 6">{{ $t('footer.github.complete') }}</span>
         <span class="hm" v-else>{{ $t('footer.github.start') }}</span>
