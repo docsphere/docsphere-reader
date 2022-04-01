@@ -1,6 +1,6 @@
 <template>
   <transition appear enter-active-class="animated zoomIn" leave-active-class="animated zoomOut">
-    <q-input for="search" v-model="term" @update:model-value="searchTerm" :placeholder="$t('menu.search')" :debounce="200">
+    <q-input for="search" v-model="term" @update:model-value="searchTerm" :placeholder="$t('menu.search')" :debounce="300">
       <template v-slot:prepend>
         <q-icon name="search" class="q-ml-sm" />
       </template>
@@ -18,7 +18,7 @@
       <div class="col-7">
         <div class="text-weight-medium">Quasar v2.x.x</div>
         <div>Documentation++</div>
-        <q-btn dense no-caps outline class="q-mt-xs q-pl-sm support" size="sm" :label="$t('system.support')" icon="fa fa-ambulance" @click="openURL('https://github.com/sponsors/rstoenescu')" />
+        <q-btn dense no-caps outline class="q-mt-xs q-pl-sm support" size="sm" :label="$t('system.support')" icon="fas fa-donate" @click="openURL('https://donate.quasar.dev/')" />
       </div>
     </div>
 
@@ -26,11 +26,27 @@
     <div class="row bg-white">
       <div class="col text-center">
         <q-btn-group flat>
-          <q-btn icon="forum" size="sm" @click="openURL('http://forum.quasar-framework.org/')" aria-label="Quasar Forum" />
-          <q-btn icon="fab fa-github" size="sm" @click="openURL('https://github.com/quasarframework/quasar')" aria-label="Quasar Github" />
-          <q-btn icon="fab fa-discord" size="sm" @click="openURL('https://discord.gg/5TDhbDg')" aria-label="Quasar Discord" />
-          <q-btn icon="fab fa-twitter" size="sm" @click="openURL('https://twitter.com/quasarframework')" aria-label="Quasar Twitter" />
-          <q-btn icon="email" size="sm" @click="openURL('mailto:razvan.stoenescu@gmail.com')" aria-label="Quasar Email" />
+          <q-btn icon="fab fa-github" size="sm" @click="openURL('https://github.quasar.dev/')" aria-label="Quasar Github">
+            <q-tooltip>Github</q-tooltip>
+          </q-btn>
+          <q-btn icon="fas fa-comments" size="sm" @click="openURL('https://forum.quasar.dev/')" aria-label="Quasar Forum">
+            <q-tooltip>Forum</q-tooltip>
+          </q-btn>
+          <q-btn icon="fas fa-comment" size="sm" @click="openURL('https://chat.quasar.dev/')" aria-label="Quasar Chat">
+            <q-tooltip>Chat</q-tooltip>
+          </q-btn>
+          <q-btn icon="fas fa-blog" size="sm" @click="openURL('https://blog.quasar.dev/')" aria-label="Quasar Blog">
+            <q-tooltip>Blog</q-tooltip>
+          </q-btn>
+          <!--<q-btn icon="fab fa-twitter" size="sm" @click="openURL('https://twitter.quasar.dev/')" aria-label="Quasar Twitter">
+            <q-tooltip>Twitter</q-tooltip>
+          </q-btn>
+          <q-btn icon="fab fa-facebook" size="sm" @click="openURL('https://facebook.quasar.dev/')" aria-label="Quasar Facebook">
+            <q-tooltip>Facebook</q-tooltip>
+          </q-btn>-->
+          <q-btn icon="fas fa-at" size="sm" @click="openURL('mailto:razvan.stoenescu@gmail.com')" aria-label="Quasar Email">
+            <q-tooltip>Email</q-tooltip>
+          </q-btn>
         </q-btn-group>
       </div>
     </div>
@@ -118,13 +134,9 @@ export default {
     searchTerm (term) {
       if (term.length > 0) {
         term = term.toLowerCase()
-
         const lang = this.$q.localStorage.getItem('setting.language')
-
         // console.log(term, lang)
-
         // TODO highlight menu item and page content terms
-
         // ! Search in Menu item label
         // TODO
         // ! Search in i18n/menu.hjson
@@ -132,7 +144,6 @@ export default {
           this.matches = menu[lang].map(item => {
             return item.indexOf(term) !== -1
           })
-
           // Search in english (en-US) language too
           if (lang !== 'en-US') {
             this.matches = menu['en-US'].map((item, index) => {
