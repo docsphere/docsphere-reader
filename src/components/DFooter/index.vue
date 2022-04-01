@@ -84,8 +84,11 @@ export default {
         const total = Number(this.$t(`_.${absolute}._subsections_`))
 
         if (!isNaN(total)) {
-          const current = this.$t(`_.${absolute}.headers`).length
-          percent = ~~((current / total) * 100)
+          const current = this.$tm(`_.${absolute}.headers`).length
+
+          if (!isNaN(current)) {
+            percent = ~~((current / total) * 100)
+          }
         }
       }
 
