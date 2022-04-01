@@ -131,31 +131,63 @@ export default {
   methods: {
     openURL,
 
+    // TODO highlight terms found in menu item and page content?
+    // TODO search result count in input bottom?
     searchTerm (term) {
-      if (term.length > 0) {
+      if (term.length > 1) {
         term = term.toLowerCase()
-        const lang = this.$q.localStorage.getItem('setting.language')
-        // console.log(term, lang)
-        // TODO highlight menu item and page content terms
-        // ! Search in Menu item label
-        // TODO
-        // ! Search in i18n/menu.hjson
-        if (typeof menu[lang] === 'object' && typeof menu[lang] !== 'undefined') {
-          this.matches = menu[lang].map(item => {
-            return item.indexOf(term) !== -1
-          })
-          // Search in english (en-US) language too
-          if (lang !== 'en-US') {
-            this.matches = menu['en-US'].map((item, index) => {
-              return this.matches[index] === true || item.indexOf(term) !== -1
-            })
+
+        const locale = this.$q.localStorage.getItem('setting.language')
+
+        this.matches = []
+
+        for (const [index, route] of this.items.entries()) {
+          // ! Search in Menu item label
+          // TODO
+          // ! Search in i18n/menu.hjson
+          // * Search in current language
+          this.matches[index] = menu[locale][index].indexOf(term) !== -1
+          // * Fallback to search in en-US
+          if (this.matches[index] === false && locale !== 'en-US') {
+            this.matches[index] = menu['en-US'][index].indexOf(term) !== -1
+          }
+          // ! Search in Page content
+          if (this.matches[index] === false) {
+            // ? Search in Page texts (overview, showcases?, changelog?)
+            // * Search in current language
+            this.matches[index] = this.searchTermInI18nTexts(route.path, term, locale)
+            // * Fallback to search in en-US
+            if (this.matches[index] === false && locale !== 'en-US') {
+              this.matches[index] = this.searchTermInI18nTexts(route.path, term, 'en-US')
+            }
+            // ? Search in Page codes (i18n)
+            // TODO
           }
         }
-        // ! Search in Page content
-        // TODO
       } else {
         this.matches = false
       }
+    },
+    searchTermInI18nTexts (route, term, locale, subpage = 'overview') {
+      const path = `_${route.replace(/_$/, '').replace(/\//g, '.')}.${subpage}.texts` // TODO replace with global solution
+
+      // * Search in page texts (i18n)
+      let texts = null
+      if (this.$te(path, locale)) {
+        texts = this.$tm(path, locale)
+      }
+
+      let found = false
+      if (texts && Object.keys(texts).length) {
+        for (const text of texts) {
+          if (text.toLowerCase().includes(term)) {
+            found = true
+            break
+          }
+        }
+      }
+
+      return found
     },
     clearSearchTerm () {
       this.term = ''
