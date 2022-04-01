@@ -208,13 +208,21 @@
 	padding: 10px 10px;
 }
 
-//* List *//
-//* List -> Item -> Label
+// ! Layouts
+// QDrawer
+// * Conflicting with Menu toogle button
+.q-drawer__opener {
+  top: 50px;
+}
+
+// ! Components
+// QList
+// QList -> Item -> Label
 .q-item__label--header {
   font-weight: 500;
   padding-left: 0;
 }
-//* Buttons *//
+// QBtn
 .q-btn {
   &.filled {
     padding: 13px;
