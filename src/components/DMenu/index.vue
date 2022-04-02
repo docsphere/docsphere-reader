@@ -161,7 +161,10 @@ export default {
               this.matches[index] = this.searchTermInI18nTexts(route.path, term, 'en-US')
             }
             // ? Search in Page codes (i18n)
-            // TODO
+            // * Search in current language
+            if (this.matches[index] === false) {
+              this.matches[index] = this.searchTermInI18nCodes(route.path, term, locale)
+            }
           }
         }
       } else {
@@ -181,6 +184,27 @@ export default {
       if (texts && Object.keys(texts).length) {
         for (const text of texts) {
           if (text.toLowerCase().includes(term)) {
+            found = true
+            break
+          }
+        }
+      }
+
+      return found
+    },
+    searchTermInI18nCodes (route, term, locale, subpage = 'overview') {
+      const path = `_${route.replace(/_$/, '').replace(/\//g, '.')}.${subpage}.codes` // TODO replace with global solution
+
+      // * Search in page codes (i18n)
+      let codes = null
+      if (this.$te(path, locale)) {
+        codes = this.$tm(path, locale)
+      }
+
+      let found = false
+      if (codes && Object.keys(codes).length) {
+        for (const code of codes) {
+          if (code.toLowerCase().includes(term)) {
             found = true
             break
           }

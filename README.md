@@ -24,8 +24,8 @@ The search for content in the documentation is simple, fast and easy.
 The search input text in the **menu** makes it easy to **search** for any content **using keywords** and you can do it in your favorite language.
 If the defined language is not English and if the search term is not found or has not been set in current language, by default a search is still performed using keywords in English.
 
-### Source code highlighted in i18n files (Beta)
-This documentation generates codes with Syntax highlighting from codes with multiline and line indented stored in translatable i18n files. So you can access the codes of the documentation **offline** and we can also use i18n for example to translate code comments.
+### Source code highlighted (Beta)
+This documentation generates codes with Syntax highlighting from texts with multiline and line indented stored in translatable i18n files. So you can access the codes of the documentation **offline** and we can also use i18n for example to translate code comments.
 
 ### Navigation using anchored links (RC)
 Anchor links work in hash and history mode and provide **faster navigation** and **better orientation** when navigating through subsections of documentation.
