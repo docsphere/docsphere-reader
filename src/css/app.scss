@@ -1,7 +1,4 @@
 #content {
-	code {
-		font-size: 90% !important;
-	}
 	p {
 		& > code {
 			color: #286fa3;
@@ -26,7 +23,7 @@
 				background-color: #cde3f3;
 			}
 		}
-		&:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):not(.diff-line-num) {
+		&:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):not(.line) {
 			color: #1b4a6c;
 			font-weight: 700;
 			padding: 0 2px;
@@ -162,14 +159,6 @@
 			}
 		}
 	}
-}
-#content code,
-#content pre:not(.code.hightlight) {
-	background-color: #f8f8f8;
-	font-family: 'Roboto Mono', Monaco, courier, monospace;
-	font-size: 14px;
-	-webkit-font-smoothing: initial;
-	-moz-osx-font-smoothing: initial;
 }
 #content h1,
 #content h2,

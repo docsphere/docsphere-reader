@@ -20,9 +20,20 @@ export default {
       const l = this.$tm(`_.${base}.overview.links[${--index}]`)
       return `<a href="${l[0]}" target="_blank">${l[1]}</a>`
     },
+    // Codes
+    c (index) {
+      const base = this.$store.state.i18n.base
+      const path = `_.${base}.overview.codes[${--index}]`
+
+      if (typeof index === 'number' && base.length > 0 && this.$te(path)) {
+        return this.$tm(path)
+      } else {
+        return ''
+      }
+    },
     // Small Codes
     sc (index, separator = '', final = '.') {
-      const code = this.codes[--index]
+      const code = this.tokens[--index]
 
       if (code.constructor === Array) {
         let codes = ''

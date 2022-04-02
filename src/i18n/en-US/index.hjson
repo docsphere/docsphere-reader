@@ -1,4 +1,4 @@
-export default {
+{
   // Sections
   _: {
     home: {
@@ -91,6 +91,62 @@ export default {
               ['https://www.udemy.com/vuejs-2-the-complete-guide/learn/v4/overview', 'Udemy Course - Vue JS 2 - The Complete Guide'],
               ['http://stylus-lang.com/', 'Stylus'],
               ['https://vuejs.org/v2/guide/custom-directive.html', 'Vue Directives']
+            ],
+            codes: [
+              '''
+              <template>
+                <!-- you define your Vue template here -->
+              </template>
+
+              <script>
+              // This is where your Javascript goes
+              // to define your Vue component, which
+              // can be a Layout, a Page or your own
+              // component used throughout the app.
+              export default {
+                //
+              }
+              </script>
+
+              <style>
+              /* This is where your CSS goes */
+              </style>
+              ''',
+
+              '''
+              <!-- notice lang="stylus" -->
+              <style lang="stylus">
+              .some-div
+                font-size 15px
+              </style>
+              ''',
+
+              '<div v-ripple>Click Me</div>',
+
+              '''
+              framework: {
+                directives: ['Ripple']
+              }
+              ''',
+
+              '''
+              framework: {
+                directives: ['Ripple', 'TouchPan', 'TouchSwipe']
+              }
+              ''',
+
+              '''
+              <div v-touch-pan="handler">...</div>
+              <div v-touch-swipe="handler">...</div>
+              <div v-ripple>Click me. I got ripples.</div>
+              ''',
+
+              '''
+              <div>
+                <q-btn @click="doSomething">Do something</q-btn>
+                <q-icon name="alarm" />
+              </div>
+              ''',
             ]
           }
         },
@@ -153,6 +209,40 @@ export default {
           links: [
             ['https://quasar-framework.org/guide/quasar-theming.html', 'Quasar Theming'],
             ['https://quasar-framework.org/components/color-utils.html', 'Color Utils']
+          ],
+          codes: [
+            '''
+            <!-- changing text color -->
+            <p class="text-primary">....</p>
+
+            <!-- changing background color -->
+            <p class="bg-positive">...</p>
+            ''',
+
+            '''
+            <!-- Notice lang="stylus" -->
+            <style lang="stylus">
+            // "variables" is a Webpack alias injected by Quasar CLI
+            @import '~variables'
+
+            div
+              color $red-1
+              background-color $grey-5
+            </style>
+            ''',
+
+            '''
+            .text-brand {
+              color: #a2aa33;
+            }
+            .bg-brand {
+              background: #a2aa33;
+            }
+            ''',
+
+            '''
+            <q-input color="brand" ... />
+            ''',
           ],
 
           p16: '',
