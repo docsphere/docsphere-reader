@@ -12,7 +12,7 @@
       <h3>Internationalization with i18n</h3>
       <p>We want the documentation to be available in any language so that it can reach everyone. Currently available in 2 languages: English (en) and Portuguese (pt).</p>
       <h3>Menu search engine based in keywords and i18n (Beta)</h3>
-      <p>The search for content in the documentation is simple, fast and easy. The search input text in the menu makes it easy to search for any content using keywords and you can do it in your favorite language. If the defined language is not English and if the search term is not found or has not been set in current language, by default a search is still performed using keywords in English.</p>
+      <p>The search for content in the documentation is simple, fast and easy. The search input text in the menu makes it easy to search for any content (headers, texts, source codes, ...) using keywords and you can do it in your favorite language. If the defined language is not English and if the search term is not found or has not been set in current language, by default a search is still performed using keywords in English.</p>
       <h3>Source code highlighted</h3>
       <p>This documentation generates codes with Syntax highlighting from texts with multiline and line indented stored in i18n files. So you can access the codes of the documentation <b>offline</b> and we can also use i18n for example to translate code comments.</p>
       <h3>Navigation using anchored links (RC)</h3>

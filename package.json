@@ -13,7 +13,6 @@
     "@quasar/extras": "^1.13.5",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "prismjs": "^1.27.0",
     "quasar": "^2.6.5",
     "vue": "^3.0.0",
     "vue-i18n": "^9.0.0",
@@ -33,6 +32,7 @@
     "hjson": "^3.2.2",
     "hjson-loader": "^1.0.0",
     "os": "^0.1.2",
+    "prismjs": "^1.27.0",
     "stylus": "^0.57.0",
     "stylus-loader": "^6.2.0"
   },
