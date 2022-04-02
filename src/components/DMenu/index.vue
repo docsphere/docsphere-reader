@@ -160,10 +160,14 @@ export default {
             if (this.matches[index] === false && locale !== 'en-US') {
               this.matches[index] = this.searchTermInI18nTexts(route.path, term, 'en-US')
             }
-            // ? Search in Page codes (i18n)
+            // ? Search in Page codes (overview, showcases?)
             // * Search in current language
             if (this.matches[index] === false) {
               this.matches[index] = this.searchTermInI18nCodes(route.path, term, locale)
+            }
+            // * Fallback to search in en-US
+            if (this.matches[index] === false && locale !== 'en-US') {
+              this.matches[index] = this.searchTermInI18nCodes(route.path, term, 'en-US')
             }
           }
         }
