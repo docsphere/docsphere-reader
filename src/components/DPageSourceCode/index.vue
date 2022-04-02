@@ -93,7 +93,7 @@ export default {
       const pathbase = this.$store.state.i18n.base
       const path = `_.${pathbase}.overview.codes[${this.index}]`
 
-      if (pathbase.length > 0 && this.$te(path)) {
+      if (pathbase.length > 0 && (this.$te(path) || this.$te(path, 'en-US'))) {
         this.text = this.$tm(path)
       } else {
         this.text = ''
