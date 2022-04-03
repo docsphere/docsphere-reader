@@ -34,16 +34,19 @@
 	h1 {
 		font-size: 2rem;
 		margin: 0 0 0.7em;
+    line-height: 48px;
 	}
 	h2 {
 		font-size: 1.5rem;
 		margin: 1.5em 0 0.8em;
+    line-height: 36px;
 		padding-bottom: 0.4em;
 		border-bottom: 1px solid #ddd;
 	}
 	h3 {
 		font-size: 1.17rem;
 		margin: 1.2em 0 0.9em;
+    line-height: 28px;
 	}
 	&:not(.overview):not(.showcase):not(.showcase-code) {
 		h1 {
