@@ -73,42 +73,60 @@ export default {
     progress () {
       // i18n
       // |-> paths
-      const absolute = this.$store.state.i18n.absolute
-      const enUpdated = this.$t(`_.${absolute}._updated_`, 'en-US')
-      const updated = this.$t(`_.${absolute}._updated_`)
+      const i18nPathAbsolute = this.$store.state.i18n.absolute
+      const i18nPath = `_.${i18nPathAbsolute}._updated_`
+
+      let currentLastUpdated = null
+      if (this.$te(i18nPath)) {
+        currentLastUpdated = this.$t(i18nPath)
+      }
+      let fallbackLastUpdated = null
+      if (this.$te(i18nPath, 'en-US')) {
+        fallbackLastUpdated = this.$t(i18nPath, 'en-US')
+      }
 
       // Subsections
-      let percent = '?'
+      let translationPercent = '?'
 
-      if (this.$i18n.locale === 'en-US' || enUpdated !== updated) {
-        const total = Number(this.$t(`_.${absolute}._subsections_`))
+      if (this.$i18n.locale === 'en-US' || (currentLastUpdated && fallbackLastUpdated && currentLastUpdated !== fallbackLastUpdated)) {
+        const totalSubsections = Number(this.$t(`_.${i18nPathAbsolute}._subsections_`))
 
-        if (!isNaN(total)) {
-          const current = this.$tm(`_.${absolute}.headers`).length
+        if (!isNaN(totalSubsections)) {
+          const currentHeaders = this.$tm(`_.${i18nPathAbsolute}.headers`).length
 
-          if (!isNaN(current)) {
-            percent = ~~((current / total) * 100)
+          if (!isNaN(currentHeaders)) {
+            translationPercent = ~~((currentHeaders / totalSubsections) * 100)
           }
         }
       }
 
-      return `${percent}%`
+      return `${translationPercent}%`
     },
     languages () {
-      // Get # of i18n languages available
-      const languages = Object.keys(this.$i18n.messages)
-      // Get default language updated status
-      const enUpdated = this.$t(`_.${this.$store.state.i18n.absolute}._updated_`, 'en-US')
+      // i18n
+      // |-> paths
+      const i18nPathAbsolute = this.$store.state.i18n.absolute
+      const i18nPath = `_.${i18nPathAbsolute}._updated_`
 
-      // Set page content languages available
-      let available = 1
-      for (let i = 0; i < languages.length; i++) {
-        if (this.$t(`_.${this.$store.state.i18n.absolute}._updated_`, languages[i]) !== enUpdated) {
-          available++
+      // Get # of i18n locales available
+      const i18nLocales = Object.keys(this.$i18n.messages)
+      // Get page last updated status of default language
+      let fallbackLastUpdated = null
+      if (this.$te(i18nPath, 'en-US')) {
+        fallbackLastUpdated = this.$t(i18nPath, 'en-US')
+      }
+
+      // Set page content locales available
+      let i18nLocalesAvailable = 1
+      if (fallbackLastUpdated) {
+        for (let i = 0; i < i18nLocales.length; i++) {
+          if (this.$t(i18nPath, i18nLocales[i]) !== fallbackLastUpdated) {
+            i18nLocalesAvailable++
+          }
         }
       }
 
-      return `${available} ${this.$t('footer.of')} ${languages.length}`
+      return `${i18nLocalesAvailable} ${this.$t('footer.of')} ${i18nLocales.length}`
     },
 
     metaToggle () {
