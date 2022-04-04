@@ -3,7 +3,7 @@
     <div class="content code white">
       <div v-if="lines" class="lines">
         <template v-for="(line, index) in lines" :key="index">
-          <a class="line" :href="`${$store.state.page.base}#${id}${line}`" :id="`${id}${line}`">
+          <a class="line" :href="`${$store.state.page.base}#${anchor}${line}`" :id="`${anchor}${line}`">
             <i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
             <span>{{ line }}</span>
           </a>
@@ -34,7 +34,7 @@ export default {
   },
 
   computed: {
-    id () {
+    anchor () {
       return this.printToLetter(this.index + 1)
     },
     lines () {
@@ -42,20 +42,8 @@ export default {
       return lines
     },
     code () {
-      let grammar
-      switch (this.language) {
-        case 'css':
-          grammar = Prism.languages.css; break
-        case 'styl':
-          grammar = Prism.languages.stylus; break
-        case 'javascript':
-          grammar = Prism.languages.js; break
-        default:
-          grammar = Prism.languages.html
-      }
-
       if (this.text) {
-        const code = Prism.highlight(this.text, grammar, this.language)
+        const code = Prism.highlight(this.text, Prism.languages[this.language], this.language)
         return code
       } else {
         return ''
