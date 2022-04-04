@@ -39,9 +39,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-img.platform {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
+<style lang="sass">
+img.platform
+  padding-top: 30px
+  padding-bottom: 30px
 </style>

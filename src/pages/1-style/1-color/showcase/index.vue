@@ -309,25 +309,20 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-div {
-  &.main-color {
-    width: 110px;
-    margin: 5px;
-    height: 40px;
-  }
-  &.detailed-color {
-    height: 55px;
-  }
-  &.detail {
-    margin-bottom: 25px;
-    max-width: 400px;
-    min-width: 135px;
-    display: inline-block;
-    margin-right: 5px;
-  }
-}
-.detailed-color {
-  width: 100%;
-}
+<style lang="sass" scoped>
+div
+  &.main-color
+    width: 110px
+    margin: 5px
+    height: 40px
+  &.detailed-color
+    height: 55px
+  &.detail
+    margin-bottom: 25px
+    max-width: 400px
+    min-width: 135px
+    display: inline-block
+    margin-right: 5px
+.detailed-color
+  width: 100%
 </style>

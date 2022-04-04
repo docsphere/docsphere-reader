@@ -54,14 +54,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-nav {
-  min-height: 36px;
-  padding-top: 15px;
-  margin-top: 15px;
-  border-top: 3px solid #e0e0e0;
-  &:first-child {
-    margin-top: calc(100vh - 200px);
-  }
-}
+<style lang="sass" scoped>
+nav
+  min-height: 36px
+  padding-top: 15px
+  margin-top: 15px
+  border-top: 3px solid #e0e0e0
+  &:first-child
+    margin-top: calc(100vh - 200px)
 </style>

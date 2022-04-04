@@ -116,54 +116,41 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="sass">
 #content,
-#content > div.scroll {
-  min-height: calc(100vh - 118px);
-}
-#content:not(.no-padding) > div.scroll > div.q-scrollarea__content {
-  padding: 20px;
-}
+#content > div.scroll
+  min-height: calc(100vh - 118px)
+#content:not(.no-padding) > div.scroll > div.q-scrollarea__content
+  padding: 20px
 
-#submenu {
-  min-height: 36px;
-  padding: 0;
-  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px rgba(0,0,0,0.14), 0 1px 6px rgba(0,0,0,0.12);
-  overflow: visible;
+#submenu
+  min-height: 36px
+  padding: 0
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px rgba(0,0,0,0.14), 0 1px 6px rgba(0,0,0,0.12)
+  overflow: visible
 
-  .toolbar-title {
-    overflow: visible;
-  }
-  .q-btn-group {
-    box-shadow: none;
-    &.mobile {
-      .q-btn-inner {
-        div {
-          display: none;
-        }
-      }
-    }
-  }
-  .q-btn-inner {
-    .q-icon {
-      margin: 0;
-    }
-    div {
-      &:not(.focus-helper) {
-        margin-left: 6px;
-      }
-    }
-  }
-}
+  .toolbar-title
+    overflow: visible
+  .q-btn-group
+    box-shadow: none
+    &.mobile
+      .q-btn-inner
+        div
+          display: none
+  .q-btn-inner
+    .q-icon
+      margin: 0
+    div
+      &:not(.focus-helper)
+        margin-left: 6px
+
 #submenu a,
-#submenu button {
-  border-radius: 0;
-  padding: 6px 12px;
-}
+#submenu button
+  border-radius: 0
+  padding: 6px 12px
 #submenu a.active,
-#submenu button.active {
-  background-color: #fff !important;
-  color: #000;
-  box-shadow: 0 10px 0 0 #fff;
-}
+#submenu button.active
+  background-color: #fff !important
+  color: #000
+  box-shadow: 0 10px 0 0 #fff
 </style>

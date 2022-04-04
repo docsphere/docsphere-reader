@@ -134,30 +134,24 @@ export default {
 }
 </script>
 
-<style lang="scss">
-#d-footer {
-  &.q-toolbar {
-    min-height: 30px;
-  }
-  span {
-    &.hm {
-      margin: 0 5px;
-    }
-  }
-  .anchor-toggle {
-    position: absolute;
-    height: 22px;
-    top: 1px;
-    right: 12px;
-  }
-  .q-toggle-handle {
-    height: 20px;
-  }
+<style lang="sass">
+#d-footer
+  &.q-toolbar
+    min-height: 30px
+  span
+    &.hm
+      margin: 0 5px
 
-  @media only screen and (max-width: 374px)  {
-    .languages-available {
-      display: none;
-    }
-  }
-}
+  .anchor-toggle
+    position: absolute
+    height: 22px
+    top: 1px
+    right: 12px
+
+  .q-toggle-handle
+    height: 20px
+
+  @media only screen and (max-width: 374px)
+    .languages-available
+      display: none
 </style>

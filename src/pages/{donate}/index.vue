@@ -63,16 +63,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
-img {
-  &.qr-code {
-    width: 180px;
-    height: 180px;
-    margin: auto;
-  }
-  &.platform {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
+<style lang="sass">
+img
+  &.qr-code
+    width: 180px
+    height: 180px
+    margin: auto
+  &.platform
+    padding-top: 30px
+    padding-bottom: 30px
 </style>

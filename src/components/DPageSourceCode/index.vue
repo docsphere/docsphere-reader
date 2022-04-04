@@ -91,86 +91,75 @@ export default {
 }
 </script>
 
-<style lang="scss">
-article.source-code {
-  .content {
-    font-family: "Menlo", "DejaVu Sans Mono", "Liberation Mono", "Consolas", "Ubuntu Mono", "Courier New", "Andale Mono", "Lucida Console", Monospace;
-    border: 1px solid #ddd;
-    border-bottom: 1px solid #ccc;
-    border-radius: 3px;
-    margin: 0;
-    padding: 0;
+<style lang="sass">
+article.source-code
+  .content
+    font-family: "Menlo", "DejaVu Sans Mono", "Liberation Mono", "Consolas", "Ubuntu Mono", "Courier New", "Andale Mono", "Lucida Console", Monospace
+    border: 1px solid #ddd
+    border-bottom: 1px solid #ccc
+    border-radius: 3px
+    margin: 0
+    padding: 0
 
-    .lines {
-      padding: 10px 5px;
-      text-align: right;
-      float: left;
-      -webkit-user-select: none;
-      user-select: none;
-      background-color: #fafafa;
+    .lines
+      padding: 10px 5px
+      text-align: right
+      float: left
+      -webkit-user-select: none
+      user-select: none
+      background-color: #fafafa
 
-      a {
-        display: block;
-        border-color: #f0f0f0;
-        font-size: 90% !important;
-        min-height: 19px;
-        white-space: nowrap;
-        padding: 0 3px;
-        color: rgba(27, 31, 35, 0.5) !important;
+      a
+        display: block
+        border-color: #f0f0f0
+        font-size: 90% !important
+        min-height: 19px
+        white-space: nowrap
+        padding: 0 3px
+        color: rgba(27, 31, 35, 0.5) !important
 
         &:hover
-          i {
-            visibility: visible;
-          }
+          i
+            visibility: visible
 
-        i {
-          float: left;
-          margin-top: 3px;
-          margin-right: 5px;
-          visibility: hidden;
-        }
-      }
-    }
-    pre {
-      display: flex;
+        i
+          float: left
+          margin-top: 3px
+          margin-right: 5px
+          visibility: hidden
+    pre
+      display: flex
 
-      margin: 0;
-      border: 0;
-      padding: 10px;
+      margin: 0
+      border: 0
+      padding: 10px
 
-      white-space: pre;
-      word-wrap: normal;
+      white-space: pre
+      word-wrap: normal
 
-      line-height: 19px;
+      line-height: 19px
 
-      overflow: auto;
-      overflow-y: hidden;
+      overflow: auto
+      overflow-y: hidden
 
-      > code {
-        display: block;
-        font-size: 90%;
-        min-width: 100%;
-        padding: 0;
-      }
-    }
-  }
-}
+      > code
+        display: block
+        font-size: 90%
+        min-width: 100%
+        padding: 0
 
 /* Tokens */
 .token.comment,
 .token.prolog,
 .token.doctype,
-.token.cdata {
-  color: slategray;
-}
+.token.cdata
+  color: slategray
 
-.token.punctuation {
-  color: #999;
-}
+.token.punctuation
+  color: #999
 
-.token.namespace {
-  opacity: .7;
-}
+.token.namespace
+  opacity: .7
 
 .token.property,
 .token.tag,
@@ -178,55 +167,46 @@ article.source-code {
 .token.number,
 .token.constant,
 .token.symbol,
-.token.deleted {
-  color: #905;
-}
+.token.deleted
+  color: #905
 
 .token.selector,
 .token.attr-name,
 .token.string,
 .token.char,
 .token.builtin,
-.token.inserted {
-  color: #690;
-}
+.token.inserted
+  color: #690
 
 .token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
-.style .token.string {
-  color: #9a6e3a;
+.style .token.string
+  color: #9a6e3a
   /* This background color was intended by the author of this theme. */
-  background: hsla(0, 0%, 100%, .5);
-}
+  background: hsla(0, 0%, 100%, .5)
 
 .token.atrule,
 .token.attr-value,
-.token.keyword {
-  color: #07a;
-}
+.token.keyword
+  color: #07a
 
 .token.function,
-.token.class-name {
-  color: #DD4A68;
-}
+.token.class-name
+  color: #DD4A68
 
 .token.regex,
 .token.important,
-.token.variable {
-  color: #e90;
-}
+.token.variable
+  color: #e90
 
 .token.important,
-.token.bold {
-  font-weight: bold;
-}
-.token.italic {
-  font-style: italic;
-}
+.token.bold
+  font-weight: bold
+.token.italic
+  font-style: italic
 
-.token.entity {
-  cursor: help;
-}
+.token.entity
+  cursor: help
 </style>

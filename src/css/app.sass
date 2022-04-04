@@ -1,0 +1,171 @@
+#content
+	p
+		& > code
+			color: #286fa3
+			padding: 3px 5px
+			margin: 0 2px
+			border-radius: 2px
+			border: 1px solid #e6e6e6
+			white-space: pre-wrap
+			display: inline-block
+			box-shadow: 0 1px 1px rgba(0,0,0,0.125)
+			line-height: 1em
+	a
+		color: #34495e
+		text-decoration: none
+		outline: 0
+		cursor: pointer
+		&:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):hover
+			&:not(.button)
+				color: #286fa3
+				background-color: #cde3f3
+		&:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):not(.line)
+			color: #1b4a6c
+			font-weight: 700
+			padding: 0 2px
+			transition: all 0.3s ease
+			border-bottom: 1px dotted #1b4a6c
+	h1
+		font-size: 2rem
+		margin: 0 0 0.7em
+		line-height: 48px
+	h2
+		font-size: 1.5rem
+		margin: 1.5em 0 0.8em
+		line-height: 36px
+		padding-bottom: 0.4em
+		border-bottom: 1px solid #ddd
+	h3
+		font-size: 1.17rem
+		margin: 1.2em 0 0.9em
+		line-height: 28px
+	&:not(.overview):not(.showcase):not(.showcase-code)
+		h1
+			font-size: 2rem
+			margin: 0 0 0.7em
+		h2
+			font-size: 1.5rem
+			margin: 1.5em 0 0.8em
+			padding-bottom: 0.4em
+			border-bottom: 1px solid #ddd
+		h3
+			font-size: 1.17rem
+			margin: 1.2em 0 0.9em
+	&.overview
+		blockquote
+			margin: 2.5em 0
+			padding: 0
+			p
+				padding: 0.5em 1em
+				background-color: #fafafa !important
+				letter-spacing: 0.5px
+		img
+			border: 0
+			max-width: 100%
+		strong
+			font-weight: 600
+			color: #286fa3
+		hr
+			margin: 2em 0
+			height: 2px
+			background-color: #e5e5e5
+			border: 0
+			padding: 0
+		em
+			color: #57a0d6
+		p
+			word-spacing: 0.05em
+		iframe
+			border: 0
+			margin: 1em 0
+		ul
+			padding-left: 1.25em
+			line-height: 1.4em
+		span
+			&.light
+				color: #57a0d6
+			&.info
+				font-size: 0.85em
+				display: inline-block
+				vertical-align: middle
+				width: 280px
+				margin-left: 20px
+		table
+			max-width: 100%
+			border: 1px solid #eee
+			border-radius: 4px
+			border-spacing: 0
+			box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.125)
+			th
+				font-weight: bold
+				border-bottom: 2px solid #eee
+				text-align: left
+			tr
+				vertical-align: top
+			&:not(.js-file-line-container)
+				tr
+					&:nth-child(2n)
+						background: #f8f8f8
+		figure
+			table
+				border: 0
+				box-shadow: none
+				th
+					border-bottom: 0
+		.highlight
+			pre
+				padding: 0
+				.line
+					min-height: 20px
+		& > h1
+			i
+				font-size: 70%
+				vertical-align: middle
+				color: #286fa3
+#content h1,
+#content h2,
+#content h3,
+#content h4
+	font-weight: 600
+	color: #286fa3
+#content:not(.overview):not(.showcase):not(.showcase-code) h1,
+#content:not(.overview):not(.showcase):not(.showcase-code) h2,
+#content:not(.overview):not(.showcase):not(.showcase-code) h3
+	font-weight: 600
+	color: #286fa3
+#content.overview ul ul,
+#content.overview ul p
+	margin: 0.6em 0
+#content.overview figure,
+#content.overview p,
+#content.overview ul,
+#content.overview ol
+	margin: 1.2em 0
+#content.overview p,
+#content.overview ul,
+#content.overview ol
+	line-height: 1.6em
+#content.overview ul,
+#content.overview ol
+	padding-left: 1.5em
+#content.overview table th,
+#content.overview table td
+	padding: 10px 10px
+
+// ! Layouts
+// QDrawer
+// * Conflicting with Menu toogle button
+.q-drawer__opener
+	top: 50px
+
+// ! Components
+// QList
+// QList -> Item -> Label
+.q-item__label--header
+	font-weight: 500
+	padding-left: 0
+// QBtn
+.q-btn
+	&.filled
+		padding: 13px
+

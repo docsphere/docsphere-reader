@@ -258,15 +258,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.docs-ripple {
-  & > .relative-position {
-    height: 150px;
-    border-radius: 3px;
-    cursor: pointer;
-    color: #fff;
-    transition: background 1.5s;
-    box-shadow: $shadow-2;
-  }
-}
+<style lang="sass">
+.docs-ripple
+  & > .relative-position
+    height: 150px
+    border-radius: 3px
+    cursor: pointer
+    color: #fff
+    transition: background 1.5s
+    box-shadow: $shadow-2
 </style>

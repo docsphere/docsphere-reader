@@ -108,13 +108,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="sass">
 // Header
-#toolbar {
-  padding: 0;
-}
+#toolbar
+  padding: 0
 
-.q-footer {
-  z-index: 999;
-}
+.q-footer
+  z-index: 999
 </style>

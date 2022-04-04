@@ -334,84 +334,66 @@ export default {
 }
 </script>
 
-<style lang="scss">
-#menu {
-  width: 100%;
-  height: calc(100% - 50px);
+<style lang="sass">
+#menu
+  width: 100%
+  height: calc(100% - 50px)
 
   // Support Button
-  .q-btn.support {
-    color: #9c3700; // Contrast Checker - OK
-  }
+  .q-btn.support
+    color: #9c3700 // Contrast Checker - OK
   // List
-  .q-list {
-    padding: 8px 0;
-  }
+  .q-list
+    padding: 8px 0
 
   // List Item
-  .q-item {
-    padding: 8px 12px;
-    min-height: 45px;
-  }
-  .q-item.q-router-link--active, .q-item--active {
-    color: black;
-    background: rgba(189,189,189,0.5);
-  }
-  .q-icon {
-    color: #363636;
-  }
+  .q-item
+    padding: 8px 12px
+    min-height: 45px
+  .q-item.q-router-link--active, .q-item--active
+    color: black
+    background: rgba(189,189,189,0.5)
+  .q-icon
+    color: #363636
 
   // List Item Label
-  .label {
-    color: #363636;
+  .label
+    color: #363636
 
-    &.header {
-      text-align: center;
-      padding: 12px 0 4px 0;
-      min-height: 32px;
+    &.header
+      text-align: center
+      padding: 12px 0 4px 0
+      min-height: 32px
 
-      .q-icon {
-        padding-right: 5px;
-      }
-    }
-    &.subheader {
-      text-align: left;
-      padding-bottom: 5px;
-      padding-left: 10px;
-    }
-  }
+      .q-icon
+        padding-right: 5px
+    &.subheader
+      text-align: left
+      padding-bottom: 5px
+      padding-left: 10px
 
   // List Item Separator
-  .separator {
-    &.list {
-      height: 3px;
-      margin: 0;
-    }
-    &.page {
-      height: 3px;
-    }
-    &.subpage {
-      height: 1px;
-    }
-    &.partial {
-      margin: 3px auto 10px auto;
-      width: 30px;
-      height: 3px;
-    }
-  }
-}
+  .separator
+    &.list
+      height: 3px
+      margin: 0
+    &.page
+      height: 3px
+    &.subpage
+      height: 1px
+    &.partial
+      margin: 3px auto 10px auto
+      width: 30px
+      height: 3px
 
 // Search
-label[for="search"] {
-  z-index: 2;
+label[for="search"]
+  z-index: 2
 
   .q-field__control,
-  .q-field__marginal {
-    height: 50px;
-  }
+  .q-field__marginal
+    height: 50px
 
-  i.clear {
-    padding: 13px 8px;
-  }
-}
+  i.clear
+    padding: 13px 8px
 </style>

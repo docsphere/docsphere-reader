@@ -66,52 +66,42 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="sass">
 .h1,
 .h2,
 .h3,
-.h4 {
-  font-weight: 600;
-  color: #286fa3;
-  user-select: none;
-}
-.h1 {
-  font-size: 2rem;
-  margin: 0 0 0.7em;
-}
-.h2 {
-  font-size: 1.5rem;
-  margin: 1.5em 0 0.8em;
-  padding-bottom: 0.4em;
-  border-bottom: 1px solid #ddd;
-}
-.h3 {
-  font-size: 1.17rem;
-  margin: 1.2em 0 0.9em;
-  &:first-child {
-    margin-top: 0;
-  }
-  &:before {
-    content: '# ';
-  }
-}
-.dh {
-  color: #286fa3;
-  padding: 6px;
-  cursor: pointer;
-  &:hover {
-    color: #4e9bd4;
-  }
-}
+.h4
+  font-weight: 600
+  color: #286fa3
+  user-select: none
+.h1
+  font-size: 2rem
+  margin: 0 0 0.7em
+.h2
+  font-size: 1.5rem
+  margin: 1.5em 0 0.8em
+  padding-bottom: 0.4em
+  border-bottom: 1px solid #ddd
+.h3
+  font-size: 1.17rem
+  margin: 1.2em 0 0.9em
+  &:first-child
+    margin-top: 0
+  &:before
+    content: '# '
+.dh
+  color: #286fa3
+  padding: 6px
+  cursor: pointer
+  &:hover
+    color: #4e9bd4
 .h1:hover:after,
 .h2:hover:after,
 .h3:hover:after,
 .h4:hover:after,
 .h5:hover:after,
-.h6:hover:after {
-  content: ' #';
-  color: #286fa3;
-  font-weight: bold;
-}
-
+.h6:hover:after
+  content: ' #'
+  color: #286fa3
+  font-weight: bold
 </style>

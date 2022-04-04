@@ -74,22 +74,17 @@ export default {
 }
 </script>
 
-<style lang="scss">
-#anchor {
-  .q-tree {
-    padding-top: 12px;
-    width: 100%;
-  }
-  b {
-    color: #1A496B;
-    font-size: 15px;
-  }
-  .q-tree-node-header {
-    margin: 0;
-    border-radius: 0;
-  }
-  .q-tree__node--selected {
-    background-color: peachpuff;
-  }
-}
+<style lang="sass">
+#anchor
+  .q-tree
+    padding-top: 12px
+    width: 100%
+  b
+    color: #1A496B
+    font-size: 15px
+  .q-tree-node-header
+    margin: 0
+    border-radius: 0
+  .q-tree__node--selected
+    background-color: peachpuff
 </style>
