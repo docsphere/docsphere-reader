@@ -62,44 +62,15 @@ export default {
     },
     openSettingsDialog () {
       this.$store.commit('settings/dialog', true)
-    },
-
-    configureLanguage () {
-      // Route
-      const root = this.$route.matched[0].path
-      const child = this.$route.matched[1].path
-
-      const base = root.substr(1)
-      let relative = child.substr(root.length)
-
-      // console.log(relative)
-
-      this.$store.commit('page/setBase', base)
-      this.$store.commit('page/setRelative', relative)
-      this.$store.commit('page/setAbsolute', base + relative)
-
-      if (relative === '/' || relative === '') {
-        relative = '/overview'
-      }
-
-      if (root) {
-        this.$store.commit('i18n/setBase', base.replace(/_$/, '').replace(/\//g, '.'))
-        this.$store.commit('i18n/setRelative', relative.substr(1).replace(/_$/, '').replace(/\//g, '.'))
-        this.$store.commit('i18n/setAbsolute', (base + relative).replace(/_$/, '').replace(/\//g, '.'))
-      } else {
-        this.$store.commit('i18n/setBase', '')
-        this.$store.commit('i18n/setRelative', '')
-        this.$store.commit('i18n/setAbsolute', '')
-      }
     }
   },
 
   created () {
-    this.configureLanguage()
+    this.$store.dispatch('app/configureLanguage', this.$route.matched)
 
     this.$router.afterEach((to, from) => {
       if (!to.hash || (from.path !== to.path)) {
-        this.configureLanguage()
+        this.$store.dispatch('app/configureLanguage', to.matched)
       }
     })
 

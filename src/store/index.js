@@ -1,10 +1,11 @@
 import { store } from 'quasar/wrappers'
 import { createStore } from 'vuex'
 
-import settings from './settings'
+import app from './app'
+import i18n from './i18n'
 import layout from './layout'
 import page from './page'
-import i18n from './i18n'
+import settings from './settings'
 
 /*
  * If not building with SSR mode, you can
@@ -18,7 +19,7 @@ import i18n from './i18n'
 export default store(function (/* { ssrContext } */) {
   const Store = createStore({
     modules: {
-      settings, layout, page, i18n
+      app, i18n, page, layout, settings
     },
 
     // enable strict mode (adds overhead!)
