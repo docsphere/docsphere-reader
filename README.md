@@ -3,6 +3,10 @@
 
 > An Alternative Documentation of Quasar Framework.
 
+<p align="center">
+  <img src="src/assets/screenshot/general.png" width="600" height="600" />
+</p>
+
 The proposal of this project is to join in one place, everything of the Quasar Documentation: the theoretical part ([quasar.dev](https://quasar.dev/ "quasar.dev")), showcases ([Quasar Play](https://quasar-framework.org/quasar-play/android/index.html#/showcase "Quasar Play")),  showcases source codes ([from github](https://github.com/quasarframework/quasar-play/tree/dev/src/pages/showcase "from github")) and changelogs.
 
 You can clone this repository, run on a **web server** and have access to everything from the Quasar Framework completely **offline** on your computer!
@@ -12,6 +16,12 @@ In addition, we have created many features that make it easy to study and search
 
 Some features of this documentation are listed below!
 See the projects tab for more details!
+
+## Compliances
+### Constrat Checker 7+
+The World Wide Web Consortium (W3C) has developed the Web Content Accessibility Guidelines, better known as WCAG, for color contrast and text.
+People who are color blind and have impaired vision can experience sensitivity and often physical pain to certain colors and shades of light.
+([Read more](https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast "Read more"))
 
 ## Features
 ### Internationalization with i18n
@@ -35,11 +45,6 @@ Anchor links work in hash and history mode and provide **faster navigation** and
 
 ### Component builder with output of source code (TODO)
 ...
-
-## Screenshots
-<p align="center">
-  <img src="src/assets/screenshot/general.png" width="600" height="600" />
-</p>
 
 ## Contributing
 Wait for the CONTRIBUTING.md file to initiate a contribution to this repository.

@@ -153,7 +153,7 @@ article.source-code
 .token.prolog,
 .token.doctype,
 .token.cdata
-  color: slategray
+  color: #4e5a65
 
 .token.punctuation
   color: #999
@@ -176,7 +176,7 @@ article.source-code
 .token.char,
 .token.builtin,
 .token.inserted
-  color: #690
+  color: #416200
 
 .token.operator,
 .token.entity,

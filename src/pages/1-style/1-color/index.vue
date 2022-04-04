@@ -39,7 +39,7 @@
 
     <d-page-source-code :index="3" />
 
-    <p style="color: red;">... (This page is still under construction!)</p>
+    <p style="color: #b50000;">... (This page is still under construction!)</p>
   </d-page>
 </template>
 
