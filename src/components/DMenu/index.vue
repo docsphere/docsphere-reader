@@ -10,7 +10,7 @@
     </q-input>
   </transition>
 
-  <q-scroll-area id="menu" class="bg-grey-2">
+  <q-scroll-area id="menu" class="bg-grey-2" :visible="true">
     <div class="row flex-center bg-white" style="height: 115px;">
       <div class="col-5">
         <img class="q-mr-xs" src="logo.svg" alt="Quasar Logo" width="75" height="75" style="float: right;">
@@ -80,15 +80,13 @@
         <q-item-section v-if="item.meta.menu.header" class="label header sticky">
           <q-item-label header>
             <q-icon :name="item.meta.menu.header.icon" size="1.5rem" />
-            <span> {{ $t(`_.${item.meta.menu.header.name}._`) }}</span>
+            <span> {{ getMenuItemHeader(item) }}</span>
           </q-item-label>
           <q-separator class="separator partial" />
         </q-item-section>
 
         <q-item-section v-if="item.meta.menu.subheader">
-          <q-item-label header class="label subheader">
-            <span> {{ $t(`_.${item.meta.menu.subheader}._`) }}</span>
-          </q-item-label>
+          <q-item-label header class="label subheader">{{ getMenuItemSubheader(item) }}</q-item-label>
         </q-item-section>
         <!-- Menu Item -->
         <q-item :to="item.path" v-show="matches[index] || !matches">
@@ -98,7 +96,7 @@
           <q-item-section>{{ getMenuItemLabel(item, index) }}</q-item-section>
           <q-item-section side>
             <q-icon class="float-right" size="xs" :name="getPageStatusIcon(item.meta.status)" />
-            <q-tooltip>{{ getPageStatusTooltipText(item.meta.status) }}</q-tooltip>
+            <q-tooltip>{{ getPageStatusTooltip(item.meta.status) }}</q-tooltip>
           </q-item-section>
         </q-item>
 
@@ -222,6 +220,24 @@ export default {
       return true
     },
 
+    getMenuItemHeader (item) {
+      const path = `_.${item.meta.menu.header.name}._`
+
+      if (this.$te(path)) {
+        return this.$t(path)
+      } else {
+        return this.$t(path, 'en-US')
+      }
+    },
+    getMenuItemSubheader (item) {
+      const path = `_.${item.meta.menu.subheader}._`
+
+      if (this.$te(path)) {
+        return this.$t(path)
+      } else {
+        return this.$t(path, 'en-US')
+      }
+    },
     getMenuItemLabel (item, index) {
       // if (this.loaded) return
 
@@ -248,7 +264,7 @@ export default {
         return 'fas fa-exclamation-circle'
       }
     },
-    getPageStatusTooltipText (status) {
+    getPageStatusTooltip (status) {
       // TODO put text in i18n
       if (status === 9) {
         return ''
@@ -373,6 +389,7 @@ export default {
         position: -o-sticky
         width: 100%
         top: -1px
+        margin-bottom: 5px
         background-color: #f5f5f5!important
         z-index: 2
         .separator
