@@ -77,14 +77,13 @@
     <q-list v-if="items !== null && items.constructor === Array && items.length > 0" no-border link inset-delimiter>
       <template v-for="(item, index) in items" :key="index">
         <!-- Custom Separators -->
-        <q-item-section v-if="item.meta.menu.header">
-          <q-item-label header class="label header">
+        <q-item-section v-if="item.meta.menu.header" class="label header sticky">
+          <q-item-label header>
             <q-icon :name="item.meta.menu.header.icon" size="1.5rem" />
             <span> {{ $t(`_.${item.meta.menu.header.name}._`) }}</span>
           </q-item-label>
+          <q-separator class="separator partial" />
         </q-item-section>
-
-        <q-separator v-if="item.meta.menu.header" class="separator partial" />
 
         <q-item-section v-if="item.meta.menu.subheader">
           <q-item-label header class="label subheader">
@@ -362,8 +361,22 @@ export default {
 
     &.header
       text-align: center
-      padding: 12px 0 4px 0
       min-height: 32px
+      > div
+        padding-bottom: 7px
+        padding-top: 10px
+      &.sticky
+        position: sticky
+        position: -webkit-sticky
+        position: -moz-sticky
+        position: -ms-sticky
+        position: -o-sticky
+        width: 100%
+        top: -1px
+        background-color: #f5f5f5!important
+        z-index: 2
+        .separator
+          margin: 0 auto
 
       .q-icon
         padding-right: 5px
@@ -371,6 +384,8 @@ export default {
       text-align: left
       padding-bottom: 5px
       padding-left: 10px
+    span
+      color: #363636
 
   // List Item Separator
   .separator
@@ -382,7 +397,7 @@ export default {
     &.subpage
       height: 1px
     &.partial
-      margin: 3px auto 10px auto
+      margin: 3px auto
       width: 30px
       height: 3px
 
