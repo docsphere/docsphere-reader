@@ -1,19 +1,13 @@
-<template>
-  <article v-if="index" class="source-code">
-    <div class="content code white">
-      <div v-if="lines" class="lines">
-        <template v-for="(line, index) in lines" :key="index">
-          <a class="line" :href="`${$store.state.page.base}#${anchor}${line}`" :id="`${anchor}${line}`">
-            <i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
-            <span>{{ line }}</span>
-          </a>
-        </template>
-      </div>
-      <pre>
-        <code :class="`language-${language}`" v-html="code"></code>
-      </pre>
-    </div>
-  </article>
+<template lang="pug">
+article.source-code(v-if="index")
+  .content.code.white
+    .lines(v-if="lines")
+      template(v-for="(line, index) in lines" :key="index")
+        a.line(:href="`${$store.state.page.base}#${anchor}${line}`" :id="`${anchor}${line}`")
+          i.fa.fa-link(aria-hidden="true" data-hidden="true")
+          span {{ line }}
+    pre
+      code(:class="`language-${language}`" v-html="code")
 </template>
 
 <script>
@@ -93,6 +87,8 @@ export default {
 
 <style lang="sass">
 article.source-code
+  box-shadow: 0 1px 1px rgb(0 0 0 / 13%)
+
   .content
     font-family: "Menlo", "DejaVu Sans Mono", "Liberation Mono", "Consolas", "Ubuntu Mono", "Courier New", "Andale Mono", "Lucida Console", Monospace
     border: 1px solid #ddd

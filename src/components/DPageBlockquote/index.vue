@@ -1,10 +1,9 @@
-<template>
-  <blockquote>
-    <strong v-if="message === 'important'">Important</strong>
-    <strong v-else-if="warning">Warning</strong>
-    <strong v-else-if="note">Note</strong>
-    <slot></slot>
-  </blockquote>
+<template lang="pug">
+blockquote
+  strong(v-if="message === 'important'") Important
+  strong(v-else-if="warning") Warning
+  strong(v-else-if="note") Note
+  slot
 </template>
 
 <script>

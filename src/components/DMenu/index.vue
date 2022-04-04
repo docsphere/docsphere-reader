@@ -1,109 +1,67 @@
-<template>
-  <transition appear enter-active-class="animated zoomIn" leave-active-class="animated zoomOut">
-    <q-input for="search" v-model="term" @update:model-value="searchTerm" :placeholder="$t('menu.search')" :debounce="300">
-      <template v-slot:prepend>
-        <q-icon name="search" class="q-ml-sm" />
-      </template>
-      <template v-slot:append>
-        <q-icon v-if="term" name="clear" @click="clearSearchTerm" class="cursor-pointer clear" />
-      </template>
-    </q-input>
-  </transition>
-
-  <q-scroll-area id="menu" class="bg-grey-2" :visible="true">
-    <div class="row flex-center bg-white" style="height: 115px;">
-      <div class="col-5">
-        <img class="q-mr-xs" src="logo.svg" alt="Quasar Logo" width="75" height="75" style="float: right;">
-      </div>
-      <div class="col-7">
-        <div class="text-weight-medium">Quasar v2.x.x</div>
-        <div>Documentation++</div>
-        <q-btn dense no-caps outline class="q-mt-xs q-pl-sm support" size="sm" :label="$t('system.support')" icon="fas fa-donate" @click="openURL('https://donate.quasar.dev/')" />
-      </div>
-    </div>
-
-    <q-separator class="separator list" />
-    <div class="row bg-white">
-      <div class="col text-center">
-        <q-btn-group flat>
-          <q-btn icon="fab fa-github" size="sm" @click="openURL('https://github.quasar.dev/')" aria-label="Quasar Github">
-            <q-tooltip>Github</q-tooltip>
-          </q-btn>
-          <q-btn icon="fas fa-comments" size="sm" @click="openURL('https://forum.quasar.dev/')" aria-label="Quasar Forum">
-            <q-tooltip>Forum</q-tooltip>
-          </q-btn>
-          <q-btn icon="fas fa-comment" size="sm" @click="openURL('https://chat.quasar.dev/')" aria-label="Quasar Chat">
-            <q-tooltip>Chat</q-tooltip>
-          </q-btn>
-          <q-btn icon="fas fa-blog" size="sm" @click="openURL('https://blog.quasar.dev/')" aria-label="Quasar Blog">
-            <q-tooltip>Blog</q-tooltip>
-          </q-btn>
-          <!--<q-btn icon="fab fa-twitter" size="sm" @click="openURL('https://twitter.quasar.dev/')" aria-label="Quasar Twitter">
-            <q-tooltip>Twitter</q-tooltip>
-          </q-btn>
-          <q-btn icon="fab fa-facebook" size="sm" @click="openURL('https://facebook.quasar.dev/')" aria-label="Quasar Facebook">
-            <q-tooltip>Facebook</q-tooltip>
-          </q-btn>-->
-          <q-btn icon="fas fa-at" size="sm" @click="openURL('mailto:razvan.stoenescu@gmail.com')" aria-label="Quasar Email">
-            <q-tooltip>Email</q-tooltip>
-          </q-btn>
-        </q-btn-group>
-      </div>
-    </div>
-    <q-separator class="separator list" />
-
-    <q-list no-border link inset-delimiter>
-      <q-item to="/" exact>
-        <q-item-section side>
-          <q-icon name="home"></q-icon>
-        </q-item-section>
-        <q-item-section>{{ $t('menu.home') }}</q-item-section>
-      </q-item>
-      <q-item to="/changelog">
-        <q-item-section side>
-          <q-icon name="assignment"></q-icon>
-        </q-item-section>
-        <q-item-section>{{ $t('menu.changelog') }}</q-item-section>
-      </q-item>
-      <q-item to="/donate">
-        <q-item-section side>
-          <q-icon name="favorite" color="red"></q-icon>
-        </q-item-section>
-        <q-item-section>{{ $t('menu.donate') }}</q-item-section>
-      </q-item>
-    </q-list>
-    <q-separator class="separator list" />
-
-    <q-list v-if="items !== null && items.constructor === Array && items.length > 0" no-border link inset-delimiter>
-      <template v-for="(item, index) in items" :key="index">
-        <!-- Custom Separators -->
-        <q-item-section v-if="item.meta.menu.header" class="label header sticky">
-          <q-item-label header>
-            <q-icon :name="item.meta.menu.header.icon" size="1.5rem" />
-            <span> {{ getMenuItemHeader(item) }}</span>
-          </q-item-label>
-          <q-separator class="separator partial" />
-        </q-item-section>
-
-        <q-item-section v-if="item.meta.menu.subheader">
-          <q-item-label header class="label subheader">{{ getMenuItemSubheader(item) }}</q-item-label>
-        </q-item-section>
-        <!-- Menu Item -->
-        <q-item :to="item.path" v-show="matches[index] || !matches">
-          <q-item-section side>
-            <q-icon v-if="item.meta.icon" :name="item.meta.icon" />
-          </q-item-section>
-          <q-item-section>{{ getMenuItemLabel(item, index) }}</q-item-section>
-          <q-item-section side>
-            <q-icon class="float-right" size="xs" :name="getPageStatusIcon(item.meta.status)" />
-            <q-tooltip>{{ getPageStatusTooltip(item.meta.status) }}</q-tooltip>
-          </q-item-section>
-        </q-item>
-
-        <q-separator v-if="item.meta.menu.separator" :class="'separator' + item.meta.menu.separator" />
-      </template>
-    </q-list>
-  </q-scroll-area>
+<template lang="pug">
+transition(appear enter-active-class="animated zoomIn" leave-active-class="animated zoomOut")
+  q-input(for="search" v-model="term" @update:model-value="searchTerm" :placeholder="$t('menu.search')" :debounce="300")
+    template(v-slot:prepend)
+      q-icon.q-ml-sm(name="search")
+    template(v-slot:append)
+      q-icon.cursor-pointer.clear(v-if="term" name="clear" @click="clearSearchTerm")
+q-scroll-area#menu.bg-grey-2(:visible="true")
+  .row.flex-center.bg-white(style="height: 115px;")
+    .col-5
+      img.q-mr-xs(src="logo.svg" alt="Quasar Logo" width="75" height="75" style="float: right;")
+    .col-7
+      .text-weight-medium Quasar v2.x.x
+      div Documentation++
+      q-btn.q-mt-xs.q-pl-sm.support(
+        dense no-caps outline
+        size="sm" :label="$t('system.support')" icon="fas fa-donate"
+        @click="openURL('https://donate.quasar.dev/')")
+  q-separator.separator.list
+  .row.bg-white
+    .col.text-center
+      q-btn-group(flat)
+        q-btn(icon="fab fa-github" size="sm" @click="openURL('https://github.quasar.dev/')" aria-label="Quasar Github")
+          q-tooltip Github
+        q-btn(icon="fas fa-comments" size="sm" @click="openURL('https://forum.quasar.dev/')" aria-label="Quasar Forum")
+          q-tooltip Forum
+        q-btn(icon="fas fa-comment" size="sm" @click="openURL('https://chat.quasar.dev/')" aria-label="Quasar Chat")
+          q-tooltip Chat
+        q-btn(icon="fas fa-blog" size="sm" @click="openURL('https://blog.quasar.dev/')" aria-label="Quasar Blog")
+          q-tooltip Blog
+        q-btn(icon="fas fa-at" size="sm" @click="openURL('mailto:razvan.stoenescu@gmail.com')" aria-label="Quasar Email")
+          q-tooltip Email
+  q-separator.separator.list
+  q-list(no-border link inset-delimiter)
+    q-item(to="/" exact)
+      q-item-section(side)
+        q-icon(name="home")
+      q-item-section {{ $t('menu.home') }}
+    q-item(to="/changelog")
+      q-item-section(side)
+        q-icon(name="assignment")
+      q-item-section {{ $t('menu.changelog') }}
+    q-item(to="/donate")
+      q-item-section(side)
+        q-icon(name="favorite" color="red")
+      q-item-section {{ $t('menu.donate') }}
+  q-separator.separator.list
+  q-list(v-if="items !== null && items.constructor === Array && items.length > 0" no-border link inset-delimiter)
+    template(v-for="(item, index) in items" :key="index")
+      q-item-section.label.header.sticky(v-if="item.meta.menu.header")
+        q-item-label(header)
+          q-icon(:name="item.meta.menu.header.icon" size="1.5rem")
+          span {{ getMenuItemHeader(item) }}
+        q-separator.separator.partial
+      q-item-section(v-if="item.meta.menu.subheader")
+        q-item-label.label.subheader(header) {{ getMenuItemSubheader(item) }}
+      q-item(:to="item.path" v-show="matches[index] || !matches")
+        q-item-section(side)
+          q-icon(v-if="item.meta.icon" :name="item.meta.icon")
+        q-item-section {{ getMenuItemLabel(item, index) }}
+        q-item-section.page-status(side)
+          q-icon.float-right(size="xs" :name="getPageStatusIcon(item.meta.status)")
+          q-tooltip {{ getPageStatusTooltip(item.meta.status) }}
+      q-separator(v-if="item.meta.menu.separator" :class="'separator' + item.meta.menu.separator")
 </template>
 
 <script>
@@ -370,6 +328,8 @@ export default {
     background: rgba(189,189,189,0.5)
   .q-icon
     color: #363636
+  .page-status
+    margin-right: 7px
 
   // List Item Label
   .label

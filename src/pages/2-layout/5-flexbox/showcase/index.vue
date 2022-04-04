@@ -1,5 +1,5 @@
-<template>
-  <d-page></d-page>
+<template lang="pug">
+d-page
 </template>
 
 <script>

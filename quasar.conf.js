@@ -77,6 +77,11 @@ module.exports = configure(function (ctx) {
           test: /\.hjson$/,
           loader: 'hjson-loader'
         })
+
+        cfg.module.rules.push({
+          test: /\.pug$/,
+          loader: 'pug-plain-loader'
+        })
       }
     },
 

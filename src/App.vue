@@ -1,37 +1,27 @@
-<template>
-  <router-view />
-
-  <q-dialog v-model="toogleDialog" :maximized="$q.platform.is.mobile ? true : false">
-    <q-layout view="Lhh lpR fff" container class="bg-white">
-      <q-header class="bg-primary" elevated>
-        <q-toolbar class="q-pr-none">
-          <q-icon name="settings" style="font-size: 1.5rem" />
-          <q-toolbar-title>{{ $t('menu.settings') }}</q-toolbar-title>
-          <q-btn v-close-popup flat class="filled" color="white" text-color="white" icon="close" />
-        </q-toolbar>
-      </q-header>
-      <q-page-container>
-        <q-page>
-          <q-list>
-            <q-item>
-              <q-item-section>
-                <q-item-label header>{{ $t('settings.general._') }}</q-item-label>
-              </q-item-section>
-            </q-item>
-            <q-item>
-              <q-item-section avatar>
-                <q-icon name="language" />
-              </q-item-section>
-              <q-item-section>
-                <q-select v-model="settings.general.language.default" :label="$t('settings.general.language._')" :options="settings.general.language.options" emit-value map-options @update:model-value="setLanguage" />
-              </q-item-section>
-            </q-item>
-            <q-separator />
-          </q-list>
-        </q-page>
-      </q-page-container>
-    </q-layout>
-  </q-dialog>
+<template lang="pug">
+router-view
+q-dialog(v-model="toogleDialog" :maximized="$q.platform.is.mobile ? true : false")
+  q-layout.bg-white(view="Lhh lpR fff" container)
+    q-header.bg-primary(elevated)
+      q-toolbar.q-pr-none
+        q-icon(name="settings" style="font-size: 1.5rem")
+        q-toolbar-title {{ $t('menu.settings') }}
+        q-btn.filled(v-close-popup flat color="white" text-color="white" icon="close")
+    q-page-container
+      q-page
+        q-list
+          q-item
+            q-item-section
+              q-item-label(header) {{ $t('settings.general._') }}
+          q-item
+            q-item-section(avatar)
+              q-icon(name="language")
+            q-item-section
+              q-select(
+                emit-value map-options
+                v-model="settings.general.language.default" :label="$t('settings.general.language._')" :options="settings.general.language.options"
+                @update:model-value="setLanguage")
+          q-separator
 </template>
 
 <script>

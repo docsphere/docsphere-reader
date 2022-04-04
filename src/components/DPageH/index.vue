@@ -1,5 +1,5 @@
-<template>
-  <div :id="id" :class="stylize" @click="push(id)">{{ heading }}</div>
+<template lang="pug">
+div(:id="id" :class="stylize" @click="push(id)") {{ heading }}
 </template>
 
 <script>

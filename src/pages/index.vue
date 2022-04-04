@@ -1,29 +1,19 @@
-<template>
-  <q-page-container>
-    <q-page id="content" class="q-pa-lg">
-      <div class="text-center">
-        <img class="platform" alt="Quasar Platforms" src="quasar/responsive-logo.png" width="325" height="257">
-        <h1>Quasar Documentation++ <span class="text-negative">(WIP)</span></h1>
-        <p class="caption"><span v-html="t('_.home.texts[0]') + t('_.home.texts[1]') + t('_.home.texts[2]')"></span><a href="https://quasar-framework.org/" target="_blank">Quasar Framework</a>!</p>
-        <p class="caption"><span></span>{{ $t('_.home.texts[3]') }}<a href="https://github.com/slowaways/" target="_blank">@slowaways</a></p>
-        <hr>
-      </div>
-      <h2>Features</h2>
-      <h3>Internationalization with i18n</h3>
-      <p>We want the documentation to be available in any language so that it can reach everyone. Currently available in 2 languages: English (en) and Portuguese (pt).</p>
-      <h3>Menu search engine based in keywords and i18n (Beta)</h3>
-      <p>The search for content in the documentation is simple, fast and easy. The search input text in the menu makes it easy to search for any content (headers, texts, source codes, ...) using keywords and you can do it in your favorite language. If the defined language is not English and if the search term is not found or has not been set in current language, by default a search is still performed using keywords in English.</p>
-      <h3>Source code highlighted</h3>
-      <p>This documentation generates codes with Syntax highlighting from texts with multiline and line indented stored in i18n files. So you can access the codes of the documentation <b>offline</b> and we can also use i18n for example to translate code comments.</p>
-      <h3>Navigation using anchored links (RC)</h3>
-      <p>Anchor links work in hash and history mode and provide faster navigation and better orientation when navigating through subsections of documentation.</p>
-      <h3>Partial Code View in the Showcase (TODO)</h3>
-      <p></p>
-      <h3>Component Builder with Source Code Output (TODO)</h3>
-      <p></p>
-      <div class="about"></div>
-    </q-page>
-  </q-page-container>
+<template lang="pug">
+q-page-container
+  q-page#content.q-pa-lg
+    .text-center
+      img.platform(alt="Quasar Platforms" src="quasar/responsive-logo.png" width="325" height="257")
+      h1 Quasar Documentation++
+        span.text-negative (WIP)
+      p.caption
+        span(v-html="t('_.home.texts[0]') + t('_.home.texts[1]') + t('_.home.texts[2]')")
+        a(href="https://quasar-framework.org/" target="_blank") Quasar Framework
+        | !
+      p.caption
+        span
+        | {{ $t('_.home.texts[3]') }}
+        a(href="https://github.com/slowaways/" target="_blank") @slowaways
+      hr
 </template>
 
 <script>

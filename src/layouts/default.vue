@@ -1,28 +1,17 @@
-<template>
-  <q-layout view="lHh LpR lFf">
-    <q-header elevated>
-      <q-toolbar id="toolbar" color="primary">
-        <q-btn flat class="filled" icon="menu" aria-label="Toggle Menu" @click="toogleMenu" />
-
-        <q-toolbar-title>
-          <q-icon class="q-mb-xs q-mr-sm" :name="headerTitleIcon" />
-          {{ headerTitleText }}
-        </q-toolbar-title>
-
-        <q-btn flat class="filled" icon="settings" aria-label="Configuration" @click="openSettingsDialog" />
-      </q-toolbar>
-    </q-header>
-
-    <q-drawer elevated show-if-above side="left" v-model="layout.menu">
-      <d-menu></d-menu>
-    </q-drawer>
-
-    <router-view />
-
-    <q-footer elevated v-if="this.$route.matched[0].meta.layouts.footer !== false" v-model="this.$store.state.layout.footer">
-      <d-footer :status="$route.meta.status" />
-    </q-footer>
-  </q-layout>
+<template lang="pug">
+q-layout(view="lHh LpR lFf")
+  q-header(elevated)
+    q-toolbar#toolbar(color="primary")
+      q-btn.filled(flat icon="menu" aria-label="Toggle Menu" @click="toogleMenu")
+      q-toolbar-title
+        q-icon.q-mb-xs.q-mr-sm(:name="headerTitleIcon")
+        | {{ headerTitleText }}
+      q-btn.filled(flat icon="settings" aria-label="Configuration" @click="openSettingsDialog")
+  q-drawer(elevated show-if-above side="left" v-model="layout.menu")
+    d-menu
+  router-view
+  q-footer(elevated v-if="this.$route.matched[0].meta.layouts.footer !== false" v-model="this.$store.state.layout.footer")
+    d-footer(:status="$route.meta.status")
 </template>
 
 <script>

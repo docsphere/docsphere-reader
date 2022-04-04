@@ -1,46 +1,28 @@
-<template>
-  <d-page :nodes="nodes">
-    <d-page-h h="1-0" />
-
-    <p v-html="t(1)"></p>
-    <p v-html="t(2) + l(1) + '.' + t(3) + l(2) + '.'"></p>
-
-    <d-page-h h="2-1" />
-
-    <p v-html="t(4) + sc(1, 'a')"></p>
-    <p v-html="t(5)"></p>
-
-    <d-page-h h="2-2" />
-
-    <p v-html="t(6) + sc(2) + t(7) + sc(3) + e1() + ':'"></p>
-    <p v-html="sc(4)"></p>
-    <p v-html="t(8) + sc(5, 'a')"></p>
-    <p v-html="t(9) + sc(6) + t(10)"></p>
-
-    <d-page-h h="2-3" />
-
-    <p v-html="t(11) + sc(7, 'o', '') + t(12)"></p>
-
-    <d-page-source-code :index="0" />
-
-    <d-page-h h="2-4" />
-
-    <p v-html="t(13) + sc(3) + t(14) + sc(8, ',', '') + t(15)"></p>
-
-    <d-page-source-code :index="1" />
-
-    <d-page-h h="2-5" />
-
-    <p v-html="t(16)"></p>
-
-    <d-page-source-code :index="2" language="css" />
-
-    <p v-html="t(17)"></p>
-
-    <d-page-source-code :index="3" />
-
-    <p style="color: #b50000;">... (This page is still under construction!)</p>
-  </d-page>
+<template lang="pug">
+d-page(:nodes="nodes")
+  d-page-h(h="1-0")
+  p(v-html="t(1)")
+  p(v-html="t(2) + l(1) + '.' + t(3) + l(2) + '.'")
+  d-page-h(h="2-1")
+  p(v-html="t(4) + sc(1, 'a')")
+  p(v-html="t(5)")
+  d-page-h(h="2-2")
+  p(v-html="t(6) + sc(2) + t(7) + sc(3) + e1() + ':'")
+  p(v-html="sc(4)")
+  p(v-html="t(8) + sc(5, 'a')")
+  p(v-html="t(9) + sc(6) + t(10)")
+  d-page-h(h="2-3")
+  p(v-html="t(11) + sc(7, 'o', '') + t(12)")
+  d-page-source-code(:index="0")
+  d-page-h(h="2-4")
+  p(v-html="t(13) + sc(3) + t(14) + sc(8, ',', '') + t(15)")
+  d-page-source-code(:index="1")
+  d-page-h(h="2-5")
+  p(v-html="t(16)")
+  d-page-source-code(:index="2" language="css")
+  p(v-html="t(17)")
+  d-page-source-code(:index="3")
+  p(style="color: #b50000;") ... (This page is still under construction!)
 </template>
 
 <script>

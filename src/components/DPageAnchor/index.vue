@@ -1,10 +1,8 @@
-<template>
-  <q-tree default-expand-all :nodes="nodes" node-key="id" v-model:selected="selected" v-bind:class="stylize">
-    <template v-slot:default-header="props">
-      <b v-if="props.node.id">{{ $t(`_.${$store.state.i18n.absolute}.headers[${props.node.id - 1}]`) }}</b>
-      <b v-else>{{ $t(`_.${$store.state.i18n.base}._`) }}</b>
-    </template>
-  </q-tree>
+<template lang="pug">
+q-tree(default-expand-all :nodes="nodes" node-key="id" v-model:selected="selected" v-bind:class="stylize")
+  template(v-slot:default-header="props")
+    b(v-if="props.node.id") {{ $t(`_.${$store.state.i18n.absolute}.headers[${props.node.id - 1}]`) }}
+    b(v-else) {{ $t(`_.${$store.state.i18n.base}._`) }}
 </template>
 
 <script>
