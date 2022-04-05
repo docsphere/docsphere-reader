@@ -18,7 +18,7 @@ Some features of this documentation are listed below!
 See the projects tab for more details!
 
 ## Compliances
-### Constrat Checker 7+
+### Contrast Checker 7+
 The World Wide Web Consortium (W3C) has developed the Web Content Accessibility Guidelines, better known as WCAG, for color contrast and text.
 People who are color blind and have impaired vision can experience sensitivity and often physical pain to certain colors and shades of light.
 ([Read more](https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast "Read more"))
