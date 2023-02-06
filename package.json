@@ -17,10 +17,7 @@
     "vue": "^3.0.0",
     "vue-i18n": "^9.0.0",
     "vue-router": "^4.0.0",
-    "vuex": "^4.0.1",
-
-    "hjson": "^3.2.2",
-    "hjson-loader": "^1.0.0"
+    "vuex": "^4.0.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",
@@ -32,6 +29,8 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^7.0.0",
     "eslint-webpack-plugin": "^2.4.0",
+    "hjson": "^3.2.2",
+    "hjson-loader": "^1.0.0",
     "os": "^0.1.2",
     "prismjs": "^1.27.0",
     "pug": "^3.0.2",
