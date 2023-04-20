@@ -1,20 +1,24 @@
-# Quasar Documentation++
+# Docstation
 (WORKING IN PROGRESS)
 
-> An Alternative Documentation of Quasar Framework.
+> "Streamline your documentation process with Docstation."
 
 <p align="center">
   <img src="src/assets/screenshot/general.png" width="600" height="600" />
 </p>
 
-The proposal of this project is to join in one place, everything of the Quasar Documentation: the theoretical part ([quasar.dev](https://quasar.dev/ "quasar.dev")), showcases ([Quasar Play](https://quasar-framework.org/quasar-play/android/index.html#/showcase "Quasar Play")),  showcases source codes ([from github](https://github.com/quasarframework/quasar-play/tree/dev/src/pages/showcase "from github")) and changelogs.
+Introducing Docstation, the ultimate documentation system for all your needs. With a user-friendly interface and a range of features, Docstation makes it easy to create and manage your documentation with subpages:
 
-You can clone this repository, run on a **web server** and have access to everything from the Quasar Framework completely **offline** on your computer!
+The "Overview" page provides a comprehensive introduction to your documentation, allowing you to showcase the key features and benefits of your project. Use this page to highlight the most important information about your project and explain its purpose and goals.
+With the "Showcases" page, you can easily demonstrate how your project works in real-world scenarios. Show off your project's capabilities by creating sample use cases that highlight its most powerful features.
+Finally, the "Versus" page allows you to compare your project with other technologies and competitors in your industry. Use this page to show why your project is superior and how it can benefit users in ways that other products can't.
+
+Overall, Docstation is the perfect solution for anyone who needs to create high-quality documentation quickly and easily. Whether you're a software developer, product manager, or technical writer, Docstation has everything you need to create effective and engaging documentation for your project.
+
+You can clone this repository, run on a **web server** and have access to everything completely **offline** on your computer!
 You can also **compile** for **mobile** and **desktop** devices.
 
-In addition, we have created many features that make it easy to study and search for specific information within the Quasar Documentation++.
-
-Some features of this documentation are listed below!
+Some others features of this documentation system are listed below!
 See the projects tab for more details!
 
 ## Compliances
@@ -43,13 +47,10 @@ Anchor links work in hash and history mode and provide **faster navigation** and
 ### Partial code view in the showcase (TODO)
 ...
 
-### Component builder with output of source code (TODO)
-...
-
 ## Contributing
 Wait for the CONTRIBUTING.md file to initiate a contribution to this repository.
 
 ## License
-Copyright (c) 2018-Present - Rodrigo Vieira (Slowaways)
+Copyright (c) 2018-Present - Rodrigo Vieira (rodrigo@slayer.tech)
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
