@@ -1,4 +1,4 @@
-# Docsphere
+# Docsphere Reader
 
 > "Streamline your documentation process with Docsphere."
 
