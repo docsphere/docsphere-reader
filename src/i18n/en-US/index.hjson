@@ -1,448 +1,19 @@
 {
-  // Sections
+  // @ Pages
   _: {
     home: {
       texts: [
-        'An ',
-        'alternative documentation ',
-        'of ',
-        'Created by'
+        'The official documentation of ',
+        'Developed by '
       ]
-    },
-
-    starting: {
-      _: 'Get Starting',
-      introduction: {
-        _: 'Introduction to Quasar',
-        overview: {
-          headers: [
-            'What is Quasar?'
-          ],
-          texts: [],
-          links: []
-        }
-      },
-
-      contribution: { _: 'Contribution Guide' },
-      roadmap: { _: 'Roadmap' },
-      upgrade: { _: 'Upgrade Guide' },
-
-      installation: {
-        _: 'Installation',
-        umd: { _: 'UMD / Standalone' },
-        quasar: { _: 'Quasar Starter Kit' },
-        cli: { _: 'Quasar CLI' }
-      },
-      modes: {
-        _: 'Modes',
-        spa: { _: 'Single Page Application' },
-        pwa: { _: 'Progressive Web Apps' },
-        ssr: { _: 'Server Side Rendering' }
-      },
-      wrappers: {
-        _: 'Wrappers',
-        cordova: { _: 'Cordova Apps' },
-        electron: { _: 'Electron Apps' }
-      },
-      resources: {
-        _: 'Resources',
-        intro: {
-          _: 'Introduction for Beginners',
-          overview: {
-            _updated_: '2018-06-14T15:29:43.957Z',
-            _subsections_: '15',
-
-            headers: [
-              'Single File Vue Components',
-              'CSS preprocessors',
-              'Using Quasar Directive',
-              'Using Quasar Components'
-            ],
-            texts: [
-              'Before you begin with Quasar, it is a good idea to get acquainted with ES6 and have a fairly good knowledge about how Vue works. (',
-              ' – don’t worry, you don’t need to understand ALL of ES6). For devs experienced with reactive UIs, ',
-              ' itself takes half a day at most to read top-to-bottom and will help you understand how Quasar components can be used and configured.',
-              'If you are a total beginner to Vue and reactive UI libraries and want a good tutorial, we recommend you take a look at the ',
-              'After reading the Vue documentation, let’s clear up some of the most frequently asked questions, like “How can I use Quasar components, Vue properties, methods and events”.',
-              'You’ll be building your Quasar app using ',
-              ' files which contain multiple sections: ‘template’ (HTML), ‘script’ (Javascript) and ‘style’ (CSS).',
-              'For the ',
-              'tag, you can also use whatever CSS preprocessor you want. ',
-              ' is available out of the box. For SCSS/SASS or LESS, you’ll need to install their Webpack loaders (example: ',
-              'After installing the loader you need (remember Stylus is already installed for you), you can specify you want your chosen preprocessor to handle the CSS code you’re writing:',
-              'In the above example, you would replace',
-              ' with the preprocessor you’ve chosen.',
-              'Quasar comes with a few custom ',
-              '. These directives can be applied on almost any DOM element or Component.',
-              'Example of a Quasar directive:',
-              'Notice how Ripple is used in the HTML template as',
-              '. Vue directives are prefixed with ',
-              'In order for you to use any of the directives that Quasar supplies, you first need to tell Quasar you want it embedded. Open ',
-              ' file and add the following reference:',
-              'Let’s take another example. We now also want TouchPan and TouchSwipe directives, so we add them too in ',
-              'Now we can write in your Vue files template:',
-              'Quasar components have names beginning with “Q” like “QBtn” or “QElementResizeObservable”. In order to use them, you need to add a reference to them in ',
-              'Let’s take the following example with a QBtn and QIcon and then we’ll see how to embed these components in our app:'
-            ],
-            links: [
-              ['https://github.com/lukehoban/es6features', 'quick overview of ES6'],
-              ['http://es6-features.org/#Constants', 'full description'],
-              ['https://vuejs.org/v2/guide/', 'the Vue documentation'],
-              ['https://www.udemy.com/vuejs-2-the-complete-guide/learn/v4/overview', 'Udemy Course - Vue JS 2 - The Complete Guide'],
-              ['http://stylus-lang.com/', 'Stylus'],
-              ['https://vuejs.org/v2/guide/custom-directive.html', 'Vue Directives']
-            ],
-            codes: [
-              '''
-              <template>
-                <!-- you define your Vue template here -->
-              </template>
-
-              <script>
-              // This is where your Javascript goes
-              // to define your Vue component, which
-              // can be a Layout, a Page or your own
-              // component used throughout the app.
-              export default {
-                //
-              }
-              </script>
-
-              <style>
-              /* This is where your CSS goes */
-              </style>
-              ''',
-
-              '''
-              <!-- notice lang="stylus" -->
-              <style lang="stylus">
-              .some-div
-                font-size 15px
-              </style>
-              ''',
-
-              '<div v-ripple>Click Me</div>',
-
-              '''
-              framework: {
-                directives: ['Ripple']
-              }
-              ''',
-
-              '''
-              framework: {
-                directives: ['Ripple', 'TouchPan', 'TouchSwipe']
-              }
-              ''',
-
-              '''
-              <div v-touch-pan="handler">...</div>
-              <div v-touch-swipe="handler">...</div>
-              <div v-ripple>Click me. I got ripples.</div>
-              ''',
-
-              '''
-              <div>
-                <q-btn @click="doSomething">Do something</q-btn>
-                <q-icon name="alarm" />
-              </div>
-              ''',
-            ]
-          }
-        },
-        platform: {
-          _: 'Platform Detection'
-        },
-        events: {
-          _: 'Global Event Bus'
-        },
-        injections: {
-          _: 'Vue Prototype Injections'
-        },
-        i18n: {
-          _: 'Internationalization (i18n)'
-        },
-        rtl: {
-          _: 'RTL Support'
-        }
-      },
-      misc: {
-        _: 'Misc',
-        ajax: { _: 'Ajax Requests' },
-        serve: { _: 'Opening Dev Server To Public' }
-      }
-    },
-
-    style: {
-      _: 'Style',
-      color: {
-        _: 'Color Palette',
-        overview: {
-          _updated_: '2018-06-14T15:35:51.537Z',
-          _subsections_: '8',
-
-          headers: [
-            'Brand Colors',
-            'Color List',
-            'Using as CSS Classes',
-            'Using Stylus Variables',
-            'Adding Your Own Colors'
-          ],
-          texts: [
-            'Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.',
-            'This page comes really handy after reading ',
-            ' You might also want to check ',
-            'There can be three main colors used throughout your App, called ',
-            'Most of the colors that Quasar Components use are strongly linked with these three colors that you can change. Choosing these colors is the first step one should take when differentiating the design of its own App. You’ll notice immediately on changing their default values that Quasar Components follow these colors as a guideline.',
-            'Here’s the list of colors provided out of the box. Use them as CSS classes (in HTML templates) or as Stylus variables (in ',
-            ' tags) within your app’s ',
-            'On the following colors there are variations available: ',
-            'Example of color variation: ',
-            ' See the demo to make a good picture of what variations are. Variation 11 to 14 are color accents.',
-            'Use ', ' prefixes as class names to change the color of text or the color of the background.',
-            'In your app’s ',
-            ' files you can use the colors as ',
-            ' and so on.',
-            'If you want to use colors of your own for components, let’s say we are adding a color named “brand”, all you need to do is add the following CSS into your app:',
-            'Now we can use this color for Quasar components:'
-          ],
-          links: [
-            ['https://quasar-framework.org/guide/quasar-theming.html', 'Quasar Theming'],
-            ['https://quasar-framework.org/components/color-utils.html', 'Color Utils']
-          ],
-          codes: [
-            '''
-            <!-- changing text color -->
-            <p class="text-primary">....</p>
-
-            <!-- changing background color -->
-            <p class="bg-positive">...</p>
-            ''',
-
-            '''
-            <!-- Notice lang="stylus" -->
-            <style lang="stylus">
-            // "variables" is a Webpack alias injected by Quasar CLI
-            @import '~variables'
-
-            div
-              color $red-1
-              background-color $grey-5
-            </style>
-            ''',
-
-            '''
-            .text-brand {
-              color: #a2aa33;
-            }
-            .bg-brand {
-              background: #a2aa33;
-            }
-            ''',
-
-            '''
-            <q-input color="brand" ... />
-            ''',
-          ],
-
-          p16: '',
-          p17: '',
-
-          t6: 'Dynamic Change of Brand Colors (Dynamic Theme Colors)'
-        },
-        showcase: {
-          _updated_: '2018-06-18T18:22:21.789Z',
-          _subsections_: '2',
-
-          headers: [
-            'Main Colors',
-            'Full Pallete'
-          ]
-        }
-      },
-      typography: {
-        _: 'Typography',
-        showcase: {
-          _updated_: '2018-06-18T23:06:14.053Z',
-          _subsections_: '5',
-
-          headers: [
-            'Headings',
-            'Weights',
-            'Blockquotes',
-            'Definition Lists - Vertical',
-            'Definition Lists - Horizontal'
-          ]
-        }
-      },
-      ripples: {
-        _: 'Material Ripples'
-      },
-      stylus: {
-        _: 'Stylus Variables'
-      },
-      icons: {
-        _: 'Icons'
-      },
-      addressbar: {
-        _: 'Addressbar Color'
-      }
-    },
-
-    layout: {
-      _: 'Layout',
-      play: {
-        _: 'Play with Layout'
-      },
-      drawer: {
-        _: 'Drawer Panels'
-      },
-      sticky: {
-        _: 'Page Sticky'
-      },
-      floating: {
-        _: 'Floating Action Button'
-      },
-      flexbox: {
-        _: 'Flexbox'
-      }
-    },
-
-    components: {
-      _: 'Components',
-      buttons: {
-        _: 'Buttons',
-        standard: { _: 'Standard Buttons' },
-        groups: { _: 'Button Groups' },
-        dropdown: { _: 'Dropdown Groups' }
-      },
-      navigation: {
-        _: 'Navigation',
-        toolbar: { _: 'Toolbar' },
-        tabs: { _: 'Tabs' },
-        pull: { _: 'Pull to Refresh' },
-        context: { _: 'Context Menu' },
-        breadcrumbs: { _: 'Breadcrumbs' },
-        pagination: { _: 'Pagination' }
-      },
-      forms: {
-        _: 'Forms',
-        fields: { _: 'Fields' },
-        input: { _: 'Input Textfield' },
-        chips: { _: 'Chips Input' },
-        color: { _: 'Color Picker' },
-        autocomplete: { _: 'Autocomplete' },
-        editor: { _: 'Editor (WYSIWYG)' },
-        search: { _: 'Search' },
-        slider: { _: 'Slider' },
-        range: { _: 'Range' },
-        checkbox: { _: 'Checkbox' },
-        toggle: { _: 'Toggle' },
-        button: { _: 'Button Toggle' },
-        option: { _: 'Option Group' },
-        datetime: { _: 'Date & Time' },
-        select: { _: 'Select' },
-        rating: { _: 'Rating' },
-        knob: { _: 'Knob' },
-        uploader: { _: 'Uploader' }
-      },
-      grouping: {
-        _: 'Grouping',
-        card: { _: 'Card' },
-        collapsible: { _: 'Collapsible' },
-        table: { _: 'Data Table' },
-        list: { _: 'List' },
-        stepper: { _: 'Stepper' },
-        tree: { _: 'Tree' }
-      },
-      popups: {
-        _: 'Popups',
-        sheet: { _: 'Action Sheet' },
-        dialog: { _: 'Dialog' },
-        modal: { _: 'Modal' },
-        notify: { _: 'Notify' },
-        popover: { _: 'Popover' },
-        tooltip: { _: 'Tooltip' }
-      },
-      progress: {
-        _: 'Progress',
-        ajax: { _: 'Ajax Bar' },
-        loading: { _: 'Loading' },
-        inner: { _: 'Inner Loading' },
-        bar: { _: 'Progress Bar' },
-        spinner: { _: 'Spinner' }
-      },
-      media: {
-        _: 'Media',
-        carousel: { _: 'Carousel' },
-        parallax: { _: 'Parallax' },
-        video: { _: 'Video Embedding' }
-      },
-      scrolling: {
-        _: 'Scrolling',
-        infinite: { _: 'Infinite Scroll' },
-        area: { _: 'Scroll Area' },
-        fire: { _: 'Scroll Fire' },
-        top: { _: 'Back to Top' },
-        observable: { _: 'Scroll Observable' }
-      },
-      others: {
-        _: 'Others Components',
-        alert: { _: 'Alert' },
-        chip: { _: 'Chip' },
-        chat: { _: 'Chat' },
-        timeline: { _: 'Timeline' },
-        jumbotron: { _: 'Jumbotron' },
-        nossr: { _: 'NoSsr' }
-      }
-    },
-
-    plugins: {
-      _: 'Plugins',
-      cookies: { _: 'Cookies' },
-      storage: { _: 'Web Storage' },
-      screen: { _: 'Screen Plugin' },
-      fullscreen: { _: 'App Fullscreen' },
-      visibility: { _: 'App Visibility' },
-      meta: { _: 'Meta Plugin' }
-    },
-
-    directives: {
-      _: 'Directives',
-      panning: { _: 'Panning Touch/Mouse' },
-      swipe: { _: 'Swipe Touch/Mouse' },
-      hold: { _: 'Touch/Mouse Hold' },
-      scroll: { _: 'Scroll Directive' }
-    },
-
-    helpers: {
-      _: 'Helpers',
-      spacing: { _: 'Spacing' },
-      shadows: { _: 'Shadows' },
-      visibility: { _: 'Visibility' },
-      positioning: { _: 'Positioning' },
-      others: { _: 'Others Helpers Classes' }
-    },
-
-    animations: {
-      _: 'Animations',
-      transition: { _: 'Transition' },
-      slide: { _: 'Slide' },
-      js: { _: 'JS Animations' },
-      css: { _: 'Animation CSS Helpers' }
-    },
-
-    utils: {
-      _: 'Utils',
-      date: { _: 'Date Utils' },
-      color: { _: 'Color Utils' },
-      dom: { _: 'Dom Utils' },
-      formatter: { _: 'Formatter Utils' },
-      scroll: { _: 'Scroll Utils' },
-      others: { _: 'Others Utils' }
     }
   },
 
+  // @ Page
+  nav: {
+    prev: 'Previous page',
+    next: 'Next page'
+  },
   footer: {
     github: {
       start: 'Start this page on ',
@@ -454,33 +25,62 @@
     anchor: 'Anchor navigation',
     of: 'of'
   },
-  submenu: {
-    overview: 'Overview',
-    showcase: 'Showcase',
-    changelog: 'Changelog',
-    builder: 'Builder'
+
+  topmenu: {
+    guides: 'Guides',
+    manuals: 'Manuals',
+    references: 'References',
   },
   menu: {
     search: 'Search',
+
     home: 'Home',
-    settings: 'Settings',
     changelog: 'Changelog',
-    donate: 'Donate',
+    roadmap: 'Roadmap',
+    sponsor: 'Sponsor',
+
+    status: {
+      empty: {
+        _: 'empty',
+        tooltip: 'This page is empty!'
+      },
+      draft: {
+        _: 'draft',
+        tooltip: 'This page is under constrution.'
+      }
+    },
+
+    settings: 'Settings',
+
     _404: '404 Error - Not Found'
   },
+  submenu: {
+    overview: 'Overview',
+    showcase: 'Showcase',
+    versus: 'Vs',
 
+    changelog: 'Changelog'
+  },
+
+  // @
   system: {
-    support: 'Support Quasar'
+    documentation: 'Documentation System',
+    support: 'Sponsor',
+    backToTop: 'Back to top'
   },
   changelog: {},
   settings: {
     general: {
       _: 'General Settings',
-      language: { _: 'Language' }
+      language: {
+        _: 'Language'
+      }
     },
     appearance: {
       _: 'Appearance',
-      background: { _: 'Background Color' }
+      background: {
+        _: 'Background Color'
+      }
     }
   },
 

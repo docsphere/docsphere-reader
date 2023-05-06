@@ -1,177 +1,268 @@
-#content
-	p
-		& > code
-			color: #286fa3
-			padding: 3px 5px
-			margin: 0 2px
-			border-radius: 2px
-			border: 1px solid #e6e6e6
-			white-space: pre-wrap
-			display: inline-block
-			box-shadow: 0 1px 1px rgba(0,0,0,0.125)
-			line-height: 1em
-	a
-		color: #34495e
-		text-decoration: none
-		outline: 0
-		cursor: pointer
-		&:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):hover
-			&:not(.button)
-				color: #286fa3
-				background-color: #cde3f3
-		&:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):not(.line)
-			color: #1b4a6c
-			font-weight: 700
-			padding: 0 2px
-			transition: all 0.3s ease
-			border-bottom: 1px dotted #1b4a6c
-	h1
-		font-size: 2rem
-		margin: 0 0 0.7em
-		line-height: 48px
-	h2
-		font-size: 1.5rem
-		margin: 1.5em 0 0.8em
-		line-height: 36px
-		padding-bottom: 0.4em
-		border-bottom: 1px solid #ddd
-	h3
-		font-size: 1.17rem
-		margin: 1.2em 0 0.9em
-		line-height: 28px
-	&:not(.overview):not(.showcase):not(.showcase-code)
-		h1
-			font-size: 2rem
-			margin: 0 0 0.7em
-		h2
-			font-size: 1.5rem
-			margin: 1.5em 0 0.8em
-			padding-bottom: 0.4em
-			border-bottom: 1px solid #ddd
-		h3
-			font-size: 1.17rem
-			margin: 1.2em 0 0.9em
-	&.overview
-		blockquote
-			margin: 2.5em 0
-			padding: 0
-			p
-				padding: 0.5em 1em
-				background-color: #fafafa !important
-				letter-spacing: 0.5px
-		img
-			border: 0
-			max-width: 100%
-		strong
-			font-weight: 600
-			color: #286fa3
-		hr
-			margin: 2em 0
-			height: 2px
-			background-color: #e5e5e5
-			border: 0
-			padding: 0
-		em
-			color: #57a0d6
-		p
-			word-spacing: 0.05em
-		iframe
-			border: 0
-			margin: 1em 0
-		ul
-			padding-left: 1.25em
-			line-height: 1.4em
-		span
-			&.light
-				color: #57a0d6
-			&.info
-				font-size: 0.85em
-				display: inline-block
-				vertical-align: middle
-				width: 280px
-				margin-left: 20px
-		table
-			max-width: 100%
-			border: 1px solid #eee
-			border-radius: 4px
-			border-spacing: 0
-			box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.125)
-			th
-				font-weight: bold
-				border-bottom: 2px solid #eee
-				text-align: left
-			tr
-				vertical-align: top
-			&:not(.js-file-line-container)
-				tr
-					&:nth-child(2n)
-						background: #f8f8f8
-		figure
-			table
-				border: 0
-				box-shadow: none
-				th
-					border-bottom: 0
-		.highlight
-			pre
-				padding: 0
-				.line
-					min-height: 20px
-		& > h1
-			i
-				font-size: 70%
-				vertical-align: middle
-				color: #286fa3
-#content h1,
-#content h2,
-#content h3,
-#content h4
-	font-weight: 600
-	color: #286fa3
-#content:not(.overview):not(.showcase):not(.showcase-code) h1,
-#content:not(.overview):not(.showcase):not(.showcase-code) h2,
-#content:not(.overview):not(.showcase):not(.showcase-code) h3
-	font-weight: 600
-	color: #286fa3
-#content.overview ul ul,
-#content.overview ul p
-	margin: 0.6em 0
-#content.overview figure,
-#content.overview p,
-#content.overview ul,
-#content.overview ol
-	margin: 1.2em 0
-#content.overview p,
-#content.overview ul,
-#content.overview ol
-	line-height: 1.6em
-#content.overview ul,
-#content.overview ol
-	padding-left: 1.5em
-#content.overview table th,
-#content.overview table td
-	padding: 10px 10px
+/* --- Docstation --- */
+// * Coloring
+// Light mode
+body.body--light
+  --q-primary: #000 !important
+  --q-secondary: #000080 !important
 
+  --q-primary-background: #FFF !important
+
+  .content
+    h1, h2, h3, h4, h5, h6
+      color: black
+
+      &:hover
+        color: #595959
+      &:hover:after
+        color: #69562b
+    p
+      // token
+      & > code
+        color: var(--q-primary) !important
+        background: var(--q-primary-background) !important
+        border: 1px solid #e6e6e6 !important
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125)
+
+    a
+      color: #34495e
+      &:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):hover
+        &:not(.button)
+          color: #286fa3
+          background-color: #cde3f3
+      &:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):not(.line)
+        color: #1b4a6c
+        border-bottom: 1px dotted #1b4a6c
+// Dark mode
+body.body--dark
+  --q-primary: #000 !important
+  --q-primary-in-dark-bg: #C1A667 !important
+  --q-secondary: #FFA07A !important
+  --q-negative: #fc001b !important
+
+  --q-light-in-dark-1: #ababab
+  --q-light-in-dark-2: #c9c9c9
+
+  --q-primary-background: #FFF !important
+
+  color: var(--q-light-in-dark-1)
+
+  .content
+    h1, h2, h3, h4, h5, h6
+      color: var(--q-light-in-dark-1)
+
+      &:hover
+        color: #969696
+      &:hover:after
+        color: #B19248
+    section
+      color: var(--q-light-in-dark-2)
+    p
+      // token
+      & > code
+        color: var(--q-primary-in-dark-bg) !important
+        background: var(--q-dark) !important
+        border: 1px solid #e6e6e6
+        box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5)
+
+    a
+      color: #34495e
+      &:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):hover
+        &:not(.button)
+          color: #286fa3
+          background-color: #cde3f3
+      &:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):not(.line)
+        color: #3da6f3
+        border-bottom: 1px dotted #1b4a6c
+
+// * General
+.content
+  --big-play-button-background: #000 !important
+  --big-play-button-background-dark: #000 !important
+
+  h1, h2, h3, h4, h5, h6
+    font-weight: 600
+    padding: 6px
+    cursor: pointer
+    user-select: none
+
+    &:hover:after
+      content: ' #'
+      font-weight: bold
+
+  h1
+    font-size: 2rem
+    line-height: 2rem
+    margin: 0 0 0.7em
+  h2
+    font-size: 1.7rem
+    line-height: 1.7rem
+    margin: 1.35em 0 0.7em
+    border-bottom: 1px solid #ddd
+  h3
+    font-size: 1.5rem
+    line-height: 1.5rem
+    margin: 1.4em 0 0.7em
+
+    &:first-child
+      margin-top: 0
+    &:before
+      content: '# '
+  h4
+    font-size: 1.25rem
+    line-height: 1.25rem
+    margin: 1em 0 0.7em
+  h5
+    font-size: 1.12rem
+    line-height: 1.12rem
+    margin: 0.5em 0 0.3em
+  h6
+    font-size: 1.06rem
+    line-height: 1.06rem
+    margin: 0.3em 0 0.1em
+
+  p
+    & > code
+      padding: 3px 5px
+      margin: 0 2px
+      border-radius: 2px
+      white-space: pre-wrap
+      display: inline-block
+      line-height: 1em
+
+  a
+    text-decoration: none
+    outline: 0
+    cursor: pointer
+    &:not([data-scroll]):not(.search-result):not(.support-button):not(.header-link):not(.line)
+      font-weight: 700
+      padding: 0 2px
+      transition: all 0.3s ease
+
+  &.overview
+    blockquote
+      margin: 2.5em 0
+      padding: 0
+      p
+        padding: 0.5em 1em
+        background-color: #fafafa !important
+        letter-spacing: 0.5px
+    img
+      border: 0
+      max-width: 100%
+    strong
+      font-weight: 600
+    hr
+      margin: 2em 0
+      height: 2px
+      background-color: #e5e5e5
+      border: 0
+      padding: 0
+    iframe
+      border: 0
+      margin: 1em 0
+    ul
+      padding-left: 1.25em
+      line-height: 1.4em
+    span
+      &.light
+        color: #57a0d6
+      &.info
+        font-size: 0.85em
+        display: inline-block
+        vertical-align: middle
+        width: 280px
+        margin-left: 20px
+    table
+      max-width: 100%
+      border: 1px solid #eee
+      border-radius: 4px
+      border-spacing: 0
+      box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.125)
+      th
+        font-weight: bold
+        border-bottom: 2px solid #eee
+        text-align: left
+      tr
+        vertical-align: top
+      &:not(.js-file-line-container)
+        tr
+          &:nth-child(2n)
+            background: #f8f8f8
+    figure
+      table
+        border: 0
+        box-shadow: none
+        th
+          border-bottom: 0
+    .highlight
+      pre
+        padding: 0
+        .line
+          min-height: 20px
+    & > h1
+      i
+        font-size: 70%
+        vertical-align: middle
+        color: #286fa3
+    ul ul,
+    ul p
+      margin: 0.6em 0
+    ul,
+    ol
+      line-height: 1.6em
+    ul,
+    ol
+      padding-left: 1.5em
+    table th,
+    table td
+      padding: 10px 10px
+
+
+
+/* --- Quasar --- */
+// * General
 // ! Layouts
 // QDrawer
-// * Conflicting with Menu toogle button
 .q-drawer__opener
-	top: 50px
+  top: 50px
 
 // ! Components
+// QDialog
+.q-dialog__inner > div
+  border-radius: 0 !important
 // QList
 // QList -> Item -> Label
 .q-item__label--header
-	font-weight: 500
-	padding-left: 0
-	padding-bottom: 10px
+  font-weight: 500
+  padding-left: 0
+  padding-bottom: 10px
 // QBtn
 .q-btn
-	&.filled
-		padding: 13px
+  &.filled
+    padding: 13px
 // QScrollArea
 .q-scrollarea__thumb
-	z-index: 3
+  z-index: 3
 // QTree
-.q-tree__arrow
-	color: #474747 !important
+.q-tree__node
+  padding: 0 0 3px 5px
+.q-tree__node-header:before
+  width: 15px
+  left: -18px !important
+// QSelect
+.q-field--labeled .q-field__native,
+.q-field--labeled .q-field__prefix,
+.q-field--labeled .q-field__suffix
+  padding-bottom: 0
+
+// * Coloring
+// Light mode
+body.body--light
+  .q-item__label--header
+    color: #565656
+  .q-tree__arrow
+    color: #474747
+// Dark mode
+body.body--dark
+  .q-tree__arrow
+    color: #a9a9a9

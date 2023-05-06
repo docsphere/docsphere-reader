@@ -1,13 +1,15 @@
+/* eslint-env node */
+
 /*
  * This file runs in a Node context (it's NOT transpiled by Babel), so use only
  * the ES6 features that are supported by your Node version. https://node.green/
  */
 
 // Configuration for your app
-// https://quasar.dev/quasar-cli/quasar-conf-js
+// https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js
 
-/* eslint-env node */
 const ESLintPlugin = require('eslint-webpack-plugin')
+
 const { configure } = require('quasar/wrappers')
 
 module.exports = configure(function (ctx) {
@@ -22,6 +24,8 @@ module.exports = configure(function (ctx) {
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/boot-files
     boot: [
+      'QZoom',
+
       'i18n',
       'axios'
     ],
@@ -70,7 +74,9 @@ module.exports = configure(function (ctx) {
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
       chainWebpack (chain) {
         chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: ['js', 'vue'] }])
+          .use(ESLintPlugin, [{
+            extensions: ['js', 'vue']
+          }])
       },
       extendWebpack (cfg) {
         cfg.module.rules.push({
@@ -82,6 +88,13 @@ module.exports = configure(function (ctx) {
           test: /\.pug$/,
           loader: 'pug-plain-loader'
         })
+
+        cfg.module.rules.push({
+          test: /\.md$/,
+          use: [
+            'raw-loader'
+          ]
+        })
       }
     },
 
@@ -91,7 +104,7 @@ module.exports = configure(function (ctx) {
         type: 'http'
       },
       port: 8080,
-      open: true // opens browser window automatically
+      open: false // opens browser window automatically
     },
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
@@ -155,36 +168,36 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: 'Quasar Documentation++',
-        short_name: 'Quasar Documentation++',
-        description: 'Alternative Quasar Documentation',
+        name: 'Docsphere Documentation System',
+        short_name: 'Docsphere Docs',
+        description: 'Streamline your documentation process with Docsphere.',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
-        theme_color: '#027be3',
+        theme_color: '#655529',
         icons: [
           {
-            src: 'icons/icon-128x128.png',
+            src: 'project/icons/favicon-128.png',
             sizes: '128x128',
             type: 'image/png'
           },
           {
-            src: 'icons/icon-192x192.png',
+            src: 'project/icons/favicon-192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: 'icons/icon-256x256.png',
+            src: 'project/icons/favicon-256.png',
             sizes: '256x256',
             type: 'image/png'
           },
           {
-            src: 'icons/icon-384x384.png',
+            src: 'project/icons/favicon-384.png',
             sizes: '384x384',
             type: 'image/png'
           },
           {
-            src: 'icons/icon-512x512.png',
+            src: 'project/icons/favicon-512.png',
             sizes: '512x512',
             type: 'image/png'
           }
@@ -222,7 +235,7 @@ module.exports = configure(function (ctx) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'quasar-documentation-pp'
+        appId: 'docsphere'
       },
 
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
