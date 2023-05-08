@@ -30,19 +30,17 @@ People who are color blind and have impaired vision can experience sensitivity a
 
 We want the documentation to be available in any language so that it can reach **everyone**.
 
-Currently available in 2 languages: English (en) and Portuguese (pt).
-
-### Menu search engine based in keywords and i18n (Beta)
+### Menu search engine based in i18n content
 
 The search for content in the documentation is simple, fast and easy.
-The search input text in the **menu** makes it easy to **search** for any content (headers, texts, source codes, ...) **using keywords** and you can do it in your favorite language.
+The search input text in the **menu** makes it easy to **search** for any content (headers, paragraphs, source codes) and you can do it in your favorite language.
 If the defined language is not English and if the search term is not found or has not been set in current language, by default a search is still performed using keywords in English.
 
-### Source code highlighted (Beta)
+### Source code highlighted
 
 This documentation generates codes with Syntax highlighting from texts with multiline and line indented stored in i18n files. So you can access the codes of the documentation **offline** and we can also use i18n for example to translate code comments.
 
-### Navigation using anchored links (RC)
+### Navigation using anchored links
 
 Anchor links work in hash and history mode and provide **faster navigation** and **better orientation** when navigating through subsections of documentation.
 
