@@ -14,7 +14,7 @@ q-layout(view="lHh LpR lFf")
   router-view
 
   q-footer(elevated v-if="this.$route.matched[0].meta.layouts.footer !== false" v-model="this.$store.state.layout.footer")
-    d-footer(:status="$route.meta.status")
+    d-footer
 </template>
 
 <script>

@@ -3,6 +3,10 @@ const langs = [
   'pt-BR'
 ]
 const i18n = {}
+// @ Import pages
+// boot
+import boot from 'pages/boot'
+// index
 import pages from 'pages'
 
 function filter (source) {
@@ -27,13 +31,17 @@ function load (path, subpage, lang) {
   return source
 }
 
+// @ Iterate langs
 for (const lang of langs) {
   i18n[lang] = require(`./${lang}/index.hjson`)
 
+  // @ Iterate pages
   for (const [key, page] of Object.entries(pages)) {
     const path = key.slice(1)
+
     const config = page.config
     const data = page.data
+    const meta = page.meta || boot.meta
 
     // ---
 
@@ -48,7 +56,8 @@ for (const lang of langs) {
         node = accumulator[current]
       }
 
-      // Set title if not exists
+      // @ Set metadata
+      // title
       if (node._ === undefined) {
         node._ = data[lang]?.title || data['*']?.title
       }
@@ -60,16 +69,22 @@ for (const lang of langs) {
       // Set subpages sources if not exists
       if (node.overview === undefined) {
         node.overview = {
+          _translations: meta[lang].overview?._translations,
+          _sections: meta[lang].overview?._sections,
           source: ''
         }
       }
       if (config.subpages.showcase && node.showcase === undefined) {
         node.showcase = {
+          _translations: meta[lang].showcase?._translations,
+          _sections: meta[lang].showcase?._sections,
           source: ''
         }
       }
       if (config.subpages.vs && node.vs === undefined) {
         node.vs = {
+          _translations: meta[lang].vs?._translations,
+          _sections: meta[lang].vs?._sections,
           source: ''
         }
       }
